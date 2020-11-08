@@ -1,0 +1,15 @@
+title: "Sugar pasta"
+preparation: 2h30m
+cooking: 10m
+difficulty: easy
+pricing: cheap
+guests: 3
+ingredients:
+  pasta:
+    quantity: 50g
+  sugar:
+    quantity: 20g
+instructions:
+  - Boil the pasta, without salt
+  - Drain the pasta
+  - Combine brown sugar with pasta

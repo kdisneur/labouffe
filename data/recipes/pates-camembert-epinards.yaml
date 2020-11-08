@@ -1,0 +1,23 @@
+title: Pates Camembert Epinards
+cooking: 10m
+preparation: 10m
+difficulty: easy
+pricing: cheap
+guests: 1
+ingredients:
+  pates:
+    quantity: 50g
+  camembert:
+    quantity: 30g
+  parmesan:
+    quantity: 10g
+  epinards:
+    quantity: 150g
+instructions:
+  - Enlever la croûte du camembert
+  - Couper le camembert en dés
+  - Cuire les pâtes dans un grand volume d'eau
+  - Quelques minutes avant la fin de la cuisson, ajouter les épinards dans l'eau
+  - Égoutter les pâtes et les épinards
+  - Ajouter le camembert et le parmesan
+  - Mélanger le tout jusqu'à ce que le camembert soit bien fondu

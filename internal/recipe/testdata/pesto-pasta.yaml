@@ -1,0 +1,15 @@
+title: "Pesto pasta"
+preparation: 5m
+cooking: 10m
+difficulty: easy
+pricing: cheap
+guests: 3
+ingredients:
+  pasta:
+    quantity: 50g
+  basil-pesto:
+    quantity: 20g
+instructions:
+  - Boil the pasta
+  - Drain the pasta
+  - Combine pesto with pasta
