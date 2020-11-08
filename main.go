@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/kdisneur/lacuisine/internal/html"
 	"github.com/kdisneur/lacuisine/internal/recipe"
 )
 
@@ -14,6 +15,7 @@ import (
 type Flags struct {
 	RecipesFolderPath string
 	IngredientsPath   string
+	OutputFolderPath  string
 }
 
 func main() {
@@ -29,6 +31,7 @@ func run() error {
 	fs := flag.NewFlagSet(os.Args[0], flag.ExitOnError)
 	fs.StringVar(&fcfg.RecipesFolderPath, "recipes", "./data/recipes", "path to the folder containing all the recipes")
 	fs.StringVar(&fcfg.IngredientsPath, "ingredients", "./data/ingredients.yaml", "path to the file containing all the ingredients")
+	fs.StringVar(&fcfg.OutputFolderPath, "output", "./public", "path to the generated site")
 
 	if err := fs.Parse(os.Args[1:]); err != nil {
 		return err
@@ -48,6 +51,10 @@ func run() error {
 	err = filepath.Walk(fcfg.RecipesFolderPath, func(path string, info os.FileInfo, err error) error {
 		if info.IsDir() {
 			return nil
+		}
+
+		if err != nil {
+			return err
 		}
 
 		basename := filepath.Base(path)
@@ -77,6 +84,14 @@ func run() error {
 
 	for _, recipe := range builder.Recipes {
 		fmt.Printf("%#+v\n", recipe)
+	}
+
+	if err := os.MkdirAll(fcfg.OutputFolderPath, 0755); err != nil {
+		return fmt.Errorf("can't create output folder '%s': %v", fcfg.OutputFolderPath, err)
+	}
+
+	if err := html.Generate(fcfg.OutputFolderPath); err != nil {
+		return fmt.Errorf("couldn't generate html site: %v", err)
 	}
 
 	return nil
