@@ -46,7 +46,14 @@ func (q *Quantity) UnmarshalYAML(unmarshal func(interface{}) error) error {
 
 	for i := range allNamedUnits {
 		var quantity int
+
 		if _, err := fmt.Sscanf(rawValue, fmt.Sprintf("%%d%s", allNamedUnits[i]), &quantity); err != nil {
+			continue
+		}
+
+		if rawValue != fmt.Sprintf("%d%s", quantity, allNamedUnits[i]) {
+			// it makes sure we don't have additional characters.
+			// For example: `12clx` would match `12cl` if only relying on Sscanf
 			continue
 		}
 
