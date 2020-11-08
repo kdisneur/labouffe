@@ -1,0 +1,16 @@
+on:
+  push:
+
+name: Test
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.15'
+      - name: Run Test
+        run: make test
