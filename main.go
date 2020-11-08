@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/kdisneur/lacuisine/internal/html"
-	"github.com/kdisneur/lacuisine/internal/recipe"
+	"github.com/kdisneur/labouffe/internal/html"
+	"github.com/kdisneur/labouffe/internal/recipe"
 )
 
 // Flags represents the set of config flags available for the command line

@@ -1,4 +1,4 @@
-module github.com/kdisneur/lacuisine
+module github.com/kdisneur/labouffe
 
 go 1.14
 

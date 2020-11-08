@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kdisneur/lacuisine/internal/recipe"
+	"github.com/kdisneur/labouffe/internal/recipe"
 )
 
 func TestBuilderParsing(t *testing.T) {
