@@ -1,7 +1,27 @@
+GIT_BIN := git
+GIT_SHA := $(shell $(GIT_BIN) rev-parse HEAD)
+
 GO_BIN := go
 GO_FMT_BIN := gofmt
 GO_LINT_BIN := $(GO_BIN) run ./vendor/golang.org/x/lint/golint
 GO_STATICCHECK_BIN := $(GO_BIN) run ./vendor/honnef.co/go/tools/cmd/staticcheck
+
+DEPLOY_FOLDER := $(shell mktemp -d /tmp/livesite.XXXX)
+
+$(DEPLOY_FOLDER)/.git:
+	$(GIT_BIN) worktree add --force $(DEPLOY_FOLDER) refs/heads/live-site
+
+generate-site: $(DEPLOY_FOLDER)/.git
+	@echo "+ $@"
+	$(GO_BIN) run . -output $(DEPLOY_FOLDER); \
+	if [ -z "$$($(GIT_BIN) -C $(DEPLOY_FOLDER) status -s)" ]; then \
+		echo "no changes to commit"; \
+	else \
+		$(GIT_BIN) -C $(DEPLOY_FOLDER) add -A .; \
+		$(GIT_BIN) -C $(DEPLOY_FOLDER) commit --message="New version from SHA $(GIT_SHA)"; \
+		$(GIT_BIN) -C $(DEPLOY_FOLDER) push; \
+		echo "site generated: $(DEPLOY_FOLDER)"; \
+	fi;
 
 test: test-style test-unit
 

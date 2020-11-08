@@ -3,14 +3,43 @@ on:
 
 name: Test
 jobs:
-  build:
+  test:
     name: Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
+
+      - name: Set up go version
+        uses: actions/setup-go@v2
         with:
           go-version: '^1.15'
+
       - name: Run Test
         run: make test
+  deploy:
+    needs: test
+    name: Deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up go version
+        uses: actions/setup-go@v2
+        with:
+          go-version: '^1.15'
+
+      - name: Checkout live-site branch
+        uses: actions/checkout@v2
+        with:
+          ref: live-site
+          path: public
+
+      - name: Generate site
+        run: |
+          git config --global user.email github-actions@github.com;
+          git config --global user.name github-actions;
+          git remote set-url --push origin https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git;
+          make generate-site DEPLOY_FOLDER=public
