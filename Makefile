@@ -16,18 +16,6 @@ live-reload:
 	@echo "+ $@"
 	$(GO_BIN) run ./vendor/github.com/cosmtrek/air
 
-generate-site: $(DEPLOY_FOLDER)/.git
-	@echo "+ $@"
-	$(GO_BIN) run . -output $(DEPLOY_FOLDER); \
-	if [ -z "$$($(GIT_BIN) -C $(DEPLOY_FOLDER) status -s)" ]; then \
-		echo "no changes to commit"; \
-	else \
-		$(GIT_BIN) -C $(DEPLOY_FOLDER) add -A .; \
-		$(GIT_BIN) -C $(DEPLOY_FOLDER) commit --message="New version from SHA $(GIT_SHA)"; \
-		$(GIT_BIN) -C $(DEPLOY_FOLDER) push; \
-		echo "site generated: $(DEPLOY_FOLDER)"; \
-	fi;
-
 test: test-style test-unit
 
 test-style: test-fmt test-lint test-vet test-staticcheck
