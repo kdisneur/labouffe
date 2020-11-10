@@ -1,0 +1,12 @@
+version: 2
+
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/"
+    pull-request-branch-name:
+      separator: "-"
+    labels:
+      - "dependabot"
+    schedule:
+      interval: "daily"
+      timezone: "Europe/Paris"
