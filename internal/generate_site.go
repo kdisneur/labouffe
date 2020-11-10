@@ -75,7 +75,7 @@ func generateRecipes(cfg SiteConfig, sitevalues html.PageSiteValues, recipes []r
 	}
 
 	return html.Generate(
-		path.Join(cfg.OutputFolderPath, "recipes"),
+		path.Join(cfg.OutputFolderPath),
 		html.PageRecipesList,
 		html.PageValues{
 			Site: sitevalues,

@@ -15,7 +15,7 @@
             <div class="uk-navbar primary">
               <div class="uk-navbar-left">
                 <img src="{{ .Site.PublicURL }}/assets/logo.svg" uk-svg="true" alt="logo" width="45" />
-                <a href="" class="uk-link tm-no-underline tm-logo-title">
+                <a href="{{ .Site.PublicURL }}/" class="uk-link tm-no-underline tm-logo-title">
                   <span class="uk-margin-small-left uk-text-large">La bouffe</span>
                 </a>
               </div>
@@ -23,10 +23,10 @@
               <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-visible@m">
                   <li class="{{ if eq .Site.CurrentPageSection.String "recipes" }} uk-active {{ end }}">
-                    <a href="/recipes">recipes</a>
+                    <a href="{{ .Site.PublicURL }}/">recipes</a>
                   </li>
                   <li class="{{ if eq .Site.CurrentPageSection.String "ingredients" }} uk-active {{ end }}">
-                    <a href="/ingredients">ingredients</a>
+                    <a href="{{ .Site.PublicURL }}/ingredients">ingredients</a>
                   </li>
                 </ul>
               </div>
