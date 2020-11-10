@@ -1,0 +1,43 @@
+{{ define "layout" }}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Site web listant nos recettes" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+      <title>La bouffe, hein!</title>
+    </head>
+    <body>
+      <div class="App">
+        <nav class="uk-navbar-container tm-navbar-container uk-active">
+          <div class="uk-container uk-container-expand">
+            <div class="uk-navbar primary">
+              <div class="uk-navbar-left">
+                <img src="{{ .Site.PublicURL }}/assets/logo.svg" uk-svg="true" alt="logo" width="45" />
+                <a href="" class="uk-link tm-no-underline tm-logo-title">
+                  <span class="uk-margin-small-left uk-text-large">La bouffe</span>
+                </a>
+              </div>
+
+              <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@m">
+                  <li class="{{ if eq .Site.CurrentPageSection.String "recipes" }} uk-active {{ end }}">
+                    <a href="/recipes">recipes</a>
+                  </li>
+                  <li class="{{ if eq .Site.CurrentPageSection.String "ingredients" }} uk-active {{ end }}">
+                    <a href="/ingredients">ingredients</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="uk-container uk-margin-medium-top">
+          {{ template "content" . }}
+        </div>
+      </div>
+    </body>
+  </html>
+{{ end }}

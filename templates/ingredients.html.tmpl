@@ -1,0 +1,20 @@
+{{ define "content" }}
+  <table class="uk-table">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th class="tm-table-field-number">Utilisé dans (recettes)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $ingredient := $.Data }}
+        <tr class="tm-table-row-clickable">
+          <td>{{ $ingredient.Title }}</td>
+          <td class="tm-table-field-number">{{ $ingredient.NumberOfRecipes }}</td>
+        </tr>
+      {{ end }}
+    </tbody>
+  </table>
+{{ end }}
+
+{{ template "layout" . }}

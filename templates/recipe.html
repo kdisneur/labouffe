@@ -1,0 +1,64 @@
+<h1 className="uk-heading-small uk-heading-divider uk-margin-remove-top">{{ .Title }}</h1>
+
+<div uk-grid="true">
+	<div className="uk-width-1-2">
+		<div uk-grid="true">
+			<div className="uk-width-1-2">
+				<dl className="uk-description-list uk-description-list-divider">
+					<dt>Temps de préparation</dt>
+					<dd>{{ .Preparation }}</dd>
+
+					<dt>Pricing</dt>
+					<dd>
+						{{ index := range []int {0, 1, 2} }}
+							{{ classname := "uk-text-primary" }}
+							{{ if index > int(.Pricing) }}
+								{{ classname := "uk-text-muted" }}
+							{{end}}
+							<span className="{{ classname }}">
+							<span uk-icon="nut"></span>
+						{{ end }}
+					</span>
+					</dd>
+				</dl>
+			</div>
+			<div className="uk-width-1-2">
+				<dl className="uk-description-list uk-description-list-divider">
+					<dt>{i18n.t(this.props.lang, "cooking time")}</dt>
+					<dd>{utils.time(this.state.recipe.cooking_time_in_minutes)}</dd>
+
+					<dt>{i18n.t(this.props.lang, "difficulty")}</dt>
+					<dd>
+						<Range value={this.state.recipe.difficulty_range} total={5} icon="nut" />
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<div className="uk-width-1-2">
+		<h5 className="uk-text-uppercase">
+			{i18n.t(this.props.lang, "ingredients for")}
+			&nbsp;
+			{this.state.recipe.quantity}
+		</h5>
+
+		{this.state.recipe.ingredients.map((ingredient) => {
+		return (
+		<RecipeIngredient
+			key={ingredient.id}
+			name={ingredient.name}
+			additionalInformation={ingredient.additional_information}
+			quantity={ingredient.quantity}
+			/>
+		);
+		})}
+	</div>
+</div>
+<div className="uk-margin-large-top">
+	<h5 className="uk-text-uppercase">{i18n.t(this.props.lang, "steps")}</h5>
+
+	{this.state.recipe.instructions.map((instruction, i) => {
+	return <p key={i}>{instruction}</p>;
+	})}
+</div>
+</div>

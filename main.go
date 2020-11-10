@@ -3,12 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
+	"net/http"
 	"os"
-	"path/filepath"
-	"strings"
 
-	"github.com/kdisneur/labouffe/internal/html"
-	"github.com/kdisneur/labouffe/internal/recipe"
+	"github.com/kdisneur/labouffe/internal"
 )
 
 // Flags represents the set of config flags available for the command line
@@ -16,6 +14,8 @@ type Flags struct {
 	RecipesFolderPath string
 	IngredientsPath   string
 	OutputFolderPath  string
+	DeveloperMode     bool
+	DeveloperModePort int
 }
 
 func main() {
@@ -29,6 +29,8 @@ func run() error {
 	var fcfg Flags
 
 	fs := flag.NewFlagSet(os.Args[0], flag.ExitOnError)
+	fs.BoolVar(&fcfg.DeveloperMode, "dev", false, "start a server to render HTML pages")
+	fs.IntVar(&fcfg.DeveloperModePort, "dev-http-port", 8080, "http port of the developer mode server")
 	fs.StringVar(&fcfg.RecipesFolderPath, "recipes", "./data/recipes", "path to the folder containing all the recipes")
 	fs.StringVar(&fcfg.IngredientsPath, "ingredients", "./data/ingredients.yaml", "path to the file containing all the ingredients")
 	fs.StringVar(&fcfg.OutputFolderPath, "output", "./public", "path to the generated site")
@@ -37,61 +39,25 @@ func run() error {
 		return err
 	}
 
-	ingredientfile, err := os.Open(fcfg.IngredientsPath)
+	ingredients, recipes, err := internal.LoadIngredientAndRecipes(fcfg.IngredientsPath, fcfg.RecipesFolderPath)
 	if err != nil {
-		return fmt.Errorf("can't open ingredient file '%s': %v", fcfg.IngredientsPath, err)
-	}
-	defer ingredientfile.Close()
-
-	builder, err := recipe.NewBuilderFromYAMLIngredients(ingredientfile)
-	if err != nil {
-		return fmt.Errorf("can't import ingredients file '%s': %v", fcfg.IngredientsPath, err)
-	}
-
-	err = filepath.Walk(fcfg.RecipesFolderPath, func(path string, info os.FileInfo, err error) error {
-		if info.IsDir() {
-			return nil
-		}
-
-		if err != nil {
-			return err
-		}
-
-		basename := filepath.Base(path)
-		extension := filepath.Ext(path)
-
-		if extension != ".yaml" && extension != ".yml" {
-			return nil
-		}
-
-		recipefile, err := os.Open(path)
-		if err != nil {
-			return fmt.Errorf("can't open recipe file: '%s': %v", path, err)
-		}
-		defer recipefile.Close()
-
-		code := strings.TrimSuffix(basename, extension)
-		if err := builder.ParseNewYAMLRecipe(code, recipefile); err != nil {
-			return fmt.Errorf("can't import recipe '%s': %v", path, err)
-		}
-
-		return nil
-	})
-
-	if err != nil {
-		return fmt.Errorf("can't import recipes: %v", err)
-	}
-
-	for _, recipe := range builder.Recipes {
-		fmt.Printf("%#+v\n", recipe)
+		return fmt.Errorf("can't load data: %v", err)
 	}
 
 	if err := os.MkdirAll(fcfg.OutputFolderPath, 0755); err != nil {
 		return fmt.Errorf("can't create output folder '%s': %v", fcfg.OutputFolderPath, err)
 	}
 
-	if err := html.Generate(fcfg.OutputFolderPath); err != nil {
-		return fmt.Errorf("couldn't generate html site: %v", err)
+	sitecfg := internal.SiteConfig{
+		OutputFolderPath: fcfg.OutputFolderPath,
+	}
+	if err := internal.GenerateSite(sitecfg, ingredients, recipes); err != nil {
+		return fmt.Errorf("couldn't generate site: %v", err)
+	}
+
+	if fcfg.DeveloperMode {
+		fmt.Printf("start developer server: http://127.0.0.1:%d\n", fcfg.DeveloperModePort)
+		return http.ListenAndServe(fmt.Sprintf(":%d", fcfg.DeveloperModePort), http.FileServer(http.Dir(fcfg.OutputFolderPath)))
 	}
 
 	return nil
