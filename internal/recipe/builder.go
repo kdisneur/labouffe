@@ -52,6 +52,7 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 
 	b.Recipes = append(b.Recipes, Recipe{
 		Code:         code,
+		Category:     r.Category,
 		Title:        r.Title,
 		Cooking:      r.Cooking,
 		Preparation:  r.Preparation,

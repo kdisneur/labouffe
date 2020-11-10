@@ -6,6 +6,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"time"
 
 	"github.com/kdisneur/labouffe/internal/html"
 	"github.com/kdisneur/labouffe/internal/recipe"
@@ -24,6 +25,54 @@ func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []rec
 		CurrentPageSection: html.PageSectionIngredients,
 	}
 
+	if err := os.RemoveAll(cfg.OutputFolderPath); err != nil {
+		return fmt.Errorf("can't remove output folder '%s': %v", cfg.OutputFolderPath, err)
+	}
+
+	if err := copyFolderContent("assets", path.Join(cfg.OutputFolderPath, "assets")); err != nil {
+		return fmt.Errorf("can't copy assets folder: %v", err)
+	}
+
+	if err := generateIngredients(cfg, sitevalues, ingredients, recipes); err != nil {
+		return fmt.Errorf("can't generate ingredients page: %v", err)
+	}
+
+	if err := generateRecipes(cfg, sitevalues, recipes); err != nil {
+		return fmt.Errorf("can't generate recipes page: %v", err)
+	}
+
+	return nil
+}
+
+func generateRecipes(cfg SiteConfig, sitevalues html.PageSiteValues, recipes []recipe.Recipe) error {
+	type recipesdata struct {
+		recipe.Recipe
+		TotalDuration   time.Duration
+		PricingScale    int
+		DifficultyScale int
+	}
+
+	data := make([]*recipesdata, len(recipes))
+	for i := range recipes {
+		data[i] = &recipesdata{
+			Recipe:          recipes[i],
+			TotalDuration:   time.Duration(recipes[i].Preparation + recipes[i].Cooking),
+			PricingScale:    int(recipes[i].Pricing) + 1,
+			DifficultyScale: int(recipes[i].Difficulty) + 1,
+		}
+	}
+
+	return html.Generate(
+		path.Join(cfg.OutputFolderPath, "recipes"),
+		html.PageRecipesList,
+		html.PageValues{
+			Site: sitevalues,
+			Data: data,
+		},
+	)
+}
+
+func generateIngredients(cfg SiteConfig, sitevalues html.PageSiteValues, ingredients []recipe.Ingredient, recipes []recipe.Recipe) error {
 	type ingredientdata struct {
 		recipe.Ingredient
 		NumberOfRecipes int
@@ -39,15 +88,6 @@ func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []rec
 			data[ingredient.Code].NumberOfRecipes++
 		}
 	}
-
-	if err := os.RemoveAll(cfg.OutputFolderPath); err != nil {
-		return fmt.Errorf("can't remove output folder '%s': %v", cfg.OutputFolderPath, err)
-	}
-
-	if err := copyFolderContent("assets", path.Join(cfg.OutputFolderPath, "assets")); err != nil {
-		return fmt.Errorf("can't copy assets folder: %v", err)
-	}
-
 	return html.Generate(
 		path.Join(cfg.OutputFolderPath, "ingredients"),
 		html.PageIngredientsList,

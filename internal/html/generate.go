@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"os"
 	"path"
+	"strings"
 )
 
 // PageSection represents one of the main site area
@@ -19,13 +20,20 @@ const (
 )
 
 // Page represents an existing template
-type Page string
+type Page struct {
+	t *template.Template
+}
 
-var tpls = template.Must(template.ParseGlob("templates/*.html.tmpl"))
-
-const (
+var (
 	// PageIngredientsList represents a page containing the list of ingredients
-	PageIngredientsList Page = "ingredients.html.tmpl"
+	PageIngredientsList = &Page{
+		t: template.Must(template.New("ingredients.html.tmpl").Funcs(helpers()).ParseFiles("templates/layout.html.tmpl", "templates/ingredients.html.tmpl")),
+	}
+
+	// PageRecipesList represents a page containing the list of recipes
+	PageRecipesList = &Page{
+		t: template.Must(template.New("recipes.html.tmpl").Funcs(helpers()).ParseFiles("templates/layout.html.tmpl", "templates/recipes.html.tmpl")),
+	}
 )
 
 // PageSiteValues represents the site values of a page
@@ -41,7 +49,7 @@ type PageValues struct {
 }
 
 // Generate generates a page from a template
-func Generate(folder string, page Page, values PageValues) error {
+func Generate(folder string, page *Page, values PageValues) error {
 	if err := os.MkdirAll(folder, 0755); err != nil {
 		return fmt.Errorf("can't create folder '%s': %v", folder, err)
 	}
@@ -52,9 +60,30 @@ func Generate(folder string, page Page, values PageValues) error {
 	}
 	defer f.Close()
 
-	if err := tpls.ExecuteTemplate(f, string(page), values); err != nil {
+	if err := page.t.Execute(f, values); err != nil {
 		return fmt.Errorf("can't render page: %v", err)
 	}
 
 	return nil
+}
+
+func helpers() template.FuncMap {
+	return template.FuncMap{
+		"scale": displayScale,
+	}
+}
+
+func displayScale(icon string, max int, current int) template.HTML {
+	var s strings.Builder
+
+	for i := 1; i <= max; i++ {
+		cssClass := "uk-text-primary"
+		if i > current {
+			cssClass = "uk-text-muted"
+		}
+
+		fmt.Fprintf(&s, "<span class=\"%s\" uk-icon=\"%s\"></span>", cssClass, icon)
+	}
+
+	return template.HTML(s.String())
 }

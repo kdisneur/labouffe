@@ -15,6 +15,7 @@ type IncludedIngredient struct {
 type Recipe struct {
 	Code         string
 	Title        string
+	Category     Category
 	Cooking      Duration
 	Preparation  Duration
 	Difficulty   Difficulty
@@ -27,6 +28,7 @@ type Recipe struct {
 // YAMLRecipe represents the YAML format
 type YAMLRecipe struct {
 	Title        string                  `yaml:"title"`
+	Category     Category                `yaml:"category"`
 	Cooking      Duration                `yaml:"cooking"`
 	Preparation  Duration                `yaml:"preparation"`
 	Difficulty   Difficulty              `yaml:"difficulty"`

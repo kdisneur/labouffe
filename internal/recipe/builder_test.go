@@ -32,6 +32,7 @@ func TestBuilderParsing(t *testing.T) {
 				{
 					Code:        "sugar-pasta",
 					Title:       "Sugar pasta",
+					Category:    recipe.CategoryHotDishes,
 					Preparation: recipe.Duration(time.Duration(2*time.Hour + 30*time.Minute)),
 					Cooking:     recipe.Duration(time.Duration(10 * time.Minute)),
 					Difficulty:  recipe.DifficultyEasy,
@@ -56,6 +57,7 @@ func TestBuilderParsing(t *testing.T) {
 				{
 					Code:        "pesto-pasta",
 					Title:       "Pesto pasta",
+					Category:    recipe.CategoryHotDishes,
 					Preparation: recipe.Duration(time.Duration(5 * time.Minute)),
 					Cooking:     recipe.Duration(time.Duration(10 * time.Minute)),
 					Difficulty:  recipe.DifficultyEasy,

@@ -1,0 +1,33 @@
+{{ define "content" }}
+  <table class="uk-table uk-table-divider">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Catégorie</th>
+        <th>Total time</th>
+        <th>Coût</th>
+        <th>Difficulté</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $recipe := .Data }}
+      <tr class="tm-table-row-clickable">
+        <td>{{ $recipe.Title }}</td>
+        <td class="uk-text-capitalize">{{ $recipe.Category }}</td>
+        <td>
+          <span uk-icon="clock"></span>&nbsp;
+          {{ $recipe.TotalDuration }}
+        </td>
+        <td>
+          {{ $recipe.PricingScale | scale "nut" 5 }}
+        </td>
+        <td>
+          {{ $recipe.DifficultyScale | scale "nut" 5 }}
+        </td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+{{ end }}
+
+{{ template "layout" . }}
