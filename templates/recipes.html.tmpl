@@ -12,7 +12,11 @@
     <tbody>
       {{ range $recipe := .Data }}
       <tr class="tm-table-row-clickable">
-        <td>{{ $recipe.Title }}</td>
+        <td>
+          <a class="uk-link-text" href="{{ $.Site.PublicURL }}/recipes/{{ $recipe.Code }}">
+            {{ $recipe.Title }}
+          </a>
+        </td>
         <td class="uk-text-capitalize">{{ $recipe.Category }}</td>
         <td>
           <span uk-icon="clock"></span>&nbsp;

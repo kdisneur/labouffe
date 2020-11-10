@@ -34,6 +34,11 @@ var (
 	PageRecipesList = &Page{
 		t: template.Must(template.New("recipes.html.tmpl").Funcs(helpers()).ParseFiles("templates/layout.html.tmpl", "templates/recipes.html.tmpl")),
 	}
+
+	// PageRecipeShow represents a page containing the list of recipes
+	PageRecipeShow = &Page{
+		t: template.Must(template.New("recipe.html.tmpl").Funcs(helpers()).ParseFiles("templates/layout.html.tmpl", "templates/recipe.html.tmpl")),
+	}
 )
 
 // PageSiteValues represents the site values of a page

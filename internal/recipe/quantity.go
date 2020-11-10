@@ -32,6 +32,10 @@ const (
 	QuantityUnitKilogram // kg
 )
 
+func (q Quantity) String() string {
+	return fmt.Sprintf("%d%s", q.Value, q.Unit)
+}
+
 // UnmarshalYAML is the function in charge of unmatshalling the string value to a Go constant
 func (q *Quantity) UnmarshalYAML(unmarshal func(interface{}) error) error {
 	var rawValue string

@@ -60,6 +60,18 @@ func generateRecipes(cfg SiteConfig, sitevalues html.PageSiteValues, recipes []r
 			PricingScale:    int(recipes[i].Pricing) + 1,
 			DifficultyScale: int(recipes[i].Difficulty) + 1,
 		}
+
+		err := html.Generate(
+			path.Join(cfg.OutputFolderPath, "recipes", recipes[i].Code),
+			html.PageRecipeShow,
+			html.PageValues{
+				Site: sitevalues,
+				Data: data[i],
+			},
+		)
+		if err != nil {
+			return fmt.Errorf("can't generare recipe '%s': %v", recipes[i].Code, err)
+		}
 	}
 
 	return html.Generate(

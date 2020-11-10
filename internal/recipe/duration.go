@@ -8,6 +8,10 @@ import (
 // Duration is a custom duration time enabling YAML unmarshalling
 type Duration time.Duration
 
+func (d Duration) String() string {
+	return time.Duration(d).String()
+}
+
 // UnmarshalYAML is the function in charge of unmarshalling the string value to a Duration
 func (d *Duration) UnmarshalYAML(unmarshal func(input interface{}) error) error {
 	var value string
