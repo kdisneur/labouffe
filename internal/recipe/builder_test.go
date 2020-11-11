@@ -60,8 +60,8 @@ func TestBuilderParsing(t *testing.T) {
 					Category:    recipe.CategoryHotDishes,
 					Preparation: recipe.Duration(time.Duration(5 * time.Minute)),
 					Cooking:     recipe.Duration(time.Duration(10 * time.Minute)),
-					Difficulty:  recipe.DifficultyEasy,
-					Pricing:     recipe.PriceCheap,
+					Difficulty:  recipe.DifficultyAverage,
+					Pricing:     recipe.PriceAffordable,
 					Guests:      3,
 					Ingredients: []recipe.IncludedIngredient{
 						{

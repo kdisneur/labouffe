@@ -18,6 +18,28 @@ type SiteConfig struct {
 	PublicURL        string
 }
 
+// RecipesView is the data necessary to display a list of recipe template
+type RecipesView struct {
+	AllCategories   []recipe.Category
+	AllDifficulties []recipe.Difficulty
+	AllPrices       []recipe.Price
+	Recipes         []*RecipeView
+}
+
+// RecipeView is the data necessary to build a recipe template
+type RecipeView struct {
+	recipe.Recipe
+	TotalDuration   time.Duration
+	PricingScale    int
+	DifficultyScale int
+}
+
+// IngredientView is the data necessary to build an ingredient template
+type IngredientView struct {
+	recipe.Ingredient
+	Recipes []*RecipeView
+}
+
 // GenerateSite generates the whole website
 func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []recipe.Recipe) error {
 	sitevalues := html.PageSiteValues{
@@ -33,28 +55,13 @@ func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []rec
 		return fmt.Errorf("can't copy assets folder: %v", err)
 	}
 
-	if err := generateIngredients(cfg, sitevalues, ingredients, recipes); err != nil {
-		return fmt.Errorf("can't generate ingredients page: %v", err)
-	}
+	categories := recipe.AllCategories()
+	prices := recipe.AllPrices()
+	difficulties := recipe.AllDifficulties()
 
-	if err := generateRecipes(cfg, sitevalues, recipes); err != nil {
-		return fmt.Errorf("can't generate recipes page: %v", err)
-	}
-
-	return nil
-}
-
-func generateRecipes(cfg SiteConfig, sitevalues html.PageSiteValues, recipes []recipe.Recipe) error {
-	type recipesdata struct {
-		recipe.Recipe
-		TotalDuration   time.Duration
-		PricingScale    int
-		DifficultyScale int
-	}
-
-	data := make([]*recipesdata, len(recipes))
+	recipeviews := make([]*RecipeView, len(recipes))
 	for i := range recipes {
-		data[i] = &recipesdata{
+		recipeviews[i] = &RecipeView{
 			Recipe:          recipes[i],
 			TotalDuration:   time.Duration(recipes[i].Preparation + recipes[i].Cooking),
 			PricingScale:    int(recipes[i].Pricing) + 1,
@@ -66,48 +73,78 @@ func generateRecipes(cfg SiteConfig, sitevalues html.PageSiteValues, recipes []r
 			html.PageRecipeShow,
 			html.PageValues{
 				Site: sitevalues,
-				Data: data[i],
+				Data: recipeviews[i],
 			},
 		)
 		if err != nil {
-			return fmt.Errorf("can't generare recipe '%s': %v", recipes[i].Code, err)
+			return fmt.Errorf("can't generate recipe page '%s': %v", recipes[i].Code, err)
 		}
 	}
 
-	return html.Generate(
+	err := html.Generate(
 		path.Join(cfg.OutputFolderPath),
 		html.PageRecipesList,
 		html.PageValues{
-			Site: sitevalues,
-			Data: data,
+			Site:  sitevalues,
+			Title: "Les recettes",
+			Data: RecipesView{
+				Recipes:         recipeviews,
+				AllCategories:   categories,
+				AllDifficulties: difficulties,
+				AllPrices:       prices,
+			},
 		},
 	)
-}
-
-func generateIngredients(cfg SiteConfig, sitevalues html.PageSiteValues, ingredients []recipe.Ingredient, recipes []recipe.Recipe) error {
-	type ingredientdata struct {
-		recipe.Ingredient
-		NumberOfRecipes int
+	if err != nil {
+		return fmt.Errorf("can't generate all recipes page: %v", err)
 	}
 
-	data := make(map[string]*ingredientdata, len(ingredients))
+	data := make(map[string]*IngredientView, len(ingredients))
 	for _, ingredient := range ingredients {
-		data[ingredient.Code] = &ingredientdata{Ingredient: ingredient}
+		data[ingredient.Code] = &IngredientView{Ingredient: ingredient}
 	}
 
-	for _, recipe := range recipes {
+	for _, recipe := range recipeviews {
 		for _, ingredient := range recipe.Ingredients {
-			data[ingredient.Code].NumberOfRecipes++
+			data[ingredient.Code].Recipes = append(data[ingredient.Code].Recipes, recipe)
 		}
 	}
-	return html.Generate(
+
+	for _, ingredient := range data {
+		err := html.Generate(
+			path.Join(cfg.OutputFolderPath, "ingredients", ingredient.Code),
+			html.PageRecipesList,
+			html.PageValues{
+				Site:  sitevalues,
+				Title: fmt.Sprintf("%s: Les recettes", ingredient.Title),
+				Data: RecipesView{
+					Recipes:         ingredient.Recipes,
+					AllCategories:   categories,
+					AllDifficulties: difficulties,
+					AllPrices:       prices,
+				},
+			},
+		)
+
+		if err != nil {
+			return fmt.Errorf("can't generate ingredient page '%s': %v", ingredient.Code, err)
+		}
+	}
+
+	err = html.Generate(
 		path.Join(cfg.OutputFolderPath, "ingredients"),
 		html.PageIngredientsList,
 		html.PageValues{
-			Site: sitevalues,
-			Data: data,
+			Site:  sitevalues,
+			Title: "Les ingrédients",
+			Data:  data,
 		},
 	)
+	if err != nil {
+		return fmt.Errorf("can't generate all ingredients page: %v", err)
+	}
+
+	return nil
 }
 
 func copyFolderContent(source string, destination string) error {

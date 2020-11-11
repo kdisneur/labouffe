@@ -22,6 +22,16 @@ const (
 	CategorySideDishes // entrée
 )
 
+// AllCategories returns the full list of categories
+func AllCategories() []Category {
+	var categories []Category
+	for i := 0; i < len(_Category_index)-1; i++ {
+		categories = append(categories, Category(i))
+	}
+
+	return categories
+}
+
 // UnmarshalYAML is the function in charge of unmarshalling the string value to a Go constant
 func (c *Category) UnmarshalYAML(unmarshal func(interface{}) error) error {
 	var namedCategory string

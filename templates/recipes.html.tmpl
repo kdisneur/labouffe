@@ -1,37 +1,74 @@
 {{ define "content" }}
-  <table class="uk-table uk-table-divider">
-    <thead>
-      <tr>
-        <th>Nom</th>
-        <th>Catégorie</th>
-        <th>Total time</th>
-        <th>Coût</th>
-        <th>Difficulté</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{ range $recipe := .Data }}
-      <tr class="tm-table-row-clickable">
-        <td>
-          <a class="uk-link-text" href="{{ $.Site.PublicURL }}/recipes/{{ $recipe.Code }}">
-            {{ $recipe.Title }}
-          </a>
-        </td>
-        <td class="uk-text-capitalize">{{ $recipe.Category }}</td>
-        <td>
-          <span uk-icon="clock"></span>&nbsp;
-          {{ $recipe.TotalDuration }}
-        </td>
-        <td>
-          {{ $recipe.PricingScale | scale "nut" 5 }}
-        </td>
-        <td>
-          {{ $recipe.DifficultyScale | scale "nut" 5 }}
-        </td>
-      </tr>
-      {{ end }}
-    </tbody>
-  </table>
+  <div uk-filter="target: .js-filter">
+    <div>
+      <div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
+        <ul class="uk-subnav uk-subnav-pill" uk-margin>
+          <li class="uk-active" uk-filter-control><a href="#">Désactiver les filtres</a></li>
+        </ul>
+      </div>
+
+      <div class="uk-grid-small uk-grid-divider" uk-grid>
+        <p class="uk-width-1-6@m">Type de plat</p>
+        <ul class="uk-subnav uk-subnav-pill" uk-margin>
+          {{ range .Data.AllCategories }}
+            <li uk-filter-control="filter: [data-category='{{ . }}']; group: data-category"><a href="#">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div class="uk-grid-small uk-grid-divider" uk-grid>
+        <p class="uk-width-1-6@m">Coût</p>
+        <ul class="uk-subnav uk-subnav-pill" uk-margin>
+          {{ range .Data.AllPrices }}
+            <li uk-filter-control="filter: [data-price='{{ . }}']; group: data-price"><a href="#">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div class="uk-grid-small uk-grid-divider" uk-grid>
+        <p class="uk-width-1-6@m">Difficulté</p>
+        <ul class="uk-subnav uk-subnav-pill" uk-margin>
+          {{ range .Data.AllDifficulties }}
+            <li uk-filter-control="filter: [data-difficulty='{{ . }}']; group: data-difficulty"><a href="#">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+
+    <table class="uk-table uk-table-divider">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Catégorie</th>
+          <th>Total time</th>
+          <th>Coût</th>
+          <th>Difficulté</th>
+        </tr>
+      </thead>
+      <tbody class="js-filter">
+        {{ range $recipe := .Data.Recipes }}
+          <tr class="tm-table-row-clickable" data-category="{{ $recipe.Category }}" data-price="{{ $recipe.Pricing }}" data-difficulty="{{ $recipe.Difficulty }}">
+            <td>
+              <a class="uk-link-text" href="{{ $.Site.PublicURL }}/recipes/{{ $recipe.Code }}">
+                {{ $recipe.Title }}
+              </a>
+            </td>
+            <td class="uk-text-capitalize">{{ $recipe.Category }}</td>
+            <td>
+              <span uk-icon="clock"></span>&nbsp;
+              {{ $recipe.TotalDuration }}
+            </td>
+            <td>
+              {{ $recipe.PricingScale | scale "nut" (len $.Data.AllPrices) }}
+            </td>
+            <td>
+              {{ $recipe.DifficultyScale | scale "nut" (len $.Data.AllDifficulties) }}
+            </td>
+          </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
 {{ end }}
 
 {{ template "layout" . }}

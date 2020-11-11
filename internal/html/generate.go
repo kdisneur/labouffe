@@ -49,8 +49,9 @@ type PageSiteValues struct {
 
 // PageValues represents a page
 type PageValues struct {
-	Site PageSiteValues
-	Data interface{}
+	Site  PageSiteValues
+	Title string
+	Data  interface{}
 }
 
 // Generate generates a page from a template

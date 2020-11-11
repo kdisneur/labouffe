@@ -13,9 +13,9 @@ func _() {
 	_ = x[DifficultyHard-2]
 }
 
-const _Difficulty_name = "easyaveragehard"
+const _Difficulty_name = "facilemoyendifficile"
 
-var _Difficulty_index = [...]uint8{0, 4, 11, 15}
+var _Difficulty_index = [...]uint8{0, 6, 11, 20}
 
 func (i Difficulty) String() string {
 	if i < 0 || i >= Difficulty(len(_Difficulty_index)-1) {

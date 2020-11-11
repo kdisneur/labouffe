@@ -33,7 +33,9 @@
         {{ range $ingredient := .Data.Ingredients }}
           <div class="uk-grid-small" uk-grid="true">
 			<div class="uk-width-expand" uk-leader="true">
-              {{ $ingredient.Title }}
+              <a  class="uk-link-text" href="{{ $.Site.PublicURL }}/ingredients/{{ $ingredient.Code }}">
+                {{ $ingredient.Title }}
+              </a>
 			</div>
             <div>{{ $ingredient.Quantity }}</div>
           </div>

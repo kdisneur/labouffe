@@ -11,12 +11,22 @@ type Price int
 //go:generate go run ../../vendor/golang.org/x/tools/cmd/stringer/stringer.go -type=Price -linecomment
 const (
 	// PriceCheap represents a recipe that is cheap
-	PriceCheap Price = iota // cheap
+	PriceCheap Price = iota // économique
 	// PriceAffordable represents a recipe that is not cheap but not too expensive
-	PriceAffordable // affordable
+	PriceAffordable // abordable
 	// PriceExpensive represents a recipe that is expensive
-	PriceExpensive // expensive
+	PriceExpensive // cher
 )
+
+// AllPrices returns the full list of prices
+func AllPrices() []Price {
+	var prices []Price
+	for i := 0; i < len(_Price_index)-1; i++ {
+		prices = append(prices, Price(i))
+	}
+
+	return prices
+}
 
 // UnmarshalYAML is the function in charge of unmarshalling the string value to a Go constant
 func (p *Price) UnmarshalYAML(unmarshal func(interface{}) error) error {

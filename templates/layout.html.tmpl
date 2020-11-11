@@ -23,10 +23,10 @@
               <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-visible@m">
                   <li class="{{ if eq .Site.CurrentPageSection.String "recipes" }} uk-active {{ end }}">
-                    <a href="{{ .Site.PublicURL }}/">recipes</a>
+                    <a href="{{ .Site.PublicURL }}/">recettes</a>
                   </li>
                   <li class="{{ if eq .Site.CurrentPageSection.String "ingredients" }} uk-active {{ end }}">
-                    <a href="{{ .Site.PublicURL }}/ingredients">ingredients</a>
+                    <a href="{{ .Site.PublicURL }}/ingredients">ingrédients</a>
                   </li>
                 </ul>
               </div>
@@ -35,6 +35,10 @@
         </nav>
 
         <div class="uk-container uk-margin-medium-top">
+          {{ if ne .Title "" }}
+            <h2>{{ .Title }}</h2>
+          {{ end }}
+
           {{ template "content" . }}
         </div>
       </div>

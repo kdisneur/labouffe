@@ -11,12 +11,22 @@ type Difficulty int
 //go:generate go run ../../vendor/golang.org/x/tools/cmd/stringer/stringer.go -type=Difficulty -linecomment
 const (
 	// DifficultyEasy represents a recipe that is easy to make
-	DifficultyEasy Difficulty = iota // easy
+	DifficultyEasy Difficulty = iota // facile
 	// DifficultyAverage represents a recipe that is not too hard to make
-	DifficultyAverage // average
+	DifficultyAverage // moyen
 	// DifficultyHard represents a recipe that is hard to make
-	DifficultyHard // hard
+	DifficultyHard // difficile
 )
+
+// AllDifficulties returns the full list of difficulties
+func AllDifficulties() []Difficulty {
+	var difficulties []Difficulty
+	for i := 0; i < len(_Difficulty_index)-1; i++ {
+		difficulties = append(difficulties, Difficulty(i))
+	}
+
+	return difficulties
+}
 
 // UnmarshalYAML is the function in charge of unmarshalling the string value to a Go constant
 func (d *Difficulty) UnmarshalYAML(unmarshal func(interface{}) error) error {

@@ -13,9 +13,9 @@ func _() {
 	_ = x[PriceExpensive-2]
 }
 
-const _Price_name = "cheapaffordableexpensive"
+const _Price_name = "économiqueabordablecher"
 
-var _Price_index = [...]uint8{0, 5, 15, 24}
+var _Price_index = [...]uint8{0, 11, 20, 24}
 
 func (i Price) String() string {
 	if i < 0 || i >= Price(len(_Price_index)-1) {
