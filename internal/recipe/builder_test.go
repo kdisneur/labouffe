@@ -37,7 +37,10 @@ func TestBuilderParsing(t *testing.T) {
 					Cooking:     recipe.Duration(time.Duration(10 * time.Minute)),
 					Difficulty:  recipe.DifficultyEasy,
 					Pricing:     recipe.PriceCheap,
-					Guests:      3,
+					Servings: recipe.Servings{
+						Quantity: 2,
+						Type:     recipe.ServingsTypeUnits,
+					},
 					Ingredients: []recipe.IncludedIngredient{
 						{
 							Ingredient: recipe.Ingredient{Code: "pasta", Title: "Pasta"},
@@ -62,7 +65,10 @@ func TestBuilderParsing(t *testing.T) {
 					Cooking:     recipe.Duration(time.Duration(10 * time.Minute)),
 					Difficulty:  recipe.DifficultyAverage,
 					Pricing:     recipe.PriceAffordable,
-					Guests:      3,
+					Servings: recipe.Servings{
+						Quantity: 3,
+						Type:     recipe.ServingsTypeGuests,
+					},
 					Ingredients: []recipe.IncludedIngredient{
 						{
 							Ingredient: recipe.Ingredient{Code: "pasta", Title: "Pasta"},

@@ -2,6 +2,7 @@ package recipe
 
 import (
 	"fmt"
+
 	"gopkg.in/yaml.v2"
 )
 
@@ -9,6 +10,12 @@ import (
 type IncludedIngredient struct {
 	Ingredient
 	Quantity Quantity
+}
+
+// Servings represents the number of people or number of items the recipe is made for
+type Servings struct {
+	Quantity int
+	Type     ServingsType
 }
 
 // Recipe represents a recipe
@@ -20,7 +27,7 @@ type Recipe struct {
 	Preparation  Duration
 	Difficulty   Difficulty
 	Pricing      Price
-	Guests       int
+	Servings     Servings
 	Instructions []string
 	Ingredients  []IncludedIngredient
 }
@@ -33,7 +40,7 @@ type YAMLRecipe struct {
 	Preparation  Duration                `yaml:"preparation"`
 	Difficulty   Difficulty              `yaml:"difficulty"`
 	Pricing      Price                   `yaml:"pricing"`
-	Guests       int                     `yaml:"guests"`
+	Servings     Servings                `yaml:"servings"`
 	Instructions []string                `yaml:"instructions"`
 	Ingredients  YAMLIncludedIngredients `yaml:"ingredients"`
 }

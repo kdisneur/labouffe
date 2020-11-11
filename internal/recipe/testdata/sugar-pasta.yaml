@@ -4,7 +4,9 @@ preparation: 2h30m
 cooking: 10m
 difficulty: facile
 pricing: économique
-guests: 3
+servings:
+  quantity: 2
+  type: unités
 ingredients:
   pasta:
     quantity: 50g

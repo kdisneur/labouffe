@@ -56,7 +56,7 @@
             <td class="uk-text-capitalize">{{ $recipe.Category }}</td>
             <td>
               <span uk-icon="clock"></span>&nbsp;
-              {{ $recipe.TotalDuration }}
+              {{ $recipe.TotalDuration | duration }}
             </td>
             <td>
               {{ $recipe.PricingScale | scale "nut" (len $.Data.AllPrices) }}

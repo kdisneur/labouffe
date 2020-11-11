@@ -4,7 +4,9 @@ preparation: 5m
 cooking: 10m
 difficulty: moyen
 pricing: abordable
-guests: 3
+servings:
+  quantity: 3
+  type: personnes
 ingredients:
   pasta:
     quantity: 50g

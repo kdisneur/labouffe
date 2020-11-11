@@ -2,8 +2,9 @@ package recipe
 
 import (
 	"fmt"
-	"gopkg.in/yaml.v2"
 	"io"
+
+	"gopkg.in/yaml.v2"
 )
 
 // Builder represents a recipe builder. It can parse and add new recipes
@@ -58,7 +59,7 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 		Preparation:  r.Preparation,
 		Difficulty:   r.Difficulty,
 		Pricing:      r.Pricing,
-		Guests:       r.Guests,
+		Servings:     r.Servings,
 		Instructions: r.Instructions,
 		Ingredients:  ingredients,
 	})

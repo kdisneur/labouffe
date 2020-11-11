@@ -4,7 +4,9 @@ cooking: 15m
 preparation: 5m
 difficulty: facile
 pricing: économique
-guests: 1
+servings:
+  quantity: 1
+  type: personnes
 ingredients:
   pates:
     quantity: 50g

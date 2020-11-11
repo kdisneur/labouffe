@@ -4,7 +4,9 @@ cooking: 60m
 preparation: 10m
 difficulty: facile
 pricing: économique
-guests: 4
+servings:
+  quantity: 4
+  type: personnes
 ingredients:
   pates:
     quantity: 300g
@@ -37,9 +39,8 @@ instructions:
   - Ajouter la viande hachée et faire cuire à feu vif
   - Ajouter le concassé de tomates, le vin rouge
   - Diluer le bouillon de boeuf dans une tasse d'eau chaude
-  - Ajouter le bouillon de boeuf
-  - Ajouter le thym, le laurier, l'origan, le sel et le poivre
-  - Laisser cuire en légers frémissements durant 1h
+  - Ajouter le bouillon de boeuf, le thym, le laurier, l'origan, le sel et le poivre
+  - Laisser cuire durant 1h (la sauce doit juste frémir)
   - Faire cuire les pâtes dans l'eau bouillante
   - Egoutter les pâtes
   - Ajouter les pâtes à la sauce et mélanger

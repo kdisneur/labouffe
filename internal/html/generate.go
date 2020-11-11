@@ -6,6 +6,7 @@ import (
 	"os"
 	"path"
 	"strings"
+	"time"
 )
 
 // PageSection represents one of the main site area
@@ -75,8 +76,13 @@ func Generate(folder string, page *Page, values PageValues) error {
 
 func helpers() template.FuncMap {
 	return template.FuncMap{
-		"scale": displayScale,
+		"scale":    displayScale,
+		"duration": displayDuration,
 	}
+}
+
+func displayDuration(t time.Duration) string {
+	return strings.ReplaceAll(strings.ReplaceAll(t.String(), "m0s", "m"), "h0m", "h")
 }
 
 func displayScale(icon string, max int, current int) template.HTML {

@@ -8,7 +8,7 @@
           <div class="uk-width-1-2">
             <dl class="uk-description-list uk-description-list-divider">
               <dt>Temps de préparation</dt>
-              <dd>{{ .Data.Preparation }}</dd>
+              <dd>{{ .Data.Preparation.TimeDuration | duration }}</dd>
 
               <dt>Coût</dt>
               <dd>{{ .Data.PricingScale | scale "nut" 5 }}</dd>
@@ -17,7 +17,7 @@
           <div class="uk-width-1-2">
             <dl class="uk-description-list uk-description-list-divider">
               <dt>Temps de cuisson</dt>
-              <dd>{{ .Data.Cooking }}</dd>
+              <dd>{{ .Data.Cooking.TimeDuration | duration }}</dd>
 
               <dt>Difficulté</dt>
               <dd>{{ .Data.DifficultyScale | scale "nut" 5 }}</dd>
@@ -27,7 +27,7 @@
       </div>
       <div class="uk-width-1-2">
         <h5 class="uk-text-uppercase">
-          Ingrédients pour &nbsp; {{ .Data.Guests }}
+          Ingrédients pour {{ .Data.Servings.Quantity }} {{ .Data.Servings.Type }}
         </h5>
 
         {{ range $ingredient := .Data.Ingredients }}

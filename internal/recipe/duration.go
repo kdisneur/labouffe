@@ -8,6 +8,11 @@ import (
 // Duration is a custom duration time enabling YAML unmarshalling
 type Duration time.Duration
 
+// TimeDuration returns the underlying time.Duration
+func (d Duration) TimeDuration() time.Duration {
+	return time.Duration(d)
+}
+
 func (d Duration) String() string {
 	return time.Duration(d).String()
 }
