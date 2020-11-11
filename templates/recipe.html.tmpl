@@ -35,6 +35,9 @@
             <div class="uk-width-expand" uk-leader="true">
               <a  class="uk-link-text" href="{{ $.Site.PublicURL }}/ingredients/{{ $ingredient.Code }}">
                 {{ $ingredient.Title }}
+                {{ if ne $ingredient.Details "" }}
+                ({{ $ingredient.Details }})
+                {{ end }}
               </a>
             </div>
             {{ if gt $ingredient.Quantity.Value 0 }}

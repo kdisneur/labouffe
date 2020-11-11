@@ -1,0 +1,46 @@
+title: Carbonnade flamande
+category: plat chaud
+cooking: 180m
+preparation: 40m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  joue-boeuf:
+    quantity: 500g
+  biere-brune:
+    quantity: 50cl
+    details: Chimay
+  oignon:
+    quantity: 2
+  cassonade:
+    quantity: 1cs
+  farine:
+    quantity: 2cc
+  pain-epice:
+    quantity: 3
+    details: tranches
+  beurre:
+    quantity: 20g
+  moutarde:
+    quantity : 0
+  thym:
+    quantity: 0
+  laurier:
+    quantity: 0
+  huile-olive:
+    quantity: 2cs
+instructions:
+  - Emincer les oignons
+  - Couper la viande en morceaux, la faire revenir dans une cocotte avec l'huile jusqu'à coloration
+  - Retirer la viande
+  - Ajouter le beurre et laisser fondre
+  - Ajouter les oignons et laisser suer jusqu'à ce qu'ils deviennent transluscides
+  - Ajouter la cassonade, laisser colorer
+  - Ajouter la viande, verser la farine en pluie sur la viande
+  - Ajouter la bière
+  - Tartiner de moutarde les tranches de pain d'épice
+  - Ajouter le pain d'épice, le thym et le laurier
+  - Laisser mijoter 3h

@@ -48,6 +48,7 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 		ingredients[i] = IncludedIngredient{
 			Ingredient: ingredient,
 			Quantity:   item.Quantity,
+			Details:    item.Details,
 		}
 	}
 

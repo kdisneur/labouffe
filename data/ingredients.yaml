@@ -1,38 +1,63 @@
-pates:
-  title: Pâtes
-camembert:
-  title: Camembert
-parmesan:
-  title: Parmesan
-epinards:
-  title: Épinards
-oignon:
-  title: Oignon
-lardons:
-  title: Lardons fumés
-creme-fraiche:
-  title: Crême fraîche épaisse
-jaune-oeuf:
-  title: Jaune d'oeuf
-concasse-tomate:
-  title: Concassé de tomates
+---
 ail:
   title: Ail
-viande-hachee:
-  title: Viande hachée
-sel:
-  title: Sel
-poivre:
-  title: Poivre
-origan:
-  title: Origan
-thym:
-  title: Thym
-laurier:
-  title: Laurier
-vin-rouge:
-  title: Vin rouge
+beurre:
+  title: Beurre
+biere-brune:
+  title: Bière brune
 bouillon-boeuf:
   title: Bouillon de boeuf
+camembert:
+  title: Camembert
+cassonade:
+  title: Cassonade
+chocolat:
+  title: Chocolat
+concasse-tomate:
+  title: Concassé de tomates
+creme-fraiche:
+  title: Crême fraîche épaisse
+epinards:
+  title: Épinards
+farine:
+  title: Farine
+fleur-sel:
+  title: fleur de sel
 huile-olive:
   title: Huile d'olive
+jaune-oeuf:
+  title: Jaune d'oeuf
+joue-boeuf:
+  title: Joue de boeuf
+lardons:
+  title: Lardons fumés
+laurier:
+  title: Laurier
+levure-chimique:
+  title: levure chimique
+moutarde:
+  title: Moutarde
+oeuf:
+  title: Oeufs
+oignon:
+  title: Oignon
+origan:
+  title: Origan
+pain-epice:
+  title: Pain d'épice
+parmesan:
+  title: Parmesan
+pates:
+  title: Pâtes
+poivre:
+  title: Poivre
+sel:
+  title: Sel
+sucre:
+  title: sucre
+thym:
+  title: Thym
+viande-hachee:
+  title: Viande hachée
+vin-rouge:
+  title: Vin rouge

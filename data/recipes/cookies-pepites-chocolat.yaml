@@ -1,0 +1,36 @@
+title: Cookies aux pépites de chocolat
+category: biscuit
+cooking: 10m
+preparation: 15m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 25
+  type: unités
+ingredients:
+  farine:
+    quantity: 350g
+  beurre:
+    quantity: 250g
+    details: mou
+  sucre:
+    quantity: 100g
+  cassonade:
+    quantity: 100g
+  oeuf:
+    quantity: 2
+  levure-chimique:
+    quantity: 1cc
+  fleur-sel:
+    quantity: 0
+  chocolat:
+    quantity: 300g
+    details: pépites
+instructions:
+  - Préchauffer le four à 180°C
+  - Travailler le beurre ramolli avec les deux sucres
+  - Ajouter les oeufs et bien mélanger
+  - Ajouter la farine tamisée et la levure
+  - Ajouter les pépites de chocolat
+  - Former des balles de ping pong à l'aide de deux cuillères
+  - Enfourner sur une plaque durant 10m
