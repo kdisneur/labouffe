@@ -14,11 +14,14 @@ func _() {
 	_ = x[QuantityUnitMilligram-3]
 	_ = x[QuantityUnitGram-4]
 	_ = x[QuantityUnitKilogram-5]
+	_ = x[QuantityUnitTeaSpoon-6]
+	_ = x[QuantityUnitTableSpoon-7]
+	_ = x[QuantityUnitNoUnit-8]
 }
 
-const _QuantityUnit_name = "mlcllmggkg"
+const _QuantityUnit_name = "mlcllmggkgcccs"
 
-var _QuantityUnit_index = [...]uint8{0, 2, 4, 5, 7, 8, 10}
+var _QuantityUnit_index = [...]uint8{0, 2, 4, 5, 7, 8, 10, 12, 14, 14}
 
 func (i QuantityUnit) String() string {
 	if i < 0 || i >= QuantityUnit(len(_QuantityUnit_index)-1) {

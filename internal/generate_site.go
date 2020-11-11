@@ -42,11 +42,6 @@ type IngredientView struct {
 
 // GenerateSite generates the whole website
 func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []recipe.Recipe) error {
-	sitevalues := html.PageSiteValues{
-		PublicURL:          cfg.PublicURL,
-		CurrentPageSection: html.PageSectionIngredients,
-	}
-
 	if err := os.RemoveAll(cfg.OutputFolderPath); err != nil {
 		return fmt.Errorf("can't remove output folder '%s': %v", cfg.OutputFolderPath, err)
 	}
@@ -72,7 +67,10 @@ func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []rec
 			path.Join(cfg.OutputFolderPath, "recipes", recipes[i].Code),
 			html.PageRecipeShow,
 			html.PageValues{
-				Site: sitevalues,
+				Site: html.PageSiteValues{
+					PublicURL:          cfg.PublicURL,
+					CurrentPageSection: html.PageSectionRecipes,
+				},
 				Data: recipeviews[i],
 			},
 		)
@@ -85,7 +83,10 @@ func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []rec
 		path.Join(cfg.OutputFolderPath),
 		html.PageRecipesList,
 		html.PageValues{
-			Site:  sitevalues,
+			Site: html.PageSiteValues{
+				PublicURL:          cfg.PublicURL,
+				CurrentPageSection: html.PageSectionRecipes,
+			},
 			Title: "Les recettes",
 			Data: RecipesView{
 				Recipes:         recipeviews,
@@ -115,7 +116,10 @@ func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []rec
 			path.Join(cfg.OutputFolderPath, "ingredients", ingredient.Code),
 			html.PageRecipesList,
 			html.PageValues{
-				Site:  sitevalues,
+				Site: html.PageSiteValues{
+					PublicURL:          cfg.PublicURL,
+					CurrentPageSection: html.PageSectionRecipes,
+				},
 				Title: fmt.Sprintf("%s: Les recettes", ingredient.Title),
 				Data: RecipesView{
 					Recipes:         ingredient.Recipes,
@@ -135,7 +139,10 @@ func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []rec
 		path.Join(cfg.OutputFolderPath, "ingredients"),
 		html.PageIngredientsList,
 		html.PageValues{
-			Site:  sitevalues,
+			Site: html.PageSiteValues{
+				PublicURL:          cfg.PublicURL,
+				CurrentPageSection: html.PageSectionIngredients,
+			},
 			Title: "Les ingrédients",
 			Data:  data,
 		},

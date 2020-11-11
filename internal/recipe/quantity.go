@@ -30,6 +30,14 @@ const (
 	QuantityUnitGram // g
 	// QuantityUnitKilogram represents kilogam unit
 	QuantityUnitKilogram // kg
+
+	// QuantityUnitTeaSpoon represents a tea spoon
+	QuantityUnitTeaSpoon // cc
+	// QuantityUnitTableSpoon represents a table spoon
+	QuantityUnitTableSpoon // cs
+
+	// QuantityUnitNoUnit represents a single unit as in one onion
+	QuantityUnitNoUnit //
 )
 
 func (q Quantity) String() string {

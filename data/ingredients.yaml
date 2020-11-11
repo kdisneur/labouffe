@@ -6,3 +6,33 @@ parmesan:
   title: Parmesan
 epinards:
   title: Épinards
+oignon:
+  title: Oignon
+lardons:
+  title: Lardons fumés
+creme-fraiche:
+  title: Crême fraîche épaisse
+jaune-oeuf:
+  title: Jaune d'oeuf
+concasse-tomate:
+  title: Concassé de tomates
+ail:
+  title: Ail
+viande-hachee:
+  title: Viande hachée
+sel:
+  title: Sel
+poivre:
+  title: Poivre
+origan:
+  title: Origan
+thym:
+  title: Thym
+laurier:
+  title: Laurier
+vin-rouge:
+  title: Vin rouge
+bouillon-boeuf:
+  title: Bouillon de boeuf
+huile-olive:
+  title: Huile d'olive

@@ -1,0 +1,45 @@
+title: Pates Bolognaise
+category: plat chaud
+cooking: 60m
+preparation: 10m
+difficulty: facile
+pricing: économique
+guests: 4
+ingredients:
+  pates:
+    quantity: 300g
+  concasse-tomate:
+    quantity: 600g
+  oignon:
+    quantity: 2
+  ail:
+    quantity: 1
+  viande-hachee:
+    quantity: 500g
+  sel:
+    quantity: 0
+  poivre:
+    quantity: 0
+  origan:
+    quantity : 0
+  thym:
+    quantity: 0
+  laurier:
+    quantity: 0
+  vin-rouge:
+    quantity: 12cl
+  bouillon-boeuf:
+    quantity: 1
+  huile-olive:
+    quantity: 2cs
+instructions:
+  - Faire revenir les oignons et la gousse d'ail hachée dans l'huile d'olive
+  - Ajouter la viande hachée et faire cuire à feu vif
+  - Ajouter le concassé de tomates, le vin rouge
+  - Diluer le bouillon de boeuf dans une tasse d'eau chaude
+  - Ajouter le bouillon de boeuf
+  - Ajouter le thym, le laurier, l'origan, le sel et le poivre
+  - Laisser cuire en légers frémissements durant 1h
+  - Faire cuire les pâtes dans l'eau bouillante
+  - Egoutter les pâtes
+  - Ajouter les pâtes à la sauce et mélanger

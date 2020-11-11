@@ -1,0 +1,22 @@
+title: Pates Carbonara
+category: plat chaud
+cooking: 15m
+preparation: 5m
+difficulty: facile
+pricing: économique
+guests: 1
+ingredients:
+  pates:
+    quantity: 50g
+  lardons:
+    quantity: 15g
+  creme-fraiche:
+    quantity: 1cs
+  jaune-oeuf:
+    quantity: 1
+instructions:
+  - Faire cuire les pâtes dans l'eau bouillante
+  - Faire revenir les lardons et la crème à feu doux
+  - Égoutter les pâtes
+  - Mélanger les pâtes et la sauce
+  - Ajouter le jaune d'oeuf et mélanger
