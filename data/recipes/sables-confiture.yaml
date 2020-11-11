@@ -1,0 +1,41 @@
+title: Sablés à la confiture
+category: biscuit
+cooking: 12m
+preparation: 120m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 25
+  type: unités
+ingredients:
+  farine:
+    quantity: 450g
+  beurre:
+    quantity: 250g
+    details: mou
+  sucre-glace:
+    quantity: 100g
+  gousse-vanille:
+    quantity: 1
+  jaune-oeuf:
+    quantity: 3
+  levure-chimique:
+    quantity: 1cc
+  sel:
+    quantity: 1cc
+  maizena:
+    quantity: 50g
+  confiture:
+    quantity: 0
+instructions:
+  - Travailler le beurre ramolli avec le sucre pour obtenir un mélange crémeux
+  - Ajouter les jaunes d'oeufs en continuant à bien mélanger
+  - Ajouter les graines de vanille, le sel, la farine, la maizena et la levure
+  - Mélanger jusqu'à ce que la pâte soit homogène
+  - Couvrir et réserver la pâte au frigo pendant 30m
+  - Préchauffer le four à 180°C
+  - Sortir la pâte et l'étaler sur 3mm d'épaisseur
+  - Couper les biscuits avec un emporte-pièces, en trouer 1/2
+  - Enfourner pour 12m
+  - Saupoudrer la face trouée de sucre glace
+  - Garnir et assembler
