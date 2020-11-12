@@ -1,0 +1,26 @@
+title: Frites
+category: plat chaud
+cooking: 9m
+preparation: 30m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 1
+  type: personnes
+ingredients:
+  pomme-de-terre:
+    quantity: 150g
+  gras-de-boeuf:
+    quantity: 1200g
+instructions:
+  - Couper le gras de boeuf en petit morceau et le mettre dans la friteuse
+  - Eplucher les pommes de terre, les mettre dans un saladier d'eau
+  - Couper les pommes de terre en frites, les remettre au fur et à mesure dans l'eau
+  - Changer l'eau et nettoyer les frites, les poser sur un torchon propre
+  - Bien essuyer les frites
+  - Faire fondre le gras de boeuf à température minimum
+  - Monter la température à 160 degrés
+  - Ajouter les frites et laisser cuire 6m
+  - Sortir les frites et laisser reposer 10m
+  - Monter la température à 180 degrés
+  - Ajouter les frites laisser cuire 3m
