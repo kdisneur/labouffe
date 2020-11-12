@@ -1,6 +1,8 @@
 ---
 ail:
   title: Ail
+avocat:
+  title: Avocat
 beurre:
   title: Beurre
 biere-brune:
@@ -13,12 +15,16 @@ cassonade:
   title: Cassonade
 chocolat:
   title: Chocolat
+citron:
+  title: Citron
 concasse-tomate:
   title: Concassé de tomates
 confiture:
   title: Confiture
 creme-fraiche:
   title: Crême fraîche épaisse
+echalote:
+  title: Echalote
 epinards:
   title: Épinards
 farine:
@@ -59,8 +65,12 @@ pates:
   title: Pâtes
 poivre:
   title: Poivre
+pomme:
+  title: Pomme
 pomme-de-terre:
   title: Pomme de terre
+saumon-frais:
+  title: Saumon frais
 sel:
   title: Sel
 sucre:
@@ -73,4 +83,5 @@ viande-hachee:
   title: Viande hachée
 vin-rouge:
   title: Vin rouge
-  
+vinaigre:
+  title: Vinaigre

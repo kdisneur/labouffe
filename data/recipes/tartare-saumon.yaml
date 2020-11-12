@@ -1,0 +1,37 @@
+title: Tartare de saumon
+category: plat froid
+cooking: 0m
+preparation: 30m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  saumon-frais:
+    quantity: 200g
+  avocat:
+    quantity: 1
+  echalote:
+    quantity: 1
+  pomme:
+    quantity: 1
+    details: granny
+  vinaigre:
+    quantity: 1cs
+    details: balsamique
+  huile-olive:
+    quantity: 1cs
+  sel:
+    quantity: 0
+  citron:
+    quantity: 0
+    details: jus
+  
+instructions:
+  - Emincer l'échalote
+  - Couper en dés, le saumon, la pomme et l'avocat  
+  - Dans un saladier mélanger l'huile, le vinaigre, le sel et le citron
+  - Ajouter les ingrédients et mélanger
+  - Laisser reposer au frais
+  - Au moment du service rectifiez l'assaisonnement si nécessaire
