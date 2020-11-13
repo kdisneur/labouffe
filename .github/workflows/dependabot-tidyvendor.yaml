@@ -3,7 +3,7 @@ name: Tidy vendor
 on:
   push:
     branches:
-      - dependabot/go_modules/**
+      - dependabot-go_modules-**
 
 jobs:
   cleandeps:
