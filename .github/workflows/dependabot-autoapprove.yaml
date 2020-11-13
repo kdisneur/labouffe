@@ -3,7 +3,7 @@ name: Auto approve
 on:
   pull_request:
     branches:
-      - dependabot/go_modules/**
+      - dependabot-go_modules-**
     types:
       - opened
 
@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: hmarr/auto-approve-action@v2.0.0
-      if: github.actor == 'dependabot'
+      if: github.actor == 'dependabot[bot]'
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"

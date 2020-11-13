@@ -3,7 +3,7 @@ name: Auto merge
 on:
   pull_request_review:
     branches:
-      - dependabot/go_modules/**
+      - dependabot-go_modules-**
     types:
       - submitted
   check_suite:
@@ -18,5 +18,5 @@ jobs:
         uses: "pascalgn/automerge-action@c29cef1b62bfb675777896255a70c69fc01bcfe4"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_FILTER_AUTHOR: "dependabot"
+          MERGE_FILTER_AUTHOR: "dependabot[bot]"
           MERGE_METHOD: squash
