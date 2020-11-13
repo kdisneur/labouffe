@@ -8,40 +8,90 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="Site web listant nos recettes" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+      <style>
+      .uk-offcanvas-bar {
+        background: #fff;
+      }
+      .uk-offcanvas-bar .uk-nav-default .uk-nav-header {
+        border-bottom: 1px solid #e5e5e5;
+        color: #222;
+        text-trabsform: uppercase;
+      }
+      .uk-offcanvas-bar .uk-nav-default > li > a,
+      .uk-offcanvas-bar .uk-nav-default > li > a:focus,
+      .uk-offcanvas-bar .uk-nav-default > li > a:hover
+      .uk-offcanvas-bar .uk-nav-default > li.uk-active > a,
+      .uk-offcanvas-bar .uk-nav-default > li.uk-active > a:focus,
+      .uk-offcanvas-bar .uk-nav-default > li.uk-active > a:hover {
+        text-transform: capitalize;
+        color: #999 !important;
+      }
+
+      .tm-logo-title {
+        margin-left: 5px;
+      }
+      .tm-logo-title img {
+        display: block;
+        float: left;
+      }
+      .tm-logo-title span {
+        padding-top: 5px;
+        display: inline-block;
+      }
+
+      .tm-link-no-highlight,
+      .tm-link-no-highlight:hover,
+      .tm-link-no-highlight:focus {
+        color: #666 !important;
+        text-decoration: none;
+      }
+      </style>
       <title>La bouffe, hein!</title>
     </head>
     <body>
-      <div class="App">
-        <nav class="uk-navbar-container tm-navbar-container uk-active">
-          <div class="uk-container uk-container-expand">
-            <div class="uk-navbar primary">
-              <div class="uk-navbar-left">
-                <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="45" />
-                <a href="/" class="uk-link tm-no-underline tm-logo-title">
-                  <span class="uk-margin-small-left uk-text-large">La bouffe</span>
-                </a>
-              </div>
+      <nav class="uk-navbar-container tm-navbar-container uk-active" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="/" class="uk-link tm-no-underline tm-logo-title">
+            <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="42" />
+              <span class="uk-margin-small-left uk-text-large">La bouffe</span>
+            </a>
+          </div>
 
-              <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav uk-visible@m">
-                  <li class="">
-                    <a href="/">recettes</a>
-                  </li>
-                  <li class=" uk-active ">
-                    <a href="/ingredients">ingrédients</a>
-                  </li>
-                </ul>
+          <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon href="" uk-toggle="target: #small-menu"></a>
+            <div id="small-menu" uk-offcanvas="mode: push; overlay: true">
+              <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
+                <div class="uk-panel">
+                    <ul class="uk-nav uk-nav-default tm-nav">
+                      <li class="uk-nav-header">Général</a>
+                      <li class="uk-margin-top ">
+                        <a href="/">recettes</a>
+                      </li>
+                      <li class="uk-margin-top uk-active">
+                        <a href="/ingredients">ingrédients</a>
+                      </li>
+                    </ul>
+                </div>
               </div>
             </div>
+            <ul class="uk-navbar-nav uk-visible@s">
+              <li class="">
+                <a href="/">recettes</a>
+              </li>
+              <li class=" uk-active ">
+                <a href="/ingredients">ingrédients</a>
+              </li>
+            </ul>
           </div>
-        </nav>
+        </div>
+      </nav>
 
-        <div class="uk-container uk-margin-medium-top">
-          
-            <h2>Les ingrédients</h2>
-          
+      <div class="uk-container uk-margin-medium-top">
+        
+          <h2>Les ingrédients</h2>
+        
 
-          
+        
   <table class="uk-table">
     <thead>
       <tr>
@@ -441,8 +491,8 @@
     </tbody>
   </table>
 
-        </div>
       </div>
+
       <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
     </body>

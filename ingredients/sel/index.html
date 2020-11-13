@@ -8,40 +8,90 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="Site web listant nos recettes" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+      <style>
+      .uk-offcanvas-bar {
+        background: #fff;
+      }
+      .uk-offcanvas-bar .uk-nav-default .uk-nav-header {
+        border-bottom: 1px solid #e5e5e5;
+        color: #222;
+        text-trabsform: uppercase;
+      }
+      .uk-offcanvas-bar .uk-nav-default > li > a,
+      .uk-offcanvas-bar .uk-nav-default > li > a:focus,
+      .uk-offcanvas-bar .uk-nav-default > li > a:hover
+      .uk-offcanvas-bar .uk-nav-default > li.uk-active > a,
+      .uk-offcanvas-bar .uk-nav-default > li.uk-active > a:focus,
+      .uk-offcanvas-bar .uk-nav-default > li.uk-active > a:hover {
+        text-transform: capitalize;
+        color: #999 !important;
+      }
+
+      .tm-logo-title {
+        margin-left: 5px;
+      }
+      .tm-logo-title img {
+        display: block;
+        float: left;
+      }
+      .tm-logo-title span {
+        padding-top: 5px;
+        display: inline-block;
+      }
+
+      .tm-link-no-highlight,
+      .tm-link-no-highlight:hover,
+      .tm-link-no-highlight:focus {
+        color: #666 !important;
+        text-decoration: none;
+      }
+      </style>
       <title>La bouffe, hein!</title>
     </head>
     <body>
-      <div class="App">
-        <nav class="uk-navbar-container tm-navbar-container uk-active">
-          <div class="uk-container uk-container-expand">
-            <div class="uk-navbar primary">
-              <div class="uk-navbar-left">
-                <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="45" />
-                <a href="/" class="uk-link tm-no-underline tm-logo-title">
-                  <span class="uk-margin-small-left uk-text-large">La bouffe</span>
-                </a>
-              </div>
+      <nav class="uk-navbar-container tm-navbar-container uk-active" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="/" class="uk-link tm-no-underline tm-logo-title">
+            <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="42" />
+              <span class="uk-margin-small-left uk-text-large">La bouffe</span>
+            </a>
+          </div>
 
-              <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav uk-visible@m">
-                  <li class=" uk-active ">
-                    <a href="/">recettes</a>
-                  </li>
-                  <li class="">
-                    <a href="/ingredients">ingrédients</a>
-                  </li>
-                </ul>
+          <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon href="" uk-toggle="target: #small-menu"></a>
+            <div id="small-menu" uk-offcanvas="mode: push; overlay: true">
+              <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
+                <div class="uk-panel">
+                    <ul class="uk-nav uk-nav-default tm-nav">
+                      <li class="uk-nav-header">Général</a>
+                      <li class="uk-margin-top uk-active">
+                        <a href="/">recettes</a>
+                      </li>
+                      <li class="uk-margin-top ">
+                        <a href="/ingredients">ingrédients</a>
+                      </li>
+                    </ul>
+                </div>
               </div>
             </div>
+            <ul class="uk-navbar-nav uk-visible@s">
+              <li class=" uk-active ">
+                <a href="/">recettes</a>
+              </li>
+              <li class="">
+                <a href="/ingredients">ingrédients</a>
+              </li>
+            </ul>
           </div>
-        </nav>
+        </div>
+      </nav>
 
-        <div class="uk-container uk-margin-medium-top">
-          
-            <h2>Sel: Les recettes</h2>
-          
+      <div class="uk-container uk-margin-medium-top">
+        
+          <h2>Sel: Les recettes</h2>
+        
 
-          
+        
   <div uk-filter="target: .js-filter">
     <div>
       <div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
@@ -94,81 +144,153 @@
       </div>
     </div>
 
-    <table class="uk-table uk-table-divider">
-      <thead>
-        <tr>
-          <th>Nom</th>
-          <th>Catégorie</th>
-          <th>Total time</th>
-          <th>Coût</th>
-          <th>Difficulté</th>
-        </tr>
-      </thead>
-      <tbody class="js-filter">
-        
-          <tr class="tm-table-row-clickable" data-category="plat chaud" data-price="économique" data-difficulty="facile">
-            <td>
-              <a class="uk-link-text" href="/recipes/pates-bolognaises">
-                Pâtes bolognaise
-              </a>
-            </td>
-            <td class="uk-text-capitalize">plat chaud</td>
-            <td>
-              <span uk-icon="clock"></span>&nbsp;
+    <div class="uk-grid uk-visible@m uk-padding-small uk-padding-remove-left uk-padding-remove-right">
+      <div class="uk-width-expand@m"><b>Nom</b></div>
+      <div class="uk-width-small@m"><b>Catégorie</b></div>
+      <div class="uk-width-small@m"><b>Total time</b></div>
+      <div class="uk-width-small@m"><b>Coût</b></div>
+      <div class="uk-width-small@m"><b>Difficulté</b></div>
+    </div>
+
+    <div class="js-filter uk-margin-bottom">
+      
+        <hr>
+        <a class="uk-link-text tm-link-no-highlight" href="/recipes/pates-bolognaises">
+          <div class="uk-grid" data-category="plat chaud" data-price="économique" data-difficulty="facile">
+            <div class="uk-width-1-1 uk-width-expand@m">
+              <span class="uk-hidden@m">
+                <span class="uk-label">plat chaud</span>
+                &nbsp;
+              </span>
+              <div class="uk-hidden@s uk-margin-top"></div>
+              <span class="uk-hidden@m uk-text-bold">Pâtes bolognaise</span>
+              <div class="uk-hidden@s uk-margin-bottom"></div>
+              <span class="uk-visible@m">Pâtes bolognaise</span>
+            </div>
+            <div class="uk-visible@m uk-width-small@m">
+              <span class="uk-visible@m">plat chaud</span>
+            </div>
+            <div class="uk-hidden@m uk-width-1-1">
+              <div class="uk-grid">
+                <div class="uk-width-1-3">
+                  Temps
+                </div>
+                <div class="uk-width-1-3">
+                  Coût
+                </div>
+                <div class="uk-width-1-3">
+                  Difficulté
+                </div>
+              </div>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
+              <span class="uk-visible@s">
+                <span uk-icon="clock"></span>&nbsp;
+              </span>
               1h10m
-            </td>
-            <td>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
               <span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span>
-            </td>
-            <td>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
               <span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span>
-            </td>
-          </tr>
-        
-          <tr class="tm-table-row-clickable" data-category="biscuit" data-price="économique" data-difficulty="facile">
-            <td>
-              <a class="uk-link-text" href="/recipes/sables-confiture">
-                Sablés à la confiture
-              </a>
-            </td>
-            <td class="uk-text-capitalize">biscuit</td>
-            <td>
-              <span uk-icon="clock"></span>&nbsp;
+            </div>
+          </div>
+        </a>
+      
+        <hr>
+        <a class="uk-link-text tm-link-no-highlight" href="/recipes/sables-confiture">
+          <div class="uk-grid" data-category="biscuit" data-price="économique" data-difficulty="facile">
+            <div class="uk-width-1-1 uk-width-expand@m">
+              <span class="uk-hidden@m">
+                <span class="uk-label">biscuit</span>
+                &nbsp;
+              </span>
+              <div class="uk-hidden@s uk-margin-top"></div>
+              <span class="uk-hidden@m uk-text-bold">Sablés à la confiture</span>
+              <div class="uk-hidden@s uk-margin-bottom"></div>
+              <span class="uk-visible@m">Sablés à la confiture</span>
+            </div>
+            <div class="uk-visible@m uk-width-small@m">
+              <span class="uk-visible@m">biscuit</span>
+            </div>
+            <div class="uk-hidden@m uk-width-1-1">
+              <div class="uk-grid">
+                <div class="uk-width-1-3">
+                  Temps
+                </div>
+                <div class="uk-width-1-3">
+                  Coût
+                </div>
+                <div class="uk-width-1-3">
+                  Difficulté
+                </div>
+              </div>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
+              <span class="uk-visible@s">
+                <span uk-icon="clock"></span>&nbsp;
+              </span>
               2h12m
-            </td>
-            <td>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
               <span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span>
-            </td>
-            <td>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
               <span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span>
-            </td>
-          </tr>
-        
-          <tr class="tm-table-row-clickable" data-category="plat froid" data-price="abordable" data-difficulty="facile">
-            <td>
-              <a class="uk-link-text" href="/recipes/tartare-saumon">
-                Tartare de saumon
-              </a>
-            </td>
-            <td class="uk-text-capitalize">plat froid</td>
-            <td>
-              <span uk-icon="clock"></span>&nbsp;
+            </div>
+          </div>
+        </a>
+      
+        <hr>
+        <a class="uk-link-text tm-link-no-highlight" href="/recipes/tartare-saumon">
+          <div class="uk-grid" data-category="plat froid" data-price="abordable" data-difficulty="facile">
+            <div class="uk-width-1-1 uk-width-expand@m">
+              <span class="uk-hidden@m">
+                <span class="uk-label">plat froid</span>
+                &nbsp;
+              </span>
+              <div class="uk-hidden@s uk-margin-top"></div>
+              <span class="uk-hidden@m uk-text-bold">Tartare de saumon</span>
+              <div class="uk-hidden@s uk-margin-bottom"></div>
+              <span class="uk-visible@m">Tartare de saumon</span>
+            </div>
+            <div class="uk-visible@m uk-width-small@m">
+              <span class="uk-visible@m">plat froid</span>
+            </div>
+            <div class="uk-hidden@m uk-width-1-1">
+              <div class="uk-grid">
+                <div class="uk-width-1-3">
+                  Temps
+                </div>
+                <div class="uk-width-1-3">
+                  Coût
+                </div>
+                <div class="uk-width-1-3">
+                  Difficulté
+                </div>
+              </div>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
+              <span class="uk-visible@s">
+                <span uk-icon="clock"></span>&nbsp;
+              </span>
               30m
-            </td>
-            <td>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
               <span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span>
-            </td>
-            <td>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
               <span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span>
-            </td>
-          </tr>
-        
-      </tbody>
-    </table>
+            </div>
+          </div>
+        </a>
+      
+    </div>
   </div>
 
-        </div>
       </div>
+
       <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
     </body>
