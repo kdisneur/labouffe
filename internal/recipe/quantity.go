@@ -11,7 +11,7 @@ type QuantityUnit int
 // Quantity represents an ingredient quantity and can be
 // represented in gramm (g) or centiliter (cl)
 type Quantity struct {
-	Value int
+	Value float64
 	Unit  QuantityUnit
 }
 
@@ -41,7 +41,7 @@ const (
 )
 
 func (q Quantity) String() string {
-	return fmt.Sprintf("%d%s", q.Value, q.Unit)
+	return fmt.Sprintf("%g%s", q.Value, q.Unit)
 }
 
 // UnmarshalYAML is the function in charge of unmatshalling the string value to a Go constant
@@ -57,15 +57,9 @@ func (q *Quantity) UnmarshalYAML(unmarshal func(interface{}) error) error {
 	}
 
 	for i := range allNamedUnits {
-		var quantity int
+		var quantity float64
 
-		if _, err := fmt.Sscanf(rawValue, fmt.Sprintf("%%d%s", allNamedUnits[i]), &quantity); err != nil {
-			continue
-		}
-
-		if rawValue != fmt.Sprintf("%d%s", quantity, allNamedUnits[i]) {
-			// it makes sure we don't have additional characters.
-			// For example: `12clx` would match `12cl` if only relying on Sscanf
+		if _, err := fmt.Sscanf(rawValue, fmt.Sprintf("%%f%s ", allNamedUnits[i]), &quantity); err != nil {
 			continue
 		}
 
