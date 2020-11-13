@@ -35,39 +35,61 @@
       </div>
     </div>
 
-    <table class="uk-table uk-table-divider">
-      <thead>
-        <tr>
-          <th>Nom</th>
-          <th>Catégorie</th>
-          <th>Total time</th>
-          <th>Coût</th>
-          <th>Difficulté</th>
-        </tr>
-      </thead>
-      <tbody class="js-filter">
-        {{ range $recipe := .Data.Recipes }}
-          <tr class="tm-table-row-clickable" data-category="{{ $recipe.Category }}" data-price="{{ $recipe.Pricing }}" data-difficulty="{{ $recipe.Difficulty }}">
-            <td>
-              <a class="uk-link-text" href="{{ $.Site.PublicURL }}/recipes/{{ $recipe.Code }}">
-                {{ $recipe.Title }}
-              </a>
-            </td>
-            <td class="uk-text-capitalize">{{ $recipe.Category }}</td>
-            <td>
-              <span uk-icon="clock"></span>&nbsp;
+    <div class="uk-grid uk-visible@m uk-padding-small uk-padding-remove-left uk-padding-remove-right">
+      <div class="uk-width-expand@m"><b>Nom</b></div>
+      <div class="uk-width-small@m"><b>Catégorie</b></div>
+      <div class="uk-width-small@m"><b>Total time</b></div>
+      <div class="uk-width-small@m"><b>Coût</b></div>
+      <div class="uk-width-small@m"><b>Difficulté</b></div>
+    </div>
+
+    <div class="js-filter uk-margin-bottom">
+      {{ range $recipe := .Data.Recipes }}
+        <hr>
+        <a class="uk-link-text tm-link-no-highlight" href="{{ $.Site.PublicURL }}/recipes/{{ $recipe.Code }}">
+          <div class="uk-grid" data-category="{{ $recipe.Category }}" data-price="{{ $recipe.Pricing }}" data-difficulty="{{ $recipe.Difficulty }}">
+            <div class="uk-width-1-1 uk-width-expand@m">
+              <span class="uk-hidden@m">
+                <span class="uk-label">{{ $recipe.Category }}</span>
+                &nbsp;
+              </span>
+              <div class="uk-hidden@s uk-margin-top"></div>
+              <span class="uk-hidden@m uk-text-bold">{{ $recipe.Title }}</span>
+              <div class="uk-hidden@s uk-margin-bottom"></div>
+              <span class="uk-visible@m">{{ $recipe.Title }}</span>
+            </div>
+            <div class="uk-visible@m uk-width-small@m">
+              <span class="uk-visible@m">{{ $recipe.Category }}</span>
+            </div>
+            <div class="uk-hidden@m uk-width-1-1">
+              <div class="uk-grid">
+                <div class="uk-width-1-3">
+                  Temps
+                </div>
+                <div class="uk-width-1-3">
+                  Coût
+                </div>
+                <div class="uk-width-1-3">
+                  Difficulté
+                </div>
+              </div>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
+              <span class="uk-visible@s">
+                <span uk-icon="clock"></span>&nbsp;
+              </span>
               {{ $recipe.TotalDuration | duration }}
-            </td>
-            <td>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
               {{ $recipe.PricingScale | scale "nut" (len $.Data.AllPrices) }}
-            </td>
-            <td>
+            </div>
+            <div class="uk-width-1-3 uk-width-small@m">
               {{ $recipe.DifficultyScale | scale "nut" (len $.Data.AllDifficulties) }}
-            </td>
-          </tr>
-        {{ end }}
-      </tbody>
-    </table>
+            </div>
+          </div>
+        </a>
+      {{ end }}
+    </div>
   </div>
 {{ end }}
 
