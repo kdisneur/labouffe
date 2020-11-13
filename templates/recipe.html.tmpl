@@ -1,13 +1,13 @@
 {{ define "content" }}
-  <div class="uk-width-3-4 uk-align-center">
+  <div class="uk-width-3-4@l uk-align-center">
     <h1 class="uk-heading-small uk-heading-divider uk-margin-remove-top">{{ .Data.Title }}</h1>
 
     <div uk-grid="true">
-      <div class="uk-width-1-2">
+      <div class="uk-width-1-2@s">
         <div uk-grid="true">
           <div class="uk-width-1-2">
             <dl class="uk-description-list uk-description-list-divider">
-              <dt>Temps de préparation</dt>
+              <dt><span class="uk-visible@s">Temps de </span>préparation</dt>
               <dd>{{ .Data.Preparation.TimeDuration | duration }}</dd>
 
               <dt>Coût</dt>
@@ -16,7 +16,7 @@
           </div>
           <div class="uk-width-1-2">
             <dl class="uk-description-list uk-description-list-divider">
-              <dt>Temps de cuisson</dt>
+              <dt><span class="uk-visible@s">Temps de </span>cuisson</dt>
               <dd>{{ .Data.Cooking.TimeDuration | duration }}</dd>
 
               <dt>Difficulté</dt>
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-      <div class="uk-width-1-2">
+      <div class="uk-width-1-2@s">
         <h5 class="uk-text-uppercase">
           Ingrédients pour {{ .Data.Servings.Quantity }} {{ .Data.Servings.Type }}
         </h5>
@@ -49,7 +49,8 @@
         {{ end }}
       </div>
     </div>
-    <div class="uk-margin-large-top">
+    <div>
+      <div class="uk-hidden@s uk-margin-large-top"></div>
       <h5 class="uk-text-uppercase">Étapes</h5>
       {{ range $instruction := .Data.Instructions }}
         <p>{{ $instruction }}</p>
