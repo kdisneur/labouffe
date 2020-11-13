@@ -1,6 +1,6 @@
 # github.com/BurntSushi/toml v0.3.1
 github.com/BurntSushi/toml
-# github.com/cosmtrek/air v1.12.1
+# github.com/cosmtrek/air v1.12.4
 ## explicit
 github.com/cosmtrek/air
 github.com/cosmtrek/air/runner

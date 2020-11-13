@@ -1,10 +1,12 @@
 package runner
 
 import (
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"runtime"
+	"strings"
 	"time"
 
 	"github.com/imdario/mergo"
@@ -12,6 +14,7 @@ import (
 )
 
 const (
+	dftTOML = ".air.toml"
 	dftConf = ".air.conf"
 	airWd   = "air_wd"
 )
@@ -58,16 +61,10 @@ type cfgMisc struct {
 
 func initConfig(path string) (cfg *config, err error) {
 	if path == "" {
-		// when path is blank, first find `.air.conf` in `air_wd` and current working directory, if not found, use defaults
-		if wd := os.Getenv(airWd); wd != "" {
-			path = filepath.Join(wd, dftConf)
-		} else {
-			path, err = dftConfPath()
-			if err != nil {
-				return nil, err
-			}
+		cfg, err = defaultPathConfig()
+		if err != nil {
+			return nil, err
 		}
-		cfg, _ = readConfigOrDefault(path)
 	} else {
 		cfg, err = readConfigOrDefault(path)
 		if err != nil {
@@ -80,6 +77,34 @@ func initConfig(path string) (cfg *config, err error) {
 	}
 	err = cfg.preprocess()
 	return cfg, err
+}
+
+func defaultPathConfig() (*config, error) {
+	// when path is blank, first find `.air.toml`, `.air.conf` in `air_wd` and current working directory, if not found, use defaults
+	for _, name := range []string{dftTOML, dftConf} {
+		var path string
+		if wd := os.Getenv(airWd); wd != "" {
+			path = filepath.Join(wd, name)
+		} else {
+			wd, err := os.Getwd()
+			if err != nil {
+				return nil, err
+			}
+			path = filepath.Join(wd, name)
+		}
+
+		cfg, err := readConfig(path)
+		if err == nil {
+			if name == dftConf {
+				fmt.Println("`.air.conf` will be deprecated soon, recommend using `.air.toml`.")
+			}
+
+			return cfg, nil
+		}
+	}
+
+	dftCfg := defaultConfig()
+	return &dftCfg, nil
 }
 
 func defaultConfig() config {
@@ -118,16 +143,27 @@ func defaultConfig() config {
 	}
 }
 
+func readConfig(path string) (*config, error) {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		return nil, err
+	}
+
+	cfg := new(config)
+	if err = toml.Unmarshal(data, cfg); err != nil {
+		return nil, err
+	}
+
+	return cfg, nil
+}
+
 func readConfigOrDefault(path string) (*config, error) {
 	dftCfg := defaultConfig()
-	data, err := ioutil.ReadFile(path)
+	cfg, err := readConfig(path)
 	if err != nil {
 		return &dftCfg, err
 	}
-	cfg := new(config)
-	if err = toml.Unmarshal(data, cfg); err != nil {
-		return &dftCfg, err
-	}
+
 	return cfg, nil
 }
 
@@ -151,6 +187,36 @@ func (c *config) preprocess() error {
 	for i := range ed {
 		ed[i] = cleanPath(ed[i])
 	}
+
+	// Fix the default configuration is not used in Windows
+	// Use the unix configuration on Windows
+	if runtime.GOOS == "windows" {
+
+		runName := "start"
+		extName := ".exe"
+		originBin := c.Build.Bin
+		if !strings.HasSuffix(c.Build.Bin, extName) {
+
+			c.Build.Bin += extName
+		}
+
+		if 0 < len(c.Build.FullBin) {
+
+			if !strings.HasSuffix(c.Build.FullBin, extName) {
+
+				c.Build.FullBin += extName
+			}
+			if !strings.HasPrefix(c.Build.FullBin, runName) {
+				c.Build.FullBin = runName + " " + c.Build.FullBin
+			}
+		}
+
+		// bin=/tmp/main  cmd=go build -o ./tmp/main.exe main.go
+		if !strings.Contains(c.Build.Cmd, c.Build.Bin) && strings.Contains(c.Build.Cmd, originBin) {
+			c.Build.Cmd = strings.Replace(c.Build.Cmd, originBin, c.Build.Bin, 1)
+		}
+	}
+
 	c.Build.ExcludeDir = ed
 	if len(c.Build.FullBin) > 0 {
 		c.Build.Bin = c.Build.FullBin
@@ -171,24 +237,12 @@ func (c *config) colorInfo() map[string]string {
 	}
 }
 
-func dftConfPath() (string, error) {
-	wd, err := os.Getwd()
-	if err != nil {
-		return "", err
-	}
-	return filepath.Join(wd, dftConf), nil
-}
-
 func (c *config) buildLogPath() string {
 	return filepath.Join(c.tmpPath(), c.Build.Log)
 }
 
 func (c *config) buildDelay() time.Duration {
 	return time.Duration(c.Build.Delay) * time.Millisecond
-}
-
-func (c *config) fullPath(path string) string {
-	return filepath.Join(c.Root, path)
 }
 
 func (c *config) binPath() string {
