@@ -1,10 +1,8 @@
-# Air [![Go](https://github.com/cosmtrek/air/workflows/Go/badge.svg)](https://github.com/cosmtrek/air/actions?query=workflow%3AGo+branch%3Amaster) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4885b8dddaa540f9ae6fe850b4611b7b)](https://www.codacy.com/app/cosmtrek/air?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cosmtrek/air&amp;utm_campaign=Badge_Grade) [![Go Report Card](https://goreportcard.com/badge/github.com/cosmtrek/air)](https://goreportcard.com/report/github.com/cosmtrek/air)
+# Air [![CircleCI](https://circleci.com/gh/cosmtrek/air/tree/master.svg?style=shield)](https://circleci.com/gh/cosmtrek/air/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4885b8dddaa540f9ae6fe850b4611b7b)](https://www.codacy.com/app/cosmtrek/air?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cosmtrek/air&amp;utm_campaign=Badge_Grade) [![Go Report Card](https://goreportcard.com/badge/github.com/cosmtrek/air)](https://goreportcard.com/report/github.com/cosmtrek/air)
 
 :cloud: Live reload for Go apps
 
 ![air](docs/air.png)
-
-:fire::fire::fire: [JOB HIRING](https://github.com/cosmtrek/air/issues/59)
 
 ## Motivation
 
@@ -36,9 +34,23 @@ The classic way to install
 go get -u github.com/cosmtrek/air
 ```
 
-### macOS, Linux, Windows
+### macOS
 
-The binary is published on the [release page](https://github.com/cosmtrek/air/releases).
+```bash
+curl -fLo air https://git.io/darwin_air
+```
+
+### Linux
+
+```bash
+curl -fLo air https://git.io/linux_air
+```
+
+### Windows
+
+```bash
+curl -fLo air.exe https://git.io/windows_air
+```
 
 P.S. Great thanks mattn's [PR](https://github.com/cosmtrek/air/pull/1) for supporting Windows platform.
 
@@ -126,10 +138,6 @@ BTW: Pull requests are welcome~
 ## Sponsor
 
 <a href="https://www.buymeacoffee.com/36lcNbW" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
-
-Huge thanks to the following supporters. I've always been remembering your kindness.
-
-* Peter Aba
 
 ## License
 
