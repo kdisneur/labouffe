@@ -28,7 +28,7 @@ type RecipesView struct {
 
 // RecipeView is the data necessary to build a recipe template
 type RecipeView struct {
-	recipe.Recipe
+	*recipe.Recipe
 	TotalDuration   time.Duration
 	PricingScale    int
 	DifficultyScale int
@@ -36,12 +36,12 @@ type RecipeView struct {
 
 // IngredientView is the data necessary to build an ingredient template
 type IngredientView struct {
-	recipe.Ingredient
+	*recipe.Ingredient
 	Recipes []*RecipeView
 }
 
 // GenerateSite generates the whole website
-func GenerateSite(cfg SiteConfig, ingredients []recipe.Ingredient, recipes []recipe.Recipe) error {
+func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*recipe.Recipe) error {
 	if err := os.RemoveAll(cfg.OutputFolderPath); err != nil {
 		return fmt.Errorf("can't remove output folder '%s': %v", cfg.OutputFolderPath, err)
 	}

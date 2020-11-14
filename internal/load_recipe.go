@@ -10,7 +10,7 @@ import (
 )
 
 // LoadIngredientAndRecipes is in charge of loading / parsing / validating all ingredients and recipes data
-func LoadIngredientAndRecipes(ingredientpath string, recipesfolderpath string) ([]recipe.Ingredient, []recipe.Recipe, error) {
+func LoadIngredientAndRecipes(ingredientpath string, recipesfolderpath string) ([]*recipe.Ingredient, []*recipe.Recipe, error) {
 	ingredientfile, err := os.Open(ingredientpath)
 	if err != nil {
 		return nil, nil, fmt.Errorf("can't open ingredient file '%s': %v", ingredientpath, err)
@@ -51,6 +51,10 @@ func LoadIngredientAndRecipes(ingredientpath string, recipesfolderpath string) (
 
 		return nil
 	})
+
+	if err := builder.LoadRecipeIngredients(); err != nil {
+		return nil, nil, fmt.Errorf("can't validate ingredients: %v", err)
+	}
 
 	if err != nil {
 		return nil, nil, fmt.Errorf("can't import recipes from '%s': %v", recipesfolderpath, err)

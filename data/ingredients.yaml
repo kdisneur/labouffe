@@ -91,6 +91,7 @@ pomme-de-terre:
   title: Pomme de terre
 puree:
   title: Purée
+  recipe: puree-pommes-de-terre
 saumon-frais:
   title: Saumon frais
 sel:

@@ -9,7 +9,15 @@
     <tbody>
       {{ range $ingredient := .Data }}
         <tr class="tm-table-row-clickable">
-          <td>{{ $ingredient.Title }}</td>
+          <td>
+            {{ if $ingredient.Recipe }}
+              <a  class="uk-link-text" href="{{ $.Site.PublicURL }}/recipes/{{ $ingredient.Recipe.Code }}">
+                {{ $ingredient.Title }}
+              </a>
+            {{ else }}
+              {{ $ingredient.Title }}
+            {{ end }}
+          </td>
           <td class="tm-table-field-number">
             <a href="{{ $.Site.PublicURL }}/ingredients/{{ $ingredient.Code }}">
               {{ len $ingredient.Recipes }}

@@ -8,7 +8,7 @@ import (
 
 // IncludedIngredient represents a recipe ingredient
 type IncludedIngredient struct {
-	Ingredient
+	*Ingredient
 	Quantity Quantity
 	Details  string
 }

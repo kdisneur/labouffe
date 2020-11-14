@@ -10,8 +10,8 @@ import (
 // Builder represents a recipe builder. It can parse and add new recipes
 // ad long as the ingredients already exist
 type Builder struct {
-	Ingredients []Ingredient
-	Recipes     []Recipe
+	Ingredients []*Ingredient
+	Recipes     []*Recipe
 }
 
 // NewBuilderFromYAMLIngredients creates a new builder for ingredients and recipes loading
@@ -25,7 +25,11 @@ func NewBuilderFromYAMLIngredients(input io.Reader) (*Builder, error) {
 	}
 
 	for _, data := range ingredients {
-		b.Ingredients = append(b.Ingredients, Ingredient(data))
+		b.Ingredients = append(b.Ingredients, &Ingredient{
+			Code:       data.Code,
+			Title:      data.Title,
+			recipeCode: data.RecipeCode,
+		})
 	}
 
 	return &b, nil
@@ -52,7 +56,7 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 		}
 	}
 
-	b.Recipes = append(b.Recipes, Recipe{
+	b.Recipes = append(b.Recipes, &Recipe{
 		Code:         code,
 		Category:     r.Category,
 		Title:        r.Title,
@@ -68,17 +72,48 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 	return nil
 }
 
+// LoadRecipeIngredients is a function that associate a recipe with
+// an ingredient. This function must be called only after the recipes
+// have already been loaded
+func (b *Builder) LoadRecipeIngredients() error {
+	for i := range b.Ingredients {
+		ingredient := b.Ingredients[i]
+		if ingredient.recipeCode == "" {
+			continue
+		}
+
+		recipe, err := b.findRecipeByCode(ingredient.recipeCode)
+		if err != nil {
+			return fmt.Errorf("can't associate ingredient '%s' with recipe '%s': %v", ingredient.Code, ingredient.recipeCode, err)
+		}
+
+		ingredient.Recipe = recipe
+	}
+
+	return nil
+}
+
 // Length returns the number of parsed recipes
 func (b *Builder) Length() int {
 	return len(b.Recipes)
 }
 
-func (b *Builder) findIngredientByCode(code string) (Ingredient, error) {
+func (b *Builder) findIngredientByCode(code string) (*Ingredient, error) {
 	for _, ingredient := range b.Ingredients {
 		if ingredient.Code == code {
 			return ingredient, nil
 		}
 	}
 
-	return Ingredient{}, fmt.Errorf("not found")
+	return nil, fmt.Errorf("not found")
+}
+
+func (b *Builder) findRecipeByCode(code string) (*Recipe, error) {
+	for _, recipe := range b.Recipes {
+		if recipe.Code == code {
+			return recipe, nil
+		}
+	}
+
+	return nil, fmt.Errorf("not found")
 }

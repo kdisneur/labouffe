@@ -7,14 +7,17 @@ import (
 
 // Ingredient represents an actual ingredient
 type Ingredient struct {
-	Code  string
-	Title string
+	Code       string
+	Title      string
+	recipeCode string
+	Recipe     *Recipe
 }
 
 // YAMLIngredient represents an ingredient in its YAML format
 type YAMLIngredient struct {
-	Code  string `yaml:"-"`
-	Title string `yaml:"title"`
+	Code       string `yaml:"-"`
+	Title      string `yaml:"title"`
+	RecipeCode string `yaml:"recipe"`
 }
 
 // YAMLIngredients is a type used to keep a map ordered
