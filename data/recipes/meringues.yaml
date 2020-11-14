@@ -1,0 +1,26 @@
+title: Meringues
+category: biscuit
+preparation: 20m
+cooking: 2h
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 30
+  type: unités
+ingredients:
+  blanc-oeuf:
+    quantity: 4
+  sucre:
+    quantity: 250g
+  citron:
+    quantity: 0
+    details: 1 trait
+instructions:
+  - Ajouter le citron aux blancs
+  - Battre à petite vitesse pendant 1m ou 2m jusqu'à ce que ça commence à mousser
+  - Ajouter le sucre en 1 fois
+  - Battre à grande vitesse pendant 5m
+  - Mettre la meringue dans une poche à douille cannelée
+  - Former des meringues sur des feuilles de papier cuisson
+  - Enfourner à 90°C pendant 1h
+  - Baisser à 80°C pendant 1h

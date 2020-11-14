@@ -1,12 +1,16 @@
 ---
 ail:
   title: Ail
+amande:
+  title: Amande
 avocat:
   title: Avocat
 beurre:
   title: Beurre
 biere-brune:
   title: Bière brune
+blanc-oeuf:
+  title: Blanc d'oeuf
 bouillon-boeuf:
   title: Bouillon de boeuf
 camembert:
@@ -51,10 +55,14 @@ maizena:
   title: Maizena
 moutarde:
   title: Moutarde
+noisettes:
+  title: Noisettes
 oeuf:
   title: Oeufs
 oignon:
   title: Oignon
+orange:
+  title: Orange
 origan:
   title: Origan
 pain-epice:
@@ -75,6 +83,8 @@ sel:
   title: Sel
 sucre:
   title: Sucre
+sucre-vanille:
+  title: Sucre vanillé
 sucre-glace:
   title: Sucre glace
 thym:

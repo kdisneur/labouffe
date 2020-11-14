@@ -1,0 +1,30 @@
+title: Hélenettes
+category: biscuit
+preparation: 30m
+cooking: 8m
+difficulty: facile
+pricing: économique
+sevings:
+  quantity: 12
+  type: unités
+ingredients:
+  jaune-oeuf:
+    quantity: 2
+  sucre:
+    quantity: 100g
+  beurre:
+    quantity: 80g
+  amande:
+    quantity: 100g
+    details: poudre
+  noisettes:
+    quantity: 100g
+    details: poudre
+instructions:
+  - Préchauffer le four à 200°C
+  - Faire fondre le beurre et laisser refroidir
+  - Travailler les jaunes d'oeufs avec le sucre
+  - Ajouter le beurre fondu
+  - Incorporer la farine et les amandes
+  - Utiliser un cercle de dressage pour façonner les biscuits et les disposer sur une plaque recouverte de papier sulfurisé (les espacer)
+  - Enfourner 8-10m (surveiller la cuisson)
