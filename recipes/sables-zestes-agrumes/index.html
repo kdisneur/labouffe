@@ -1,0 +1,311 @@
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Site web listant nos recettes" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+      <style>
+      .uk-offcanvas-bar {
+        background: #fff;
+      }
+      .uk-offcanvas-bar .uk-subnav {
+        margin-left: 0;
+        font-size: .875rem;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-nav-default .uk-nav-header {
+        border-bottom: 1px solid #e5e5e5;
+        color: #222;
+        text-transform: uppercase;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-subnav > li {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .uk-offcanvas-bar .uk-subnav > li > a,
+      .uk-offcanvas-bar .uk-subnav > li > a:focus,
+      .uk-offcanvas-bar .uk-subnav > li > a:hover {
+        text-transform: capitalize;
+        color: #999 !important;
+      }
+
+      .uk-offcanvas-bar .uk-subnav > li.uk-active > a {
+        background-color: #1e87f0;
+        color: #fff !important;
+      }
+
+      .tm-logo-title {
+        margin-left: 5px;
+      }
+      .tm-logo-title img {
+        display: block;
+        float: left;
+      }
+      .tm-logo-title span {
+        padding-top: 5px;
+        display: inline-block;
+      }
+
+      .tm-link-no-highlight,
+      .tm-link-no-highlight:hover,
+      .tm-link-no-highlight:focus {
+        color: #666 !important;
+        text-decoration: none;
+      }
+      </style>
+      <title>La bouffe, hein!</title>
+    </head>
+    <body>
+      <nav class="uk-navbar-container tm-navbar-container uk-active" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="/" class="uk-link tm-no-underline tm-logo-title">
+            <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="42" />
+              <span class="uk-margin-small-left uk-text-large">La bouffe</span>
+            </a>
+          </div>
+
+          <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon href="" uk-toggle="target: #small-menu"></a>
+            <div id="small-menu" uk-offcanvas="mode: push; overlay: true">
+              <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
+                <div class="uk-panel">
+                    <ul class="uk-subnav uk-subnav-pill tm-nav">
+                      <li class="uk-subnav-header">Général</a>
+                      <li class="uk-margin-top uk-active">
+                        <a href="/">recettes</a>
+                      </li>
+                      <li class="uk-margin-top ">
+                        <a href="/ingredients">ingrédients</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <ul class="uk-navbar-nav uk-visible@s">
+              <li class=" uk-active ">
+                <a href="/">recettes</a>
+              </li>
+              <li class="">
+                <a href="/ingredients">ingrédients</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="uk-container uk-margin-medium-top">
+        
+
+        
+  <div class="uk-width-3-4@l uk-align-center">
+    <h1 class="uk-heading-small uk-heading-divider uk-margin-remove-top">Sablés aux zestes d&#39;agrumes</h1>
+
+    <div uk-grid="true">
+      <div class="uk-width-1-2@s">
+        <div uk-grid="true">
+          <div class="uk-width-1-2">
+            <dl class="uk-description-list uk-description-list-divider">
+              <dt><span class="uk-visible@s">Temps de </span>préparation</dt>
+              <dd>45m</dd>
+
+              <dt>Coût</dt>
+              <dd><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></dd>
+            </dl>
+          </div>
+          <div class="uk-width-1-2">
+            <dl class="uk-description-list uk-description-list-divider">
+              <dt><span class="uk-visible@s">Temps de </span>cuisson</dt>
+              <dd>20m</dd>
+
+              <dt>Difficulté</dt>
+              <dd><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-1-2@s">
+        <h5 class="uk-text-uppercase">
+          Ingrédients pour 8 personnes
+        </h5>
+
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              <a  class="uk-link-text" href="/ingredients/jaune-oeuf">
+                Jaune d&#39;oeuf
+                
+              </a>
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              <a  class="uk-link-text" href="/ingredients/oeuf">
+                Oeufs
+                
+              </a>
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              <a  class="uk-link-text" href="/ingredients/sucre">
+                Sucre
+                
+              </a>
+            </div>
+            
+              <div>
+                125g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              <a  class="uk-link-text" href="/ingredients/farine">
+                Farine
+                
+              </a>
+            </div>
+            
+              <div>
+                250g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              <a  class="uk-link-text" href="/ingredients/citron">
+                Citron
+                
+                (zeste)
+                
+              </a>
+            </div>
+            
+              <div>
+                1cs
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              <a  class="uk-link-text" href="/ingredients/orange">
+                Orange
+                
+                (zeste)
+                
+              </a>
+            </div>
+            
+              <div>
+                1cs
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              <a  class="uk-link-text" href="/ingredients/beurre">
+                Beurre
+                
+                (mou)
+                
+              </a>
+            </div>
+            
+              <div>
+                125g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              <a  class="uk-link-text" href="/ingredients/sucre-vanille">
+                Sucre vanillé
+                
+                (sachet)
+                
+              </a>
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              <a  class="uk-link-text" href="/ingredients/sel">
+                Sel
+                
+                (pincée)
+                
+              </a>
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+    <div>
+      <div class="uk-hidden@s uk-margin-large-top"></div>
+      <h5 class="uk-text-uppercase">Étapes</h5>
+      
+        <p>Préchauffez le four à 140°C</p>
+      
+        <p>Battez l&#39;oeuf entier dans un saladier</p>
+      
+        <p>Incorporez le sucre en poudre, les zestes d&#39;agrumes râpés, le sel et le sucre vanillé. Mélangez bien jusqu&#39;à ce que le sucre soit bien fondu.</p>
+      
+        <p>Mettez toute la farine d&#39;un seul coup. Mélangez d&#39;abord à la cuillère en allant du fond vers la surface, puis à la main en émiettant pour obtenir comme du sable.</p>
+      
+        <p>Ajoutez alors le beurre mou coupé en petits cubes, en pétrissant jusqu&#39;à ce que la pâte devienne homogène et ne colle plus aux doigts.</p>
+      
+        <p>Roulez la pâte en boule et laissez reposer 1 heure au froid.</p>
+      
+        <p>Au bout de ce temps, abaissez la pâte au rouleau sur la table farinée, à 5mm d&#39;épaisseur.</p>
+      
+        <p>Découpez à l&#39;aide d&#39;un ou plusieurs emporte-pièces les biscuits. Placez-les sur une plaque de four recouverte de papier sulfurisé. Dorez-les au pinceau avec le jaune d&#39;oeuf battu.</p>
+      
+        <p>Enfournez pendant 20m.</p>
+      
+        <p>A la sortie du four, laissez refroidir les sablés sur une grille avant de les décoller de la plaque.</p>
+      
+        <p>Conservez les sablés dans une boîte hermétique jusqu&#39;à la dégustation.</p>
+      
+    </div>
+  </div>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    </body>
+  </html>
+
