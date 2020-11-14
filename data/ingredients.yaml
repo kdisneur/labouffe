@@ -3,6 +3,8 @@ ail:
   title: Ail
 amande:
   title: Amande
+arome-vanille:
+  title: Arôme de vanille
 avocat:
   title: Avocat
 beurre:
@@ -15,6 +17,8 @@ bouillon-boeuf:
   title: Bouillon de boeuf
 camembert:
   title: Camembert
+cannelle:
+  title: Cannelle
 cassonade:
   title: Cassonade
 chocolat:
@@ -33,6 +37,8 @@ emmental-rape:
   title: Emmental râpé
 epinards:
   title: Épinards
+extrait-vanille:
+  title: Extrait de vanille
 farine:
   title: Farine
 fleur-sel:
@@ -61,6 +67,8 @@ moutarde:
   title: Moutarde
 noisettes:
   title: Noisettes
+noix-coco:
+  title: Noix de coco
 oeuf:
   title: Oeufs
 oignon:
@@ -101,4 +109,3 @@ vin-rouge:
   title: Vin rouge
 vinaigre:
   title: Vinaigre
-  
