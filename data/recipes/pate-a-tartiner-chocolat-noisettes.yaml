@@ -1,0 +1,36 @@
+title: Pâte à tartiner chocolat noisettes
+category: biscuit
+preparation: 5m
+cooking: 6m30s
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 2
+  type: unités
+ingredients:
+  noisettes:
+    quantity: 30g
+    details : grillées en poudre
+  chocolat:
+    quantity: 120g
+    details: min 52% cacao
+  chocolat-praline:
+    quantity: 170g
+  lait-concentre:
+    quantity: 400g
+  huile-noisettes:
+    quantity: 30g
+  lait:
+    quantity: 10g
+  arome-vanille:
+    quantity: 5g
+  sel:
+    quantity: 1
+    details: pincée
+instructions:
+  - Dans le Thermomix, mettre la poudre de noisettes, le lait concentré, le chocolat en morceaux, l'huile de noisettes et le sel
+  - Chauffer 4m à 60°, vitesse mélange
+  - Ajouter le lait et la vanille
+  - Chauffer 2m30 à 60°, vitesse 2
+  - Transvaser le contenu dans les pots à confiture
+  - Conserver à température ambiante

@@ -4,7 +4,7 @@ preparation: 10m
 cooking: 20m
 difficulty: facile
 pricing: économique
-sevings:
+servings:
   quantity: 20
   type: unités
 ingredients:
@@ -25,7 +25,7 @@ ingredients:
   sucre-glace:
     quantity: 0
 instructions:
-  - Dans un cul de poule, fouetter le beurre mou et l'oeuf
+  - Dans un saladier, fouetter le beurre mou et l'oeuf
   - Ajouter la farine, la levure, le sucre en poudre et fouetter à nouveau
   - Verser le jus de citron avec le zeste et fouetter jusqu'à obtenir une pâte homogène
   - Filmer la pâte au contact et réserver la au réfrigérateur pendant 30m

@@ -47,6 +47,8 @@ gousse-vanille:
   title: Gousse de vanille
 gras-de-boeuf:
   title: Gras de boeuf
+huile-noisettes:
+  title: Huile de noisettes
 huile-olive:
   title: Huile d'olive
 jaune-oeuf:
@@ -55,6 +57,8 @@ joue-boeuf:
   title: Joue de boeuf
 lait:
   title: Lait
+lait-concentre:
+  title: Lait concentré sucré
 lardons:
   title: Lardons fumés
 laurier:
@@ -90,8 +94,16 @@ pomme:
 pomme-de-terre:
   title: Pomme de terre
 puree:
-  title: Purée
   recipe: puree-pommes-de-terre
+  title: Purée
+ras-el-hanout:
+  title: Ras el Hanout
+riz:
+  title: Riz
+safran:
+  title: Safran
+saucisse-fumée:
+  title: Saucisse fumée
 saumon-frais:
   title: Saumon frais
 sel:
@@ -110,3 +122,5 @@ vin-rouge:
   title: Vin rouge
 vinaigre:
   title: Vinaigre
+chocolat-praline:
+  title: Chocolat praliné dessert

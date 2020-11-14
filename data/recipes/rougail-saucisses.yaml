@@ -1,0 +1,47 @@
+title: Rougail saucisses
+category: plat chaud
+cooking: 80m
+preparation: 15m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  saucisse-fumée:
+    quantity: 4
+    details: Diots de savoie
+  oignon:
+    quantity: 2
+  ail:
+    quantity: 2
+    details: gousse
+  concasse-tomate:
+    quantity: 600g
+  thym:
+    quantity: 0
+  huile-olive:
+    quantity: 2cs
+  riz: 
+    quantity: 240g
+  safran:
+    quantity: 2
+    details: dosettes
+  ras-el-hanout:
+    quantity: 2cc
+  sel:
+    quantity: 0
+  poivre:
+    quantity: 0
+instructions:
+  - Faire bouillir les saucisses 20m
+  - Emincer les oignons
+  - Dans une sauteuse, faire revenir les oignons et les gousses d'ail écrasées dans l'huile d'olive
+  - Couper les saucisses en tranches épaisses
+  - Ajouter les saucisses, laisser cuire jusqu'à coloration
+  - Ajouter le thym, le laurier, le concassé de tomates et les épices
+  - Saler, poivrer
+  - Laisser cuire à feu doux durant 60m
+  - Faire cuire le riz dans l'eau bouillante
+  - Egoutter le riz
+  - Servir le rougail saucisses accompagné du riz
