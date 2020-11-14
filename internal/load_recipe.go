@@ -52,12 +52,16 @@ func LoadIngredientAndRecipes(ingredientpath string, recipesfolderpath string) (
 		return nil
 	})
 
+	if err != nil {
+		return nil, nil, fmt.Errorf("can't import recipes from '%s': %v", recipesfolderpath, err)
+	}
+
 	if err := builder.LoadRecipeIngredients(); err != nil {
 		return nil, nil, fmt.Errorf("can't validate ingredients: %v", err)
 	}
 
-	if err != nil {
-		return nil, nil, fmt.Errorf("can't import recipes from '%s': %v", recipesfolderpath, err)
+	if err := builder.LoadRecipeInstructions(); err != nil {
+		return nil, nil, fmt.Errorf("can't validate recipe instructions: %v", err)
 	}
 
 	return builder.Ingredients, builder.Recipes, nil

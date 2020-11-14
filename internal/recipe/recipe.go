@@ -30,7 +30,7 @@ type Recipe struct {
 	Difficulty   Difficulty
 	Pricing      Price
 	Servings     Servings
-	Instructions []string
+	Instructions []*Instruction
 	Ingredients  []IncludedIngredient
 }
 
@@ -43,7 +43,7 @@ type YAMLRecipe struct {
 	Difficulty   Difficulty              `yaml:"difficulty"`
 	Pricing      Price                   `yaml:"pricing"`
 	Servings     Servings                `yaml:"servings"`
-	Instructions []string                `yaml:"instructions"`
+	Instructions []*Instruction          `yaml:"instructions"`
 	Ingredients  YAMLIncludedIngredients `yaml:"ingredients"`
 }
 

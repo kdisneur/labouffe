@@ -104,6 +104,30 @@ func (b *Builder) LoadRecipeIngredients() error {
 	return nil
 }
 
+// LoadRecipeInstructions is a function that associate a recipe with
+// a recipe step. This function must be called only after the recipes
+// have already been loaded
+func (b *Builder) LoadRecipeInstructions() error {
+	for i := range b.Recipes {
+		recipe := b.Recipes[i]
+		for i := range recipe.Instructions {
+			instruction := recipe.Instructions[i]
+			if instruction.recipeCode == "" {
+				continue
+			}
+
+			associatedRecipe, err := b.findRecipeByCode(instruction.recipeCode)
+			if err != nil {
+				return fmt.Errorf("recipe '%s': can't associate recipe '%s' for step '%s': %v", recipe.Code, instruction.recipeCode, instruction.Title, err)
+			}
+
+			instruction.Recipe = associatedRecipe
+		}
+	}
+
+	return nil
+}
+
 // Length returns the number of parsed recipes
 func (b *Builder) Length() int {
 	return len(b.Recipes)

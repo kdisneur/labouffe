@@ -33,7 +33,8 @@ ingredients:
   beurre:
     quantity: 20g
 instructions:
-  - Faire la purée
+  - instruction: Faire la purée
+    recipe: puree-pommes-de-terre
   - Emincer les oignons
   - Dans une sauteuse, faire revenir l'oignon et la gousse d'ail écrasée dans l'huile d'olive
   - Ajouter la viande, laisser cuire jusqu'à coloration
@@ -45,4 +46,3 @@ instructions:
   - Ajouter une couche de purée
   - Parsemer d'emmental râpé et de petits morceaux de beurre
   - Enfourner durant 20m
-  

@@ -68,7 +68,12 @@
       <div class="uk-hidden@s uk-margin-large-top"></div>
       <h5 class="uk-text-uppercase">Étapes</h5>
       {{ range $instruction := .Data.Instructions }}
-        <p>{{ $instruction }}</p>
+        <p>
+          {{ $instruction.Title }}
+          {{ if $instruction.Recipe }}
+            (<a href="{{ recipeURL $.Site.PublicURL $instruction.Recipe.Code }}">voir la recette</a>)
+          {{ end }}
+        </p>
       {{ end }}
     </div>
   </div>
