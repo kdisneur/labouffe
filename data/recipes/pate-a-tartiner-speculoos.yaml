@@ -1,0 +1,32 @@
+title: Pâte à tartiner speculoos
+category: biscuit
+preparation: 5m
+cooking: 4m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 1
+  type: unités
+ingredients:
+  speculoos:
+    quantity: 190g
+  sucre:
+    quantity: 20g
+  cassonade:
+    quantity: 20g
+  lait:
+    quantity: 100g
+  arome-vanille:
+    quantity: 5g
+  beurre:
+    quantity: 60g
+instructions:
+  - Dans le Thermomix, mettre les sucres
+  - Pulvériser 10s vitesse 9
+  - Ajouter les speculoos
+  - Pulvériser 15s vitesse 9
+  - Ajouter le lait, le beurre et la vanille
+  - Chauffer 4m à 50°C vitesse 3
+  - Pulvériser 5s vitesse 9
+  - Transvaser le contenu dans le pot à confiture
+  - Conserver au frigo

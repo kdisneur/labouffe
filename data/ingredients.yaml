@@ -23,6 +23,8 @@ cassonade:
   title: Cassonade
 chocolat:
   title: Chocolat
+chocolat-praline:
+  title: Chocolat praliné dessert
 citron:
   title: Citron
 concasse-tomate:
@@ -108,6 +110,8 @@ saumon-frais:
   title: Saumon frais
 sel:
   title: Sel
+speculoos:
+  title: Speculoos
 sucre:
   title: Sucre
 sucre-glace:
@@ -122,5 +126,3 @@ vin-rouge:
   title: Vin rouge
 vinaigre:
   title: Vinaigre
-chocolat-praline:
-  title: Chocolat praliné dessert
