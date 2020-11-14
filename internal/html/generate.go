@@ -76,8 +76,10 @@ func Generate(folder string, page *Page, values PageValues) error {
 
 func helpers() template.FuncMap {
 	return template.FuncMap{
-		"scale":    displayScale,
-		"duration": displayDuration,
+		"scale":         displayScale,
+		"duration":      displayDuration,
+		"ingredientURL": ingredientURL,
+		"recipeURL":     recipeURL,
 	}
 }
 
@@ -98,4 +100,12 @@ func displayScale(icon string, max int, current int) template.HTML {
 	}
 
 	return template.HTML(s.String())
+}
+
+func ingredientURL(publicURL string, code string) string {
+	return fmt.Sprintf("%s/ingredients/%s", publicURL, code)
+}
+
+func recipeURL(publicURL string, code string) string {
+	return fmt.Sprintf("%s/recipes/%s", publicURL, code)
 }

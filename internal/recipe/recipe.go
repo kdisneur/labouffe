@@ -9,8 +9,9 @@ import (
 // IncludedIngredient represents a recipe ingredient
 type IncludedIngredient struct {
 	*Ingredient
-	Quantity Quantity
-	Details  string
+	Quantity     Quantity
+	Details      string
+	Alternatives []*Ingredient
 }
 
 // Servings represents the number of people or number of items the recipe is made for
@@ -48,9 +49,10 @@ type YAMLRecipe struct {
 
 // YAMLIncludedIngredient represents an ingredient to include in a recipe
 type YAMLIncludedIngredient struct {
-	Code     string   `yaml:"-"`
-	Quantity Quantity `yaml:"quantity"`
-	Details  string   `yaml:"details"`
+	Code         string   `yaml:"-"`
+	Quantity     Quantity `yaml:"quantity"`
+	Details      string   `yaml:"details"`
+	Alternatives []string `yaml:"alternatives"`
 }
 
 // YAMLIncludedIngredients is a type used to keep a map ordered

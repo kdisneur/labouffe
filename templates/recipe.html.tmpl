@@ -33,17 +33,27 @@
         {{ range $ingredient := .Data.Ingredients }}
           <div class="uk-grid-small" uk-grid="true">
             <div class="uk-width-expand" uk-leader="true">
-              {{ $url := printf "%s/ingredients/%s" $.Site.PublicURL $ingredient.Code }}
+              {{ $url := ingredientURL $.Site.PublicURL $ingredient.Code }}
               {{ if $ingredient.Recipe }}
-                {{ $url = printf "%s/recipes/%s" $.Site.PublicURL $ingredient.Recipe.Code }}
+                {{ $url = recipeURL $.Site.PublicURL $ingredient.Recipe.Code }}
               {{ end }}
 
-              <a  class="uk-link-text" href="{{ $url }}">
+              <a class="uk-link-text" href="{{ $url }}">
                 {{ $ingredient.Title }}
-                {{ if ne $ingredient.Details "" }}
-                ({{ $ingredient.Details }})
-                {{ end }}
               </a>
+              {{ range $alternative := $ingredient.Alternatives }}
+                /
+                {{ $url := ingredientURL $.Site.PublicURL $alternative.Code }}
+                {{ if $alternative.Recipe }}
+                  {{ $url = recipeURL $.Site.PublicURL $alternative.Recipe.Code }}
+                {{ end }}
+                <a class="uk-link-text" href="{{ $url }}">
+                  {{ $alternative.Title }}
+                </a>
+              {{ end }}
+              {{ if ne $ingredient.Details "" }}
+                ({{ $ingredient.Details }})
+              {{ end }}
             </div>
             {{ if gt $ingredient.Quantity.Value 0.0 }}
               <div>

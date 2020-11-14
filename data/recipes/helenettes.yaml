@@ -17,9 +17,8 @@ ingredients:
   amande:
     quantity: 100g
     details: poudre
-  noisettes:
-    quantity: 100g
-    details: poudre
+    alternatives:
+      - noisettes
 instructions:
   - Préchauffer le four à 200°C
   - Faire fondre le beurre et laisser refroidir

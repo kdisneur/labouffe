@@ -49,10 +49,21 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 			return fmt.Errorf("can't find ingredient '%s'", item.Code)
 		}
 
+		alternatives := make([]*Ingredient, len(item.Alternatives))
+		for i := range item.Alternatives {
+			ingredient, err := b.findIngredientByCode(item.Alternatives[i])
+			if err != nil {
+				return fmt.Errorf("can't find ingredient '%s' as alternative to '%s'", item.Alternatives[i], item.Code)
+			}
+
+			alternatives[i] = ingredient
+		}
+
 		ingredients[i] = IncludedIngredient{
-			Ingredient: ingredient,
-			Quantity:   item.Quantity,
-			Details:    item.Details,
+			Ingredient:   ingredient,
+			Quantity:     item.Quantity,
+			Details:      item.Details,
+			Alternatives: alternatives,
 		}
 	}
 

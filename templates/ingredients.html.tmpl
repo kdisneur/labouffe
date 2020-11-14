@@ -11,7 +11,7 @@
         <tr class="tm-table-row-clickable">
           <td>
             {{ if $ingredient.Recipe }}
-              <a  class="uk-link-text" href="{{ $.Site.PublicURL }}/recipes/{{ $ingredient.Recipe.Code }}">
+              <a  class="uk-link-text" href="{{ recipeURL $.Site.PublicURL $ingredient.Recipe.Code }}">
                 {{ $ingredient.Title }}
               </a>
             {{ else }}
