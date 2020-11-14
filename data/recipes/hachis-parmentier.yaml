@@ -1,0 +1,48 @@
+title: Hachis parmentier
+category: plat chaud
+cooking: 80m
+preparation: 40m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  puree:
+    quantity: 800g
+  viande-hachee:
+    quantity: 500g
+  oignon:
+    quantity: 1
+  ail:
+    quantity: 1
+    detail: gousse
+  bouillon-boeuf:
+    quantity: 1
+    detail: tablette
+  concasse-tomate:
+    quantity: 100g
+  thym:
+    quantity: 0
+  laurier:
+    quantity: 0
+  huile-olive:
+    quantity: 2cs
+  emmental-rape:
+    quantity: 100g
+  beurre:
+    quantity: 20g
+instructions:
+  - Faire la purée
+  - Emincer les oignons
+  - Dans une sauteuse, faire revenir l'oignon et la gousse d'ail écrasée dans l'huile d'olive
+  - Ajouter la viande, laisser cuire jusqu'à coloration
+  - Diluer le bouillon de boeuf dans une tasse d'eau chaude
+  - Ajouter le bouillon, le thym, le laurier et le concassé de tomates à la viande
+  - Laisser cuire à feu doux durant 30m
+  - Préchauffer le four à 180 degrés
+  - Dans un plat, mettre la viande
+  - Ajouter une couche de purée
+  - Parsemer d'emmental râpé et de petits morceaux de beurre
+  - Enfourner durant 20m
+  

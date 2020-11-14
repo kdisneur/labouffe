@@ -29,6 +29,8 @@ creme-fraiche:
   title: Crême fraîche épaisse
 echalote:
   title: Echalote
+emmental-rape:
+  title: Emmental râpé
 epinards:
   title: Épinards
 farine:
@@ -45,6 +47,8 @@ jaune-oeuf:
   title: Jaune d'oeuf
 joue-boeuf:
   title: Joue de boeuf
+lait:
+  title: Lait
 lardons:
   title: Lardons fumés
 laurier:
@@ -77,16 +81,18 @@ pomme:
   title: Pomme
 pomme-de-terre:
   title: Pomme de terre
+puree:
+  title: Purée
 saumon-frais:
   title: Saumon frais
 sel:
   title: Sel
 sucre:
   title: Sucre
-sucre-vanille:
-  title: Sucre vanillé
 sucre-glace:
   title: Sucre glace
+sucre-vanille:
+  title: Sucre vanillé
 thym:
   title: Thym
 viande-hachee:
@@ -95,3 +101,4 @@ vin-rouge:
   title: Vin rouge
 vinaigre:
   title: Vinaigre
+  
