@@ -16,10 +16,10 @@ ingredients:
     quantity: 1
   ail:
     quantity: 1
-    detail: gousse
+    details: gousse
   bouillon-boeuf:
     quantity: 1
-    detail: tablette
+    details: tablette
   concasse-tomate:
     quantity: 100g
   thym:
