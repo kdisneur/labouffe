@@ -1,4 +1,6 @@
 ---
+abricots-secs:
+  title: Abricots secs
 ail:
   title: Ail
 amande:
@@ -15,10 +17,14 @@ blanc-oeuf:
   title: Blanc d'oeuf
 bouillon-boeuf:
   title: Bouillon de boeuf
+bouillon-legumes:
+  title: Bouillon de légumes
 camembert:
   title: Camembert
 cannelle:
   title: Cannelle
+carotte:
+  title: Carottes
 cassonade:
   title: Cassonade
 chocolat:
@@ -31,8 +37,12 @@ concasse-tomate:
   title: Concassé de tomates
 confiture:
   title: Confiture
+courgette:
+  title: Courgettes
 creme-fraiche:
   title: Crême fraîche épaisse
+eau:
+  title: Eau
 echalote:
   title: Echalote
 emmental-rape:
@@ -43,6 +53,8 @@ extrait-vanille:
   title: Extrait de vanille
 farine:
   title: Farine
+feta:
+  title: Fêta
 fleur-sel:
   title: Fleur de sel
 gousse-vanille:
@@ -89,8 +101,12 @@ parmesan:
   title: Parmesan
 pates:
   title: Pâtes
+petits-pois:
+  title: Petits-pois
 poivre:
   title: Poivre
+poivron:
+  title: Poivrons
 pomme:
   title: Pomme
 pomme-de-terre:
@@ -110,6 +126,8 @@ saumon-frais:
   title: Saumon frais
 sel:
   title: Sel
+semoule:
+  title: Semoule
 speculoos:
   title: Speculoos
 sucre:
