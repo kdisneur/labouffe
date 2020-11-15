@@ -1,0 +1,491 @@
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Site web listant nos recettes" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+      <style>
+      .uk-offcanvas-bar {
+        background: #fff;
+      }
+      .uk-offcanvas-bar .uk-subnav {
+        margin-left: 0;
+        font-size: .875rem;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-nav-default .uk-nav-header {
+        border-bottom: 1px solid #e5e5e5;
+        color: #222;
+        text-transform: uppercase;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-subnav > li {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .uk-offcanvas-bar .uk-subnav > li > a,
+      .uk-offcanvas-bar .uk-subnav > li > a:focus,
+      .uk-offcanvas-bar .uk-subnav > li > a:hover {
+        text-transform: capitalize;
+        color: #999 !important;
+      }
+
+      .uk-offcanvas-bar .uk-subnav > li.uk-active > a {
+        background-color: #1e87f0;
+        color: #fff !important;
+      }
+
+      .tm-logo-title {
+        margin-left: 5px;
+      }
+      .tm-logo-title img {
+        display: block;
+        float: left;
+      }
+      .tm-logo-title span {
+        padding-top: 5px;
+        display: inline-block;
+      }
+
+      .tm-link-no-highlight,
+      .tm-link-no-highlight:hover,
+      .tm-link-no-highlight:focus {
+        color: #666 !important;
+        text-decoration: none;
+      }
+      </style>
+      <title>La bouffe, hein!</title>
+    </head>
+    <body>
+      <nav class="uk-navbar-container tm-navbar-container uk-active" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="/" class="uk-link tm-no-underline tm-logo-title">
+            <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="42" />
+              <span class="uk-margin-small-left uk-text-large">La bouffe</span>
+            </a>
+          </div>
+
+          <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon href="" uk-toggle="target: #small-menu"></a>
+            <div id="small-menu" uk-offcanvas="mode: push; overlay: true">
+              <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
+                <div class="uk-panel">
+                    <ul class="uk-subnav uk-subnav-pill tm-nav">
+                      <li class="uk-subnav-header">Général</a>
+                      <li class="uk-margin-top uk-active">
+                        <a href="/">recettes</a>
+                      </li>
+                      <li class="uk-margin-top ">
+                        <a href="/ingredients">ingrédients</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <ul class="uk-navbar-nav uk-visible@s">
+              <li class=" uk-active ">
+                <a href="/">recettes</a>
+              </li>
+              <li class="">
+                <a href="/ingredients">ingrédients</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="uk-container uk-margin-medium-top">
+        
+
+        
+  <div class="uk-width-3-4@l uk-align-center">
+    <h1 class="uk-heading-small uk-heading-divider uk-margin-remove-top">Semoule aux légumes et à la fêta</h1>
+
+    <div uk-grid="true">
+      <div class="uk-width-1-2@s">
+        <div uk-grid="true">
+          <div class="uk-width-1-2">
+            <dl class="uk-description-list uk-description-list-divider">
+              <dt><span class="uk-visible@s">Temps de </span>préparation</dt>
+              <dd>45m</dd>
+
+              <dt>Coût</dt>
+              <dd><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></dd>
+            </dl>
+          </div>
+          <div class="uk-width-1-2">
+            <dl class="uk-description-list uk-description-list-divider">
+              <dt><span class="uk-visible@s">Temps de </span>cuisson</dt>
+              <dd>30m</dd>
+
+              <dt>Difficulté</dt>
+              <dd><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-1-2@s">
+        <h5 class="uk-text-uppercase">
+          Ingrédients pour 4 personnes
+        </h5>
+
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/semoule">
+                Semoule
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                100g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/noisettes">
+                Noisettes
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                50g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/abricots-secs">
+                Abricots secs
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                100g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/oignon">
+                Oignon
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                150g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/ail">
+                Ail
+              </a>
+              
+              
+                (gousse)
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/huile-olive">
+                Huile d&#39;olive
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                30g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/sel">
+                Sel
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                0.5cc
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/eau">
+                Eau
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                500g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/carotte">
+                Carottes
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                100g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/courgette">
+                Courgettes
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                100g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/poivron">
+                Poivrons
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                75g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/petits-pois">
+                Petits-pois
+              </a>
+              
+              
+                (surgelés)
+              
+            </div>
+            
+              <div>
+                75g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/feta">
+                Fêta
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                100g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/bouillon-legumes">
+                Bouillon de légumes
+              </a>
+              
+              
+                (tablette)
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+    <div>
+      <div class="uk-hidden@s uk-margin-large-top"></div>
+      <h5 class="uk-text-uppercase">Étapes</h5>
+      
+        <p>
+          Couper en rondelles épaisses les carottes et les courgettes
+          
+        </p>
+      
+        <p>
+          Couper en dés la fêta et le poivron
+          
+        </p>
+      
+        <p>
+          Couper l&#39;oignon en 4
+          
+        </p>
+      
+        <p>
+          Dans le Thermomix, mettre les noisettes et les abricots secs. Mixer 7s vitesse 5
+          
+        </p>
+      
+        <p>
+          Transvaser dans un saladier
+          
+        </p>
+      
+        <p>
+          Dans le bol du Thermomix, mettre les oignons, la gousse d&#39;ail, l&#39;huile d&#39;olive et le sel
+          
+        </p>
+      
+        <p>
+          Mixer 6s vitesse 4,5, puis rissoler 13m, 120°C, vitesse mélange
+          
+        </p>
+      
+        <p>
+          Ajouter la semoule et le bouillon de légumes émietté
+          
+        </p>
+      
+        <p>
+          Mélanger 10s, vitesse 2, sens inverse
+          
+        </p>
+      
+        <p>
+          Ajouter 100g d&#39;eau, mélanger à l&#39;aide de la spatule, insérer le couvercle du bol et laisser le couscous absorber le liquide pendant 5m.
+          
+        </p>
+      
+        <p>
+          Mettre les petits pois, les poivrons, les carottes et courgettes dans le panier cuisson
+          
+        </p>
+      
+        <p>
+          Transvaser le couscous dans le saladier contenant les noisettes et abricots. Ajouter la fêta et mélanger
+          
+        </p>
+      
+        <p>
+          Etaler une partie du couscous dans le Varoma en veillant à ne pas obstruer les trous
+          
+        </p>
+      
+        <p>
+          Etaler le reste du couscous sur le plateau vapeur
+          
+        </p>
+      
+        <p>
+          Mettre 400g d&#39;eau dans le bol du Thermomix, insérer le panier cuisson
+          
+        </p>
+      
+        <p>
+          Insérer le Varoma, cuire 17m, Varoma, vitesse 1
+          
+        </p>
+      
+    </div>
+  </div>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    </body>
+  </html>
+
