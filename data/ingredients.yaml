@@ -19,6 +19,10 @@ bouillon-boeuf:
   title: Bouillon de boeuf
 bouillon-legumes:
   title: Bouillon de légumes
+cacao:
+  title: Cacao en poudre
+cafe:
+  title: Café
 camembert:
   title: Camembert
 cannelle:
@@ -81,6 +85,8 @@ levure-chimique:
   title: Levure chimique
 maizena:
   title: Maizena
+mascarpone:
+  title: Mascarpone
 moutarde:
   title: Moutarde
 noisettes:
@@ -101,6 +107,8 @@ parmesan:
   title: Parmesan
 pates:
   title: Pâtes
+pavesini:
+  title: Pavesini
 petits-pois:
   title: Petits-pois
 poivre:

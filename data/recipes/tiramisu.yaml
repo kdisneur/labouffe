@@ -1,0 +1,42 @@
+title: Tiramisu
+category: gâteau
+cooking: 0m
+preparation: 290m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 6
+  type: personnes
+ingredients:
+  oeuf:
+    quantity: 3
+  cassonade:
+    quantity: 100g
+  sucre-glace:
+    quantity: 100g
+  sucre-vanille:
+    quantity: 1
+    details: sachet
+  mascarpone:
+    quantity: 250g
+  pavesini:
+    quantity: 1
+    details: boîte
+  cafe:
+    quantity: 50cl
+    détails: fort
+  cacao:
+    quantity: 30g
+    details: non sucré
+instructions:
+  - Séparer les blancs des jaunes d'oeufs
+  - Mélanger les jaunes d'oeufs avec la cassonade et le sucre vanillé
+  - Ajouter le mascarpone et mélanger au batteur électrique
+  - Monter les blancs en neige et les incorporer délicatement à la spatule
+  - Tremper rapidement une face de biscuit dans le café et le poser dans le plat
+  - Tapisser le fond du plat de biscuits trempés dans le café
+  - Recouvrir d'une couche de crème
+  - Répéter le montage en alternant une couche de biscuits et une de crème
+  - Finir par une couche de crème
+  - Saupoudrer de cacao
+  - Réserver au frais durant 4h au minimum 
