@@ -16,8 +16,8 @@ type DurationRange struct {
 func AllDurationRanges() []DurationRange {
 	return []DurationRange{
 		{ThresholdMinutes: 30, Title: "< 30m"},
-		{ThresholdMinutes: 60, Title: "> 30m and < 1h"},
-		{ThresholdMinutes: 90, Title: "> 1h and < 1h30"},
+		{ThresholdMinutes: 60, Title: "> 30m et < 1h"},
+		{ThresholdMinutes: 90, Title: "> 1h et < 1h30"},
 		{ThresholdMinutes: math.MaxFloat64, Title: "> 1h30"},
 	}
 }
