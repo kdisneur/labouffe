@@ -6,7 +6,6 @@ import (
 	"os"
 	"path"
 	"path/filepath"
-	"time"
 
 	"github.com/kdisneur/labouffe/internal/html"
 	"github.com/kdisneur/labouffe/internal/recipe"
@@ -21,16 +20,17 @@ type SiteConfig struct {
 
 // RecipesView is the data necessary to display a list of recipe template
 type RecipesView struct {
-	AllCategories   []recipe.Category
-	AllDifficulties []recipe.Difficulty
-	AllPrices       []recipe.Price
-	Recipes         []*RecipeView
+	AllDurationRanges []recipe.DurationRange
+	AllCategories     []recipe.Category
+	AllDifficulties   []recipe.Difficulty
+	AllPrices         []recipe.Price
+	Recipes           []*RecipeView
 }
 
 // RecipeView is the data necessary to build a recipe template
 type RecipeView struct {
 	*recipe.Recipe
-	TotalDuration   time.Duration
+	TotalDuration   recipe.Duration
 	PricingScale    int
 	DifficultyScale int
 }
@@ -56,6 +56,7 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 		return fmt.Errorf("can't initialize html renderer: %v", err)
 	}
 
+	durationRanges := recipe.AllDurationRanges()
 	categories := recipe.AllCategories()
 	prices := recipe.AllPrices()
 	difficulties := recipe.AllDifficulties()
@@ -64,7 +65,7 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 	for i := range recipes {
 		recipeviews[i] = &RecipeView{
 			Recipe:          recipes[i],
-			TotalDuration:   time.Duration(recipes[i].Preparation + recipes[i].Cooking),
+			TotalDuration:   recipe.Duration(recipes[i].Preparation + recipes[i].Cooking),
 			PricingScale:    int(recipes[i].Pricing) + 1,
 			DifficultyScale: int(recipes[i].Difficulty) + 1,
 		}
@@ -95,10 +96,11 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 			},
 			Title: "Les recettes",
 			Data: RecipesView{
-				Recipes:         recipeviews,
-				AllCategories:   categories,
-				AllDifficulties: difficulties,
-				AllPrices:       prices,
+				Recipes:           recipeviews,
+				AllCategories:     categories,
+				AllDurationRanges: durationRanges,
+				AllDifficulties:   difficulties,
+				AllPrices:         prices,
 			},
 		},
 	)
@@ -128,10 +130,11 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 				},
 				Title: fmt.Sprintf("%s: Les recettes", ingredient.Title),
 				Data: RecipesView{
-					Recipes:         ingredient.Recipes,
-					AllCategories:   categories,
-					AllDifficulties: difficulties,
-					AllPrices:       prices,
+					Recipes:           ingredient.Recipes,
+					AllCategories:     categories,
+					AllDurationRanges: durationRanges,
+					AllDifficulties:   difficulties,
+					AllPrices:         prices,
 				},
 			},
 		)

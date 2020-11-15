@@ -2,8 +2,25 @@ package recipe
 
 import (
 	"fmt"
+	"math"
 	"time"
 )
+
+// DurationRange represents a duration group
+type DurationRange struct {
+	ThresholdMinutes float64
+	Title            string
+}
+
+// AllDurationRanges represents all the available duration ranges
+func AllDurationRanges() []DurationRange {
+	return []DurationRange{
+		{ThresholdMinutes: 30, Title: "< 30m"},
+		{ThresholdMinutes: 60, Title: "> 30m and < 1h"},
+		{ThresholdMinutes: 90, Title: "> 1h and < 1h30"},
+		{ThresholdMinutes: math.MaxFloat64, Title: "> 1h30"},
+	}
+}
 
 // Duration is a custom duration time enabling YAML unmarshalling
 type Duration time.Duration
@@ -11,6 +28,18 @@ type Duration time.Duration
 // TimeDuration returns the underlying time.Duration
 func (d Duration) TimeDuration() time.Duration {
 	return time.Duration(d)
+}
+
+// RangeName groups the duration in useful filters
+func (d Duration) RangeName() string {
+	allRanges := AllDurationRanges()
+	for _, r := range allRanges {
+		if r.ThresholdMinutes > time.Duration(d).Minutes() {
+			return r.Title
+		}
+	}
+
+	return allRanges[len(allRanges)-1].Title
 }
 
 func (d Duration) String() string {
