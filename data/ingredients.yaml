@@ -31,12 +31,18 @@ carotte:
   title: Carottes
 cassonade:
   title: Cassonade
+champignons:
+  title: Champignons
 chocolat:
   title: Chocolat
 chocolat-praline:
   title: Chocolat praliné dessert
+chorizo:
+  title: Chorizo
 citron:
   title: Citron
+concentre-tomate:
+  title: Concenté de tomates
 concasse-tomate:
   title: Concassé de tomates
 confiture:
@@ -65,6 +71,8 @@ gousse-vanille:
   title: Gousse de vanille
 gras-de-boeuf:
   title: Gras de boeuf
+herbes-provence:
+  title: Herbes de provence
 huile-noisettes:
   title: Huile de noisettes
 huile-olive:
