@@ -1,0 +1,32 @@
+title: Crêpes
+category: plat chaud
+preparation: 130m
+cooking: 30m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 12
+  type: unités
+ingredients:
+  oeuf:
+    quantity: 4
+  beurre:
+    quantity: 20g
+    details: fondu
+  lait:
+    quantity: 500g
+  sucre:
+    quantity: 60g
+  sucre-vanille:
+    quantity: 1
+    details: sachet
+  farine:
+    quantity: 200g
+  eau:
+    quantity: 60g
+  sel:
+    quantity: 3g
+instructions:
+  - Dans le Thermomix, ajouter tous les ingrédients
+  - Mixer 1m, vitesse 7
+  - Transvaser dans un saladier et réserver 2h minimum à température ambiante
