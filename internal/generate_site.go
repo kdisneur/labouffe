@@ -47,7 +47,7 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 		return fmt.Errorf("can't remove output folder '%s': %v", cfg.OutputFolderPath, err)
 	}
 
-	if err := copyFolderContent("assets", path.Join(cfg.OutputFolderPath, "assets")); err != nil {
+	if err := copyFolderContent(path.Join(cfg.TemlatesFolderPath, "assets"), path.Join(cfg.OutputFolderPath, "assets")); err != nil {
 		return fmt.Errorf("can't copy assets folder: %v", err)
 	}
 

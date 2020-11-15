@@ -9,7 +9,7 @@ import (
 )
 
 func TestLoadingValidRecipes(t *testing.T) {
-	ingredients, recipes, err := internal.LoadIngredientAndRecipes("testdata/load_recipe/valid_recipes/ingredients.yaml", "testdata/load_recipe/valid_recipes/recipes")
+	ingredients, recipes, err := internal.LoadIngredientAndRecipes("testdata/valid_recipes/ingredients.yaml", "testdata/valid_recipes/recipes")
 	if err != nil {
 		t.Fatalf("expected successful ingredients and recipes load: %v", err)
 	}
