@@ -21,25 +21,15 @@ const (
 )
 
 // Page represents an existing template
-type Page struct {
-	t *template.Template
-}
+type Page int
 
-var (
+const (
 	// PageIngredientsList represents a page containing the list of ingredients
-	PageIngredientsList = &Page{
-		t: template.Must(template.New("ingredients.html.tmpl").Funcs(helpers()).ParseFiles("templates/layout.html.tmpl", "templates/ingredients.html.tmpl")),
-	}
-
+	PageIngredientsList Page = iota
 	// PageRecipesList represents a page containing the list of recipes
-	PageRecipesList = &Page{
-		t: template.Must(template.New("recipes.html.tmpl").Funcs(helpers()).ParseFiles("templates/layout.html.tmpl", "templates/recipes.html.tmpl")),
-	}
-
+	PageRecipesList
 	// PageRecipeShow represents a page containing the list of recipes
-	PageRecipeShow = &Page{
-		t: template.Must(template.New("recipe.html.tmpl").Funcs(helpers()).ParseFiles("templates/layout.html.tmpl", "templates/recipe.html.tmpl")),
-	}
+	PageRecipeShow
 )
 
 // PageSiteValues represents the site values of a page
@@ -55,8 +45,40 @@ type PageValues struct {
 	Data  interface{}
 }
 
+// Renderer represents the HTML page renderer
+type Renderer struct {
+	templates map[Page]*template.Template
+}
+
+// NewRenderer initializes a renderer using a specific template path
+func NewRenderer(root string) (*Renderer, error) {
+	var r Renderer
+
+	tplNames := map[Page]string{
+		PageIngredientsList: "ingredients.html.tmpl",
+		PageRecipesList:     "recipes.html.tmpl",
+		PageRecipeShow:      "recipe.html.tmpl",
+	}
+
+	r.templates = make(map[Page]*template.Template)
+	for page, tplName := range tplNames {
+		tpl, err := template.
+			New(tplName).
+			Funcs(helpers()).
+			ParseFiles(path.Join(root, "layout.html.tmpl"), path.Join(root, tplName))
+
+		if err != nil {
+			return nil, fmt.Errorf("can't load template '%s' from '%s': %v", tplName, root, err)
+		}
+
+		r.templates[page] = tpl
+	}
+
+	return &r, nil
+}
+
 // Generate generates a page from a template
-func Generate(folder string, page *Page, values PageValues) error {
+func (r *Renderer) Generate(folder string, page Page, values PageValues) error {
 	if err := os.MkdirAll(folder, 0755); err != nil {
 		return fmt.Errorf("can't create folder '%s': %v", folder, err)
 	}
@@ -67,7 +89,12 @@ func Generate(folder string, page *Page, values PageValues) error {
 	}
 	defer f.Close()
 
-	if err := page.t.Execute(f, values); err != nil {
+	tpl, ok := r.templates[page]
+	if !ok {
+		return fmt.Errorf("template doesn't exist")
+	}
+
+	if err := tpl.Execute(f, values); err != nil {
 		return fmt.Errorf("can't render page: %v", err)
 	}
 

@@ -31,7 +31,7 @@ type Recipe struct {
 	Pricing      Price
 	Servings     Servings
 	Instructions []*Instruction
-	Ingredients  []IncludedIngredient
+	Ingredients  []*IncludedIngredient
 }
 
 // YAMLRecipe represents the YAML format

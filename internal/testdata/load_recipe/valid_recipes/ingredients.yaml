@@ -1,0 +1,11 @@
+farine:
+  title: Farine
+oeuf:
+  title: Oeuf
+sucre-glace:
+  title: Sucre glace
+puree:
+  title: Purée
+  recipe: recipe-4-plat-chaud-facile-economique
+recipe4-no-override:
+  recipe: recipe-4-plat-chaud-facile-economique

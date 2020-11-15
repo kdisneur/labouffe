@@ -49,10 +49,11 @@ func run() error {
 	}
 
 	sitecfg := internal.SiteConfig{
-		OutputFolderPath: fcfg.OutputFolderPath,
+		TemlatesFolderPath: "templates",
+		OutputFolderPath:   fcfg.OutputFolderPath,
 	}
 	if err := internal.GenerateSite(sitecfg, ingredients, recipes); err != nil {
-		return fmt.Errorf("couldn't generate site: %v", err)
+		return fmt.Errorf("can't generate site: %v", err)
 	}
 
 	if fcfg.DeveloperMode {

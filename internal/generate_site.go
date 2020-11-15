@@ -14,8 +14,9 @@ import (
 
 // SiteConfig  represents the site configuration
 type SiteConfig struct {
-	OutputFolderPath string
-	PublicURL        string
+	TemlatesFolderPath string
+	OutputFolderPath   string
+	PublicURL          string
 }
 
 // RecipesView is the data necessary to display a list of recipe template
@@ -50,6 +51,11 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 		return fmt.Errorf("can't copy assets folder: %v", err)
 	}
 
+	renderer, err := html.NewRenderer(cfg.TemlatesFolderPath)
+	if err != nil {
+		return fmt.Errorf("can't initialize html renderer: %v", err)
+	}
+
 	categories := recipe.AllCategories()
 	prices := recipe.AllPrices()
 	difficulties := recipe.AllDifficulties()
@@ -63,7 +69,7 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 			DifficultyScale: int(recipes[i].Difficulty) + 1,
 		}
 
-		err := html.Generate(
+		err := renderer.Generate(
 			path.Join(cfg.OutputFolderPath, "recipes", recipes[i].Code),
 			html.PageRecipeShow,
 			html.PageValues{
@@ -79,7 +85,7 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 		}
 	}
 
-	err := html.Generate(
+	err = renderer.Generate(
 		path.Join(cfg.OutputFolderPath),
 		html.PageRecipesList,
 		html.PageValues{
@@ -112,7 +118,7 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 	}
 
 	for _, ingredient := range data {
-		err := html.Generate(
+		err := renderer.Generate(
 			path.Join(cfg.OutputFolderPath, "ingredients", ingredient.Code),
 			html.PageRecipesList,
 			html.PageValues{
@@ -135,7 +141,7 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 		}
 	}
 
-	err = html.Generate(
+	err = renderer.Generate(
 		path.Join(cfg.OutputFolderPath, "ingredients"),
 		html.PageIngredientsList,
 		html.PageValues{

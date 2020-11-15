@@ -1,0 +1,17 @@
+title: Recipe 4
+category: plat chaud
+preparation: 10m
+cooking: 20m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  oeuf:
+    quantity: 1
+  farine:
+    quantity: 10g
+instructions:
+  - La première instruction
+  - La seconde instruction

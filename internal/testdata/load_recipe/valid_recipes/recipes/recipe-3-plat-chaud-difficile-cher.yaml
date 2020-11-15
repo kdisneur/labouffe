@@ -1,0 +1,23 @@
+title: Recipe 3
+category: plat chaud
+preparation: 45m
+cooking: 1h14m
+difficulty: difficile
+pricing: cher
+servings:
+  quantity: 8
+  type: personnes
+ingredients:
+  oeuf:
+    quantity: 3
+  farine:
+    quantity: 1.5kg
+    alternatives:
+      - sucre-glace
+  puree:
+    quantity: 100g
+instructions:
+  - instruction: La première instruction
+    recipe: recipe-4-plat-chaud-facile-economique
+  - La seconde instruction
+  - La troisième instruction

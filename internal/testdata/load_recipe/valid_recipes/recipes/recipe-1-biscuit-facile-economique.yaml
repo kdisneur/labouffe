@@ -1,0 +1,21 @@
+title: Recipe 1
+category: biscuit
+preparation: 10m
+cooking: 20m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 20
+  type: unités
+ingredients:
+  oeuf:
+    quantity: 1
+    details: jaune
+  farine:
+    quantity: 300g
+  sucre-glace:
+    quantity: 0
+instructions:
+  - La première instruction
+  - La seconde instruction
+  - La troisième instruction

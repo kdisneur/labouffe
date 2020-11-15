@@ -42,7 +42,7 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 		return fmt.Errorf("can't decode recipe: %v", err)
 	}
 
-	ingredients := make([]IncludedIngredient, len(r.Ingredients))
+	ingredients := make([]*IncludedIngredient, len(r.Ingredients))
 	for i, item := range r.Ingredients {
 		ingredient, err := b.findIngredientByCode(item.Code)
 		if err != nil {
@@ -59,7 +59,7 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 			alternatives[i] = ingredient
 		}
 
-		ingredients[i] = IncludedIngredient{
+		ingredients[i] = &IncludedIngredient{
 			Ingredient:   ingredient,
 			Quantity:     item.Quantity,
 			Details:      item.Details,
@@ -99,6 +99,9 @@ func (b *Builder) LoadRecipeIngredients() error {
 		}
 
 		ingredient.Recipe = recipe
+		if ingredient.Title == "" {
+			ingredient.Title = recipe.Title
+		}
 	}
 
 	return nil
