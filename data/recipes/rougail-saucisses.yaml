@@ -20,15 +20,13 @@ ingredients:
     quantity: 600g
   thym:
     quantity: 0
-  huile-olive:
-    quantity: 2cs
   riz: 
     quantity: 240g
   safran:
     quantity: 2
     details: dosettes
   ras-el-hanout:
-    quantity: 2cc
+    quantity: 1cc
   sel:
     quantity: 0
   poivre:
@@ -36,10 +34,11 @@ ingredients:
 instructions:
   - Faire bouillir les saucisses 20m
   - Emincer les oignons
-  - Dans une sauteuse, faire revenir les oignons et les gousses d'ail écrasées dans l'huile d'olive
   - Couper les saucisses en tranches épaisses
-  - Ajouter les saucisses, laisser cuire jusqu'à coloration
-  - Ajouter le thym, le laurier, le concassé de tomates et les épices
+  - Dans une sauteuse, faire revenir les saucisses jusqu'à coloration
+  - Ajouter les oignons et les gousses d'ail écrasées
+  - Laisser cuire jusqu'à ce que les oignons soient transluscides
+  - Ajouter le thym, le concassé de tomates et les épices
   - Saler, poivrer
   - Laisser cuire à feu doux durant 60m
   - Faire cuire le riz dans l'eau bouillante
