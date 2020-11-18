@@ -1,0 +1,38 @@
+title: Fondue de poireaux
+category: plat chaud
+cooking: 20m
+preparation: 10m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  poireaux:
+    quantity: 600g
+    details: blancs
+  beurre:
+    quantity: 30g
+  creme-fraiche:
+    quantity: 50g
+  moutarde:
+    quantity: 1cc
+  sel:
+    quantity: 0
+  poivre:
+    quantity: 0
+instructions:
+  - Laver les blancs de poireaux 
+  - Les couper en tronçons
+  - Dans le thermomix mettre 300g de poireaux
+  - Mixer 5s, vitesse 5
+  - Réserver 
+  - Mettre le reste des poireaux dqns le Thermomix
+  - Mixer 5s, vitesse 5
+  - Ajouter le beurre et le reste des poireaux mixés
+  - Cuire 10m, 100°C, vitesse 1, sens inverse
+  - Mélanger 
+  - Cuire de nouveau 10m, 100°C, vitesse 1, sens inverse sans le gobelet doseur
+  - Ajouter la crème, le sel, le poivre, et la moutarde
+  - Mélanger 1m, 100°C, vitesse 1, sens inverse avec le gobelet
+  

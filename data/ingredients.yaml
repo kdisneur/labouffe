@@ -41,10 +41,10 @@ chorizo:
   title: Chorizo
 citron:
   title: Citron
-concentre-tomate:
-  title: Concenté de tomates
 concasse-tomate:
   title: Concassé de tomates
+concentre-tomate:
+  title: Concenté de tomates
 confiture:
   title: Confiture
 courgette:
@@ -119,6 +119,8 @@ pavesini:
   title: Pavesini
 petits-pois:
   title: Petits-pois
+poireaux:
+  title: poireaux
 poivre:
   title: Poivre
 poivron:
