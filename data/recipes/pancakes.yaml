@@ -1,0 +1,39 @@
+title: Pancakes
+category: plat chaud
+preparation: 30m
+cooking: 4m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 10
+  type: unités
+ingredients:
+  oeuf:
+    quantity: 1
+  beurre:
+    quantity: 30g
+    details: fondu
+  lait:
+    quantity: 190ml
+  sucre:
+    quantity: 50g
+  extrait-vanille:
+    quantity: 1cc
+  farine:
+    quantity: 170g
+  levure-chimique:
+    quantity: 1
+    details: sachet
+  sel:
+    quantity: 1
+    details: pincée
+instructions:
+  - Faire fondre le beurre
+  - Dans un saladier, mélanger la farine, le sucre, la levure et le sel. Faire un puit
+  - Dans un autre saladier, battre l'oeuf. Ajouter l'extrait de vanille, le lait et le beurre fondu refroidi. Mélanger
+  - Verser la moitié du mélange liquide dans le puit. Mélanger légèrement jusqu'à ce que la farine soit mouillée.
+  - Ajouter le reste du liquide. Mélanger délicatement jusqu'à incorporation complète de la farine (le mélange doit être grumeleux)
+  - Laisser reposer la pâte 15m
+  - Dans une poêle chaude, verser de la pâte
+  - Laisser cuire jusqu'à l'apparition des premières bulles à la surface
+  - Retourner le pancake et laisser cuire 1 à 2m   
