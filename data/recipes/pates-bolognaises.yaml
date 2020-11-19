@@ -16,7 +16,7 @@ ingredients:
     quantity: 2
   ail:
     quantity: 1
-    detail: gousse
+    details: gousse
   viande-hachee:
     quantity: 500g
   sel:
@@ -33,7 +33,7 @@ ingredients:
     quantity: 12cl
   bouillon-boeuf:
     quantity: 1
-    detail: tablette
+    details: tablette
   huile-olive:
     quantity: 2cs
 instructions:

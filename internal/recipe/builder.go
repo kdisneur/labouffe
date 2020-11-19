@@ -14,13 +14,15 @@ type Builder struct {
 	Recipes     []*Recipe
 }
 
-// NewBuilderFromYAMLIngredients creates a new builder for ingredients and recipes loading
-// a YAML list of ingredients
+// NewBuilderFromYAMLIngredients parses a YAML list of ingredients
 func NewBuilderFromYAMLIngredients(input io.Reader) (*Builder, error) {
+	decoder := yaml.NewDecoder(input)
+	decoder.SetStrict(true)
+
 	var b Builder
 
 	var ingredients YAMLIngredients
-	if err := yaml.NewDecoder(input).Decode(&ingredients); err != nil {
+	if err := decoder.Decode(&ingredients); err != nil {
 		return nil, fmt.Errorf("can't decode ingredients: %v", err)
 	}
 
@@ -37,8 +39,11 @@ func NewBuilderFromYAMLIngredients(input io.Reader) (*Builder, error) {
 
 // ParseNewYAMLRecipe parses a new recipe from a YAML
 func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
+	decoder := yaml.NewDecoder(input)
+	decoder.SetStrict(true)
+
 	var r YAMLRecipe
-	if err := yaml.NewDecoder(input).Decode(&r); err != nil {
+	if err := decoder.Decode(&r); err != nil {
 		return fmt.Errorf("can't decode recipe: %v", err)
 	}
 

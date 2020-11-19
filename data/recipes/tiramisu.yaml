@@ -24,7 +24,7 @@ ingredients:
     details: boîte
   cafe:
     quantity: 50cl
-    détails: fort
+    details: fort
   cacao:
     quantity: 30g
     details: non sucré
@@ -39,4 +39,4 @@ instructions:
   - Répéter le montage en alternant une couche de biscuits et une de crème
   - Finir par une couche de crème
   - Saupoudrer de cacao
-  - Réserver au frais durant 4h au minimum 
+  - Réserver au frais durant 4h au minimum
