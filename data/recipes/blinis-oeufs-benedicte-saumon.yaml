@@ -1,0 +1,29 @@
+title: Blinis aux oeufs bénédicte sur saumon fumé
+category: plat chaud
+cooking: 15m
+preparation: 20m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 1
+  type: personnes
+ingredients:
+  oeuf:
+    quantity: 2
+    details: pochés
+  saumon-fume:
+    quantity: 2
+    details: tranches
+  sauce-hollandaise: 
+    quantity: 2cs
+  ciboulette:
+    quantity: 0
+instructions:
+  - Répartir le saumon fumé sur les blinis
+  - instruction: Préparer les oeufs pochés
+    recipe : oeufs-poches
+  - Pendant la cuisson, préparer la sauce hollandaise
+  - Poser un oeuf sur chaque blini
+  - Napper de sauce hollandaise
+  - Parsermer d'un peu de ciboulette
+  
