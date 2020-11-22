@@ -15,6 +15,8 @@ biere-brune:
   title: Bière brune
 blanc-oeuf:
   title: Blanc d'oeuf
+blinis:
+  title: Blinis
 bouillon-boeuf:
   title: Bouillon de boeuf
 bouillon-legumes:
@@ -39,6 +41,8 @@ chocolat-praline:
   title: Chocolat praliné dessert
 chorizo:
   title: Chorizo
+ciboulette:
+  title: Ciboulette
 citron:
   title: Citron
 concasse-tomate:
@@ -49,6 +53,8 @@ confiture:
   title: Confiture
 courgette:
   title: Courgettes
+creme-entiere-liquide:
+  title: Crème entière liquide
 creme-fraiche:
   title: Crême fraîche épaisse
 eau:
@@ -109,6 +115,8 @@ oeuf:
   title: Oeufs
 oignon:
   title: Oignon
+olives:
+  title: Olives
 orange:
   title: Orange
 origan:
@@ -117,6 +125,8 @@ pain-epice:
   title: Pain d'épice
 parmesan:
   title: Parmesan
+pate-tarte-feuilletee:
+  title: Pâte à tarte feuilletée
 pates:
   title: Pâtes
 pavesini:
@@ -125,6 +135,8 @@ petits-pois:
   title: Petits-pois
 poireaux:
   title: poireaux
+poires:
+  title: Poires
 poivre:
   title: Poivre
 poivron:
@@ -133,6 +145,8 @@ pomme:
   title: Pomme
 pomme-de-terre:
   title: Pomme de terre
+porto:
+  title: Porto
 puree:
   recipe: puree-pommes-de-terre
   title: Purée
@@ -142,10 +156,16 @@ riz:
   title: Riz
 safran:
   title: Safran
+sauce-hollandaise:
+  title: Sauce hollandaise
 saucisse-fumée:
   title: Saucisse fumée
 saumon-frais:
   title: Saumon frais
+saumon-fume:
+  title: Saumon fumé
+saute-veau:
+  title: Sauté de veau
 sel:
   title: Sel
 semoule:
@@ -166,17 +186,3 @@ vin-rouge:
   title: Vin rouge
 vinaigre:
   title: Vinaigre
-saumon-fume:
-  title: Saumon fumé
-sauce-hollandaise:
-  title: Sauce hollandaise
-blinis:
-  title: Blinis
-ciboulette:
-  title: Ciboulette
-saute-veau:
-  title: Sauté de veau
-porto:
-  title: Porto
-olives:
-  title: Olives
