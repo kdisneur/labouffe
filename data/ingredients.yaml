@@ -44,7 +44,7 @@ citron:
 concasse-tomate:
   title: Concassé de tomates
 concentre-tomate:
-  title: Concenté de tomates
+  title: Concentré de tomates
 confiture:
   title: Confiture
 courgette:
@@ -174,3 +174,9 @@ blinis:
   title: Blinis
 ciboulette:
   title: Ciboulette
+saute-veau:
+  title: Sauté de veau
+porto:
+  title: Porto
+olives:
+  title: Olives
