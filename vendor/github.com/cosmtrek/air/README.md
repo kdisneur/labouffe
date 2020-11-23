@@ -1,4 +1,4 @@
-# Air [![CircleCI](https://circleci.com/gh/cosmtrek/air/tree/master.svg?style=shield)](https://circleci.com/gh/cosmtrek/air/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4885b8dddaa540f9ae6fe850b4611b7b)](https://www.codacy.com/app/cosmtrek/air?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cosmtrek/air&amp;utm_campaign=Badge_Grade) [![Go Report Card](https://goreportcard.com/badge/github.com/cosmtrek/air)](https://goreportcard.com/report/github.com/cosmtrek/air)
+# Air [![Go](https://github.com/cosmtrek/air/workflows/Go/badge.svg)](https://github.com/cosmtrek/air/actions?query=workflow%3AGo+branch%3Amaster) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4885b8dddaa540f9ae6fe850b4611b7b)](https://www.codacy.com/app/cosmtrek/air?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cosmtrek/air&amp;utm_campaign=Badge_Grade) [![Go Report Card](https://goreportcard.com/badge/github.com/cosmtrek/air)](https://goreportcard.com/report/github.com/cosmtrek/air) [![codecov](https://codecov.io/gh/cosmtrek/air/branch/master/graph/badge.svg)](https://codecov.io/gh/cosmtrek/air)
 
 :cloud: Live reload for Go apps
 
@@ -34,22 +34,16 @@ The classic way to install
 go get -u github.com/cosmtrek/air
 ```
 
-### macOS
+### macOS, Linux, Windows
 
 ```bash
-curl -fLo air https://git.io/darwin_air
-```
+# binary will be $(go env GOPATH)/bin/air
+curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
 
-### Linux
+# or install it into ./bin/
+curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s
 
-```bash
-curl -fLo air https://git.io/linux_air
-```
-
-### Windows
-
-```bash
-curl -fLo air.exe https://git.io/windows_air
+air -v
 ```
 
 P.S. Great thanks mattn's [PR](https://github.com/cosmtrek/air/pull/1) for supporting Windows platform.
@@ -91,23 +85,23 @@ cd /path/to/your_project
 The simplest usage is run
 
 ```bash
-# firstly find `.air.conf` in current directory, if not found, use defaults
-air -c .air.conf
+# firstly find `.air.toml` in current directory, if not found, use defaults
+air -c .air.toml
 ```
 
 While I prefer the second way
 
 ```bash
 # 1. create a new file
-touch .air.conf
+touch .air.toml
 
-# 2. paste `air.conf.example` into this file, and **modify it** to satisfy your needs.
+# 2. paste `air_example.toml` into this file, and **modify it** to satisfy your needs.
 
-# 3. run air with your config. If file name is `.air.conf`, just run `air`.
+# 3. run air with your config. If file name is `.air.toml`, just run `air`.
 air
 ```
 
-See the complete [air_example.conf](air_example.conf)
+See the complete [air_example.toml](air_example.toml)
 
 ### Debug
 
@@ -138,6 +132,12 @@ BTW: Pull requests are welcome~
 ## Sponsor
 
 <a href="https://www.buymeacoffee.com/36lcNbW" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
+Huge thanks to the following supporters. I've always been remembering your kindness.
+
+* Peter Aba
+* Apostolis Anastasiou
+* keita koga
 
 ## License
 

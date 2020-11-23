@@ -1,9 +1,15 @@
 package runner
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
+	"errors"
+	"io/ioutil"
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
+	"sync"
 
 	"github.com/fsnotify/fsnotify"
 )
@@ -26,22 +32,10 @@ func (e *Engine) buildLog(format string, v ...interface{}) {
 	})
 }
 
-func (e *Engine) buildDebug(format string, v ...interface{}) {
-	if e.debugMode {
-		e.buildLog(format, v...)
-	}
-}
-
 func (e *Engine) runnerLog(format string, v ...interface{}) {
 	e.logWithLock(func() {
 		e.logger.runner()(format, v...)
 	})
-}
-
-func (e *Engine) runnerDebug(format string, v ...interface{}) {
-	if e.debugMode {
-		e.runnerLog(format, v...)
-	}
 }
 
 func (e *Engine) watcherLog(format string, v ...interface{}) {
@@ -186,4 +180,75 @@ func removeEvent(ev fsnotify.Event) bool {
 
 func cmdPath(path string) string {
 	return strings.Split(path, " ")[0]
+}
+
+func adaptToVariousPlatforms(c *config) {
+	// Fix the default configuration is not used in Windows
+	// Use the unix configuration on Windows
+	if runtime.GOOS == PlatformWindows {
+
+		runName := "start"
+		extName := ".exe"
+		originBin := c.Build.Bin
+		if !strings.HasSuffix(c.Build.Bin, extName) {
+
+			c.Build.Bin += extName
+		}
+
+		if 0 < len(c.Build.FullBin) {
+
+			if !strings.HasSuffix(c.Build.FullBin, extName) {
+
+				c.Build.FullBin += extName
+			}
+			if !strings.HasPrefix(c.Build.FullBin, runName) {
+				c.Build.FullBin = runName + " /b " + c.Build.FullBin
+			}
+		}
+
+		// bin=/tmp/main  cmd=go build -o ./tmp/main.exe main.go
+		if !strings.Contains(c.Build.Cmd, c.Build.Bin) && strings.Contains(c.Build.Cmd, originBin) {
+			c.Build.Cmd = strings.Replace(c.Build.Cmd, originBin, c.Build.Bin, 1)
+		}
+	}
+}
+
+// fileChecksum returns a checksum for the given file's contents.
+func fileChecksum(filename string) (checksum string, err error) {
+	contents, err := ioutil.ReadFile(filename)
+	if err != nil {
+		return "", err
+	}
+
+	// If the file is empty, an editor might've been in the process of rewriting the file when we read it.
+	// This can happen often if editors are configured to run format after save.
+	// Instead of calculating a new checksum, we'll assume the file was unchanged, but return an error to force a rebuild anyway.
+	if len(contents) == 0 {
+		return "", errors.New("empty file, forcing rebuild without updating checksum")
+	}
+
+	h := sha256.New()
+	if _, err := h.Write(contents); err != nil {
+		return "", err
+	}
+
+	return hex.EncodeToString(h.Sum(nil)), nil
+}
+
+// checksumMap is a thread-safe map to store file checksums.
+type checksumMap struct {
+	l sync.Mutex
+	m map[string]string
+}
+
+// update updates the filename with the given checksum if different.
+func (a *checksumMap) updateFileChecksum(filename, newChecksum string) (ok bool) {
+	a.l.Lock()
+	defer a.l.Unlock()
+	oldChecksum, ok := a.m[filename]
+	if !ok || oldChecksum != newChecksum {
+		a.m[filename] = newChecksum
+		return true
+	}
+	return false
 }

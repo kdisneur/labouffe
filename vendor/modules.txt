@@ -1,23 +1,23 @@
 # github.com/BurntSushi/toml v0.3.1
 github.com/BurntSushi/toml
-# github.com/cosmtrek/air v1.12.1
+# github.com/cosmtrek/air v1.15.1
 ## explicit
 github.com/cosmtrek/air
 github.com/cosmtrek/air/runner
 # github.com/creack/pty v1.1.11
 ## explicit
 github.com/creack/pty
-# github.com/fatih/color v1.7.0
+# github.com/fatih/color v1.10.0
 github.com/fatih/color
 # github.com/fsnotify/fsnotify v1.4.9
 github.com/fsnotify/fsnotify
-# github.com/imdario/mergo v0.3.8
+# github.com/imdario/mergo v0.3.11
 github.com/imdario/mergo
-# github.com/mattn/go-colorable v0.1.4
+# github.com/mattn/go-colorable v0.1.8
 github.com/mattn/go-colorable
-# github.com/mattn/go-isatty v0.0.10
+# github.com/mattn/go-isatty v0.0.12
 github.com/mattn/go-isatty
-# github.com/pelletier/go-toml v1.6.0
+# github.com/pelletier/go-toml v1.8.1
 github.com/pelletier/go-toml
 # golang.org/x/lint v0.0.0-20200302205851-738671d3881b
 ## explicit
