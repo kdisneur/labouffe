@@ -1,0 +1,44 @@
+title: Pâtes tomates épinards
+category: plat chaud
+cooking: 40m
+preparation: 15m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  pates:
+    quantity: 250g
+  concasse-tomate:
+    quantity: 200g
+  oignon:
+    quantity: 1
+  ail:
+    quantity: 1
+    details: gousse
+  epinards:
+    quantity: 150g
+    details: surgelés
+  huile-olive:
+    quantity: 2cs
+  philadelphia:
+    quantity: 100g
+  origan:
+    quantity: 0
+  sel:
+    quantity: 0
+  poivre: 
+    quantity: 0
+  sucre:
+    quantity: 1cc
+  
+instructions:
+  - Cuire les pâtes
+  - Emincer les oignons et écraser la gousse d'ail
+  - Dans une sauteuse, faire chauffer l'huile d'olive
+  - Faire revenir les oignons et l'ail jusqu'à ce qu'ils deviennent translucides
+  - Ajouter le concassé de tomates, le sucre et l'origan. Laisser mijoter 30min
+  - Ajouter les épinards décongelés et laisser cuire 10min
+  - Ajouter le philadelphia. Mélanger jusqu'à ce qu'il soit fondu
+  - Ajouter les pâtes. Saler poivrer
