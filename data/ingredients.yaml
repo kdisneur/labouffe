@@ -33,6 +33,8 @@ carotte:
   title: Carottes
 cassonade:
   title: Cassonade
+chair-a-saucisse:
+  title: Chair à saucisse
 champignons:
   title: Champignons
 chocolat:
@@ -69,6 +71,8 @@ epinards:
   title: Épinards
 extrait-vanille:
   title: Extrait de vanille
+farce:
+  title: Farce porc et veau
 farine:
   title: Farine
 feta:
@@ -121,6 +125,8 @@ orange:
   title: Orange
 origan:
   title: Origan
+pain:
+  title: Pain
 pain-epice:
   title: Pain d'épice
 parmesan:
