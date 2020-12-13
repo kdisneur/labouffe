@@ -37,6 +37,8 @@ chair-a-saucisse:
   title: Chair à saucisse
 champignons:
   title: Champignons
+chevre:
+  title: Chèvre
 chocolat:
   title: Chocolat
 chocolat-praline:
@@ -53,6 +55,8 @@ concentre-tomate:
   title: Concentré de tomates
 confiture:
   title: Confiture
+coulis-tomate:
+  title: Coulis de tomates
 courgette:
   title: Courgettes
 creme-entiere-liquide:
@@ -188,6 +192,8 @@ sucre-vanille:
   title: Sucre vanillé
 thym:
   title: Thym
+tomate:
+  title: Tomate
 viande-hachee:
   title: Viande hachée
 vin-rouge:
