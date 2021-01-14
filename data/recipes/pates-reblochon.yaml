@@ -1,0 +1,32 @@
+title: Gratin de pâtes au reblochon
+category: plat chaud
+cooking: 30m
+preparation: 10m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  pates:
+    quantity: 150g
+  chorizo:
+    quantity: 70g
+  creme-entiere-liquide:
+    quantity: 0.5 
+  champignons:
+    quantity: 150g
+  olives:
+    quantity: 50g
+  reblochon:
+    quantity: 0.5
+instructions:
+  - Préchauffer le four à 200°, chaleur tournante mode gratin
+  - Faire cuire les pâtes dans l'eau bouillante
+  - Couper les champignons, le chorizo et les olives en morceaux
+  - Faire revenir dans une poêle
+  - Couper le reblochon en morceaux, enlever la croûte
+  - Égoutter les pâtes
+  - Dans un plat mettre une couche de pâte, une couche de farce, quelques morceaux de reblochon et un peu de crème
+  - Recommencer jusqu'à épuisement
+  - Cuire au four 20m
