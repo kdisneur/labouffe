@@ -1,0 +1,25 @@
+title: Crème anglaise
+category: biscuit
+preparation: 5m
+cooking: 8m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 2
+  type: unités
+ingredients:
+  gousse-vanille:
+    quantity: 1
+  lait:
+    quantity: 300g
+  jaune-oeuf:
+    quantity: 4
+  sucre:
+    quantity: 50g
+
+instructions:
+  - Dans le Thermomix, mettre les ingrédients
+  - Insérer le fouet
+  - Chauffer 8m à 80°C, vitesse 2, sens inverse
+  - Transvaser le contenu dans un plat
+  - Laisser refroidir à température ambiante avant de conserver au frigo

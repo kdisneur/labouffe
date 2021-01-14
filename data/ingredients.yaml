@@ -29,6 +29,8 @@ camembert:
   title: Camembert
 cannelle:
   title: Cannelle
+caramel:
+  title: Caramel
 carotte:
   title: Carottes
 cassonade:
@@ -61,6 +63,9 @@ coulis-tomate:
   title: Coulis de tomates
 courgette:
   title: Courgettes
+creme-anglaise:
+  recipe: creme-anglaise
+  title: Crème anglaise
 creme-entiere-liquide:
   title: Crème entière liquide
 creme-fraiche:
