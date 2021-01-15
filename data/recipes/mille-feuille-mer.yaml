@@ -1,0 +1,48 @@
+title: Mille feuilles de la mer
+category: plat froid
+cooking: 0m
+preparation: 30m
+difficulty: facile
+pricing: cher
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  saumon-fume:
+    quantity: 4
+    details: grandes tranches
+  fromage-frais:
+    quantity: 1
+  echalote:
+    quantity: 1
+  crabe:
+    quantity: 1
+    details: boîte de morceaux
+  poivre:
+    quantity: 0
+  huile-olive:
+    quantity: 1cs
+  citron:
+    quantity: 2cs
+    details: jus
+  ciboulette:
+    quantity: 0.25
+    details: botte
+  persil:
+    quantity: 0.25
+    details: plat, en botte
+  piment-espelette:
+    quantity: 0
+    details: pincée
+
+   
+  
+instructions:
+  - Emincer l'échalote et les herbes
+  - Egouter le crabe et émietter 
+  - A l'aide d'un emporte pièces, réaliser 6 ronds de saumon
+  - Hacher finement les chutes de saumon
+  - Dans un saladier mélanger l'huile, le citron, l'échalote, les herbes, le crabe, le poivre, les chutes de saumon, le piment et le fromage
+  - Dans une assiette, avec le cercle de dressage, poser un rond de saumon fumé puis de la farce
+  - Tasser puis recommencer
+  - Démouler et réserver au frais

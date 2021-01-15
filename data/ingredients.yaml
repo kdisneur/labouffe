@@ -63,6 +63,8 @@ coulis-tomate:
   title: Coulis de tomates
 courgette:
   title: Courgettes
+crabe:
+  title: Crabe
 creme-anglaise:
   recipe: creme-anglaise
   title: Crème anglaise
@@ -152,10 +154,14 @@ pates:
   title: Pâtes
 pavesini:
   title: Pavesini
+persil:
+  title: Persil
 petits-pois:
   title: Petits-pois
 philadelphia:
   title: Philadelphia
+piment-espelette:
+  title: Piment d'Espelette
 poireaux:
   title: poireaux
 poires:
@@ -175,6 +181,8 @@ puree:
   title: Purée
 ras-el-hanout:
   title: Ras el Hanout
+reblochon:
+  title: Reblochon
 riz:
   title: Riz
 safran:
@@ -211,5 +219,3 @@ vin-rouge:
   title: Vin rouge
 vinaigre:
   title: Vinaigre
-reblochon:
-  title: Reblochon
