@@ -1,0 +1,33 @@
+title: Pâte à galettes
+category: plat chaud
+preparation: 13h20m
+cooking: 30m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 6
+  type: unités
+ingredients:
+  oeuf:
+    quantity: 1
+  beurre:
+    quantity: 15g
+    details: fondu
+  farine:
+    quantity: 250g
+    details: sarrasin
+  eau:
+    quantity: 1l
+  sel:
+    quantity: 7g
+    details: fleur de sel
+instructions:
+  - Mettre la farine et le sel dans un saladier
+  - Ajouter l'eau et l'oeuf battu
+  - Mélanger
+  - Ajouter le beurre fondu
+  - Fouetter la pâte pendant 5 à 10m
+  - Couvrir et laisser reposer au frigo durant 12h (4h minimum)
+  - Ajouter 50cl d'eau et mélanger
+  - Laisser reposer 1h à température ambiante avant utilisation
+  
