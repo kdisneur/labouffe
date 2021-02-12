@@ -1,0 +1,35 @@
+title: Pâte à pizza
+category: plat chaud
+preparation: 130m
+cooking: 5m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 4
+  type: unités
+ingredients:
+  huile-olive:
+    quantity: 30g
+  levure-boulanger:
+    quantity: 20g
+  sucre:
+    quantity: 1cc
+  farine:
+    quantity: 400g
+  eau:
+    quantity: 220g
+  sel:
+    quantity: 1cc
+instructions:
+  - Graisser un saladier
+  - Dans le Thermomix, mettre l'eau, le sucre et la levure. 
+  - Mélanger 20s, vitesse 2
+  - Ajouter la farine, l'huile d'olive et le sel
+  - Mélanger 5m en mode pétrin
+  - Former une boule et mettre dans le saladier
+  - Couvrir le saladier et le mettre dans le four fermé jusqu'à ce que la pâte ait doublé de volume
+  - Poser la pâte sur un plan de travail fariné et la pétrir
+  - Etaler à la main ou à l'aide d'un rouleau
+  - Garnir la pâte 
+  - Préchauffer le four à 240°
+  - Mettre au four pendant 5m
