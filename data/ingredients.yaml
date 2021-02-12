@@ -21,6 +21,8 @@ bouillon-boeuf:
   title: Bouillon de boeuf
 bouillon-legumes:
   title: Bouillon de légumes
+bouillon-volaille:
+  title: Bouillon de volaille
 cacao:
   title: Cacao en poudre
 cafe:
@@ -148,6 +150,8 @@ pain-epice:
   title: Pain d'épice
 parmesan:
   title: Parmesan
+patate-douce:
+  title: Patate douce
 pate-tarte-feuilletee:
   title: Pâte à tarte feuilletée
 pates:
@@ -176,6 +180,8 @@ pomme-de-terre:
   title: Pomme de terre
 porto:
   title: Porto
+potimarron:
+  title: Potimarron
 puree:
   recipe: puree-pommes-de-terre
   title: Purée
