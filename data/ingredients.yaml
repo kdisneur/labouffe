@@ -3,6 +3,8 @@ abricots-secs:
   title: Abricots secs
 ail:
   title: Ail
+ail-poudre:
+  title: Ail poudre
 amande:
   title: Amande
 arome-vanille:
@@ -43,6 +45,11 @@ champagne:
   title: Champagne
 champignons:
   title: Champignons
+champignons-teriyaki:
+  recipe: champignons-teriyaki
+  title: Champignons teriyaki
+chapelure:
+  title: Chapelure
 chevre:
   title: Chèvre
 chocolat:
@@ -51,6 +58,8 @@ chocolat-praline:
   title: Chocolat praliné dessert
 chorizo:
   title: Chorizo
+chou-rouge:
+  title: Chou rouge
 ciboulette:
   title: Ciboulette
 citron:
@@ -94,12 +103,18 @@ farine:
   title: Farine
 feta:
   title: Fêta
+feuille-nori:
+  title: Feuille de nori
+filet-poulet:
+  title: Filet de poulet
 fleur-sel:
   title: Fleur de sel
 fromage-frais:
   title: Fromage frais
 gousse-vanille:
   title: Gousse de vanille
+graines-sesame:
+  title: Graines de sésame
 gras-de-boeuf:
   title: Gras de boeuf
 herbes-provence:
@@ -128,16 +143,25 @@ maizena:
   title: Maizena
 mascarpone:
   title: Mascarpone
+mayonnaise:
+  title: Mayonnaise
 moutarde:
   title: Moutarde
 noisettes:
   title: Noisettes
 noix-coco:
   title: Noix de coco
+nugget:
+  recipe: nuggets
+  title: Nugget
 oeuf:
   title: Oeufs
 oignon:
   title: Oignon
+oignon-poudre:
+  title: Oignon poudre
+oignon-frits:
+  title: Oignon frits
 olives:
   title: Olives
 orange:
@@ -190,11 +214,21 @@ ras-el-hanout:
 reblochon:
   title: Reblochon
 riz:
-  title: Riz
+  title: Riz long cru
+riz-japonais:
+  recipe: riz-japonais
+  title: Riz japonais cuit
+riz-sushi:
+  title: Riz spécial sushi cru
 safran:
   title: Safran
 sauce-hollandaise:
   title: Sauce hollandaise
+sauce-ranch:
+  recipe: sauce-ranch
+  title: Sauce ranch
+sauce-teriyaki:
+  title: Sauce teriyaki
 saucisse-fumée:
   title: Saucisse fumée
 saumon-frais:
@@ -207,6 +241,8 @@ sel:
   title: Sel
 semoule:
   title: Semoule
+sirop-agave:
+  title: Sirop d'agave
 speculoos:
   title: Speculoos
 sucre:
@@ -225,3 +261,9 @@ vin-rouge:
   title: Vin rouge
 vinaigre:
   title: Vinaigre
+vinaigre-riz:
+  title: Vinaigre de riz
+wrap:
+  title: Wrap
+yahourt-grec:
+  title: Yahourt grec

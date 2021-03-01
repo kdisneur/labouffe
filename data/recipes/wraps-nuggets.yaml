@@ -1,0 +1,29 @@
+title: Wraps nuggets
+category: plat froid
+cooking: 0m
+preparation: 15m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 10
+  type: unités
+ingredients:
+  wrap:
+    quantity: 6
+  nugget:
+    quantity: 30
+  sauce-ranch:
+    quantity: 150g
+  tomate:
+    quantity: 3
+  avocat:
+    quantity: 1
+  oignon-frits:
+    quantity: 0
+instructions:
+  - Couper le wrap en deux
+  - Étaler de la sauce ranch au milieu (ne pas trop remonter sur les côtés)
+  - Ajouter les oignons frits, de la tomate et de l’avocat au milieu
+  - Ajouter 2 ou 3 nuggets
+  - Replier le bas (arrondi) de un tiers puis replier les côtes vers le centre.
+  - Le retourner pour que le wrap tienne fermé

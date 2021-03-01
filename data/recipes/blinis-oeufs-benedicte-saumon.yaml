@@ -14,7 +14,7 @@ ingredients:
   saumon-fume:
     quantity: 2
     details: tranches
-  sauce-hollandaise: 
+  sauce-hollandaise:
     quantity: 2cs
   ciboulette:
     quantity: 0
@@ -26,4 +26,3 @@ instructions:
   - Poser un oeuf sur chaque blini
   - Napper de sauce hollandaise
   - Parsermer d'un peu de ciboulette
-  

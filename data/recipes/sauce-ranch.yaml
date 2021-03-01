@@ -1,0 +1,27 @@
+title: Sauce ranch
+category: plat froid
+cooking: 0m
+preparation: 15m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 3
+  type: personnes
+ingredients:
+  yahourt-grec:
+    quantity: 150g
+  mayonnaise:
+    quantity: 2cs
+  ail-poudre:
+    quantity: 0.5cc
+  oignon-poudre:
+    quantity: 0.5cc
+  ciboulette:
+    quantity: 0
+  sel:
+    quantity: 0
+  poivre:
+    quantity: 0
+instructions:
+  - Mélanger tous les ingrédients ensemble
+  - Mettre au frigo (se conserver de 3 à 5 jours)
