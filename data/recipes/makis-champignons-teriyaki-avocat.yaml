@@ -26,6 +26,10 @@ ingredients:
   poivre:
     quantity: 0
 instructions:
+  - instruction: Préparer le riz
+    recipe: riz-japonais
+  - instruction: Préparer les champignons teriyaki
+    recipe: champignons-teriyaki
   - Découper finement les champignons pour simplifier le montage
   - Découper l'avocat en lamelles
   - Déposer une feuille de nori contre le bord sur le bord supérieur d'une natte de bamboo humidifiée
