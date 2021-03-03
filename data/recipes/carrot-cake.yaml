@@ -1,0 +1,46 @@
+title: Carrot cake
+category: gâteau 
+cooking: 50m
+preparation: 15m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 8
+  type: personnes
+ingredients:
+  carotte:
+    quantity: 330g 
+  amande: 
+    quantity: 100g
+    details: poudre
+  noix: 
+    quantity: 40g
+    details: cerneaux
+  noisettes:
+    quantity: 40g
+  noix-cajou:
+    quantity: 20g
+  raisins-secs:
+    quantity: 100g
+  oeuf:
+    quantity: 4
+  sucre:
+    quantity: 50g
+  farine:
+    quantity: 150g
+  levure-chimique :
+    quantity: 1cc
+  beurre: 
+    quantity: 100g
+  lait:
+    quantity: 45g
+
+instructions:
+  - Préchauffer le four à 180°
+  - Beurrer un moule à cake
+  - Eplucher les carottes, les couper en tronçons
+  - Mettre la poudre d'amandes, les carottes et les fruits secs (noix, noisettes, noix de Cajou) dans le Thermomix. Hacher 6 s, vit 5
+  - Ajouter les oeufs et mélanger 13s, vit 4, sens inverse
+  - Ajouter la farine, les raisins secs, le lait, le beurre, la levure et mélanger 30s, vit 4, sens inverse
+  - Transvaser dans le moule et lisser la surface
+  - Enfourner et cuire 50m 

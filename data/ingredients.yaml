@@ -149,6 +149,10 @@ moutarde:
   title: Moutarde
 noisettes:
   title: Noisettes
+noix:
+  title: Noix
+noix-cajou:
+  title: Noix de Cajou
 noix-coco:
   title: Noix de coco
 nugget:
@@ -209,6 +213,8 @@ potimarron:
 puree:
   recipe: puree-pommes-de-terre
   title: Purée
+raisins-secs:
+  title: Raisins secs
 ras-el-hanout:
   title: Ras el Hanout
 reblochon:
