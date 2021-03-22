@@ -2,10 +2,12 @@ package internal
 
 import (
 	"fmt"
+	"html/template"
 	"io"
 	"os"
 	"path"
 	"path/filepath"
+	"strings"
 
 	"github.com/kdisneur/labouffe/internal/html"
 	"github.com/kdisneur/labouffe/internal/recipe"
@@ -30,6 +32,7 @@ type RecipesView struct {
 // RecipeView is the data necessary to build a recipe template
 type RecipeView struct {
 	*recipe.Recipe
+	WarningSafeHTML *template.HTML
 	TotalDuration   recipe.Duration
 	PricingScale    int
 	DifficultyScale int
@@ -65,6 +68,7 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 	for i := range recipes {
 		recipeviews[i] = &RecipeView{
 			Recipe:          recipes[i],
+			WarningSafeHTML: nl2br(recipes[i].Warning),
 			TotalDuration:   recipe.Duration(recipes[i].Preparation + recipes[i].Cooking),
 			PricingScale:    int(recipes[i].Pricing) + 1,
 			DifficultyScale: int(recipes[i].Difficulty) + 1,
@@ -196,4 +200,14 @@ func copyFolderContent(source string, destination string) error {
 
 		return nil
 	})
+}
+
+func nl2br(text *string) *template.HTML {
+	if text == nil {
+		return nil
+	}
+
+	html := template.HTML(strings.ReplaceAll(template.HTMLEscapeString(*text), "\n", "<br>"))
+
+	return &html
 }

@@ -2,6 +2,13 @@
   <div class="uk-width-3-4@l uk-align-center">
     <h1 class="uk-heading-small uk-heading-divider uk-margin-remove-top">{{ .Data.Title }}</h1>
 
+    {{- if .Data.WarningSafeHTML }}
+      <div class="uk-alert-primary" uk-alert>
+        <h4>Note importante</h4>
+        <p> {{ .Data.WarningSafeHTML }}</p>
+      </div>
+    {{- end }}
+
     <div uk-grid="true">
       <div class="uk-width-1-2@s">
         <div uk-grid="true">

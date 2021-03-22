@@ -83,6 +83,7 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 		Servings:     r.Servings,
 		Instructions: r.Instructions,
 		Ingredients:  ingredients,
+		Warning:      r.Warning,
 	})
 
 	return nil

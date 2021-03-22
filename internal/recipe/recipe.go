@@ -32,6 +32,7 @@ type Recipe struct {
 	Servings     Servings
 	Instructions []*Instruction
 	Ingredients  []*IncludedIngredient
+	Warning      *string
 }
 
 // YAMLRecipe represents the YAML format
@@ -45,6 +46,7 @@ type YAMLRecipe struct {
 	Servings     Servings                `yaml:"servings"`
 	Instructions []*Instruction          `yaml:"instructions"`
 	Ingredients  YAMLIncludedIngredients `yaml:"ingredients"`
+	Warning      *string                 `yaml:"warning"`
 }
 
 // YAMLIncludedIngredient represents an ingredient to include in a recipe
