@@ -8,6 +8,7 @@ import (
 type Instruction struct {
 	Title      string
 	Recipe     *Recipe
+	Warning    string
 	recipeCode string
 }
 
@@ -15,6 +16,7 @@ type Instruction struct {
 func (i *Instruction) UnmarshalYAML(unmarhsal func(interface{}) error) error {
 	var title string
 	var recipeCode string
+	var warning string
 
 	if err1 := unmarhsal(&title); err1 != nil {
 		var data map[string]string
@@ -24,10 +26,12 @@ func (i *Instruction) UnmarshalYAML(unmarhsal func(interface{}) error) error {
 
 		title = data["instruction"]
 		recipeCode = data["recipe"]
+		warning = data["warning"]
 	}
 
 	i.Title = title
 	i.recipeCode = recipeCode
+	i.Warning = warning
 
 	return nil
 }

@@ -4,7 +4,7 @@ preparation: 30m
 resting: 12h
 cooking: 40m
 difficulty: facile
-pricing: abordable 
+pricing: abordable
 servings:
   quantity: 6
   type: unités
@@ -31,8 +31,9 @@ instructions:
   - "Monter la crème au mascarpone en chantilly : Battre la crème au fouet électrique durant 3m jusqu'à obtention d'une chantilly très ferme"
   - Sortir la crème patissière du frigo
   - La mélanger au fouet jusqu'à obtention d'une consistance lisse
-  - Incorporer délicatement la chantilly à la crème. La totalité de la crème chantilly n'est pas forcément nécessaire. Goûter à l'incorporation de la chantilly afin que la crème ait le goût souhaité
+  - instruction: Incorporer délicatement la chantilly à la crème.
+    warning: La totalité de la crème chantilly n'est pas forcément nécessaire. Goûter à l'incorporation de la chantilly afin que la crème ait le goût souhaité
   - "Monter le mille-feuille : Remplir une poche à douille avec embout cannelé de crème"
   - Disposer la crème sur une pâte feuilletée
   - Recouvrir d'une pâte feuilletée et répéter l'opération
-  - Décorer le mille-feuille 
+  - Décorer le mille-feuille

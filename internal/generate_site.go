@@ -32,10 +32,17 @@ type RecipesView struct {
 // RecipeView is the data necessary to build a recipe template
 type RecipeView struct {
 	*recipe.Recipe
+	Instructions    []*RecipeViewInstruction
 	WarningSafeHTML *template.HTML
 	TotalDuration   recipe.Duration
 	PricingScale    int
 	DifficultyScale int
+}
+
+// RecipeViewInstruction is the instruction data necessary to buld a recipe template
+type RecipeViewInstruction struct {
+	*recipe.Instruction
+	WarningSafeHTML *template.HTML
 }
 
 // IngredientView is the data necessary to build an ingredient template
@@ -66,8 +73,17 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 
 	recipeviews := make([]*RecipeView, len(recipes))
 	for i := range recipes {
+		instructions := make([]*RecipeViewInstruction, len(recipes[i].Instructions))
+		for j := range recipes[i].Instructions {
+			instructions[j] = &RecipeViewInstruction{
+				Instruction:     recipes[i].Instructions[j],
+				WarningSafeHTML: nl2br(recipes[i].Instructions[j].Warning),
+			}
+		}
+
 		recipeviews[i] = &RecipeView{
 			Recipe:          recipes[i],
+			Instructions:    instructions,
 			WarningSafeHTML: nl2br(recipes[i].Warning),
 			TotalDuration:   recipe.Duration(recipes[i].Preparation + +recipes[i].Resting + recipes[i].Cooking),
 			PricingScale:    int(recipes[i].Pricing) + 1,
@@ -202,12 +218,12 @@ func copyFolderContent(source string, destination string) error {
 	})
 }
 
-func nl2br(text *string) *template.HTML {
-	if text == nil {
+func nl2br(text string) *template.HTML {
+	if text == "" {
 		return nil
 	}
 
-	html := template.HTML(strings.ReplaceAll(template.HTMLEscapeString(*text), "\n", "<br>"))
+	html := template.HTML(strings.ReplaceAll(template.HTMLEscapeString(text), "\n", "<br>"))
 
 	return &html
 }

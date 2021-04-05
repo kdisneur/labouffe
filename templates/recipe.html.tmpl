@@ -28,10 +28,12 @@
         </div>
         {{- end }}
 
+        {{- if .Data.Cooking }}
         <div uk-grid="true" class="uk-grid-small">
           <div class="uk-width-1-2">cuisson</div>
           <div class="uk-width-1-2">{{ .Data.Cooking.TimeDuration | duration }}</div>
         </div>
+        {{- end }}
 
         <hr>
 
@@ -92,6 +94,10 @@
           {{ $instruction.Title }}
           {{ if $instruction.Recipe }}
             (<a href="{{ recipeURL $.Site.PublicURL $instruction.Recipe.Code }}">voir la recette</a>)
+          {{ end }}
+          {{- if $instruction.WarningSafeHTML }}
+            <mark>{{ $instruction.WarningSafeHTML }}</mark>
+          </p>
           {{ end }}
         </p>
       {{ end }}

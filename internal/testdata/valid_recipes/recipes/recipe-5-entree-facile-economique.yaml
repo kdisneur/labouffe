@@ -4,6 +4,7 @@ preparation: 10m
 cooking: 35m
 difficulty: facile
 pricing: économique
+warning: Ceci est une recette a préparer à l'avance
 servings:
   quantity: 2
   type: personnes

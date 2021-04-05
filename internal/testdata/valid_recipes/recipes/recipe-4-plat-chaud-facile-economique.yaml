@@ -15,3 +15,5 @@ ingredients:
 instructions:
   - La première instruction
   - La seconde instruction
+  - instruction: La troisième instruction
+    warning: mais attention de bien la faire avant la seconde

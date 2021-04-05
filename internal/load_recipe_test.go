@@ -57,6 +57,7 @@ func TestLoadingValidRecipes(t *testing.T) {
 			Title:       "Recipe 2",
 			Category:    recipe.CategoryColdDishes,
 			Preparation: recipe.Duration(10 * time.Minute),
+			Resting:     recipe.Duration(3 * time.Minute),
 			Cooking:     recipe.Duration(20 * time.Minute),
 			Difficulty:  recipe.DifficultyAverage,
 			Pricing:     recipe.PriceAffordable,
@@ -129,12 +130,17 @@ func TestLoadingValidRecipes(t *testing.T) {
 			Instructions: []*recipe.Instruction{
 				{Title: "La première instruction"},
 				{Title: "La seconde instruction"},
+				{
+					Title:   "La troisième instruction",
+					Warning: "mais attention de bien la faire avant la seconde",
+				},
 			},
 		},
 		{
 			Code:        "recipe-5-entree-facile-economique",
 			Title:       "Recipe 5",
 			Category:    recipe.CategorySideDishes,
+			Warning:     "Ceci est une recette a préparer à l'avance",
 			Preparation: recipe.Duration(10 * time.Minute),
 			Cooking:     recipe.Duration(35 * time.Minute),
 			Difficulty:  recipe.DifficultyEasy,
@@ -229,12 +235,20 @@ func assertRecipe(t *testing.T, want *recipe.Recipe, got *recipe.Recipe) {
 		t.Errorf("unexpected recipe '%s' title: want: %s; got: %s", want.Code, want.Title, got.Title)
 	}
 
+	if want.Warning != got.Warning {
+		t.Errorf("unexpected recipe '%s' warning: want: %s; got: %s", want.Code, want.Warning, got.Warning)
+	}
+
 	if want.Category != got.Category {
 		t.Errorf("unexpected recipe '%s' category: want: %s; got: %s", want.Code, want.Category, got.Category)
 	}
 
 	if want.Preparation != got.Preparation {
 		t.Errorf("unexpected recipe '%s' preparation: want: %s; got: %s", want.Code, want.Preparation, got.Preparation)
+	}
+
+	if want.Resting != got.Resting {
+		t.Errorf("unexpected recipe '%s' resting: want: %s; got: %s", want.Code, want.Resting, got.Resting)
 	}
 
 	if want.Cooking != got.Cooking {
@@ -300,6 +314,23 @@ func assertRecipe(t *testing.T, want *recipe.Recipe, got *recipe.Recipe) {
 
 		if wantInstruction.Title != gotInstruction.Title {
 			t.Errorf("unexpected recipe '%s' instruction title: want: %s; got: %s", want.Code, wantInstruction.Title, gotInstruction.Title)
+		}
+
+		if wantInstruction.Recipe != nil && gotInstruction.Recipe == nil {
+			t.Errorf("unexpected recipe '%s' instruction recipe: want a linked recipe but did not get one", want.Code)
+		}
+
+		if wantInstruction.Recipe == nil && gotInstruction.Recipe != nil {
+			t.Errorf("unexpected recipe '%s' instruction recipe: didn't want a linked recipe but got one", want.Code)
+		}
+
+		if wantInstruction.Recipe != nil {
+			t.Logf("asserting likned reciped to an instruction for recipe '%s'", want.Code)
+			assertRecipe(t, wantInstruction.Recipe, gotInstruction.Recipe)
+		}
+
+		if wantInstruction.Warning != gotInstruction.Warning {
+			t.Errorf("unexpected recipe '%s' instruction warning: want: %s; got: %s", want.Code, wantInstruction.Warning, gotInstruction.Warning)
 		}
 
 		t.Logf("asserting instruction recipe for '%s'", want.Code)
