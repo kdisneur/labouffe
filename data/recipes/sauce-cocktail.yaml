@@ -1,0 +1,21 @@
+title: Sauce cocktail
+category: sauce
+preparation: 5m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  ketchup:
+    quantity: 2cs
+  mayonnaise:
+    quantity: 1cs
+  paprika:
+    quantity: 0
+  whisky:
+    quantity: 1cc
+    details: optionnel
+instructions:
+  - Mélanger tous les ingrédients ensemble
+  - Mettre au frigo (se conserve de 3 à 5 jours)
