@@ -17,8 +17,6 @@ ingredients:
   creme-mascarpone:
     quantity: 1
   sucre-glace:
-    quantity: 0
-
 instructions:
   - Préchauffer le four à 180°
   - Mettre au congélateur le récipient et les fouets pour monter la chantilly
@@ -33,7 +31,7 @@ instructions:
   - La mélanger au fouet jusqu'à obtention d'une consistance lisse
   - instruction: Incorporer délicatement la chantilly à la crème.
     warning: La totalité de la crème chantilly n'est pas forcément nécessaire. Goûter à l'incorporation de la chantilly afin que la crème ait le goût souhaité
-  - "Monter le mille-feuille : Remplir une poche à douille avec embout cannelé de crème"
+  - Remplir une poche à douille avec embout cannelé de crème
   - Disposer la crème sur une pâte feuilletée
   - Recouvrir d'une pâte feuilletée et répéter l'opération
   - Décorer le mille-feuille

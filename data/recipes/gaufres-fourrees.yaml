@@ -21,9 +21,7 @@ ingredients:
   levure-boulanger:
     quantity: 1
   lait:
-    quantity: 0
   cassonade:
-    quantity: 0
 instructions:
   - Mettre la farine, le sucre dans le Thermomix
   - Mélanger 10s vitesse 5
@@ -39,4 +37,3 @@ instructions:
   - Cuire les gaufres quelques minutes
   - Les couper en 2 et les fourrer avec 2 cuillères à café de cassonade
   - Faire une pile et poser un poids dessus
-

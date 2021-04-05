@@ -24,14 +24,11 @@ ingredients:
     details: tranches
   beurre:
     quantity: 20g
-  moutarde:
-    quantity : 0
-  thym:
-    quantity: 0
-  laurier:
-    quantity: 0
   huile-olive:
     quantity: 2cs
+  moutarde:
+  thym:
+  laurier:
 instructions:
   - Emincer les oignons
   - Couper la viande en morceaux, la faire revenir dans une cocotte avec l'huile jusqu'à coloration

@@ -1,6 +1,5 @@
 title: Mille-feuille de la mer
 category: plat froid
-cooking: 0m
 preparation: 30m
 difficulty: facile
 pricing: cher
@@ -18,8 +17,6 @@ ingredients:
   crabe:
     quantity: 1
     details: boîte de morceaux
-  poivre:
-    quantity: 0
   huile-olive:
     quantity: 1cs
   citron:
@@ -32,14 +29,11 @@ ingredients:
     quantity: 0.25
     details: plat, en botte
   piment-espelette:
-    quantity: 0
     details: pincée
-
-   
-  
+  poivre:
 instructions:
   - Emincer l'échalote et les herbes
-  - Egouter le crabe et émietter 
+  - Egouter le crabe et émietter
   - A l'aide d'un emporte pièces, réaliser 6 ronds de saumon
   - Hacher finement les chutes de saumon
   - Dans un saladier mélanger l'huile, le citron, l'échalote, les herbes, le crabe, le poivre, les chutes de saumon, le piment et le fromage

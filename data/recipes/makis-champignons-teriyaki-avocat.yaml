@@ -20,11 +20,8 @@ ingredients:
     quantity: 1
     details: haché en sachet
   graines-sesame:
-    quantity: 0
   sel:
-    quantity: 0
   poivre:
-    quantity: 0
 instructions:
   - instruction: Préparer le riz
     recipe: riz-japonais

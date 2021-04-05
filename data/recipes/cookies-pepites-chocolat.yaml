@@ -21,11 +21,10 @@ ingredients:
     quantity: 2
   levure-chimique:
     quantity: 1cc
-  fleur-sel:
-    quantity: 0
   chocolat:
     quantity: 300g
     details: pépites
+  fleur-sel:
 instructions:
   - Préchauffer le four à 180°C
   - Travailler le beurre ramolli avec les deux sucres

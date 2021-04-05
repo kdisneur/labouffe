@@ -1,5 +1,5 @@
 title: Carrot cake
-category: gâteau 
+category: gâteau
 cooking: 50m
 preparation: 15m
 difficulty: facile
@@ -9,11 +9,11 @@ servings:
   type: personnes
 ingredients:
   carotte:
-    quantity: 330g 
-  amande: 
+    quantity: 330g
+  amande:
     quantity: 100g
     details: poudre
-  noix: 
+  noix:
     quantity: 40g
     details: cerneaux
   noisettes:
@@ -30,7 +30,7 @@ ingredients:
     quantity: 150g
   levure-chimique :
     quantity: 1cc
-  beurre: 
+  beurre:
     quantity: 100g
   lait:
     quantity: 45g
@@ -43,4 +43,4 @@ instructions:
   - Ajouter les oeufs et mélanger 13s, vit 4, sens inverse
   - Ajouter la farine, les raisins secs, le lait, le beurre, la levure et mélanger 30s, vit 4, sens inverse
   - Transvaser dans le moule et lisser la surface
-  - Enfourner et cuire 50m 
+  - Enfourner et cuire 50m

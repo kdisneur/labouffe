@@ -32,9 +32,7 @@ ingredients:
   concasse-tomate:
     quantity: 400g
   sel:
-    quantity: 0
   poivre:
-    quantity: 0
 instructions:
   - Emietter le pain et le faire tremper dans le lait
   - Eplucher les oignons et les couper en 4
@@ -45,6 +43,6 @@ instructions:
   - Ajouter la chair des courgettes, du sel, rissoler 5min, 120°C, vitesse 0,5 sans le gobelet
   - Préchauffer le four à 180°C
   - Ajouter la chair à saucisse, la farce, le pain, l'oeuf et le poivre
-  - Mélanger 30s, vitesse 4 
+  - Mélanger 30s, vitesse 4
   - Garnir les courgettes, les poser dans un plat, ajouter le concassé de tomates
   - Enfourner durant 30m

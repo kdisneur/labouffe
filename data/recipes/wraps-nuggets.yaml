@@ -1,6 +1,5 @@
 title: Wraps nuggets
 category: plat froid
-cooking: 0m
 preparation: 15m
 difficulty: facile
 pricing: économique
@@ -19,7 +18,6 @@ ingredients:
   avocat:
     quantity: 1
   oignon-frits:
-    quantity: 0
 instructions:
   - Couper le wrap en deux
   - Étaler de la sauce ranch au milieu (ne pas trop remonter sur les côtés)

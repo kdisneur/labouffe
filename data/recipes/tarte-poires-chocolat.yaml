@@ -17,14 +17,12 @@ ingredients:
     details: noir pâtissier
   creme-entiere-liquide:
     quantity: 300ml
-  beurre: 
-    quantity: 0
+  beurre:
     details: quelques noisettes
   cassonade:
     quantity: 1cs
   poires:
     quantity: 4
-
 instructions:
   - Préchauffer le four à 180°C
   - Mettre le chocolat en morceaux dans un saladier

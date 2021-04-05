@@ -22,16 +22,14 @@ ingredients:
     details: tablette
   concasse-tomate:
     quantity: 100g
-  thym:
-    quantity: 0
-  laurier:
-    quantity: 0
   huile-olive:
     quantity: 2cs
   emmental-rape:
     quantity: 100g
   beurre:
     quantity: 20g
+  thym:
+  laurier:
 instructions:
   - instruction: Faire la purée
     recipe: puree-pommes-de-terre

@@ -1,6 +1,5 @@
 title: Tartare de saumon
 category: plat froid
-cooking: 0m
 preparation: 30m
 difficulty: facile
 pricing: abordable
@@ -23,11 +22,8 @@ ingredients:
   huile-olive:
     quantity: 1cs
   sel:
-    quantity: 0
   citron:
-    quantity: 0
     details: jus
-
 instructions:
   - Emincer l'échalote
   - Couper en dés, le saumon, la pomme et l'avocat

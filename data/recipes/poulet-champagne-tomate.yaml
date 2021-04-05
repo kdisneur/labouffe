@@ -20,9 +20,7 @@ ingredients:
   champignons:
     quantity: 200g
   sel:
-    quantity: 0
   poivre:
-    quantity: 0
   beurre:
     quantity: 50g
   creme-fraiche:
@@ -38,4 +36,3 @@ instructions:
   - Les ajouter dans le plat
   - Laisser cuire durant 1h (la sauce doit juste frémir)
   - Ajouter la crème fraîche et mélanger
-  

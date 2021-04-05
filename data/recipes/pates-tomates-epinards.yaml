@@ -25,14 +25,10 @@ ingredients:
   philadelphia:
     quantity: 100g
   origan:
-    quantity: 0
   sel:
-    quantity: 0
-  poivre: 
-    quantity: 0
+  poivre:
   sucre:
     quantity: 1cc
-  
 instructions:
   - Cuire les pâtes
   - Emincer les oignons et écraser la gousse d'ail

@@ -13,7 +13,6 @@ ingredients:
   sucre:
     quantity: 250g
   citron:
-    quantity: 0
     details: 1 trait
 instructions:
   - Ajouter le citron aux blancs

@@ -19,16 +19,6 @@ ingredients:
     details: gousse
   viande-hachee:
     quantity: 500g
-  sel:
-    quantity: 0
-  poivre:
-    quantity: 0
-  origan:
-    quantity : 0
-  thym:
-    quantity: 0
-  laurier:
-    quantity: 0
   vin-rouge:
     quantity: 12cl
   bouillon-boeuf:
@@ -36,6 +26,11 @@ ingredients:
     details: tablette
   huile-olive:
     quantity: 2cs
+  sel:
+  poivre:
+  origan:
+  thym:
+  laurier:
 instructions:
   - Faire revenir les oignons et la gousse d'ail hachée dans l'huile d'olive
   - Ajouter la viande hachée et faire cuire à feu vif

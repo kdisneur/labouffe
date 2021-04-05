@@ -1,6 +1,5 @@
 title: Sauce ranch
 category: sauce
-cooking: 0m
 preparation: 15m
 difficulty: facile
 pricing: économique
@@ -17,11 +16,8 @@ ingredients:
   oignon-poudre:
     quantity: 0.5cc
   ciboulette:
-    quantity: 0
   sel:
-    quantity: 0
   poivre:
-    quantity: 0
 instructions:
   - Mélanger tous les ingrédients ensemble
   - Mettre au frigo (se conserve de 3 à 5 jours)

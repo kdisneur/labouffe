@@ -18,19 +18,16 @@ ingredients:
     details: gousse
   concasse-tomate:
     quantity: 600g
-  thym:
-    quantity: 0
-  riz: 
+  riz:
     quantity: 240g
   safran:
     quantity: 2
     details: dosettes
   ras-el-hanout:
     quantity: 1cc
+  thym:
   sel:
-    quantity: 0
   poivre:
-    quantity: 0
 instructions:
   - Faire bouillir les saucisses 20m
   - Emincer les oignons
