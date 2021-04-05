@@ -132,6 +132,8 @@ jaune-oeuf:
   title: Jaune d'oeuf
 joue-boeuf:
   title: Joue de boeuf
+ketchup:
+  title: Ketchup
 lait:
   title: Lait
 lait-concentre:
@@ -181,6 +183,8 @@ pain:
   title: Pain
 pain-epice:
   title: Pain d'épice
+paprika:
+  title: Paprika
 parmesan:
   title: Parmesan
 patate-douce:
@@ -278,6 +282,8 @@ vinaigre:
   title: Vinaigre
 vinaigre-riz:
   title: Vinaigre de riz
+whisky:
+  title: Whisky
 wrap:
   title: Wrap
 yahourt-grec:

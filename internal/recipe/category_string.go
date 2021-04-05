@@ -13,11 +13,12 @@ func _() {
 	_ = x[CategoryColdDishes-2]
 	_ = x[CategoryHotDishes-3]
 	_ = x[CategorySideDishes-4]
+	_ = x[CategorySauce-5]
 }
 
-const _Category_name = "biscuitgâteauplat froidplat chaudentrée"
+const _Category_name = "biscuitgâteauplat froidplat chaudentréesauce"
 
-var _Category_index = [...]uint8{0, 7, 14, 24, 34, 41}
+var _Category_index = [...]uint8{0, 7, 14, 24, 34, 41, 46}
 
 func (i Category) String() string {
 	if i < 0 || i >= Category(len(_Category_index)-1) {
