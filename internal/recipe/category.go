@@ -20,6 +20,8 @@ const (
 	CategoryHotDishes // plat chaud
 	// CategorySideDishes represents a side dishes kind of recipe
 	CategorySideDishes // entrée
+	// CategorySauce represents a sauce kind of recipe
+	CategorySauce // sauce
 )
 
 // AllCategories returns the full list of categories

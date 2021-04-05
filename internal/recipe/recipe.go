@@ -26,6 +26,7 @@ type Recipe struct {
 	Title        string
 	Category     Category
 	Cooking      Duration
+	Resting      Duration
 	Preparation  Duration
 	Difficulty   Difficulty
 	Pricing      Price
@@ -40,6 +41,7 @@ type YAMLRecipe struct {
 	Title        string                  `yaml:"title"`
 	Category     Category                `yaml:"category"`
 	Cooking      Duration                `yaml:"cooking"`
+	Resting      Duration                `yaml:"resting"`
 	Preparation  Duration                `yaml:"preparation"`
 	Difficulty   Difficulty              `yaml:"difficulty"`
 	Pricing      Price                   `yaml:"pricing"`

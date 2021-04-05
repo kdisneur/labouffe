@@ -69,7 +69,7 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 		recipeviews[i] = &RecipeView{
 			Recipe:          recipes[i],
 			WarningSafeHTML: nl2br(recipes[i].Warning),
-			TotalDuration:   recipe.Duration(recipes[i].Preparation + recipes[i].Cooking),
+			TotalDuration:   recipe.Duration(recipes[i].Preparation + +recipes[i].Resting + recipes[i].Cooking),
 			PricingScale:    int(recipes[i].Pricing) + 1,
 			DifficultyScale: int(recipes[i].Difficulty) + 1,
 		}

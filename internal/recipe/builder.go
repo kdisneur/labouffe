@@ -77,6 +77,7 @@ func (b *Builder) ParseNewYAMLRecipe(code string, input io.Reader) error {
 		Category:     r.Category,
 		Title:        r.Title,
 		Cooking:      r.Cooking,
+		Resting:      r.Resting,
 		Preparation:  r.Preparation,
 		Difficulty:   r.Difficulty,
 		Pricing:      r.Pricing,

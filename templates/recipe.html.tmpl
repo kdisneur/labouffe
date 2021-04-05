@@ -11,25 +11,38 @@
 
     <div uk-grid="true">
       <div class="uk-width-1-2@s">
-        <div uk-grid="true">
-          <div class="uk-width-1-2">
-            <dl class="uk-description-list uk-description-list-divider">
-              <dt><span class="uk-visible@s">Temps de </span>préparation</dt>
-              <dd>{{ .Data.Preparation.TimeDuration | duration }}</dd>
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Temps total</span></div>
+          <div class="uk-width-1-2">{{ .Data.TotalDuration.TimeDuration | duration }}</div>
+        </div>
 
-              <dt>Coût</dt>
-              <dd>{{ .Data.PricingScale | scale "nut" 5 }}</dd>
-            </dl>
-          </div>
-          <div class="uk-width-1-2">
-            <dl class="uk-description-list uk-description-list-divider">
-              <dt><span class="uk-visible@s">Temps de </span>cuisson</dt>
-              <dd>{{ .Data.Cooking.TimeDuration | duration }}</dd>
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">préparation</div>
+          <div class="uk-width-1-2">{{ .Data.Preparation.TimeDuration | duration }}</div>
+        </div>
 
-              <dt>Difficulté</dt>
-              <dd>{{ .Data.DifficultyScale | scale "nut" 5 }}</dd>
-            </dl>
-          </div>
+        {{- if .Data.Resting }}
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">repos</div>
+          <div class="uk-width-1-2">{{ .Data.Resting.TimeDuration | duration }}</div>
+        </div>
+        {{- end }}
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">cuisson</div>
+          <div class="uk-width-1-2">{{ .Data.Cooking.TimeDuration | duration }}</div>
+        </div>
+
+        <hr>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Coût</span></div>
+          <div class="uk-width-1-2">{{ .Data.PricingScale | scale "nut" 5 }}</div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Difficulté</span></div>
+          <div class="uk-width-1-2">{{ .Data.DifficultyScale | scale "nut" 5 }}</div>
         </div>
       </div>
       <div class="uk-width-1-2@s">
