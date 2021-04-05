@@ -1,0 +1,29 @@
+title: Crème patissière
+category: gâteau
+preparation: 12h20m
+cooking: 10m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 4
+  type: unités
+ingredients:
+  gousse-vanille:
+    quantity: 2
+  lait:
+    quantity: 50cl
+  jaune-oeuf:
+    quantity: 4
+  sucre:
+    quantity: 100g
+  farine:
+    quantity: 50g
+
+instructions:
+  - La veille - Faire infuser la vanille dans le lait
+  - Dans un récipient, mélanger les jaunes d'oeufs, le sucre et la farine
+  - Faire bouillir le lait 
+  - Hors du feu, ajouter le mélange d'oeufs, bien fouetter
+  - Remettre sur le feu et mélanger jusqu'à épaississement de la crème
+  - Transvaser dans un récipient
+  - Laisser refroidir à température ambiante avant de mettre au frigo.
