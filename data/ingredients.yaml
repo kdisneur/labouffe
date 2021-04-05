@@ -83,6 +83,11 @@ creme-entiere-liquide:
   title: Crème entière liquide
 creme-fraiche:
   title: Crême fraîche épaisse
+creme-mascarpone:
+  title: Crème mascarpone
+creme-patissiere:
+  recipe: creme-patissiere
+  title: Crème Pâtissière
 cuisse-poulet:
   title: Cuisse de poulet
 eau:
@@ -162,10 +167,10 @@ oeuf:
   title: Oeufs
 oignon:
   title: Oignon
-oignon-poudre:
-  title: Oignon poudre
 oignon-frits:
   title: Oignon frits
+oignon-poudre:
+  title: Oignon poudre
 olives:
   title: Olives
 orange:
@@ -180,6 +185,8 @@ parmesan:
   title: Parmesan
 patate-douce:
   title: Patate douce
+pate-feuilletee:
+  title: Pâte feuilletée
 pate-tarte-feuilletee:
   title: Pâte à tarte feuilletée
 pates:

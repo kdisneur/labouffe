@@ -1,0 +1,37 @@
+title: Mille-feuille
+category: gâteau
+preparation: 13h
+cooking: 40m
+difficulty: facile
+pricing: abordable 
+servings:
+  quantity: 6
+  type: unités
+ingredients:
+  pate-feuilletee:
+    quantity: 18
+    details: détaillée en rectangles
+  creme-patissiere:
+    quantity: 500g
+  creme-mascarpone:
+    quantity: 1
+  sucre-glace:
+    quantity: 0
+
+instructions:
+  - Préchauffer le four à 180°
+  - Mettre au congélateur le récipient et les fouets pour monter la chantilly
+  - Sur les plaques de four, sur du papier cuisson, déposer les rectangles de pâte feuilletée
+  - Les saupoudrer de sucre glace
+  - Recouvrir de papier cuisson et poser des poids
+  - Mettre au four 30m
+  - Retirer les poids et le papier cuisson de dessus. Remettre au four 10m
+  - Sortir du four et laisser refroidir
+  - "Monter la crème au mascarpone en chantilly : Battre la crème au fouet électrique durant 3m jusqu'à obtention d'une chantilly très ferme"
+  - Sortir la crème patissière du frigo
+  - La mélanger au fouet jusqu'à obtention d'une consistance lisse
+  - Incorporer délicatement la chantilly à la crème. La totalité de la crème chantilly n'est pas forcément nécessaire. Goûter à l'incorporation de la chantilly afin que la crème ait le goût souhaité
+  - "Monter le mille-feuille : Remplir une poche à douille avec embout cannelé de crème"
+  - Disposer la crème sur une pâte feuilletée
+  - Recouvrir d'une pâte feuilletée et répéter l'opération
+  - Décorer le mille-feuille 
