@@ -79,7 +79,13 @@ func (i *YAMLIncludedIngredients) UnmarshalYAML(unmarshal func(interface{}) erro
 			return fmt.Errorf("can't decode ingredient code as string '%v': %T", item.Key, item.Key)
 		}
 
-		unordered[code].Code = code
+		ingredient := unordered[code]
+		if ingredient == nil {
+			ingredient = &YAMLIncludedIngredient{}
+		}
+
+		ingredient.Code = code
+		unordered[code] = ingredient
 
 		*i = append(*i, *unordered[code])
 	}
