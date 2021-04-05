@@ -1,7 +1,8 @@
 title: Frites
 category: plat chaud
 cooking: 9m
-preparation: 30m
+resting: 10m
+preparation: 20m
 difficulty: facile
 pricing: économique
 servings:
