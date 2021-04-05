@@ -1,0 +1,35 @@
+title: Soupe à la tomate
+category: plat chaud
+cooking: 25m
+preparation: 10m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 5
+  type: personnes
+ingredients:
+  tomate-pelee:
+    quantity: 800g
+    details: garder le jus
+  oignon:
+    quantity: 1
+  ail:
+    quantity: 1
+  huile-colza:
+    quantity: 1cs
+  eau:
+    quantity: 250g
+  sucre:
+    quantity: 1cc
+  creme-entiere-liquide:
+    quantity: 200g
+  sel:
+  poivre:
+instructions:
+  - Couper l'oignon en 8
+  - Peler et dégermer l'ail
+  - Dans le bol du Thermomix, mixer l'oignon et l'ail à vitesse 5 pendant 3s
+  - Ajouter l'huile et faire rissoler vitesse mélange pendant 4m à 120°C
+  - Ajouter les tomates avec leur jus, l'eau, le sucre, le sel et le poivre
+  - Faire mijoter à vitesse 2 pendant 20m à 100°C
+  - Ajouter la crème et mixer à vitesse 6 pendant 2m

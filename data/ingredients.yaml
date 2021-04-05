@@ -124,6 +124,8 @@ gras-de-boeuf:
   title: Gras de boeuf
 herbes-provence:
   title: Herbes de provence
+huile-colza:
+  title: Huile de colza
 huile-noisettes:
   title: Huile de noisettes
 huile-olive:
@@ -274,6 +276,8 @@ thym:
   title: Thym
 tomate:
   title: Tomate
+tomate-pelee:
+  title: Tomates pelées
 viande-hachee:
   title: Viande hachée
 vin-rouge:
