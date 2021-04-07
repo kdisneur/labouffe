@@ -25,6 +25,14 @@ bouillon-legumes:
   title: Bouillon de légumes
 bouillon-volaille:
   title: Bouillon de volaille
+coriandre:
+  title: Coriandre
+coriandre-poudre:
+  title: Coriandre en poudre
+pois-chiche:
+  title: Pois-chiche
+cumin:
+  title: Cumin
 cacao:
   title: Cacao en poudre
 cafe:
@@ -128,6 +136,8 @@ herbes-provence:
   title: Herbes de provence
 huile-colza:
   title: Huile de colza
+huile-friture:
+  title: Huile de friture
 huile-noisettes:
   title: Huile de noisettes
 huile-olive:
