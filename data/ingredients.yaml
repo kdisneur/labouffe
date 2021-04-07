@@ -76,6 +76,8 @@ coriandre:
   title: Coriandre
 coriandre-poudre:
   title: Coriandre en poudre
+cornichon:
+  title: Cornichon
 coulis-tomate:
   title: Coulis de tomates
 courgette:
@@ -272,8 +274,12 @@ sauce-menthe:
 sauce-ranch:
   recipe: sauce-ranch
   title: Sauce ranch
+sauce-tartare:
+  title: Sauce tartare
 sauce-teriyaki:
   title: Sauce teriyaki
+sauce-worchestershire:
+  title: Sauce worchestershire
 saucisse-fumée:
   title: Saucisse fumée
 saumon-frais:
