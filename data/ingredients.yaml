@@ -39,6 +39,8 @@ carotte:
   title: Carottes
 cassonade:
   title: Cassonade
+celeri:
+  title: Céleri
 chair-a-saucisse:
   title: Chair à saucisse
 champagne:
@@ -145,6 +147,8 @@ huile-noisettes:
   title: Huile de noisettes
 huile-olive:
   title: Huile d'olive
+jarret-veau:
+  title: Jarret de veau
 jaune-oeuf:
   title: Jaune d'oeuf
 joue-boeuf:
@@ -313,6 +317,8 @@ tomate-pelee:
   title: Tomates pelées
 viande-hachee:
   title: Viande hachée
+vin-blanc:
+  title: Vin blanc
 vin-rouge:
   title: Vin rouge
 vinaigre:
