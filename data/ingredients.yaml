@@ -25,14 +25,6 @@ bouillon-legumes:
   title: Bouillon de légumes
 bouillon-volaille:
   title: Bouillon de volaille
-coriandre:
-  title: Coriandre
-coriandre-poudre:
-  title: Coriandre en poudre
-pois-chiche:
-  title: Pois-chiche
-cumin:
-  title: Cumin
 cacao:
   title: Cacao en poudre
 cafe:
@@ -80,6 +72,10 @@ conchiglioni:
   title: Conchiglioni
 confiture:
   title: Confiture
+coriandre:
+  title: Coriandre
+coriandre-poudre:
+  title: Coriandre en poudre
 coulis-tomate:
   title: Coulis de tomates
 courgette:
@@ -100,6 +96,8 @@ creme-patissiere:
   title: Crème Pâtissière
 cuisse-poulet:
   title: Cuisse de poulet
+cumin:
+  title: Cumin
 eau:
   title: Eau
 echalote:
@@ -227,6 +225,8 @@ poireaux:
   title: poireaux
 poires:
   title: Poires
+pois-chiche:
+  title: Pois-chiche
 poivre:
   title: Poivre
 poivron:
@@ -290,6 +290,9 @@ sucre-glace:
   title: Sucre glace
 sucre-vanille:
   title: Sucre vanillé
+tahini:
+  recipe: tahini
+  title: Tahini
 thym:
   title: Thym
 tomate:
