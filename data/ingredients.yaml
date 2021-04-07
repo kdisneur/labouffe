@@ -110,6 +110,9 @@ epinards:
   title: Épinards
 extrait-vanille:
   title: Extrait de vanille
+falafel:
+  recipe: falafel
+  title: Falafel
 farce:
   title: Farce porc et veau
 farine:
@@ -263,6 +266,9 @@ safran:
   title: Safran
 sauce-hollandaise:
   title: Sauce hollandaise
+sauce-menthe:
+  recipe: sauce-menthe
+  title: Sauce à la menthe
 sauce-ranch:
   recipe: sauce-ranch
   title: Sauce ranch

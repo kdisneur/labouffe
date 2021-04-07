@@ -1,0 +1,24 @@
+title: Falafels sandwich
+category: plat froid
+preparation: 15m
+difficulty: facile
+pricing: économique
+warning: |
+  La dernière fois on a testé avec du pain faluche mais ça prenait trop le dessus en terme de goût. À retester avec une galette.
+servings:
+  quantity: 4
+  type: unités
+ingredients:
+  falafel:
+    quantity: 12
+  sauce-menthe:
+    quantity: 100g
+  tomate:
+    quantity: 2
+    details: grosses
+instructions:
+  - Ouvrir le pain en 2, ne pas couper en entier
+  - Tartiner les deux faces intérieurs de sauce à la menthe
+  - Ajouter des rondelles de tomates
+  - Ajouter 3 falafels
+  - Refermer le pain
