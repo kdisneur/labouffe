@@ -1,0 +1,29 @@
+title: Béchamel
+category: sauce
+preparation: 5m
+cooking: 10m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  echalote:
+    quantity: 2
+  beurre:
+    quantity: 25g
+  farine:
+    quantity: 25g
+  lait:
+    quantity: 25cl
+  sel:
+  poivre:
+instructions:
+  - Hacher les échalotes
+  - Faire fondre le beurre avec les échalotes à feu doux (2)
+  - Faire cuire 2-3 minutes
+  - Ajouter la farine et bien mélanger
+  - Verser d'un coup le lait et bien mélanger
+  - Porter à ébulltion à feu moyen (4) en arrêtant pas de mélanger
+  - Continuer jusqu'à épaississement de la sauce
+  - Saler et poivrer
