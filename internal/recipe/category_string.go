@@ -9,14 +9,14 @@ func _() {
 	// Re-run the stringer command to generate them again.
 	var x [1]struct{}
 	_ = x[CategoryBiscuit-0]
-	_ = x[CategoryCake-1]
+	_ = x[CategoryDessert-1]
 	_ = x[CategoryColdDishes-2]
 	_ = x[CategoryHotDishes-3]
 	_ = x[CategorySideDishes-4]
 	_ = x[CategorySauce-5]
 }
 
-const _Category_name = "biscuitgâteauplat froidplat chaudentréesauce"
+const _Category_name = "biscuitdessertplat froidplat chaudentréesauce"
 
 var _Category_index = [...]uint8{0, 7, 14, 24, 34, 41, 46}
 

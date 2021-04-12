@@ -12,8 +12,8 @@ type Category int
 const (
 	// CategoryBiscuit represents a biscuit kind of recipe
 	CategoryBiscuit Category = iota // biscuit
-	// CategoryCake represents a cake kind of recipe
-	CategoryCake // gâteau
+	// CategoryDessert represents a dessert kind of recipe
+	CategoryDessert // dessert
 	// CategoryColdDishes represents a cold dishes kind of recipe
 	CategoryColdDishes // plat froid
 	// CategoryHotDishes represents a hot dishes kind of recipe
