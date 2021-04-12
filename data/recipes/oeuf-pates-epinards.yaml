@@ -1,0 +1,55 @@
+title: Oeufs dans un nid de pâtes sur lit d'épinards
+category: plat chaud
+cooking: 40m
+preparation: 1h
+difficulty: facile
+pricing: abordable
+warning: Équeuter les épinard peut prendre beaucoup de temps. Ça peut être fait la veille sans problème.
+servings:
+  quantity: 1
+  type: personnes
+ingredients:
+  bechamel:
+    quantity: 25cl
+  epinards:
+    quantity: 1kg
+    details: frais
+  oeuf:
+    quantity: 2
+  pates:
+    quantity: 80g
+    details: tagliatelle
+  emmental-rape:
+  sel:
+  poivre:
+instructions:
+  - Équeuter et laver les épinards
+  - instruction: Préparer la béchamel
+    recipe : bechamel
+  - Verser les épinards dans une poele à feu doux-moyen (3) et couvrir
+  - Remuer assez souvent et y ajouter des épinards au fur et à mesure qu'ils fondent
+  - Égoutter les épinards et les remettre dans la poele
+  - Ajouter la béchamel et mélanger puis réserver
+  - Préchauffer le four à 180°C
+  - Huiler une feuille de papier sulfurisé
+  - Huiler 2 cercles de dressage et les poser sur le papier sulfurisé
+  - Porter de l'eau à ébullition avec du sel et du poivre
+  - instruction: Faire cuire les pâtes.
+    warning: Cuire al-dente car Les pâtes vont continuer à cuire dans le four par la suite
+  - Égoutter les pâtes et réserver
+  - instruction: Séparer les blancs des jaunes. Déposer les blancs dans de petits bols séparés.
+    warning: Garder les jaunes dans leur coquille
+  - Fouetter les blancs à la fourchette
+  - Positionner les pates en rond dans les cercles pour former des nids
+  - Déposer les blancs d'oeuf dans les nids
+  - Recouvir les pâtes d'huile avec un pinceau
+  - Recouvrir l'ensemble d'une feuille de papier sulfurisé
+  - Enfourner quelques minutes. Sortir lorsque le blanc est pris.
+  - Faire des copeaux avec le fromage
+  - Réchauffer les épinards
+  - instruction: Servir les épinards dans une assiette pour former une couronne sur le tour de l'assiette.
+    warning: Prévoir un emplacement pour le nid
+  - Disposer le nid au centre de l'assiette
+  - Poser délicatement le jaune d'oeuf au centre de l'assiette
+  - Saler, Poivrer
+  - Parsemer de copeaux d'emmental

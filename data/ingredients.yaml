@@ -1,7 +1,4 @@
 ---
-hummus:
-  title: Hummus
-  recipe: hummus
 abricots-secs:
   title: Abricots secs
 ail:
@@ -14,6 +11,9 @@ arome-vanille:
   title: Arôme de vanille
 avocat:
   title: Avocat
+bechamel:
+  recipe: bechamel
+  title: Béchamel
 beurre:
   title: Beurre
 biere-brune:
@@ -152,6 +152,9 @@ huile-noisettes:
   title: Huile de noisettes
 huile-olive:
   title: Huile d'olive
+hummus:
+  recipe: hummus
+  title: Hummus
 jarret-veau:
   title: Jarret de veau
 jaune-oeuf:
