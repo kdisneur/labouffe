@@ -14,7 +14,8 @@ ingredients:
   pesto:
     quantity: 1
     details: petit pot
-  emmental-rape:
+  emmental:
+    details: râpé
     quantity: 50g
   jaune-oeuf:
     quantity: 1

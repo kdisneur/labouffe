@@ -21,7 +21,8 @@ ingredients:
     quantity: 4
   farine:
     quantity: 150g
-  emmental-rape:
+  emmental:
+    details: râpé
     quantity: 75g
   lait:
     quantity: 10cl

@@ -24,7 +24,8 @@ ingredients:
     quantity: 100g
   huile-olive:
     quantity: 2cs
-  emmental-rape:
+  emmental:
+    details: râpé
     quantity: 100g
   beurre:
     quantity: 20g
