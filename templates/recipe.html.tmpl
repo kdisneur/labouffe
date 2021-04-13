@@ -3,10 +3,10 @@
     <h1 class="uk-heading-small uk-heading-divider uk-margin-remove-top">{{ .Data.Title }}</h1>
 
     {{- if .Data.WarningSafeHTML }}
-      <div class="uk-alert-primary" uk-alert>
-        <h4>Note importante</h4>
-        <p> {{ .Data.WarningSafeHTML }}</p>
-      </div>
+      <p class="uk-background-muted uk-padding">
+        <span class="uk-label">Note</span>
+        {{ .Data.WarningSafeHTML }}
+      </p>
     {{- end }}
 
     <div uk-grid="true">
