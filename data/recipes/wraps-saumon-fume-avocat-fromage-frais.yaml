@@ -1,0 +1,33 @@
+title: Wraps saumon fumé avocat et fromage frais
+category: plat froid
+preparation: 15m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 4
+  type: unités
+ingredients:
+  wrap:
+    quantity: 2
+  tomate:
+    quantity: 1
+  fromage-frais:
+    quantity: 1
+  saumon-fume:
+    quantity: 4
+    details: tranches
+  avocat:
+    quantity: 1
+  ciboulette:
+instructions:
+  - Couper les avocats en lamelles de ~5mm
+  - Couper les tomates en deux puis en lamelles de ~5mm
+  - Émincer la ciboulette
+  - Couper le wrap en deux
+  - Étaler une fine couche de fromage frais sur la totalité du wrap
+  - Ajouter une tranche de saumon fumé coupé en morceaux au centre du wrap
+  - Ajouter 3 tranches d'avocat
+  - Ajouter 3 tranches de tomates
+  - Ajouter la ciboulette
+  - Replier le bas (arrondi) de un tiers puis replier les côtes vers le centre
+  - Le retourner pour que le wrap tienne fermé

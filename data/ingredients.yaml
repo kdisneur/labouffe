@@ -9,6 +9,8 @@ amande:
   title: Amande
 arome-vanille:
   title: Arôme de vanille
+aubergine:
+  title: Aubergine
 avocat:
   title: Avocat
 bechamel:
@@ -130,6 +132,8 @@ feta:
   title: Fêta
 feuille-nori:
   title: Feuille de nori
+figue:
+  title: Figue
 filet-poulet:
   title: Filet de poulet
 fleur-sel:
@@ -183,6 +187,8 @@ mayonnaise:
   title: Mayonnaise
 menthe:
   title: Menthe
+miel:
+  title: Miel
 moutarde:
   title: Moutarde
 noisettes:
