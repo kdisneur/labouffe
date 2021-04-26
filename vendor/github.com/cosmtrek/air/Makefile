@@ -1,5 +1,7 @@
+AIRVER := $(shell git describe --tags)
 LDFLAGS += -X "main.BuildTimestamp=$(shell date -u "+%Y-%m-%d %H:%M:%S")"
-LDFLAGS += -X "main.Version=$(shell git rev-parse HEAD)"
+LDFLAGS += -X "main.airVersion=$(AIRVER)"
+LDFLAGS += -X "main.goVersion=$(shell go version | sed -r 's/go version go(.*)\ .*/\1/')"
 
 GO := GO111MODULE=on go
 
@@ -40,8 +42,8 @@ release: check
 
 .PHONY: docker-image
 docker-image:
-	docker build -t cosmtrek/air:v1.12.0 -f ./Dockerfile .
+	docker build -t cosmtrek/air:$(AIRVER) -f ./Dockerfile .
 
 .PHONY: push-docker-image
 push-docker-image:
-	docker push cosmtrek/air:v1.12.0
+	docker push cosmtrek/air:$(AIRVER)
