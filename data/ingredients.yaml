@@ -175,6 +175,8 @@ lardons:
   title: Lardons fumés
 laurier:
   title: Laurier
+lentilles:
+  title: Lentilles
 levure-boulanger:
   title: Levure de boulanger
 levure-chimique:
@@ -298,6 +300,8 @@ sauce-teriyaki:
   title: Sauce teriyaki
 sauce-worchestershire:
   title: Sauce worchestershire
+saucisse-francfort:
+  title: Saucisse de Francfort
 saucisse-fumée:
   title: Saucisse fumée
 saumon-frais:

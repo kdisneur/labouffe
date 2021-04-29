@@ -1,0 +1,50 @@
+title: Saucisses lentilles
+category: plat chaud
+cooking: 1h30m
+preparation: 20m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  saucisse-francfort:
+    quantity: 2
+  eau:
+    quantity: 1l
+  huile-olive:
+  saucisse-fumée:
+    quantity: 2
+  pomme-de-terre:
+    quantity: 12
+    details : petites fermes
+  lentilles:
+    quantity: 400g
+    details: vertes
+  bouillon-legumes:
+    quantity: 1
+    details: tablette
+  carotte:
+    quantity: 2
+  oignon:
+    quantity: 1
+  ail:
+    quantity: 1
+  laurier:
+    quantity: 2
+    details: feuilles
+  thym:
+    quantity: 1
+    details: branche
+  sel:
+  poivre:
+instructions:
+  - Emincer l'oignon et l'ail
+  - Eplucher et laver les pommes de terre
+  - Eplucher, laver et couper les carottes en rondelles
+  - Couper les saucisses en rondelles
+  - Rincer les lentilles 
+  - Faire revenir les oignons, l'ail et les carottes, les saucisses dans l'huile d'olive
+  - Ajouter les lentilles
+  - Ajouter de l'eau, la tablette de bouillon, le thym le laurier, le sel et le poivre et les pommes de terre
+  - Porter à ebullition, laisser cuire 1h30
