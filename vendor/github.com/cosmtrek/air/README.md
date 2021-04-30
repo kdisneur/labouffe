@@ -1,4 +1,4 @@
-# Air [![CircleCI](https://circleci.com/gh/cosmtrek/air/tree/master.svg?style=shield)](https://circleci.com/gh/cosmtrek/air/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4885b8dddaa540f9ae6fe850b4611b7b)](https://www.codacy.com/app/cosmtrek/air?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cosmtrek/air&amp;utm_campaign=Badge_Grade) [![Go Report Card](https://goreportcard.com/badge/github.com/cosmtrek/air)](https://goreportcard.com/report/github.com/cosmtrek/air)
+# Air [![Go](https://github.com/cosmtrek/air/workflows/Go/badge.svg)](https://github.com/cosmtrek/air/actions?query=workflow%3AGo+branch%3Amaster) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4885b8dddaa540f9ae6fe850b4611b7b)](https://www.codacy.com/app/cosmtrek/air?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cosmtrek/air&amp;utm_campaign=Badge_Grade) [![Go Report Card](https://goreportcard.com/badge/github.com/cosmtrek/air)](https://goreportcard.com/report/github.com/cosmtrek/air) [![codecov](https://codecov.io/gh/cosmtrek/air/branch/master/graph/badge.svg)](https://codecov.io/gh/cosmtrek/air)
 
 :cloud: Live reload for Go apps
 
@@ -26,35 +26,21 @@ NOTE: This tool has nothing to do with hot-deploy for production.
 
 ## Installation
 
-### Go
-
-The classic way to install
+### Prefer install.sh
 
 ```bash
-go get -u github.com/cosmtrek/air
-```
+# binary will be $(go env GOPATH)/bin/air
+curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
 
-### macOS
+# or install it into ./bin/
+curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s
 
-```bash
-curl -fLo air https://git.io/darwin_air
-```
-
-### Linux
-
-```bash
-curl -fLo air https://git.io/linux_air
-```
-
-### Windows
-
-```bash
-curl -fLo air.exe https://git.io/windows_air
+air -v
 ```
 
 P.S. Great thanks mattn's [PR](https://github.com/cosmtrek/air/pull/1) for supporting Windows platform.
 
-### Docker way
+### Docker
 
 Please pull this docker image [cosmtrek/air](https://hub.docker.com/r/cosmtrek/air).
 
@@ -91,23 +77,23 @@ cd /path/to/your_project
 The simplest usage is run
 
 ```bash
-# firstly find `.air.conf` in current directory, if not found, use defaults
-air -c .air.conf
+# firstly find `.air.toml` in current directory, if not found, use defaults
+air -c .air.toml
 ```
 
-While I prefer the second way
+You can initialize the `.air.toml` configuration file to the current directory with the default settings running the following command.
 
 ```bash
-# 1. create a new file
-touch .air.conf
+air init
+```
 
-# 2. paste `air.conf.example` into this file, and **modify it** to satisfy your needs.
+After this you can just run the `air` command without additional arguments and it will use the `.air.toml` file for configuration.
 
-# 3. run air with your config. If file name is `.air.conf`, just run `air`.
+```bash
 air
 ```
 
-See the complete [air_example.conf](air_example.conf)
+For modifying the configuration refer to the [air_example.toml](air_example.toml) file.
 
 ### Debug
 
@@ -138,6 +124,12 @@ BTW: Pull requests are welcome~
 ## Sponsor
 
 <a href="https://www.buymeacoffee.com/36lcNbW" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
+Huge thanks to the following supporters. I've always been remembering your kindness.
+
+* Peter Aba
+* Apostolis Anastasiou
+* keita koga
 
 ## License
 

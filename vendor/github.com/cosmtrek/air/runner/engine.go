@@ -25,9 +25,10 @@ type Engine struct {
 	binStopCh      chan bool
 	exitCh         chan bool
 
-	mu         sync.RWMutex
-	binRunning bool
-	watchers   uint
+	mu            sync.RWMutex
+	binRunning    bool
+	watchers      uint
+	fileChecksums *checksumMap
 
 	ll sync.Mutex // lock for logger
 }
@@ -45,7 +46,7 @@ func NewEngine(cfgPath string, debugMode bool) (*Engine, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &Engine{
+	e := Engine{
 		config:         cfg,
 		logger:         logger,
 		watcher:        watcher,
@@ -58,11 +59,22 @@ func NewEngine(cfgPath string, debugMode bool) (*Engine, error) {
 		exitCh:         make(chan bool),
 		binRunning:     false,
 		watchers:       0,
-	}, nil
+	}
+
+	if cfg.Build.ExcludeUnchanged {
+		e.fileChecksums = &checksumMap{m: make(map[string]string)}
+	}
+
+	return &e, nil
 }
 
 // Run run run
 func (e *Engine) Run() {
+	if len(os.Args) > 1 && os.Args[1] == "init" {
+		writeDefaultConfig()
+		return
+	}
+
 	e.mainDebug("CWD: %s", e.config.Root)
 
 	var err error
@@ -121,6 +133,63 @@ func (e *Engine) watching(root string) error {
 	})
 }
 
+// cacheFileChecksums calculates and stores checksums for each non-excluded file it finds from root.
+func (e *Engine) cacheFileChecksums(root string) error {
+	return filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			if info.IsDir() {
+				return filepath.SkipDir
+			}
+			return err
+		}
+
+		if !info.Mode().IsRegular() {
+			if e.isTmpDir(path) || isHiddenDirectory(path) || e.isExcludeDir(path) {
+				e.watcherDebug("!exclude checksum %s", e.config.rel(path))
+				return filepath.SkipDir
+			}
+
+			// Follow symbolic link
+			if e.config.Build.FollowSymlink && (info.Mode()&os.ModeSymlink) > 0 {
+				link, err := filepath.EvalSymlinks(path)
+				if err != nil {
+					return err
+				}
+				linkInfo, err := os.Stat(link)
+				if err != nil {
+					return err
+				}
+				if linkInfo.IsDir() {
+					err = e.watchDir(link)
+					if err != nil {
+						return err
+					}
+				}
+				return nil
+			}
+		}
+
+		if e.isExcludeFile(path) || !e.isIncludeExt(path) {
+			e.watcherDebug("!exclude checksum %s", e.config.rel(path))
+			return nil
+		}
+
+		excludeRegex, err := e.isExcludeRegex(path)
+		if err != nil {
+			return err
+		}
+		if excludeRegex {
+			e.watcherDebug("!exclude checksum %s", e.config.rel(path))
+			return nil
+		}
+
+		// update the checksum cache for the current file
+		_ = e.isModified(path)
+
+		return nil
+	})
+}
+
 func (e *Engine) watchDir(path string) error {
 	if err := e.watcher.Add(path); err != nil {
 		e.watcherLog("failed to watching %s, error: %s", path, err.Error())
@@ -138,6 +207,13 @@ func (e *Engine) watchDir(path string) error {
 			})
 		}()
 
+		if e.config.Build.ExcludeUnchanged {
+			err := e.cacheFileChecksums(path)
+			if err != nil {
+				e.watcherLog("error building checksum cache: %v", err)
+			}
+		}
+
 		for {
 			select {
 			case <-e.watcherStopCh:
@@ -152,6 +228,10 @@ func (e *Engine) watchDir(path string) error {
 					break
 				}
 				if e.isExcludeFile(ev.Name) {
+					break
+				}
+				excludeRegex, _ := e.isExcludeRegex(ev.Name)
+				if excludeRegex {
 					break
 				}
 				if !e.isIncludeExt(ev.Name) {
@@ -188,6 +268,21 @@ func (e *Engine) watchNewDir(dir string, removeDir bool) {
 	}(dir)
 }
 
+func (e *Engine) isModified(filename string) bool {
+	newChecksum, err := fileChecksum(filename)
+	if err != nil {
+		e.watcherDebug("can't determine if file was changed: %v - assuming it did without updating cache", err)
+		return true
+	}
+
+	if e.fileChecksums.updateFileChecksum(filename, newChecksum) {
+		e.watcherDebug("stored checksum for %s: %s", e.config.rel(filename), newChecksum)
+		return true
+	}
+
+	return false
+}
+
 // Endless loop and never return
 func (e *Engine) start() {
 	firstRunCh := make(chan bool, 1)
@@ -204,6 +299,12 @@ func (e *Engine) start() {
 			e.flushEvents()
 			if !e.isIncludeExt(filename) {
 				continue
+			}
+			if e.config.Build.ExcludeUnchanged {
+				if !e.isModified(filename) {
+					e.mainLog("skipping %s because contents unchanged", e.config.rel(filename))
+					continue
+				}
 			}
 			e.mainLog("%s has changed", e.config.rel(filename))
 		case <-firstRunCh:
@@ -239,7 +340,7 @@ func (e *Engine) buildRun() {
 	var err error
 	if err = e.building(); err != nil {
 		e.buildLog("failed to build, error: %s", err.Error())
-		e.writeBuildErrorLog(err.Error())
+		_ = e.writeBuildErrorLog(err.Error())
 		if e.config.Build.StopOnError {
 			return
 		}
@@ -277,8 +378,8 @@ func (e *Engine) building() error {
 		stdout.Close()
 		stderr.Close()
 	}()
-	io.Copy(os.Stdout, stdout)
-	io.Copy(os.Stderr, stderr)
+	_, _ = io.Copy(os.Stdout, stdout)
+	_, _ = io.Copy(os.Stderr, stderr)
 	// wait for building
 	err = cmd.Wait()
 	if err != nil {
@@ -299,8 +400,8 @@ func (e *Engine) runBin() error {
 	})
 
 	go func() {
-		io.Copy(os.Stdout, stdout)
-		io.Copy(os.Stderr, stderr)
+		_, _ = io.Copy(os.Stdout, stdout)
+		_, _ = io.Copy(os.Stderr, stderr)
 	}()
 
 	go func(cmd *exec.Cmd, stdout io.ReadCloser, stderr io.ReadCloser) {
@@ -324,7 +425,7 @@ func (e *Engine) runBin() error {
 		e.withLock(func() {
 			e.binRunning = false
 		})
-		cmdBinPath := cmdPath(e.config.binPath())
+		cmdBinPath := cmdPath(e.config.rel(e.config.binPath()))
 		if _, err = os.Stat(cmdBinPath); os.IsNotExist(err) {
 			return
 		}

@@ -1,9 +1,12 @@
 package runner
 
 import (
+	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 	"path/filepath"
+	"regexp"
 	"runtime"
 	"time"
 
@@ -12,6 +15,7 @@ import (
 )
 
 const (
+	dftTOML = ".air.toml"
 	dftConf = ".air.conf"
 	airWd   = "air_wd"
 )
@@ -26,18 +30,36 @@ type config struct {
 }
 
 type cfgBuild struct {
-	Cmd           string        `toml:"cmd"`
-	Bin           string        `toml:"bin"`
-	FullBin       string        `toml:"full_bin"`
-	Log           string        `toml:"log"`
-	IncludeExt    []string      `toml:"include_ext"`
-	ExcludeDir    []string      `toml:"exclude_dir"`
-	IncludeDir    []string      `toml:"include_dir"`
-	ExcludeFile   []string      `toml:"exclude_file"`
-	Delay         int           `toml:"delay"`
-	StopOnError   bool          `toml:"stop_on_error"`
-	SendInterrupt bool          `toml:"send_interrupt"`
-	KillDelay     time.Duration `toml:"kill_delay"`
+	Cmd              string        `toml:"cmd"`
+	Bin              string        `toml:"bin"`
+	FullBin          string        `toml:"full_bin"`
+	Log              string        `toml:"log"`
+	IncludeExt       []string      `toml:"include_ext"`
+	ExcludeDir       []string      `toml:"exclude_dir"`
+	IncludeDir       []string      `toml:"include_dir"`
+	ExcludeFile      []string      `toml:"exclude_file"`
+	ExcludeRegex     []string      `toml:"exclude_regex"`
+	ExcludeUnchanged bool          `toml:"exclude_unchanged"`
+	FollowSymlink    bool          `toml:"follow_symlink"`
+	Delay            int           `toml:"delay"`
+	StopOnError      bool          `toml:"stop_on_error"`
+	SendInterrupt    bool          `toml:"send_interrupt"`
+	KillDelay        time.Duration `toml:"kill_delay"`
+	regexCompiled    []*regexp.Regexp
+}
+
+func (c *cfgBuild) RegexCompiled() ([]*regexp.Regexp, error) {
+	if len(c.ExcludeRegex) > 0 && len(c.regexCompiled) == 0 {
+		c.regexCompiled = make([]*regexp.Regexp, 0, len(c.ExcludeRegex))
+		for _, s := range c.ExcludeRegex {
+			re, err := regexp.Compile(s)
+			if err != nil {
+				return nil, err
+			}
+			c.regexCompiled = append(c.regexCompiled, re)
+		}
+	}
+	return c.regexCompiled, nil
 }
 
 type cfgLog struct {
@@ -58,16 +80,10 @@ type cfgMisc struct {
 
 func initConfig(path string) (cfg *config, err error) {
 	if path == "" {
-		// when path is blank, first find `.air.conf` in `air_wd` and current working directory, if not found, use defaults
-		if wd := os.Getenv(airWd); wd != "" {
-			path = filepath.Join(wd, dftConf)
-		} else {
-			path, err = dftConfPath()
-			if err != nil {
-				return nil, err
-			}
+		cfg, err = defaultPathConfig()
+		if err != nil {
+			return nil, err
 		}
-		cfg, _ = readConfigOrDefault(path)
 	} else {
 		cfg, err = readConfigOrDefault(path)
 		if err != nil {
@@ -82,6 +98,72 @@ func initConfig(path string) (cfg *config, err error) {
 	return cfg, err
 }
 
+func writeDefaultConfig() {
+	confFiles := []string{dftTOML, dftConf}
+
+	for _, fname := range confFiles {
+		fstat, err := os.Stat(fname)
+		if err != nil && !os.IsNotExist(err) {
+			log.Fatal("failed to check for existing configuration")
+			return
+		}
+		if err == nil && fstat != nil {
+			log.Fatal("configuration already exists")
+			return
+		}
+	}
+
+	file, err := os.Create(dftTOML)
+	if err != nil {
+		log.Fatalf("failed to create a new confiuration: %+v", err)
+	}
+	defer file.Close()
+
+	config := defaultConfig()
+	configFile, err := toml.Marshal(config)
+	if err != nil {
+		log.Fatalf("failed to marshal the default configuration: %+v", err)
+	}
+
+	_, err = file.Write(configFile)
+	if err != nil {
+		log.Fatalf("failed to write to %s: %+v", dftTOML, err)
+	}
+
+	fmt.Printf("%s file created to the current directory with the default settings\n", dftTOML)
+}
+
+func defaultPathConfig() (*config, error) {
+	// when path is blank, first find `.air.toml`, `.air.conf` in `air_wd` and current working directory, if not found, use defaults
+	for _, name := range []string{dftTOML, dftConf} {
+		cfg, err := readConfByName(name)
+		if err == nil {
+			if name == dftConf {
+				fmt.Println("`.air.conf` will be deprecated soon, recommend using `.air.toml`.")
+			}
+			return cfg, nil
+		}
+	}
+
+	dftCfg := defaultConfig()
+	return &dftCfg, nil
+}
+
+func readConfByName(name string) (*config, error) {
+	var path string
+	if wd := os.Getenv(airWd); wd != "" {
+		path = filepath.Join(wd, name)
+	} else {
+		wd, err := os.Getwd()
+		if err != nil {
+			return nil, err
+		}
+		path = filepath.Join(wd, name)
+	}
+	cfg, err := readConfig(path)
+	return cfg, err
+}
+
 func defaultConfig() config {
 	build := cfgBuild{
 		Cmd:         "go build -o ./tmp/main .",
@@ -92,7 +174,7 @@ func defaultConfig() config {
 		Delay:       1000,
 		StopOnError: true,
 	}
-	if runtime.GOOS == "windows" {
+	if runtime.GOOS == PlatformWindows {
 		build.Bin = `tmp\main.exe`
 		build.Cmd = "go build -o ./tmp/main.exe ."
 	}
@@ -118,16 +200,27 @@ func defaultConfig() config {
 	}
 }
 
+func readConfig(path string) (*config, error) {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		return nil, err
+	}
+
+	cfg := new(config)
+	if err = toml.Unmarshal(data, cfg); err != nil {
+		return nil, err
+	}
+
+	return cfg, nil
+}
+
 func readConfigOrDefault(path string) (*config, error) {
 	dftCfg := defaultConfig()
-	data, err := ioutil.ReadFile(path)
+	cfg, err := readConfig(path)
 	if err != nil {
 		return &dftCfg, err
 	}
-	cfg := new(config)
-	if err = toml.Unmarshal(data, cfg); err != nil {
-		return &dftCfg, err
-	}
+
 	return cfg, nil
 }
 
@@ -151,6 +244,9 @@ func (c *config) preprocess() error {
 	for i := range ed {
 		ed[i] = cleanPath(ed[i])
 	}
+
+	adaptToVariousPlatforms(c)
+
 	c.Build.ExcludeDir = ed
 	if len(c.Build.FullBin) > 0 {
 		c.Build.Bin = c.Build.FullBin
@@ -171,24 +267,12 @@ func (c *config) colorInfo() map[string]string {
 	}
 }
 
-func dftConfPath() (string, error) {
-	wd, err := os.Getwd()
-	if err != nil {
-		return "", err
-	}
-	return filepath.Join(wd, dftConf), nil
-}
-
 func (c *config) buildLogPath() string {
 	return filepath.Join(c.tmpPath(), c.Build.Log)
 }
 
 func (c *config) buildDelay() time.Duration {
 	return time.Duration(c.Build.Delay) * time.Millisecond
-}
-
-func (c *config) fullPath(path string) string {
-	return filepath.Join(c.Root, path)
 }
 
 func (c *config) binPath() string {
