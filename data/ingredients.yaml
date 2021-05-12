@@ -222,6 +222,9 @@ pain:
   title: Pain
 pain-epice:
   title: Pain d'épice
+pain-pita:
+  recipe: pain-pita
+  title: Pain pita
 paprika:
   title: Paprika
 parmesan:

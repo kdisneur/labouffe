@@ -1,0 +1,28 @@
+title: Pita oeuf-avocat
+category: plat chaud
+cooking: 15m
+preparation: 10m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  pain-pita:
+    quantity: 4
+  avocat:
+    quantity: 1
+  oeuf:
+    quantity: 4
+  creme-fraiche:
+    quantity: 4cs
+  ciboulette:
+  beurre:
+instructions:
+  - Couper l’avocat en dés
+  - Ciseler la ciboulette
+  - Faire fondre du beurre dans une poêle
+  - Cuire les œufs brouillés
+  - Incorporer la crème fraîche et la ciboulette quelques minutes avant la fin de la cuisson des œufs
+  - Réchauffer le pain pita
+  - Poser les œufs sur le pain pita, agrémenter d’avocats
