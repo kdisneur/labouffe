@@ -1,0 +1,38 @@
+title: Pâtes ail ciboulette
+category: plat chaud
+cooking: 20m
+preparation: 10m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  pates:
+    quantity: 120g
+    details: spaghetti
+  creme-fraiche:
+    quantity: 2cs
+  ail:
+    quantity: 3
+    details: grosse gousse
+  citron:
+    quantity: 2cs
+  huile-olive:
+    quantity: 20ml
+  ciboulette:
+    alternatives:
+      - persil
+  sel:
+  poivre:
+instructions:
+  - Porter une casserole à ébullition
+  - Hacher le persil
+  - Peler, dégermer et ciseler l’ail
+  - Faire chauffer l’huile dans une sauteuse à feu doux
+  - Ajouter l’ail, la ciboulette
+  - Laisser cuire à feu doux quelques minutes
+  - Ajouter le jus de citron et la crème fraîche hors du feu et mélanger
+  - Allonger la sauce avec de l’eau de cuisson des pâtes avant de les égoutter
+  - Égoutter les pâtes
+  - Ajouter les pâtes dans la sauteuse et bien mélanger
