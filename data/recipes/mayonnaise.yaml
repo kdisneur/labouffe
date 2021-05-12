@@ -1,0 +1,26 @@
+title: Mayonnaise
+category: sauce
+preparation: 15m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  jaune-oeuf:
+    quantity: 1
+  moutarde:
+    quantity: 1.5cc
+  huile-colza:
+    quantity: 25cl
+  sel:
+warning: Penser à sortir les ingrédients à l'avance pour qu'ils ne soient pas trop froid
+instructions:
+  - Mettre la moutarde dans un saladier dont la surface de base est restreinte (type cul de poule). Si la surface est trop grande ça risque de poser problème
+  - instruction: Incorporer le sel à la moutade
+    warning: Il faut bien mélanger pour éviter le contact direct du sel avec le jaune, ça risquerait de le brûler
+  - Clarifier l'œuf
+  - Ajouter le jaune et bien mélanger
+  - Laisser reposer 2m ou 3m
+  - Incorporer l’huile très doucement, par petit filet, tout en fouettant continuellement et énergiquement
+  - Conserver une douzaine d'heures max
