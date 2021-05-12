@@ -122,6 +122,11 @@
               <li class="uk-active" uk-filter-control><a href="#">Désactiver les filtres</a></li>
             </ul>
             <ul class="uk-subnav uk-subnav-pill">
+              <li class="uk-subnav-header">Réchauffable</li>
+              <li class="uk-margin-top" uk-filter-control="filter: [data-reheat='true']; group: data-reheat"><a href="#">Oui</a></li>
+              <li class="uk-margin-top" uk-filter-control="filter: [data-reheat='false']; group: data-reheat"><a href="#">Non</a></li>
+            </ul>
+            <ul class="uk-subnav uk-subnav-pill">
               <li class="uk-subnav-header">Type de plat</li>
               
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='biscuit']; group: data-category"><a href="#">biscuit</a></li>
@@ -185,7 +190,7 @@
 
     <div class="js-filter uk-margin-bottom">
       
-        <div class="uk-margin-bottom" data-category="plat froid" data-price="cher" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat froid" data-price="cher" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/mille-feuille-mer">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
