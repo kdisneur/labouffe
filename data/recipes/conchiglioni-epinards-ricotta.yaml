@@ -4,6 +4,7 @@ cooking: 25m
 preparation: 15m
 resting: 0m
 difficulty: facile
+reheat: true
 pricing: économique
 servings:
   quantity: 2

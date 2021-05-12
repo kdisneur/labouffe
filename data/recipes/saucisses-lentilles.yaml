@@ -3,6 +3,7 @@ category: plat chaud
 cooking: 1h30m
 preparation: 20m
 difficulty: facile
+reheat: true
 pricing: abordable
 servings:
   quantity: 4
