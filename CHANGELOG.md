@@ -6,6 +6,18 @@ All notable changes to this project will be documented in this file
 
 n/a
 
+## 2021-05
+
+- [FEATURE] Add support for `reheat` on the recipe. It has also been added in the list of available filters.
+  ```yaml
+  # file:recipes/carbonade.yaml
+  title: Carbonade
+  # ...
+  reheat: true
+  instructions:
+    # - ...
+  ```
+
 ## 2021-04
 
 - [ENHANCEMENT] Rename the `category` cake to dessert to be more flexible

@@ -13,6 +13,11 @@
               <li class="uk-active" uk-filter-control><a href="#">Désactiver les filtres</a></li>
             </ul>
             <ul class="uk-subnav uk-subnav-pill">
+              <li class="uk-subnav-header">Réchauffable</li>
+              <li class="uk-margin-top" uk-filter-control="filter: [data-reheat='true']; group: data-reheat"><a href="#">Oui</a></li>
+              <li class="uk-margin-top" uk-filter-control="filter: [data-reheat='false']; group: data-reheat"><a href="#">Non</a></li>
+            </ul>
+            <ul class="uk-subnav uk-subnav-pill">
               <li class="uk-subnav-header">Type de plat</li>
               {{ range .Data.AllCategories }}
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='{{ . }}']; group: data-category"><a href="#">{{ . }}</a></li>
@@ -52,7 +57,7 @@
 
     <div class="js-filter uk-margin-bottom">
       {{ range $recipe := .Data.Recipes }}
-        <div class="uk-margin-bottom" data-category="{{ $recipe.Category }}" data-price="{{ $recipe.Pricing }}" data-difficulty="{{ $recipe.Difficulty }}" data-duration-range="{{ $recipe.TotalDuration.RangeName }}">
+        <div class="uk-margin-bottom" data-category="{{ $recipe.Category }}" data-price="{{ $recipe.Pricing }}" data-reheat="{{ $recipe.Reheat }}" data-difficulty="{{ $recipe.Difficulty }}" data-duration-range="{{ $recipe.TotalDuration.RangeName }}">
           <a class="uk-link-text tm-link-no-highlight" href="{{ recipeURL $.Site.PublicURL $recipe.Code }}">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">

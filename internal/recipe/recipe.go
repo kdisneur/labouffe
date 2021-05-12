@@ -28,6 +28,7 @@ type Recipe struct {
 	Cooking      Duration
 	Resting      Duration
 	Preparation  Duration
+	Reheat       bool
 	Difficulty   Difficulty
 	Pricing      Price
 	Servings     Servings
@@ -43,6 +44,7 @@ type YAMLRecipe struct {
 	Cooking      Duration                `yaml:"cooking"`
 	Resting      Duration                `yaml:"resting"`
 	Preparation  Duration                `yaml:"preparation"`
+	Reheat       bool                    `yaml:"reheat"`
 	Difficulty   Difficulty              `yaml:"difficulty"`
 	Pricing      Price                   `yaml:"pricing"`
 	Servings     Servings                `yaml:"servings"`

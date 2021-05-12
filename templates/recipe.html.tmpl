@@ -38,6 +38,13 @@
         <hr>
 
         <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Réchauffable</span></div>
+          <div class="uk-width-1-2">
+          {{- if .Data.Reheat }} Oui {{- else }} Non {{- end }}
+          </div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
           <div class="uk-width-1-2"><span class="uk-text-uppercase">Coût</span></div>
           <div class="uk-width-1-2">{{ .Data.PricingScale | scale "nut" 5 }}</div>
         </div>
