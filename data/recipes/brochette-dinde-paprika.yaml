@@ -1,0 +1,35 @@
+title: Brochette de dinde au paprika
+category: plat chaud
+cooking: 15m
+preparation: 5m
+resting: 1h
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 2
+  type: unités
+ingredients:
+  dinde:
+    quantity: 1
+    details: filet
+  paprika:
+    quantity: 1cs
+  cumin:
+    quantity: 0.5cc
+  coriandre:
+    quantity: 1cc
+  herbes-provence:
+    quantity: 1cc
+  ail-poudre:
+    quantity: 1cc
+  huile-olive:
+    quantity: 5cs
+  sel:
+  poivre:
+instructions:
+  - Ajouter tous les ingrédients dans un récipient, les mélanger.
+  - Couper le poulet en cubes de 2 ou 3 cm
+  - Plonger les cubes dans la marinade
+  - Laisser mariner au moins 1h (et les retourner entre deux pour s’assurer que le poulet soit bien mariné partout)
+  - Embrocher 4 cubes par pique à brochette
+  - Cuire au barbecue ou au four à 180°C pendant 15m
