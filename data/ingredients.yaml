@@ -163,12 +163,12 @@ huile-olive:
 hummus:
   recipe: hummus
   title: Hummus
+jambon:
+  title: Jambon
 jarret-veau:
   title: Jarret de veau
 jaune-oeuf:
   title: Jaune d'oeuf
-jambon:
-  title: Jambon
 joue-boeuf:
   title: Joue de boeuf
 ketchup:
@@ -199,6 +199,8 @@ miel:
   title: Miel
 moutarde:
   title: Moutarde
+mozzarella:
+  title: Mozzarella
 noisettes:
   title: Noisettes
 noix:

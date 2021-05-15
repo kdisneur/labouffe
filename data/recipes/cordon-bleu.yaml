@@ -4,6 +4,7 @@ cooking: 15m
 preparation: 45m
 difficulty: moyen
 pricing: économique
+reheat: true
 servings:
   quantity: 2
   type: unités

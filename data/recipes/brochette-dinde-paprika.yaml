@@ -5,6 +5,7 @@ preparation: 5m
 resting: 1h
 difficulty: facile
 pricing: économique
+reheat: true
 servings:
   quantity: 2
   type: unités
