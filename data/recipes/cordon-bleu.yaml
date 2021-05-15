@@ -1,0 +1,52 @@
+title: Cordon bleu
+category: plat chaud
+cooking: 15m
+preparation: 45m
+difficulty: moyen
+pricing: économique
+servings:
+  quantity: 2
+  type: unités
+ingredients:
+  dinde:
+    quantity: 2
+    details: escalope
+  emmental:
+    quantity: 150g
+  jambon:
+    quantity: 2
+    details: fines tranches
+  farine:
+    quantity: 100g
+  oeuf:
+    quantity: 3
+  chapelure:
+    quantity: 100g
+  huile-friture:
+    quantity: 2l
+  sel:
+  poivre:
+instructions:
+  - Faire bouillir de l'eau
+  - Dédoubler l'escalope sur l'épaisseur
+  - Placer une feuille de papier sulfurisé au dessus et en dessous
+  - Battre (avec une casserole?) les escalopes pour les aplatir à ~5mm
+  - Saler et poivrer
+  - Faire des copeaux de fromage à l'aide d'un économe
+  - Étaler les copeaux sur la viande, faire attention de ne pas dépasser
+  - Couper des morceaux de jambons et les poser sur le fromage. Faire attention de ne pas dépasser
+  - Poser la seconde tranche de volaille sur la première. Bien couvrir la jambon et le fromage
+  - Enrouler le montage dans du papier film étirable bien serré
+  - Plonger les cordons bleus dans l'eau frémissantes.
+  - Pocher les cordons bleus pendants quelques minutes ~5m. Les sortir lorsque l'on ne voit plus de rose sur la surface.
+  - Réserver au frigo
+  - Mettre de la farine dans une assiette
+  - Mettre les œufs battus dans une assiette
+  - Mettre la chapelure dans une assiette
+  - Faire chauffer l'huile à 180deg dans une sauteuse
+  - Retirer le film étirable des cordons bleus
+  - Tremper le cordon bleu dans la farine (retirer l'excédent de farine)
+  - Tremper ensuite dans l'œuf
+  - Tremper finalement dans la chapelure
+  - Plonger le cordon bleu dans la sauteuse et retourner souvent
+  - Sortir le cordon bleu lorsqu'il est bien doré
