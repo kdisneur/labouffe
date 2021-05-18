@@ -1,0 +1,41 @@
+title: Conchiglioni au saumon frais et béchamel
+category: plat chaud
+cooking: 40m
+preparation: 10m
+resting: 0m
+difficulty: facile
+reheat: true
+pricing: abordable
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  saumon-frais:
+    details: pavés
+    quantity: 2
+  conchiglioni:
+    quantity: 20
+    details: (~100g)
+  bechamel-fromage:
+    quantity: 1
+  mozzarella:
+    quantity: 100g
+    details: cossettes
+  sel:
+  poivre:
+instructions:
+  
+  - Dans le Thermomix mettre 1l d’eau
+  - Saler, poivrer le saumon
+  - Poser les pavés de saumon sur le plateau vapeur
+  - Cuire au Varoma, vit1, 20m
+  - Pendant la cuisson du saumon, préparer la béchamel au fromage
+  - Préchauffer le four à 180°
+  - instruction: Cuire les pâtes dans une casserole d'eau bouillante.
+    warning: Les sortir 2 minutes avant le temps indiqué sur l'emballage, elles finiront leur cuisson au four
+  - Egoutter délicatement
+  - Ecraser le saumon avec un peu de béchamel
+  - Dans le fond du plat disposer la béchamel
+  - Fourrer les conchiglioni de la farce au saumon
+  - Saupoudrer de mozzarella
+  - Enfourner pour 15m

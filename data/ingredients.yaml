@@ -18,6 +18,8 @@ basilic:
 bechamel:
   recipe: bechamel
   title: Béchamel
+bechamel-fromage:
+  title: Béchamel au fromage
 beurre:
   title: Beurre
 biere-brune:
@@ -275,6 +277,8 @@ porto:
   title: Porto
 potimarron:
   title: Potimarron
+pruneaux:
+  title: Pruneaux
 puree:
   recipe: puree-pommes-de-terre
   title: Purée
@@ -309,6 +313,9 @@ sauce-tartare:
   title: Sauce tartare
 sauce-teriyaki:
   title: Sauce teriyaki
+sauce-tomate:
+  recipe: sauce-tomate
+  title: Sauce tomate
 sauce-worchestershire:
   title: Sauce worchestershire
 saucisse-francfort:

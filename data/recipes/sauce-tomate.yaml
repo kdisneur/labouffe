@@ -1,0 +1,29 @@
+title: Sauce cocktail
+category: sauce
+preparation: 10m
+cooking: 35m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  concasse-tomate:
+    quantity: 400g
+  oignon:
+    quantity: 1
+  ail:
+    quantity: 1
+    details: gousse
+  sucre:
+    quantity: 1cc
+  huile-olive:
+    quantity: 1cs
+  sel:
+  poivre:
+  origan:
+instructions:
+  - Hacher l’oignon et l’ail finement
+  - Les faire suer dans une sauteuse avec de l’huile d’olive
+  - Ajouter le concassé de tomates, le sucre, le sel, le poivre et l’origan
+  - Laisser mijoter à feu doux 30m

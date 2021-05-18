@@ -1,0 +1,40 @@
+title: Conchiglioni aubergine sauce tomate béchamel
+category: plat chaud
+cooking: 40m
+preparation: 10m
+resting: 0m
+difficulty: facile
+reheat: true
+pricing: économique
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  aubergine:
+    quantity: 1
+  conchiglioni:
+    quantity: 20
+    details: (~100g)
+  bechamel-fromage:
+    quantity: 1
+  mozzarella:
+    quantity: 100g
+    details: cossettes
+  sel:
+  poivre:
+  sauce-tomate:
+    quantity: 1
+instructions:
+  - Couper l’aubergine en petits dés
+  - instruction: Préparer une sauce tomate
+    recipe: sauce-tomate
+  - Préparer une béchamel
+  - Faire revenir les dés d’aubergine dans l’huile d’olive
+  - Ajouter la sauce tomate 
+  - Laisser mijoter 30min
+  - Faire cuire les conchiglioni 12m
+  - Préchauffer le four à 180°
+  - Disposer la béchamel dans le fond du plat
+  - Garnir les conchiglioni de la farce aux aubergines
+  - Enfourner 15m
+
