@@ -11,6 +11,7 @@ servings:
 ingredients:
   conchiglioni:
     quantity: 20
+    details: (~100g)
   champignons:
     details: paris
     quantity: 200g
