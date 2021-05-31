@@ -12,6 +12,8 @@ github.com/fatih/color
 github.com/fsnotify/fsnotify
 # github.com/imdario/mergo v0.3.12
 github.com/imdario/mergo
+# github.com/kr/pretty v0.1.0
+## explicit
 # github.com/mattn/go-colorable v0.1.8
 github.com/mattn/go-colorable
 # github.com/mattn/go-isatty v0.0.12
@@ -24,10 +26,11 @@ golang.org/x/lint
 golang.org/x/lint/golint
 # golang.org/x/mod v0.3.0
 golang.org/x/mod/semver
-# golang.org/x/sys v0.0.0-20200930185726-fdedc70b468f
+# golang.org/x/sys v0.0.0-20210119212857-b64e53b001e4
+golang.org/x/sys/execabs
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
-# golang.org/x/tools v0.0.0-20201105220310-78b158585360
+# golang.org/x/tools v0.1.0
 ## explicit
 golang.org/x/tools/cmd/stringer
 golang.org/x/tools/go/analysis
@@ -55,37 +58,44 @@ golang.org/x/tools/internal/typesinternal
 # golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 golang.org/x/xerrors
 golang.org/x/xerrors/internal
+# gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127
+## explicit
 # gopkg.in/yaml.v2 v2.3.0
 ## explicit
 gopkg.in/yaml.v2
-# honnef.co/go/tools v0.0.1-2020.1.6
+# honnef.co/go/tools v0.3.0-0.dev
 ## explicit
-honnef.co/go/tools/arg
+honnef.co/go/tools/analysis/code
+honnef.co/go/tools/analysis/edit
+honnef.co/go/tools/analysis/facts
+honnef.co/go/tools/analysis/facts/nilness
+honnef.co/go/tools/analysis/facts/typedness
+honnef.co/go/tools/analysis/lint
+honnef.co/go/tools/analysis/report
 honnef.co/go/tools/cmd/staticcheck
-honnef.co/go/tools/code
 honnef.co/go/tools/config
-honnef.co/go/tools/deprecated
-honnef.co/go/tools/edit
-honnef.co/go/tools/facts
-honnef.co/go/tools/functions
+honnef.co/go/tools/go/ast/astutil
+honnef.co/go/tools/go/ir
+honnef.co/go/tools/go/ir/irutil
+honnef.co/go/tools/go/loader
 honnef.co/go/tools/go/types/typeutil
 honnef.co/go/tools/internal/cache
+honnef.co/go/tools/internal/go/gcimporter
 honnef.co/go/tools/internal/passes/buildir
 honnef.co/go/tools/internal/renameio
 honnef.co/go/tools/internal/robustio
 honnef.co/go/tools/internal/sharedcheck
-honnef.co/go/tools/ir
-honnef.co/go/tools/ir/irutil
-honnef.co/go/tools/lint
-honnef.co/go/tools/lint/lintdsl
-honnef.co/go/tools/lint/lintutil
-honnef.co/go/tools/lint/lintutil/format
-honnef.co/go/tools/loader
+honnef.co/go/tools/internal/sync
+honnef.co/go/tools/knowledge
+honnef.co/go/tools/lintcmd
+honnef.co/go/tools/lintcmd/runner
+honnef.co/go/tools/lintcmd/version
 honnef.co/go/tools/pattern
 honnef.co/go/tools/printf
-honnef.co/go/tools/report
+honnef.co/go/tools/quickfix
+honnef.co/go/tools/sarif
 honnef.co/go/tools/simple
 honnef.co/go/tools/staticcheck
 honnef.co/go/tools/stylecheck
 honnef.co/go/tools/unused
-honnef.co/go/tools/version
+honnef.co/go/tools/unused/typemap
