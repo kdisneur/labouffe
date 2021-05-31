@@ -11,22 +11,23 @@ servings:
 ingredients:
   pomme-de-terre:
     quantity: 1000g
-  lait:
-    quantity: 300g
   oeuf:
     quantity: 2
   beurre:
     quantity: 30g
   creme-fraiche:
     quantity: 1cs
+  lait:
   sel:
   poivre:
 instructions:
   - Eplucher les pommes de terre
-  - Les laver
-  - Couper les pommes de terre en morceaux de 0,5cm
-  - Dans le thermomix mettre le fouet
-  - Ajouter les pommes de terre, le lait et le sel
-  - Faire cuire 30m, 95°C, vitesse 1, sens inverse, sans le gobelet
-  - Ajouter les oeufs, le beurre, la crème fraîche et le poivre
-  - Mixer 40s, vitesse 4 avec le gobelet
+  - Laver les pommes de terre
+  - Couper les pommes de terre grossièrement
+  - Cuire dans une caserole d'eau froide salée pendant 30m
+  - Égoutter les pommes de terre
+  - Passer les pommes de terre au passe-vite en utilisant la grille moyenne
+  - Ajouter le beurre, l'oeuf, la crème fraiche
+  - Mélanger
+  - Ajouter du lait jusqu'à obtenir la consistance attendue
+  - Saler et poivrer
