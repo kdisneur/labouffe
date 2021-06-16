@@ -1,0 +1,57 @@
+title: Naan
+category: plat froid
+cooking: 20m
+preparation: 15m
+resting: 6h
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 4
+  type: unités
+ingredients:
+  farine:
+    quantity: 250g
+    details: T45
+  eau:
+    quantity: 9cl
+  yaourt-grec:
+    quantity: 60g
+  vache-qui-rit:
+    details: optionnel
+    quantity: 8
+  levure-boulanger:
+    quantity: 0.5
+    details: sachet
+  huile-colza:
+    quantity: 2cs
+  sel:
+  beurre:
+    details: clarifié
+instructions:
+  - Mettre la farine et la levure de boulanger dans un saladier
+  - Mélanger
+  - Ajouter le sel
+  - Mélanger
+  - Ajouter le yaourt et l'huile
+  - Mélanger
+  - Tiédir l'eau
+  - Faire un puit au centre de la farine
+  - Incorporer l'eau à la farine par petites quantités
+  - "Ajuster le ratio farine-eau de la pâte: elle doit coller aux doigts sans y rester accrochée. Pour bien gonfler la pâte doit être bien hydratée"
+  - Pétrir 10m à 15m pour obtenir une pâte bien souple
+  - Former une boule avec la pâte
+  - Couvrir le saladier avec un film étirable
+  - Mettre au frigo pour au moins 6h. Dégazer la pâte une fois par heure durant les 3 premières heures pour ne pas trop fragiliser la pâte
+  - Sortir la quantité de pâte nécessaire. Compter ~100g par naan
+  - Former deux boules de 50g pour chaque naan et abaisser les patons à la main pour former un disque épais
+  - Couvrir d'un linge propre et laisser reposer ~15m
+  - Chauffer une poele à fond épais à feu vif (4)
+  - Graisser légèrement le fond de la poele avec de l'huile d'olive avant chaque cuisson de naan
+  - Abaisser deux patons à ~2mm en formant un disque. Ne pas prendre de l'avance en abaissant les autres, ne préparer qu'un naan à la fois, juste avant de le cuire
+  - Tartiner deux portions de vache qui rit sur l'un des deux disques. Ne pas mettre de fromage trop sur le bord
+  - Humidifier les rebords du disque
+  - Poser le deuxième disque au dessus du premier et souder les bords
+  - Mettre le disque sur la poele et attendre la formation de belles bulles (~45s)
+  - Retourner le disque et le laisser gonfler ~1m. Ne pas hésiter à bouger un peu le disque pour ne pas qu'il brule. À la fin de cette étape le naan devrait s'être transformé en ballon
+  - Retourner une seconde fois le disque pendant ~1m
+  - Sortir le naan de la poele et le badigeonner de beurre clarifié avant de le couvrir d'un linge propre

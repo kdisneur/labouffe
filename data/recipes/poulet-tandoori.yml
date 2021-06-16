@@ -1,0 +1,35 @@
+title: Poulet tandoori
+category: plat chaud
+cooking: 20m
+preparation: 5m
+resting: 8h
+difficulty: facile
+pricing: économique
+reheat: true
+servings:
+  quantity: 2
+  type: unités
+ingredients:
+  filet-poulet:
+    quantity: 200g
+  yaourt-grec:
+    quantity: 120g
+  ail:
+    quantity: 1
+    details: gousse
+  huile-olive:
+    quantity: 2cs
+  citron:
+    quantity: 0.5
+  tandoori:
+    quantity: 2cc
+  sel:
+instructions:
+  - Hacher finement l'ail
+  - Mettre l'ail dans un saladier
+  - Ajouter les épices tandoori, le yaourt, et le citron
+  - Mélanger
+  - Entailler les filets
+  - Napper les filets de marinade
+  - Couvrir d'un film étirable et mettre au frigo pour au moins 8h
+  - Cuire sur la plancha à feu fort (5) en retournant à mi-cuisson

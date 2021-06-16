@@ -301,6 +301,9 @@ roquefort:
   title: Roquefort
 safran:
   title: Safran
+sauce-ciboulette:
+  recipe: sauce-ciboulette
+  title: Sauce à la ciboulette
 sauce-hollandaise:
   title: Sauce hollandaise
 sauce-menthe:
@@ -342,6 +345,8 @@ sucre-glace:
   title: Sucre glace
 sucre-vanille:
   title: Sucre vanillé
+tandoori:
+  title: Épices tandoori
 tahini:
   recipe: tahini
   title: Tahini
@@ -351,6 +356,8 @@ tomate:
   title: Tomate
 tomate-pelee:
   title: Tomates pelées
+vache-qui-rit:
+  title: Vache qui rit
 viande-hachee:
   title: Viande hachée
 vin-blanc:
@@ -365,5 +372,5 @@ whisky:
   title: Whisky
 wrap:
   title: Wrap
-yahourt-grec:
-  title: Yahourt grec
+yaourt-grec:
+  title: Yaourt grec
