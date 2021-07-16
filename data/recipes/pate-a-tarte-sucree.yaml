@@ -1,0 +1,35 @@
+title: Pâte à tarte sucrée
+category: dessert
+preparation: 10m
+resting: 2h
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 1
+  type: unités
+ingredients:
+  oeuf:
+    quantity: 1
+  beurre:
+    quantity: 120g
+    details: mou
+  sel:
+    quantity: 1
+    details: pincée
+  gousse-vanille:
+    quantity: 1
+  farine:
+    quantity: 200g
+  amande:
+    quantity: 25g
+    details: poudre
+  sucre-glace:
+    quantity: 80g
+instructions:
+  - Fouetter le beurre mou et le sucre glace tamisé dans un saladier
+  - Gratter la gousse de vanille
+  - Ajouter les graines, la poudre d'amandes et le sel 
+  - Mélanger l'ensemble jusqu'à obtention d'une texture homogène
+  - Ajouter l'oeuf et mélanger
+  - Tamiser la farine et ajouter au mélange sans trop travailler la pâte, par petites quantités
+  - Filmer et réserver au frais 2h

@@ -245,6 +245,9 @@ pate-feuilletee:
   title: Pâte feuilletée
 pate-tarte-feuilletee:
   title: Pâte à tarte feuilletée
+pate-tarte-sucree:
+  recipe: pate-a-tarte-sucree
+  title: Pâte à tarte sucrée
 pates:
   title: Pâtes
 pavesini:
@@ -299,6 +302,8 @@ riz-sushi:
   title: Riz spécial sushi cru
 roquefort:
   title: Roquefort
+rhubarbe:
+  title: Rhubarbe
 safran:
   title: Safran
 sauce-ciboulette:
