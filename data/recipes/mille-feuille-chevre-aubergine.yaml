@@ -1,0 +1,35 @@
+title: Mille-feuille chèvre aubergine
+category: plat froid
+difficulty: facile
+preparation: 40m
+pricing: économique
+reheat: true
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  aubergine:
+    quantity: 1
+  tomate:
+    quantity: 2
+  chevre:
+    quantity: 0.5
+    details: bûche
+  huile-olive:
+    quantity: 3cs
+  menthe:
+    quantity: 20
+    details: feuilles
+  mozzarella:
+    quantity: 0.5
+    details: boule
+instructions:
+  - Couper les tomates en rondelles
+  - Couper le chèvre en fines tranches
+  - Couper la mozzarella en fines tranches
+  - Couper l'aubergine en lamelles
+  - Ciseler la menthe
+  - Faire revenir l'aubergine dans un filet d'huile d'olive
+  - Alterner les tranches d'aubergine, de tomate, de chèvre, de mozzarella et de menthe dans un moule à terrine
+  - Mettre au réfrigérateur jusqu'au moment de servir
+  - Arroser d'huile d'olive au moment de servir
