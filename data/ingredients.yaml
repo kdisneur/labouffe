@@ -34,6 +34,8 @@ bouillon-legumes:
   title: Bouillon de légumes
 bouillon-volaille:
   title: Bouillon de volaille
+cacahuete:
+  title: Cacahuète
 cacao:
   title: Cacao en poudre
 cafe:
@@ -211,6 +213,8 @@ noix-cajou:
   title: Noix de Cajou
 noix-coco:
   title: Noix de coco
+nouilles-riz:
+  title: Nouilles de riz
 nugget:
   recipe: nuggets
   title: Nugget
@@ -222,6 +226,8 @@ oignon-frits:
   title: Oignon frits
 oignon-poudre:
   title: Oignon poudre
+oignon-vert:
+  title: Oignon vert
 olives:
   title: Olives
 orange:
@@ -291,6 +297,8 @@ ras-el-hanout:
   title: Ras el Hanout
 reblochon:
   title: Reblochon
+rhubarbe:
+  title: Rhubarbe
 ricotta:
   title: Ricotta
 riz:
@@ -302,8 +310,6 @@ riz-sushi:
   title: Riz spécial sushi cru
 roquefort:
   title: Roquefort
-rhubarbe:
-  title: Rhubarbe
 safran:
   title: Safran
 sauce-ciboulette:
@@ -314,9 +320,13 @@ sauce-hollandaise:
 sauce-menthe:
   recipe: sauce-menthe
   title: Sauce à la menthe
+sauce-nuoc-mam:
+  title: Sauce Nuoc-Mam
 sauce-ranch:
   recipe: sauce-ranch
   title: Sauce ranch
+sauce-soja-salee:
+  title: Sauce soja salée
 sauce-tartare:
   title: Sauce tartare
 sauce-teriyaki:
@@ -350,11 +360,11 @@ sucre-glace:
   title: Sucre glace
 sucre-vanille:
   title: Sucre vanillé
-tandoori:
-  title: Épices tandoori
 tahini:
   recipe: tahini
   title: Tahini
+tandoori:
+  title: Épices tandoori
 thym:
   title: Thym
 tomate:
@@ -371,6 +381,8 @@ vin-rouge:
   title: Vin rouge
 vinaigre:
   title: Vinaigre
+vinaigre-blanc:
+  title: Vinaigre blanc
 vinaigre-riz:
   title: Vinaigre de riz
 whisky:
