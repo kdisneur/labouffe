@@ -1,0 +1,576 @@
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Site web listant nos recettes" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+      <style>
+      .uk-offcanvas-bar {
+        background: #fff;
+      }
+      .uk-offcanvas-bar .uk-subnav {
+        margin-left: 0;
+        font-size: .875rem;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-nav-default .uk-nav-header {
+        border-bottom: 1px solid #e5e5e5;
+        color: #222;
+        text-transform: uppercase;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-subnav > li {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .uk-offcanvas-bar .uk-subnav > li > a,
+      .uk-offcanvas-bar .uk-subnav > li > a:focus,
+      .uk-offcanvas-bar .uk-subnav > li > a:hover {
+        text-transform: capitalize;
+        color: #999 !important;
+      }
+
+      .uk-offcanvas-bar .uk-subnav > li.uk-active > a {
+        background-color: #1e87f0;
+        color: #fff !important;
+      }
+
+      .tm-logo-title {
+        margin-left: 5px;
+      }
+      .tm-logo-title img {
+        display: block;
+        float: left;
+      }
+      .tm-logo-title span {
+        padding-top: 5px;
+        display: inline-block;
+      }
+
+      .tm-link-no-highlight,
+      .tm-link-no-highlight:hover,
+      .tm-link-no-highlight:focus {
+        color: #666 !important;
+        text-decoration: none;
+      }
+      </style>
+      <title>La bouffe, hein!</title>
+    </head>
+    <body>
+      <nav class="uk-navbar-container tm-navbar-container uk-active" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="/" class="uk-link tm-no-underline tm-logo-title">
+            <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="42" />
+              <span class="uk-margin-small-left uk-text-large">La bouffe</span>
+            </a>
+          </div>
+
+          <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon href="" uk-toggle="target: #small-menu"></a>
+            <div id="small-menu" uk-offcanvas="mode: push; overlay: true">
+              <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
+                <div class="uk-panel">
+                    <ul class="uk-subnav uk-subnav-pill tm-nav">
+                      <li class="uk-subnav-header">Général</a>
+                      <li class="uk-margin-top uk-active">
+                        <a href="/">recettes</a>
+                      </li>
+                      <li class="uk-margin-top ">
+                        <a href="/ingredients">ingrédients</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <ul class="uk-navbar-nav uk-visible@s">
+              <li class=" uk-active ">
+                <a href="/">recettes</a>
+              </li>
+              <li class="">
+                <a href="/ingredients">ingrédients</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="uk-container uk-margin-medium-top">
+        
+
+        
+  <div class="uk-width-3-4@l uk-align-center">
+    <h1 class="uk-heading-small uk-heading-divider uk-margin-remove-top">Pad-thaï végétarien cacahuète basilic</h1>
+
+    <div uk-grid="true">
+      <div class="uk-width-1-2@s">
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Temps total</span></div>
+          <div class="uk-width-1-2">45m</div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">préparation</div>
+          <div class="uk-width-1-2">30m</div>
+        </div>
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">cuisson</div>
+          <div class="uk-width-1-2">15m</div>
+        </div>
+
+        <hr>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Réchauffable</span></div>
+          <div class="uk-width-1-2"> Non
+          </div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Coût</span></div>
+          <div class="uk-width-1-2"><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Difficulté</span></div>
+          <div class="uk-width-1-2"><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></div>
+        </div>
+      </div>
+      <div class="uk-width-1-2@s">
+        <h5 class="uk-text-uppercase">
+          Ingrédients pour 2 personnes
+        </h5>
+
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/nouilles-riz">
+                Nouilles de riz
+              </a>
+              
+              
+                (complètes)
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/courgette">
+                Courgettes
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/poivron">
+                Poivrons
+              </a>
+              
+              
+                (rouge)
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/oignon">
+                Oignon
+              </a>
+              
+              
+                (jaune)
+              
+            </div>
+            
+              <div>
+                0.5
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/carotte">
+                Carottes
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                2
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/huile-colza">
+                Huile de colza
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1cs
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/oeuf">
+                Oeufs
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/cacahuete">
+                Cacahuète
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                60g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/oignon-vert">
+                Oignon vert
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/basilic">
+                Basilic
+              </a>
+              
+              
+            </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/sauce-nuoc-mam">
+                Sauce Nuoc-Mam
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                3cs
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/cassonade">
+                Cassonade
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                3cs
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/bouillon-legumes">
+                Bouillon de légumes
+              </a>
+              
+              
+                (tablette)
+              
+            </div>
+            
+              <div>
+                0.5
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/vinaigre-blanc">
+                Vinaigre blanc
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                2cs
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/sauce-soja-salee">
+                Sauce soja salée
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1cs
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/eau">
+                Eau
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                50cl
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+    <div>
+      <div class="uk-hidden@s uk-margin-large-top"></div>
+      <h5 class="uk-text-uppercase">Étapes</h5>
+      
+        <p>
+          Placer les nouilles dans un bol d&#39;eau fraîche, si elles sont pré-cuites, sinon les cuire selon les instructions du paquet.
+          
+        </p>
+      
+        <p>
+          Couper de longues bandes de courgette à l&#39;économe
+          
+        </p>
+      
+        <p>
+          Couper de longues bandes d&#39;oignon jaune à l&#39;économe
+          
+        </p>
+      
+        <p>
+          Couper de longues bandes de carottes à l&#39;économe
+          
+        </p>
+      
+        <p>
+          Couper de très fines lamelles de poivrons dans le sens de la longueur avec un couteau (à l&#39;économe ça ne fonctionne pas)
+          
+        </p>
+      
+        <p>
+          Ciseler l&#39;oignon vert
+          
+        </p>
+      
+        <p>
+          Ciseler le basilic
+          
+        </p>
+      
+        <p>
+          Hacher les cacahuètes
+          
+        </p>
+      
+        <p>
+          Battre l&#39;oeuf dans un bol
+          
+        </p>
+      
+        <p>
+          Faire bouillir l&#39;eau
+          
+        </p>
+      
+        <p>
+          Dissoudre la tablette de bouillon de légumes dans l&#39;eau
+          
+        </p>
+      
+        <p>
+          Placer la sauce soja, nuoc-mam, le vinaigre blanc, la cassonade, et 3cs de bouillon de légumes dans un pot à confiture
+          
+        </p>
+      
+        <p>
+          Secouer vigoureusement le pot
+          
+        </p>
+      
+        <p>
+          Chauffer 1cs d&#39;huile de colza dans une poêle à feu moyen-fort (4)
+          
+        </p>
+      
+        <p>
+          Ajouter les légumes pour 2m/3m jusqu&#39;à ce qu&#39;ils ramolissent
+          
+        </p>
+      
+        <p>
+          Réserver les légumes
+          
+        </p>
+      
+        <p>
+          Rajouter 1cs d&#39;huile d&#39;olive dans la poêle
+          
+        </p>
+      
+        <p>
+          Égoutter les pâtes
+          
+        </p>
+      
+        <p>
+          Ajouter les pâtes dans la poêle et mélanger constamment pendant 1m
+          
+        </p>
+      
+        <p>
+          Ajouter la sauce et continuer à mélanger jusqu&#39;à ce que la sauce commence à épaissir et colle aux pâtes
+          
+        </p>
+      
+        <p>
+          Mettre les nouilles sur le côté pour laisser de la place pour l&#39;oeuf
+          
+        </p>
+      
+        <p>
+          Ajouter l&#39;oeuf dans la poêle et le laisser se solidifier pendant ~30s
+          
+        </p>
+      
+        <p>
+          Mélanger
+          
+        </p>
+      
+        <p>
+          Ajouter les légumes, les cacahuètes et les herbes dans la poêle et mélanger le tout
+          
+        </p>
+      
+    </div>
+  </div>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    </body>
+  </html>
+
