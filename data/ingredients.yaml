@@ -56,8 +56,6 @@ chair-a-saucisse:
   title: Chair à saucisse
 champagne:
   title: Champagne
-feuille-lasagnes:
-  title: Feuille de lasagnes
 champignons:
   title: Champignons
 champignons-teriyaki:
@@ -140,6 +138,8 @@ farine:
   title: Farine
 feta:
   title: Fêta
+feuille-lasagnes:
+  title: Feuille de lasagnes
 feuille-nori:
   title: Feuille de nori
 figue:
