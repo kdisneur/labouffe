@@ -228,6 +228,8 @@ oignon-frits:
   title: Oignon frits
 oignon-poudre:
   title: Oignon poudre
+oignon-rouge:
+  title: Oignon rouge
 oignon-vert:
   title: Oignon vert
 olives:
@@ -371,6 +373,8 @@ thym:
   title: Thym
 tomate:
   title: Tomate
+tomate-cerise:
+  title: Tomates cerises
 tomate-pelee:
   title: Tomates pelées
 vache-qui-rit:
@@ -387,6 +391,8 @@ vinaigre-blanc:
   title: Vinaigre blanc
 vinaigre-riz:
   title: Vinaigre de riz
+vinaigre-vin-rouge:
+  title: Vinaigre de vin rouge
 whisky:
   title: Whisky
 wrap:
