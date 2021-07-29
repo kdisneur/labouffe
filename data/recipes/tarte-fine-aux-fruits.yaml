@@ -1,0 +1,31 @@
+title: Tarte fine aux fruits
+category: dessert
+cooking: 30m
+preparation: 30m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 6
+  type: personnes
+ingredients:
+  pate-tarte-feuilletee:
+    quantity: 1
+  sucre-vanille:
+    quantity: 1
+    details: sachet
+  beurre:
+    details: quelques noisettes
+  cassonade:
+  fruit:
+    quantity: 3
+    details: pommes
+instructions:
+  - Préchauffer le four à 180°
+  - Couper et éplucher les fruits
+  - Détailler les fruits finement ou à la mandoline
+  - Etaler la pate feuilletée sur une plaque
+  - Piquer la pâte
+  - Disposer les lamelles de fruits sur la pâte
+  - Disposer de petites noisettes de beurre 
+  - Saupoudrer de sucre vanillé et de cassonade
+  - Enfourner pour 30m
