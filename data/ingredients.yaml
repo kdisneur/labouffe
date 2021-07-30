@@ -274,10 +274,10 @@ philadelphia:
   title: Philadelphia
 piment-espelette:
   title: Piment d'Espelette
-poireau:
-  title: poireaux
 poire:
   title: Poires
+poireau:
+  title: poireaux
 pois-chiche:
   title: Pois-chiche
 poivre:
@@ -358,8 +358,6 @@ saumon-frais:
   title: Saumon frais
 saumon-fume:
   title: Saumon fumé
-saute-veau:
-  title: Sauté de veau
 sel:
   title: Sel
 sel-fleur:
@@ -409,6 +407,8 @@ vanille-gousse:
   title: Gousse de vanille
 veau-jarret:
   title: Jarret de veau
+veau-saute:
+  title: Sauté de veau
 viande-hachee:
   title: Viande hachée
 vin-blanc:
