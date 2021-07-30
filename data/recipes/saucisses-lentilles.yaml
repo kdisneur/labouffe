@@ -14,7 +14,7 @@ ingredients:
   eau:
     quantity: 1l
   huile-olive:
-  saucisse-fumée:
+  saucisse-fumee:
     quantity: 2
   pomme-de-terre:
     quantity: 12
@@ -44,7 +44,7 @@ instructions:
   - Eplucher et laver les pommes de terre
   - Eplucher, laver et couper les carottes en rondelles
   - Couper les saucisses en rondelles
-  - Rincer les lentilles 
+  - Rincer les lentilles
   - Faire revenir les oignons, l'ail et les carottes, les saucisses dans l'huile d'olive
   - Ajouter les lentilles
   - Ajouter de l'eau, la tablette de bouillon, le thym le laurier, le sel et le poivre et les pommes de terre
