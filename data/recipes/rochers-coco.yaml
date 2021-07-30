@@ -16,7 +16,7 @@ ingredients:
   sucre-vanille:
     quantity: 1
     details: sachet
-  blanc-oeuf:
+  oeuf-blanc:
     quantity: 2
 instructions:
   - Préchauffer le four à 190°C
