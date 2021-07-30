@@ -138,8 +138,6 @@ feuille-nori:
   title: Feuille de nori
 figue:
   title: Figue
-fleur-sel:
-  title: Fleur de sel
 fromage-frais:
   title: Fromage frais
 fruit:
@@ -370,6 +368,8 @@ saute-veau:
   title: Sauté de veau
 sel:
   title: Sel
+sel-fleur:
+  title: Fleur de sel
 semoule:
   title: Semoule
 sirop-agave:
