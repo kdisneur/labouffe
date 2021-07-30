@@ -56,8 +56,6 @@ celeri:
   title: Céleri
 cerise:
   title: Cerises
-chair-a-saucisse:
-  title: Chair à saucisse
 champagne:
   title: Champagne
 champignons:
@@ -366,6 +364,8 @@ sauce-tomate:
   title: Sauce tomate
 sauce-worchestershire:
   title: Sauce worchestershire
+saucisse-chair:
+  title: Chair à saucisse
 saucisse-francfort:
   title: Saucisse de Francfort
 saucisse-fumée:
