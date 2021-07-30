@@ -111,6 +111,8 @@ creme-mascarpone:
 creme-patissiere:
   recipe: creme-patissiere
   title: Crème Pâtissière
+cumin-graine:
+  title: Graines de cumin
 cumin-poudre:
   title: Poudre de Cumin
 dinde:
@@ -148,8 +150,6 @@ gingembre:
   title: Gingembre
 gingembre-poudre:
   title: Gingembre en poudre
-graines-cumin:
-  title: Graines de cumin
 graines-fenouil:
   title: Graines de fenouil
 graines-fenugrec:
