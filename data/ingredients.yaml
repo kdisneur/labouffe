@@ -154,8 +154,6 @@ gingembre:
   title: Gingembre
 gingembre-poudre:
   title: Gingembre en poudre
-graines-sesame:
-  title: Graines de sésame
 gras-de-boeuf:
   title: Gras de boeuf
 herbes-provence:
@@ -370,6 +368,8 @@ sel-fleur:
   title: Fleur de sel
 semoule:
   title: Semoule
+sesame-graine:
+  title: Graines de sésame
 sirop-agave:
   title: Sirop d'agave
 speculoos:
