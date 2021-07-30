@@ -93,8 +93,6 @@ coriandre-poudre:
   title: Coriandre en poudre
 cornichon:
   title: Cornichon
-coulis-tomate:
-  title: Coulis de tomates
 courgette:
   title: Courgettes
 crabe:
@@ -403,6 +401,8 @@ tomate-concasse:
   title: Concassé de tomates
 tomate-concentre:
   title: Concentré de tomates
+tomate-coulis:
+  title: Coulis de tomates
 tomate-pelee:
   title: Tomates pelées
 vache-qui-rit:
