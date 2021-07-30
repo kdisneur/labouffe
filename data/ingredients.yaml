@@ -17,8 +17,6 @@ avocat:
   title: Avocat
 basilic:
   title: Basilic
-baton-cannelle:
-  title: Bâtons de cannelle
 bechamel:
   recipe: bechamel
   title: Béchamel
@@ -46,6 +44,8 @@ camembert:
   title: Camembert
 cannelle:
   title: Cannelle
+cannelle-baton:
+  title: Bâtons de cannelle
 caramel:
   title: Caramel
 carotte:
