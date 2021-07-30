@@ -11,7 +11,7 @@ servings:
 ingredients:
   semoule:
     quantity: 100g
-  noisettes:
+  noisette:
     quantity: 50g
   abricot-sec:
     quantity: 100g
@@ -57,4 +57,3 @@ instructions:
   - Etaler le reste du couscous sur le plateau vapeur
   - Mettre 400g d'eau dans le bol du Thermomix, insérer le panier cuisson
   - Insérer le Varoma, cuire 17m, Varoma, vitesse 1
-
