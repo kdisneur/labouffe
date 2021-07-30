@@ -109,8 +109,6 @@ creme-mascarpone:
 creme-patissiere:
   recipe: creme-patissiere
   title: Crème Pâtissière
-cuisse-poulet:
-  title: Cuisse de poulet
 cumin:
   title: Cumin
 dinde:
@@ -308,6 +306,8 @@ porto:
   title: Porto
 potimarron:
   title: Potimarron
+poulet-cuisse:
+  title: Cuisse de poulet
 pruneaux:
   title: Pruneaux
 puree:
