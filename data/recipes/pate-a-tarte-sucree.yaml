@@ -16,7 +16,7 @@ ingredients:
   sel:
     quantity: 1
     details: pincée
-  gousse-vanille:
+  vanille-gousse:
     quantity: 1
   farine:
     quantity: 200g
@@ -28,7 +28,7 @@ ingredients:
 instructions:
   - Fouetter le beurre mou et le sucre glace tamisé dans un saladier
   - Gratter la gousse de vanille
-  - Ajouter les graines, la poudre d'amandes et le sel 
+  - Ajouter les graines, la poudre d'amandes et le sel
   - Mélanger l'ensemble jusqu'à obtention d'une texture homogène
   - Ajouter l'oeuf et mélanger
   - Tamiser la farine et ajouter au mélange sans trop travailler la pâte, par petites quantités

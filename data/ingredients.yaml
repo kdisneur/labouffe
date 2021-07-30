@@ -146,8 +146,6 @@ gingembre:
   title: Gingembre
 gingembre-poudre:
   title: Gingembre en poudre
-gousse-vanille:
-  title: Gousse de vanille
 gousses-cardamome:
   title: Gousses de cardamome
 graines-cumin:
@@ -409,6 +407,8 @@ vanille-arome:
   title: Arôme de vanille
 vanille-extrait:
   title: Extrait de vanille
+vanille-gousse:
+  title: Gousse de vanille
 viande-hachee:
   title: Viande hachée
 vin-blanc:
