@@ -134,6 +134,8 @@ farce:
   title: Farce porc et veau
 farine:
   title: Farine
+fenouil-graine:
+  title: Graines de fenouil
 feta:
   title: Fêta
 feuille-lasagnes:
@@ -150,8 +152,6 @@ gingembre:
   title: Gingembre
 gingembre-poudre:
   title: Gingembre en poudre
-graines-fenouil:
-  title: Graines de fenouil
 graines-fenugrec:
   title: Graines de fenugrec
 graines-poivre-noir:
