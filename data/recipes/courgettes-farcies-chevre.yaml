@@ -1,0 +1,30 @@
+title: Courgettes farcies au chèvre
+category: plat chaud
+cooking: 15m
+preparation: 15m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 18
+  type: unités
+ingredients:
+  courgette:
+    quantity: 6
+    details: minces
+  chevre:
+    quantity: 1
+    details: frais
+  tomate-cerise:
+    quantity: 18
+  piment-espelette:
+instructions:
+  - Couper les courgettes en 3 tronçons
+  - instruction: Creuser le centre de chaque tronçon.
+    warning: Attention de ne pas percer le fond
+  - Préchauffer le four à 180°C
+  - Mélanger le chèvre et le piment d'espelette dans un bol
+  - Farcir les tronçons avec la préparation
+  - Disposer les tronçons sur une plaque de cuisson
+  - Déposer une tomate cerise sur chaque tronçon
+  - instruction: Enfourner au four pour ~15m.
+    warning: Le couteau doit pouvoir s'enfoncer facilement mais les courgettes doivent se tenir
