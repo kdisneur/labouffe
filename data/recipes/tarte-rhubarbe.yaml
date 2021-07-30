@@ -17,7 +17,7 @@ ingredients:
     quantity: 125g
   creme-entiere-liquide:
     quantity: 250ml
-  extrait-vanille:
+  vanille-extrait:
     quantity: 1cc
   rhubarbe:
     quantity: 800g
@@ -32,7 +32,7 @@ instructions:
   - Mélanger
   - Egoutter la rhubarbe pendant 30m. Conserver le jus
   - Préchauffer le four à 180°
-  - Etaler la pâte 
+  - Etaler la pâte
   - Garnir le moule à tarte de la pâte
   - Piquer la pâte avec une fourchette dans le fond et les côtés
   - Disposer la rhubarbe sur le fond de tarte

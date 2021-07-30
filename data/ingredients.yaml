@@ -123,8 +123,6 @@ endive:
   title: Endives
 epinard:
   title: Épinards
-extrait-vanille:
-  title: Extrait de vanille
 falafel:
   recipe: falafel
   title: Falafel
@@ -409,6 +407,8 @@ vache-qui-rit:
   title: Vache qui rit
 vanille-arome:
   title: Arôme de vanille
+vanille-extrait:
+  title: Extrait de vanille
 viande-hachee:
   title: Viande hachée
 vin-blanc:
