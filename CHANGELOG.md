@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file
 
 n/a
 
+## 2021-07
+
+- [BUGFIX] Update recipe list page to sort recipes based on their name instead of their slugs.
+
 ## 2021-05
 
 - [FEATURE] Add support for `reheat` on the recipe. It has also been added in the list of available filters.

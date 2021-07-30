@@ -7,6 +7,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"sort"
 	"strings"
 
 	"github.com/kdisneur/labouffe/internal/html"
@@ -105,6 +106,10 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 			return fmt.Errorf("can't generate recipe page '%s': %v", recipes[i].Code, err)
 		}
 	}
+
+	sort.Slice(recipeviews, func(i int, j int) bool {
+		return recipeviews[i].Title < recipeviews[j].Title
+	})
 
 	err = renderer.Generate(
 		path.Join(cfg.OutputFolderPath),
