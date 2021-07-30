@@ -1,12 +1,16 @@
 ---
 abricots-secs:
   title: Abricots secs
+agneau:
+  title: Agneau
 ail:
   title: Ail
 ail-poudre:
   title: Ail poudre
 amande:
   title: Amande
+anis-etoile:
+  title: Anis étoilé
 arome-vanille:
   title: Arôme de vanille
 aubergine:
@@ -15,6 +19,8 @@ avocat:
   title: Avocat
 basilic:
   title: Basilic
+batons-cannelle:
+  title: Bâtons de cannelle
 bechamel:
   recipe: bechamel
   title: Béchamel
@@ -77,6 +83,8 @@ ciboulette:
   title: Ciboulette
 citron:
   title: Citron
+clous-girofle:
+  title: Clous de girofle
 concasse-tomate:
   title: Concassé de tomates
 concentre-tomate:
@@ -150,8 +158,22 @@ fleur-sel:
   title: Fleur de sel
 fromage-frais:
   title: Fromage frais
+gingembre:
+  title: Gingembre
+gingembre-poudre:
+  title: Gingembre en poudre
 gousse-vanille:
   title: Gousse de vanille
+gousses-cardamome:
+  title: Gousses de cardamome
+graines-cumin:
+  title: Graines de cumin
+graines-fenouil:
+  title: Graines de fenouil
+graines-fenugrec:
+  title: Graines de fenugrec
+graines-poivre-noir:
+  title: Grains de poivre noir
 graines-sesame:
   title: Graines de sésame
 gras-de-boeuf:
@@ -215,6 +237,8 @@ noix-cajou:
   title: Noix de Cajou
 noix-coco:
   title: Noix de coco
+noix-muscade:
+  title: Noix de muscade
 nouilles-riz:
   title: Nouilles de riz
 nugget:
@@ -352,6 +376,8 @@ saute-veau:
   title: Sauté de veau
 sel:
   title: Sel
+sel-mer:
+  title: Sel de mer
 semoule:
   title: Semoule
 sirop-agave:
@@ -364,6 +390,8 @@ sucre-glace:
   title: Sucre glace
 sucre-vanille:
   title: Sucre vanillé
+sumac:
+  title: Sumac
 tahini:
   recipe: tahini
   title: Tahini
