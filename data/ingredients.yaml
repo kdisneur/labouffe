@@ -48,6 +48,8 @@ cannelle-baton:
   title: Bâtons de cannelle
 caramel:
   title: Caramel
+cardamome-gousse:
+  title: Gousses de cardamome
 carotte:
   title: Carottes
 cassonade:
@@ -146,8 +148,6 @@ gingembre:
   title: Gingembre
 gingembre-poudre:
   title: Gingembre en poudre
-gousses-cardamome:
-  title: Gousses de cardamome
 graines-cumin:
   title: Graines de cumin
 graines-fenouil:
