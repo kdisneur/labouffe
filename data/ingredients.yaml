@@ -81,8 +81,6 @@ citron:
   title: Citron
 clou-girofle:
   title: Clous de girofle
-concasse-tomate:
-  title: Concassé de tomates
 concentre-tomate:
   title: Concentré de tomates
 conchiglioni:
@@ -403,6 +401,8 @@ tomate:
   title: Tomate
 tomate-cerise:
   title: Tomates cerises
+tomate-concasse:
+  title: Concassé de tomates
 tomate-pelee:
   title: Tomates pelées
 vache-qui-rit:
