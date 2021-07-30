@@ -171,8 +171,6 @@ hummus:
   title: Hummus
 jambon:
   title: Jambon
-jarret-veau:
-  title: Jarret de veau
 jaune-oeuf:
   title: Jaune d'oeuf
 joue-boeuf:
@@ -409,6 +407,8 @@ vanille-extrait:
   title: Extrait de vanille
 vanille-gousse:
   title: Gousse de vanille
+veau-jarret:
+  title: Jarret de veau
 viande-hachee:
   title: Viande hachée
 vin-blanc:

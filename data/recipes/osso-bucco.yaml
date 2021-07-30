@@ -9,7 +9,7 @@ servings:
   quantity: 4
   type: personnes
 ingredients:
-  jarret-veau:
+  veau-jarret:
     quantity: 4
     details: tranches
   ail:
@@ -53,4 +53,3 @@ instructions:
   - Ajouter du bouillon jusqu’à recouvrir les ingrédients
   - Laisser mijoter 2h à feu doux
   - Ajouter du bouillon si nécessaire
-
