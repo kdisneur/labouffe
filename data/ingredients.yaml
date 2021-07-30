@@ -171,8 +171,6 @@ hummus:
   title: Hummus
 jambon:
   title: Jambon
-jaune-oeuf:
-  title: Jaune d'oeuf
 joue-boeuf:
   title: Joue de boeuf
 ketchup:
@@ -224,6 +222,8 @@ oeuf:
   title: Oeufs
 oeuf-blanc:
   title: Blanc d'oeuf
+oeuf-jaune:
+  title: Jaune d'oeuf
 oignon:
   title: Oignon
 oignon-frits:
