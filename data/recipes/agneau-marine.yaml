@@ -11,7 +11,8 @@ servings:
   type: personnes
 ingredients:
   agneau:
-    quantity: 1kg
+    quantity: 500g
+    details: selle
   graines-poivre-noir:
     quantity: 2cc
   clous-girofle:
