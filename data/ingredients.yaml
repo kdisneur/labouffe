@@ -154,8 +154,6 @@ gingembre:
   title: Gingembre
 gingembre-poudre:
   title: Gingembre en poudre
-graines-poivre-noir:
-  title: Grains de poivre noir
 graines-sesame:
   title: Graines de sésame
 gras-de-boeuf:
@@ -288,6 +286,8 @@ pois-chiche:
   title: Pois-chiche
 poivre:
   title: Poivre
+poivre-noir-graine:
+  title: Grains de poivre noir
 poivron:
   title: Poivrons
 pomme:
