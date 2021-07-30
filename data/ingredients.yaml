@@ -136,6 +136,8 @@ farine:
   title: Farine
 fenouil-graine:
   title: Graines de fenouil
+fenugrec-graine:
+  title: Graines de fenugrec
 feta:
   title: Fêta
 feuille-lasagnes:
@@ -152,8 +154,6 @@ gingembre:
   title: Gingembre
 gingembre-poudre:
   title: Gingembre en poudre
-graines-fenugrec:
-  title: Graines de fenugrec
 graines-poivre-noir:
   title: Grains de poivre noir
 graines-sesame:
