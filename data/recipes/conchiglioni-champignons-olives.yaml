@@ -12,7 +12,7 @@ ingredients:
   conchiglioni:
     quantity: 20
     details: (~100g)
-  champignons:
+  champignon:
     details: paris
     quantity: 200g
   olives:
