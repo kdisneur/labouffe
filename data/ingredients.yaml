@@ -47,26 +47,26 @@ camembert:
 cannelle:
   title: Cannelle
 cannelle-baton:
-  title: Bâtons de cannelle
+  title: Bâton de cannelle
 caramel:
   title: Caramel
 cardamome-gousse:
-  title: Gousses de cardamome
+  title: Gousse de cardamome
 carotte:
-  title: Carottes
+  title: Carotte
 cassonade:
   title: Cassonade
 celeri:
   title: Céleri
 cerise:
-  title: Cerises
+  title: Cerise
 champagne:
   title: Champagne
 champignon:
-  title: Champignons
+  title: Champignon
 champignon-teriyaki:
   recipe: champignons-teriyaki
-  title: Champignons teriyaki
+  title: Champignon teriyaki
 chapelure:
   title: Chapelure
 chevre:
@@ -84,7 +84,7 @@ ciboulette:
 citron:
   title: Citron
 clou-girofle:
-  title: Clous de girofle
+  title: Clou de girofle
 conchiglioni:
   title: Conchiglioni
 concombre:
@@ -98,7 +98,7 @@ coriandre-poudre:
 cornichon:
   title: Cornichon
 courgette:
-  title: Courgettes
+  title: Courgette
 crabe:
   title: Crabe
 creme-anglaise:
@@ -114,7 +114,7 @@ creme-patissiere:
   recipe: creme-patissiere
   title: Crème Pâtissière
 cumin-graine:
-  title: Graines de cumin
+  title: Graine de cumin
 cumin-poudre:
   title: Poudre de Cumin
 dinde:
@@ -126,9 +126,9 @@ echalote:
 emmental:
   title: Emmental
 endive:
-  title: Endives
+  title: Endive
 epinard:
-  title: Épinards
+  title: Épinard
 falafel:
   recipe: falafel
   title: Falafel
@@ -137,9 +137,9 @@ farce:
 farine:
   title: Farine
 fenouil-graine:
-  title: Graines de fenouil
+  title: Graine de fenouil
 fenugrec-graine:
-  title: Graines de fenugrec
+  title: Graine de fenugrec
 feta:
   title: Fêta
 feuille-lasagnes:
@@ -151,7 +151,7 @@ figue:
 fromage-frais:
   title: Fromage frais
 fruit:
-  title: Fruits
+  title: Fruit
 gingembre:
   title: Gingembre
 gingembre-poudre:
@@ -180,11 +180,11 @@ lait:
 lait-concentre:
   title: Lait concentré sucré
 lardons:
-  title: Lardons fumés
+  title: Lardon fumé
 laurier:
   title: Laurier
 lentilles:
-  title: Lentilles
+  title: Lentille
 levure-boulanger:
   title: Levure de boulanger
 levure-chimique:
@@ -204,7 +204,7 @@ moutarde:
 mozzarella:
   title: Mozzarella
 noisettes:
-  title: Noisettes
+  title: Noisette
 noix:
   title: Noix
 noix-cajou:
@@ -219,7 +219,7 @@ nugget:
   recipe: nuggets
   title: Nugget
 oeuf:
-  title: Oeufs
+  title: Oeuf
 oeuf-blanc:
   title: Blanc d'oeuf
 oeuf-jaune:
@@ -235,7 +235,7 @@ oignon-rouge:
 oignon-vert:
   title: Oignon vert
 olive:
-  title: Olives
+  title: Olive
 orange:
   title: Orange
 origan:
@@ -275,17 +275,17 @@ philadelphia:
 piment-espelette:
   title: Piment d'Espelette
 poire:
-  title: Poires
+  title: Poire
 poireau:
-  title: poireaux
+  title: poireau
 pois-chiche:
   title: Pois-chiche
 poivre:
   title: Poivre
 poivre-noir-graine:
-  title: Grains de poivre noir
+  title: Grain de poivre noir
 poivron:
-  title: Poivrons
+  title: Poivron
 pomme:
   title: Pomme
 pomme-de-terre:
@@ -299,7 +299,7 @@ poulet-cuisse:
 poulet-filet:
   title: Filet de poulet
 pruneau:
-  title: Pruneaux
+  title: Pruneau
 puree:
   recipe: puree-pommes-de-terre
   title: Purée
@@ -365,7 +365,7 @@ sel-fleur:
 semoule:
   title: Semoule
 sesame-graine:
-  title: Graines de sésame
+  title: Graine de sésame
 sirop-agave:
   title: Sirop d'agave
 speculoos:
@@ -382,13 +382,13 @@ tahini:
   recipe: tahini
   title: Tahini
 tandoori:
-  title: Épices tandoori
+  title: Épice tandoori
 thym:
   title: Thym
 tomate:
   title: Tomate
 tomate-cerise:
-  title: Tomates cerises
+  title: Tomate cerise
 tomate-concasse:
   title: Concassé de tomates
 tomate-concentre:
@@ -396,7 +396,7 @@ tomate-concentre:
 tomate-coulis:
   title: Coulis de tomates
 tomate-pelee:
-  title: Tomates pelées
+  title: Tomate pelée
 vache-qui-rit:
   title: Vache qui rit
 vanille-arome:
