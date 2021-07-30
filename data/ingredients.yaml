@@ -28,6 +28,8 @@ biere-brune:
   title: Bière brune
 blinis:
   title: Blinis
+boeuf-joue:
+  title: Joue de boeuf
 bouillon-boeuf:
   title: Bouillon de boeuf
 bouillon-legumes:
@@ -171,8 +173,6 @@ hummus:
   title: Hummus
 jambon:
   title: Jambon
-joue-boeuf:
-  title: Joue de boeuf
 ketchup:
   title: Ketchup
 lait:
