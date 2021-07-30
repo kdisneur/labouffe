@@ -138,8 +138,6 @@ feuille-nori:
   title: Feuille de nori
 figue:
   title: Figue
-filet-poulet:
-  title: Filet de poulet
 fleur-sel:
   title: Fleur de sel
 fromage-frais:
@@ -306,6 +304,8 @@ potimarron:
   title: Potimarron
 poulet-cuisse:
   title: Cuisse de poulet
+poulet-filet:
+  title: Filet de poulet
 pruneaux:
   title: Pruneaux
 puree:
