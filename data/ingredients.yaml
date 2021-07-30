@@ -11,8 +11,6 @@ amande:
   title: Amande
 anis-etoile:
   title: Anis étoilé
-arome-vanille:
-  title: Arôme de vanille
 aubergine:
   title: Aubergine
 avocat:
@@ -409,6 +407,8 @@ tomate-pelee:
   title: Tomates pelées
 vache-qui-rit:
   title: Vache qui rit
+vanille-arome:
+  title: Arôme de vanille
 viande-hachee:
   title: Viande hachée
 vin-blanc:
