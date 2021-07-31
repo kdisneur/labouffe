@@ -4,7 +4,6 @@ difficulty: moyen
 preparation: 20m
 cooking: 15m
 pricing: abordable
-reheat: true
 servings:
   quantity: 4
   type: personnes
@@ -36,5 +35,5 @@ instructions:
   - Verser le vin blanc sur le riz, une fois prêt
   - Laisser réduire
   - Ajouter le bouillon dans le riz, louche par louche, à chaque fois que le bouillon est absorbé
-  - Faire revenir le morceaux de chorizo
+  - Faire revenir les morceaux de chorizo
   - Ajouter le chorizo au riz en fin de cuisson
