@@ -1,0 +1,29 @@
+title: Pâtes au saumon
+category: plat chaud
+cooking: 20m
+preparation: 5m
+difficulty: facile
+pricing: abordable
+servings:
+  quantity: 1
+  type: personnes
+ingredients:
+  pates:
+    quantity: 60g
+  saumon-frais:
+    quantity: 125g
+  creme-fraiche:
+    quantity: 2cs
+  huile-olive:
+    quantity: 1cs
+  sel:
+  poivre:
+instructions:
+  - Couper le saumon en cubes
+  - Faire cuire les pâtes dans l'eau bouillante
+  - Faire revenir les cubes de saumon dans l'huile d'olive dans une sauteuse
+  - Saler, poivrer
+  - Ajouter la crème et laisser cuire à feu doux (2) jusqu'à ce que le goût du saumon imprègne la crème
+  - Égoutter les pâtes
+  - Mélanger les pâtes et la sauce
+  
