@@ -8,7 +8,7 @@ servings:
   quantity: 2
   type: unités
 ingredients:
-  noisettes:
+  noisette:
     quantity: 30g
     details : grillées en poudre
   chocolat:
@@ -22,7 +22,7 @@ ingredients:
     quantity: 30g
   lait:
     quantity: 10g
-  arome-vanille:
+  vanille-arome:
     quantity: 5g
   sel:
     quantity: 1

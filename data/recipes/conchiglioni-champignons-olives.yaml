@@ -12,10 +12,10 @@ ingredients:
   conchiglioni:
     quantity: 20
     details: (~100g)
-  champignons:
+  champignon:
     details: paris
     quantity: 200g
-  olives:
+  olive:
     details: noires dénoyautées
     quantity: 30
   ail-poudre:
@@ -23,11 +23,11 @@ ingredients:
   basilic:
     details: grandes feuilles
     quantity: 2
-  concentre-tomate:
+  tomate-concentre:
     quantity: 1cc
   creme-fraiche:
     quantity: 3cs
-  coulis-tomate:
+  tomate-coulis:
     quantity: 4cs
   mozzarella:
     details: cossettes

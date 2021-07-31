@@ -9,7 +9,7 @@ servings:
   quantity: 4
   type: personnes
 ingredients:
-  saucisse-fumée:
+  saucisse-fumee:
     quantity: 4
     details: Diots de savoie
   oignon:
@@ -17,7 +17,7 @@ ingredients:
   ail:
     quantity: 2
     details: gousse
-  concasse-tomate:
+  tomate-concasse:
     quantity: 600g
   riz:
     quantity: 240g

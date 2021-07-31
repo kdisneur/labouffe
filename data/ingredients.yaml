@@ -1,6 +1,6 @@
 ---
-abricots-secs:
-  title: Abricots secs
+abricot-sec:
+  title: Abricot sec
 agneau:
   title: Agneau
 ail:
@@ -11,16 +11,12 @@ amande:
   title: Amande
 anis-etoile:
   title: Anis étoilé
-arome-vanille:
-  title: Arôme de vanille
 aubergine:
   title: Aubergine
 avocat:
   title: Avocat
 basilic:
   title: Basilic
-batons-cannelle:
-  title: Bâtons de cannelle
 bechamel:
   recipe: bechamel
   title: Béchamel
@@ -30,10 +26,10 @@ beurre:
   title: Beurre
 biere-brune:
   title: Bière brune
-blanc-oeuf:
-  title: Blanc d'oeuf
 blinis:
   title: Blinis
+boeuf-joue:
+  title: Joue de boeuf
 bouillon-boeuf:
   title: Bouillon de boeuf
 bouillon-legumes:
@@ -50,25 +46,27 @@ camembert:
   title: Camembert
 cannelle:
   title: Cannelle
+cannelle-baton:
+  title: Bâton de cannelle
 caramel:
   title: Caramel
+cardamome-gousse:
+  title: Gousse de cardamome
 carotte:
-  title: Carottes
+  title: Carotte
 cassonade:
   title: Cassonade
 celeri:
   title: Céleri
 cerise:
-  title: Cerises
-chair-a-saucisse:
-  title: Chair à saucisse
+  title: Cerise
 champagne:
   title: Champagne
-champignons:
-  title: Champignons
-champignons-teriyaki:
+champignon:
+  title: Champignon
+champignon-teriyaki:
   recipe: champignons-teriyaki
-  title: Champignons teriyaki
+  title: Champignon teriyaki
 chapelure:
   title: Chapelure
 chevre:
@@ -85,12 +83,8 @@ ciboulette:
   title: Ciboulette
 citron:
   title: Citron
-clous-girofle:
-  title: Clous de girofle
-concasse-tomate:
-  title: Concassé de tomates
-concentre-tomate:
-  title: Concentré de tomates
+clou-girofle:
+  title: Clou de girofle
 conchiglioni:
   title: Conchiglioni
 concombre:
@@ -103,10 +97,8 @@ coriandre-poudre:
   title: Coriandre en poudre
 cornichon:
   title: Cornichon
-coulis-tomate:
-  title: Coulis de tomates
 courgette:
-  title: Courgettes
+  title: Courgette
 crabe:
   title: Crabe
 creme-anglaise:
@@ -121,10 +113,10 @@ creme-mascarpone:
 creme-patissiere:
   recipe: creme-patissiere
   title: Crème Pâtissière
-cuisse-poulet:
-  title: Cuisse de poulet
-cumin:
-  title: Cumin
+cumin-graine:
+  title: Graine de cumin
+cumin-poudre:
+  title: Poudre de Cumin
 dinde:
   title: Dinde
 eau:
@@ -133,12 +125,10 @@ echalote:
   title: Echalote
 emmental:
   title: Emmental
-endives:
-  title: Endives
-epinards:
-  title: Épinards
-extrait-vanille:
-  title: Extrait de vanille
+endive:
+  title: Endive
+epinard:
+  title: Épinard
 falafel:
   recipe: falafel
   title: Falafel
@@ -146,6 +136,10 @@ farce:
   title: Farce porc et veau
 farine:
   title: Farine
+fenouil-graine:
+  title: Graine de fenouil
+fenugrec-graine:
+  title: Graine de fenugrec
 feta:
   title: Fêta
 feuille-lasagnes:
@@ -154,32 +148,14 @@ feuille-nori:
   title: Feuille de nori
 figue:
   title: Figue
-filet-poulet:
-  title: Filet de poulet
-fleur-sel:
-  title: Fleur de sel
 fromage-frais:
   title: Fromage frais
 fruit:
-  title: Fruits
+  title: Fruit
 gingembre:
   title: Gingembre
 gingembre-poudre:
   title: Gingembre en poudre
-gousse-vanille:
-  title: Gousse de vanille
-gousses-cardamome:
-  title: Gousses de cardamome
-graines-cumin:
-  title: Graines de cumin
-graines-fenouil:
-  title: Graines de fenouil
-graines-fenugrec:
-  title: Graines de fenugrec
-graines-poivre-noir:
-  title: Grains de poivre noir
-graines-sesame:
-  title: Graines de sésame
 gras-de-boeuf:
   title: Gras de boeuf
 herbes-provence:
@@ -197,24 +173,18 @@ hummus:
   title: Hummus
 jambon:
   title: Jambon
-jarret-veau:
-  title: Jarret de veau
-jaune-oeuf:
-  title: Jaune d'oeuf
-joue-boeuf:
-  title: Joue de boeuf
 ketchup:
   title: Ketchup
 lait:
   title: Lait
 lait-concentre:
   title: Lait concentré sucré
-lardons:
-  title: Lardons fumés
+lardon:
+  title: Lardon fumé
 laurier:
   title: Laurier
-lentilles:
-  title: Lentilles
+lentille:
+  title: Lentille
 levure-boulanger:
   title: Levure de boulanger
 levure-chimique:
@@ -233,8 +203,8 @@ moutarde:
   title: Moutarde
 mozzarella:
   title: Mozzarella
-noisettes:
-  title: Noisettes
+noisette:
+  title: Noisette
 noix:
   title: Noix
 noix-cajou:
@@ -249,7 +219,11 @@ nugget:
   recipe: nuggets
   title: Nugget
 oeuf:
-  title: Oeufs
+  title: Oeuf
+oeuf-blanc:
+  title: Blanc d'oeuf
+oeuf-jaune:
+  title: Jaune d'oeuf
 oignon:
   title: Oignon
 oignon-frits:
@@ -260,8 +234,8 @@ oignon-rouge:
   title: Oignon rouge
 oignon-vert:
   title: Oignon vert
-olives:
-  title: Olives
+olive:
+  title: Olive
 orange:
   title: Orange
 origan:
@@ -300,16 +274,18 @@ philadelphia:
   title: Philadelphia
 piment-espelette:
   title: Piment d'Espelette
-poireaux:
-  title: poireaux
-poires:
-  title: Poires
+poire:
+  title: Poire
+poireau:
+  title: poireau
 pois-chiche:
   title: Pois-chiche
 poivre:
   title: Poivre
+poivre-noir-grain:
+  title: Grain de poivre noir
 poivron:
-  title: Poivrons
+  title: Poivron
 pomme:
   title: Pomme
 pomme-de-terre:
@@ -318,12 +294,16 @@ porto:
   title: Porto
 potimarron:
   title: Potimarron
-pruneaux:
-  title: Pruneaux
+poulet-cuisse:
+  title: Cuisse de poulet
+poulet-filet:
+  title: Filet de poulet
+pruneau:
+  title: Pruneau
 puree:
   recipe: puree-pommes-de-terre
   title: Purée
-raisins-secs:
+raisin-sec:
   title: Raisins secs
 ras-el-hanout:
   title: Ras el Hanout
@@ -368,20 +348,24 @@ sauce-tomate:
   title: Sauce tomate
 sauce-worchestershire:
   title: Sauce worchestershire
+saucisse-chair:
+  title: Chair à saucisse
 saucisse-francfort:
   title: Saucisse de Francfort
-saucisse-fumée:
+saucisse-fumee:
   title: Saucisse fumée
 saumon-frais:
   title: Saumon frais
 saumon-fume:
   title: Saumon fumé
-saute-veau:
-  title: Sauté de veau
 sel:
   title: Sel
+sel-fleur:
+  title: Fleur de sel
 semoule:
   title: Semoule
+sesame-graine:
+  title: Graine de sésame
 sirop-agave:
   title: Sirop d'agave
 speculoos:
@@ -398,17 +382,33 @@ tahini:
   recipe: tahini
   title: Tahini
 tandoori:
-  title: Épices tandoori
+  title: Épice tandoori
 thym:
   title: Thym
 tomate:
   title: Tomate
 tomate-cerise:
-  title: Tomates cerises
+  title: Tomate cerise
+tomate-concasse:
+  title: Concassé de tomates
+tomate-concentre:
+  title: Concentré de tomates
+tomate-coulis:
+  title: Coulis de tomates
 tomate-pelee:
-  title: Tomates pelées
+  title: Tomate pelée
 vache-qui-rit:
   title: Vache qui rit
+vanille-arome:
+  title: Arôme de vanille
+vanille-extrait:
+  title: Extrait de vanille
+vanille-gousse:
+  title: Gousse de vanille
+veau-jarret:
+  title: Jarret de veau
+veau-saute:
+  title: Sauté de veau
 viande-hachee:
   title: Viande hachée
 vin-blanc:

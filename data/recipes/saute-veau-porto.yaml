@@ -9,7 +9,7 @@ servings:
   quantity: 4
   type: personnes
 ingredients:
-  saute-veau:
+  veau-saute:
     quantity: 400g
   eau:
     quantity: 2
@@ -22,10 +22,10 @@ ingredients:
   pomme-de-terre:
     quantity: 1.2kg
     details : fermes
-  olives:
+  olive:
     quantity: 1
     details: poignée
-  concentre-tomate:
+  tomate-concentre:
     quantity: 2cs
   porto:
     quantity: 2

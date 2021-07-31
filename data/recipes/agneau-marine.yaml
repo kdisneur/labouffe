@@ -13,21 +13,21 @@ ingredients:
   agneau:
     quantity: 500g
     details: selle
-  graines-poivre-noir:
+  poivre-noir-grain:
     quantity: 2cc
-  clous-girofle:
+  clou-girofle:
     quantity: 5
-  gousses-cardamome:
+  cardamome-gousse:
     quantity: 3
-  graines-fenugrec:
+  fenugrec-graine:
     quantity: 0.5cc
-  graines-fenouil:
+  fenouil-graine:
     quantity: 1cc
-  graines-cumin:
+  cumin-graine:
     quantity: 1cs
   anis-etoile:
     quantity: 1
-  batons-cannelle:
+  cannelle-baton:
     quantity: 1
   noix-muscade:
     quantity: 0.5

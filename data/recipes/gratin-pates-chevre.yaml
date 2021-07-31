@@ -10,7 +10,7 @@ servings:
 ingredients:
   pates:
     quantity: 50g
-  champignons:
+  champignon:
     quantity: 3
   creme-fraiche:
     quantity: 1cs
@@ -18,9 +18,9 @@ ingredients:
     quantity: 1
   chevre:
     quantity: 50g
-  olives:
+  olive:
     quantity: 6
-  coulis-tomate:
+  tomate-coulis:
     quantity: 100ml
   origan:
   sel:

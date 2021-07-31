@@ -25,9 +25,9 @@ ingredients:
     quantity: 1cc
   beurre:
     quantity: 85g
-  arome-vanille:
+  vanille-arome:
     quantity: 5g
-  extrait-vanille:
+  vanille-extrait:
     quantity: 1cc
   oeuf:
     quantity: 1
