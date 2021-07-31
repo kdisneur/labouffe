@@ -318,6 +318,8 @@ riz:
 riz-japonais:
   recipe: riz-japonais
   title: Riz japonais cuit
+riz-risotto:
+  title: Riz risotto
 riz-sushi:
   title: Riz spécial sushi cru
 roquefort:
