@@ -3,6 +3,9 @@ abricot-sec:
   title: Abricot sec
 agneau:
   title: Agneau
+agneau-marine:
+  recipe: agneau-marine
+  title: Agneau mariné
 ail:
   title: Ail
 ail-poudre:
@@ -324,6 +327,8 @@ roquefort:
   title: Roquefort
 safran:
   title: Safran
+sauce-ail:
+  title: Sauce à l'ail
 sauce-ciboulette:
   recipe: sauce-ciboulette
   title: Sauce à la ciboulette
