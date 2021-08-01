@@ -20,10 +20,10 @@ ingredients:
   clou-girofle:
     quantity: 0.5cc
   thym:
-    quantity: 0.5cc
+    quantity: 0.25cc
   laurier:
     quantity: 4
-    details: branches
+    details: petite feuille
   cannelle-poudre:
     quantity: 0.5cc
   cardamome-graine:
@@ -34,6 +34,7 @@ ingredients:
     quantity: 1cc
 instructions:
   - Chauffer une poêle à sec à feu doux
+  - Dégousser la cardamome
   - Verser les clous de girofle, les graines de coriandre, de cumin, de cardamome
   - Torréfier à feu doux pendant ~4m sans cesser de remuer.
   - warning: Stopper la cuisson dès que l'odeur des épices se dégage sous peine de les brûler
