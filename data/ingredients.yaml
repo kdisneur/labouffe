@@ -47,14 +47,14 @@ cafe:
   title: Café
 camembert:
   title: Camembert
-cannelle:
-  title: Cannelle
+cannelle-poudre:
+  title: Cannelle en poudre
 cannelle-baton:
   title: Bâton de cannelle
 caramel:
   title: Caramel
-cardamome-gousse:
-  title: Gousse de cardamome
+cardamome-graine:
+  title: Graine de cardamome
 carotte:
   title: Carotte
 cassonade:
@@ -96,6 +96,8 @@ confiture:
   title: Confiture
 coriandre:
   title: Coriandre
+coriandre-graine:
+  title: Coriandre en graine
 coriandre-poudre:
   title: Coriandre en poudre
 cornichon:
@@ -120,6 +122,8 @@ cumin-graine:
   title: Graine de cumin
 cumin-poudre:
   title: Poudre de Cumin
+curcuma:
+  title: Curcuma
 dinde:
   title: Dinde
 eau:
@@ -285,8 +289,8 @@ pois-chiche:
   title: Pois-chiche
 poivre:
   title: Poivre
-poivre-noir-grain:
-  title: Grain de poivre noir
+poivre-noir-graine:
+  title: Graines de poivre noir
 poivron:
   title: Poivron
 pomme:

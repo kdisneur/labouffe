@@ -1,0 +1,42 @@
+title: Épice tandoori
+category: plat froid
+difficulty: facile
+preparation: 30m
+cooking: 30m
+pricing: économique
+ingredients:
+  cumin-graine:
+    quantity: 3cs
+  gingembre-poudre:
+    quantity: 1cs
+  coriandre-graine:
+    quantity: 3cs
+  curcuma:
+    quantity: 1cs
+  paprika:
+    quantity: 1cs
+  ail-poudre:
+    quantity: 1cs
+  clou-girofle:
+    quantity: 0.5cc
+  thym:
+    quantity: 0.5cc
+  laurier:
+    quantity: 4
+    details: branches
+  cannelle-poudre:
+    quantity: 0.5cc
+  cardamome-graine:
+    quantity: 0.25cc
+  poivre-noir-graine:
+    quantity: 0.5cc
+  sel:
+    quantity: 1cc
+instructions:
+  - Chauffer une poêle à sec à feu doux
+  - Verser les clous de girofle, les graines de coriandre, de cumin, de cardamome
+  - Torréfier à feu doux pendant ~4m sans cesser de remuer.
+  - warning: Stopper la cuisson dès que l'odeur des épices se dégage sous peine de les brûler
+  - Réserver dans un bol le temps qu'elles refroidissent
+  - Transvaser dans le mixeur
+  - Mixer jusqu'à obtention d'une poudre

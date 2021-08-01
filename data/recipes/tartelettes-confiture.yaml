@@ -8,9 +8,8 @@ servings:
   quantity: 30
   type: unités
 ingredients:
-  cannelle:
+  cannelle-poudre:
     quantity: 1cc
-    details: poudre
   cassonade:
     quantity: 85g
   farine:
