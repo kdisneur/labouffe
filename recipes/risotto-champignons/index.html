@@ -1,0 +1,562 @@
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Site web listant nos recettes" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+      <style>
+      .uk-offcanvas-bar {
+        background: #fff;
+      }
+      .uk-offcanvas-bar .uk-subnav {
+        margin-left: 0;
+        font-size: .875rem;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-nav-default .uk-nav-header {
+        border-bottom: 1px solid #e5e5e5;
+        color: #222;
+        text-transform: uppercase;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-subnav > li {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .uk-offcanvas-bar .uk-subnav > li > a,
+      .uk-offcanvas-bar .uk-subnav > li > a:focus,
+      .uk-offcanvas-bar .uk-subnav > li > a:hover {
+        text-transform: capitalize;
+        color: #999 !important;
+      }
+
+      .uk-offcanvas-bar .uk-subnav > li.uk-active > a {
+        background-color: #1e87f0;
+        color: #fff !important;
+      }
+
+      .tm-logo-title {
+        margin-left: 5px;
+      }
+      .tm-logo-title img {
+        display: block;
+        float: left;
+      }
+      .tm-logo-title span {
+        padding-top: 5px;
+        display: inline-block;
+      }
+
+      .tm-link-no-highlight,
+      .tm-link-no-highlight:hover,
+      .tm-link-no-highlight:focus {
+        color: #666 !important;
+        text-decoration: none;
+      }
+      </style>
+      <title>La bouffe, hein!</title>
+    </head>
+    <body>
+      <nav class="uk-navbar-container tm-navbar-container uk-active" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="/" class="uk-link tm-no-underline tm-logo-title">
+            <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="42" />
+              <span class="uk-margin-small-left uk-text-large">La bouffe</span>
+            </a>
+          </div>
+
+          <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon href="" uk-toggle="target: #small-menu"></a>
+            <div id="small-menu" uk-offcanvas="mode: push; overlay: true">
+              <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
+                <div class="uk-panel">
+                    <ul class="uk-subnav uk-subnav-pill tm-nav">
+                      <li class="uk-subnav-header">Général</a>
+                      <li class="uk-margin-top uk-active">
+                        <a href="/">recettes</a>
+                      </li>
+                      <li class="uk-margin-top ">
+                        <a href="/ingredients">ingrédients</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <ul class="uk-navbar-nav uk-visible@s">
+              <li class=" uk-active ">
+                <a href="/">recettes</a>
+              </li>
+              <li class="">
+                <a href="/ingredients">ingrédients</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="uk-container uk-margin-medium-top">
+        
+
+        
+  <div class="uk-width-3-4@l uk-align-center">
+    <h1 class="uk-heading-small uk-heading-divider uk-margin-remove-top">Risotto aux champignons</h1>
+
+    <div uk-grid="true">
+      <div class="uk-width-1-2@s">
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Temps total</span></div>
+          <div class="uk-width-1-2">1h</div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">préparation</div>
+          <div class="uk-width-1-2">30m</div>
+        </div>
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">cuisson</div>
+          <div class="uk-width-1-2">30m</div>
+        </div>
+
+        <hr>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Réchauffable</span></div>
+          <div class="uk-width-1-2"> Non
+          </div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Coût</span></div>
+          <div class="uk-width-1-2"><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Difficulté</span></div>
+          <div class="uk-width-1-2"><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></div>
+        </div>
+      </div>
+      <div class="uk-width-1-2@s">
+        <h5 class="uk-text-uppercase">
+          Ingrédients pour 4 personnes
+        </h5>
+
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/riz-risotto">
+                Riz risotto
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                250g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/champignon">
+                Champignon
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                300g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/bouillon-legumes">
+                Bouillon de légumes
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                2
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/oignon">
+                Oignon
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/vin-blanc">
+                Vin blanc
+              </a>
+              
+              
+                (3cs &#43; 10cl)
+              
+            </div>
+            
+              <div>
+                10cs
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/creme-fraiche">
+                Crême fraîche épaisse
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                15cl
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/parmesan">
+                Parmesan
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                100g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/ail">
+                Ail
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/huile-olive">
+                Huile d&#39;olive
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1cs
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/persil">
+                Persil
+              </a>
+              
+              
+                (branches)
+              
+            </div>
+            
+              <div>
+                3
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/beurre">
+                Beurre
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                15g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/eau">
+                Eau
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1l
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/sel">
+                Sel
+              </a>
+              
+              
+            </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/poivre">
+                Poivre
+              </a>
+              
+              
+            </div>
+            
+          </div>
+        
+      </div>
+    </div>
+    <div>
+      <div class="uk-hidden@s uk-margin-large-top"></div>
+      <h5 class="uk-text-uppercase">Étapes</h5>
+      
+        <p>
+          Couper les champignons en gros morceaux
+          
+        </p>
+      
+        <p>
+          Émincer l’ail
+          
+        </p>
+      
+        <p>
+          Émincer l’oignon
+          
+        </p>
+      
+        <p>
+          Ciseler le persil
+          
+        </p>
+      
+        <p>
+          Faire fondre le beurre dans la poêle
+          
+        </p>
+      
+        <p>
+          Faire revenir l’ail pendant ~2m
+          
+        </p>
+      
+        <p>
+          Ajouter les champignons
+          
+        </p>
+      
+        <p>
+          Laisser cuire pendant ~3m
+          
+        </p>
+      
+        <p>
+          Ajouter le persil en fin de cuisson
+          
+        </p>
+      
+        <p>
+          Ajouter 3cs de vin blanc
+          
+        </p>
+      
+        <p>
+          Laisser cuire ~2m, jusqu’à ce que le vin blanc réduise
+          
+        </p>
+      
+        <p>
+          Ajouter la crème fraîche
+          
+        </p>
+      
+        <p>
+          Mélanger
+          
+        </p>
+      
+        <p>
+          Saler
+          
+        </p>
+      
+        <p>
+          Poivrer
+          
+        </p>
+      
+        <p>
+          Réserver
+          
+        </p>
+      
+        <p>
+          Faire bouillir l’eau dans une bouilloire
+          
+        </p>
+      
+        <p>
+          Transvaser l’eau dans un récipient
+          
+        </p>
+      
+        <p>
+          Diluer les cubes de bouillon dans l’eau
+          
+        </p>
+      
+        <p>
+          Faire chauffer de l’huile d’olive dans une sauteuse
+          
+        </p>
+      
+        <p>
+          Faire revenir l’oignon pendant ~3m
+          
+        </p>
+      
+        <p>
+          Ajouter le riz
+          
+        </p>
+      
+        <p>
+          Laisser cuire pendant ~2m, jusqu’à ce qu’il soit transparent, tout en le remuant
+          
+        </p>
+      
+        <p>
+          Ajouter 7cs de vin blanc
+          
+        </p>
+      
+        <p>
+          Ajouter une louche de bouillon lorsque le vin blanc est absorbé
+          
+        </p>
+      
+        <p>
+          Mélanger
+          
+        </p>
+      
+        <p>
+          Répéter l’opération à chaque fois que le liquide est absorbé, jusqu’à ce qu’il n’y ait plus de bouillon
+          
+        </p>
+      
+        <p>
+          Ajouter les champignons et la moitié du parmesan
+          
+        </p>
+      
+        <p>
+          Attendre 2m puis mélanger vivement
+          
+        </p>
+      
+        <p>
+          Ajouter le reste du parmesan au moment de servir
+          
+        </p>
+      
+    </div>
+  </div>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    </body>
+  </html>
+
