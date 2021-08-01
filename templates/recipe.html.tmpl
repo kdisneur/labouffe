@@ -56,7 +56,11 @@
       </div>
       <div class="uk-width-1-2@s">
         <h5 class="uk-text-uppercase">
-          Ingrédients pour {{ .Data.Servings.Quantity }} {{ .Data.Servings.Type }}
+          {{ if (gt .Data.Servings.Quantity 0) }}
+            Ingrédients pour {{ .Data.Servings.Quantity }} {{ .Data.Servings.Type }}
+          {{ else }}
+            Ingrédients
+          {{ end }}
         </h5>
 
         {{ range $ingredient := .Data.Ingredients }}
