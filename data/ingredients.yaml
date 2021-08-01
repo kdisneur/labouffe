@@ -1,6 +1,4 @@
 ---
-magret-canard:
-  title: Magret de canard
 abricot-sec:
   title: Abricot sec
 agneau:
@@ -51,10 +49,10 @@ cafe:
   title: Café
 camembert:
   title: Camembert
-cannelle-poudre:
-  title: Cannelle en poudre
 cannelle-baton:
   title: Bâton de cannelle
+cannelle-poudre:
+  title: Cannelle en poudre
 caramel:
   title: Caramel
 cardamome-graine:
@@ -200,6 +198,8 @@ levure-boulanger:
   title: Levure de boulanger
 levure-chimique:
   title: Levure chimique
+magret-canard:
+  title: Magret de canard
 maizena:
   title: Maizena
 mascarpone:
