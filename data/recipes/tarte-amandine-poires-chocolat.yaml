@@ -1,0 +1,48 @@
+title: Tarte amandine poires chocolat
+category: dessert
+cooking: 40m
+preparation: 30m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 6
+  type: personnes
+ingredients:
+  pate-tarte-sucree:
+    quantity: 1
+  oeuf:
+    quantity: 2
+  chocolat:
+    quantity: 60g
+    details: noir pâtissier
+  creme-entiere-liquide:
+    quantity: 2cs
+  creme-fraiche:
+    quantity: 1cs
+  beurre:
+    quantity: 100g
+    details: mou
+  sucre:
+    quantity: 125g
+  poire:
+    quantity: 4
+  amande-poudre:
+    quantity: 100g
+  farine:
+    quantity: 2cs
+instructions:
+  - instruction: Préparer la pâte à tarte sucrée
+    recipe : pate-a-tarte-sucree
+  - Préchauffer le four à 180°C
+  - Eplucher et couper les poires en quartiers
+  - Battre le beurre mou et le sucre dans un saladier, jusqu'à ce que le mélange soit crémeux
+  - Ajouter les œufs, la crème fraiche, les deux cuillères à soupe de farine et la poudre d'amande 
+  - Mélanger jusqu'à obtention d'un mélange homogène
+  - Etaler la pâte dans le moule
+  - Piquer la pâte avec une fourchette dans le fond et les côtés
+  - Disposer les poires sur la pâte
+  - Verser le mélange sur la pâte
+  - Enfourner 40m
+  - Sortir la tarte du four
+  - Faire fondre le chocolat dans une casserole avec la crème liquide
+  - Napper la tarte de chocolat fondu
