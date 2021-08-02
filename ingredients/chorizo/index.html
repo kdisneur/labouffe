@@ -127,19 +127,34 @@
               <li class="uk-margin-top" uk-filter-control="filter: [data-reheat='false']; group: data-reheat"><a href="#">Non</a></li>
             </ul>
             <ul class="uk-subnav uk-subnav-pill">
+              <li class="uk-subnav-header">Végétarien</li>
+              <li class="uk-margin-top" uk-filter-control="filter: [data-vegetarian='true']; group: data-vegetarian"><a href="#">Oui</a></li>
+              <li class="uk-margin-top" uk-filter-control="filter: [data-vegetarian='false']; group: data-vegetarian"><a href="#">Non</a></li>
+            </ul>
+            <ul class="uk-subnav uk-subnav-pill">
               <li class="uk-subnav-header">Type de plat</li>
-              
-                <li class="uk-margin-top" uk-filter-control="filter: [data-category='biscuit']; group: data-category"><a href="#">biscuit</a></li>
-              
-                <li class="uk-margin-top" uk-filter-control="filter: [data-category='dessert']; group: data-category"><a href="#">dessert</a></li>
               
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='plat froid']; group: data-category"><a href="#">plat froid</a></li>
               
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='plat chaud']; group: data-category"><a href="#">plat chaud</a></li>
               
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='oeuf']; group: data-category"><a href="#">oeuf</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='viande']; group: data-category"><a href="#">viande</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='poisson']; group: data-category"><a href="#">poisson</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='accompagnement']; group: data-category"><a href="#">accompagnement</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='biscuit']; group: data-category"><a href="#">biscuit</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='dessert']; group: data-category"><a href="#">dessert</a></li>
+              
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='entrée']; group: data-category"><a href="#">entrée</a></li>
               
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='sauce']; group: data-category"><a href="#">sauce</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='épice']; group: data-category"><a href="#">épice</a></li>
               
             </ul>
             <ul class="uk-subnav uk-subnav-pill">
@@ -190,7 +205,7 @@
 
     <div class="js-filter uk-margin-bottom">
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/cake-chorizo-olives-tomates-poivrons-chevre">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -236,8 +251,8 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
-          <a class="uk-link-text tm-link-no-highlight" href="/recipes/gratin-pates-reblochon">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="false" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+          <a class="uk-link-text tm-link-no-highlight" href="/recipes/gratin-pates-chorizo-reblochon">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
                 <span class="uk-hidden@m">
@@ -245,9 +260,9 @@
                   &nbsp;
                 </span>
                 <div class="uk-hidden@s uk-margin-top"></div>
-                <span class="uk-hidden@m uk-text-bold">Gratin de pâtes au reblochon</span>
+                <span class="uk-hidden@m uk-text-bold">Gratin de pâtes chorizo reblochon</span>
                 <div class="uk-hidden@s uk-margin-bottom"></div>
-                <span class="uk-visible@m">Gratin de pâtes au reblochon</span>
+                <span class="uk-visible@m">Gratin de pâtes chorizo reblochon</span>
               </div>
               <div class="uk-visible@m uk-width-small@m">
                 <span class="uk-visible@m">plat chaud</span>
@@ -282,7 +297,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/pates-chorizo">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -328,7 +343,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="false" data-difficulty="moyen" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="false" data-vegetarian="false" data-difficulty="moyen" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/risotto-safran-chorizo">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -374,7 +389,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/saute-veau-porto">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">

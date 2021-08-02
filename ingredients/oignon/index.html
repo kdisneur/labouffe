@@ -127,19 +127,34 @@
               <li class="uk-margin-top" uk-filter-control="filter: [data-reheat='false']; group: data-reheat"><a href="#">Non</a></li>
             </ul>
             <ul class="uk-subnav uk-subnav-pill">
+              <li class="uk-subnav-header">Végétarien</li>
+              <li class="uk-margin-top" uk-filter-control="filter: [data-vegetarian='true']; group: data-vegetarian"><a href="#">Oui</a></li>
+              <li class="uk-margin-top" uk-filter-control="filter: [data-vegetarian='false']; group: data-vegetarian"><a href="#">Non</a></li>
+            </ul>
+            <ul class="uk-subnav uk-subnav-pill">
               <li class="uk-subnav-header">Type de plat</li>
-              
-                <li class="uk-margin-top" uk-filter-control="filter: [data-category='biscuit']; group: data-category"><a href="#">biscuit</a></li>
-              
-                <li class="uk-margin-top" uk-filter-control="filter: [data-category='dessert']; group: data-category"><a href="#">dessert</a></li>
               
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='plat froid']; group: data-category"><a href="#">plat froid</a></li>
               
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='plat chaud']; group: data-category"><a href="#">plat chaud</a></li>
               
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='oeuf']; group: data-category"><a href="#">oeuf</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='viande']; group: data-category"><a href="#">viande</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='poisson']; group: data-category"><a href="#">poisson</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='accompagnement']; group: data-category"><a href="#">accompagnement</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='biscuit']; group: data-category"><a href="#">biscuit</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='dessert']; group: data-category"><a href="#">dessert</a></li>
+              
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='entrée']; group: data-category"><a href="#">entrée</a></li>
               
                 <li class="uk-margin-top" uk-filter-control="filter: [data-category='sauce']; group: data-category"><a href="#">sauce</a></li>
+              
+                <li class="uk-margin-top" uk-filter-control="filter: [data-category='épice']; group: data-category"><a href="#">épice</a></li>
               
             </ul>
             <ul class="uk-subnav uk-subnav-pill">
@@ -190,7 +205,7 @@
 
     <div class="js-filter uk-margin-bottom">
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/aubergine-legumes-confits">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -236,12 +251,12 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
+        <div class="uk-margin-bottom" data-category="viande" data-price="abordable" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/carbonnade-flamande">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
                 <span class="uk-hidden@m">
-                  <span class="uk-label">plat chaud</span>
+                  <span class="uk-label">viande</span>
                   &nbsp;
                 </span>
                 <div class="uk-hidden@s uk-margin-top"></div>
@@ -250,7 +265,7 @@
                 <span class="uk-visible@m">Carbonnade flamande</span>
               </div>
               <div class="uk-visible@m uk-width-small@m">
-                <span class="uk-visible@m">plat chaud</span>
+                <span class="uk-visible@m">viande</span>
               </div>
               <div class="uk-hidden@m uk-width-1-1">
                 <div class="uk-grid">
@@ -282,12 +297,12 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="accompagnement" data-price="économique" data-reheat="true" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/carottes-vichy">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
                 <span class="uk-hidden@m">
-                  <span class="uk-label">plat chaud</span>
+                  <span class="uk-label">accompagnement</span>
                   &nbsp;
                 </span>
                 <div class="uk-hidden@s uk-margin-top"></div>
@@ -296,7 +311,7 @@
                 <span class="uk-visible@m">Carottes vichy</span>
               </div>
               <div class="uk-visible@m uk-width-small@m">
-                <span class="uk-visible@m">plat chaud</span>
+                <span class="uk-visible@m">accompagnement</span>
               </div>
               <div class="uk-hidden@m uk-width-1-1">
                 <div class="uk-grid">
@@ -328,7 +343,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/courgettes-farcies">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -374,7 +389,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/falafel">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -420,7 +435,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/hachis-parmentier">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -466,7 +481,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/lasagnes-chevre-courgette-basilic">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -512,12 +527,12 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
+        <div class="uk-margin-bottom" data-category="viande" data-price="abordable" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/osso-bucco">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
                 <span class="uk-hidden@m">
-                  <span class="uk-label">plat chaud</span>
+                  <span class="uk-label">viande</span>
                   &nbsp;
                 </span>
                 <div class="uk-hidden@s uk-margin-top"></div>
@@ -526,7 +541,7 @@
                 <span class="uk-visible@m">Osso bucco</span>
               </div>
               <div class="uk-visible@m uk-width-small@m">
-                <span class="uk-visible@m">plat chaud</span>
+                <span class="uk-visible@m">viande</span>
               </div>
               <div class="uk-hidden@m uk-width-1-1">
                 <div class="uk-grid">
@@ -558,7 +573,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/pad-thai-vegetarien-cacahuete-basilic">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -604,7 +619,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/pates-chorizo">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -650,7 +665,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/pates-bolognaises">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -696,7 +711,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/pates-tomates-epinards">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -742,7 +757,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/risotto-champignons">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -788,7 +803,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/rougail-saucisses">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -834,7 +849,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="sauce" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="sauce" data-price="économique" data-reheat="false" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/sauce-tomate">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -880,7 +895,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/saucisses-lentilles">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -926,7 +941,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/saute-veau-porto">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -972,7 +987,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="abordable" data-reheat="true" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/semoule-legumes-feta">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -1018,7 +1033,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/shakshuka">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -1064,7 +1079,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/soupe-tomate">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -1110,7 +1125,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat froid" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat froid" data-price="économique" data-reheat="false" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/taboule">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -1156,7 +1171,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="false" data-vegetarian="false" data-difficulty="facile" data-duration-range="&gt; 1h et &lt; 1h30">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/tajine-kefta-oeuf">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -1202,7 +1217,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/tajine-pruneaux-abricots-raisins-secs">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
@@ -1248,12 +1263,12 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat froid" data-price="abordable" data-reheat="false" data-difficulty="facile" data-duration-range="&lt; 30m">
+        <div class="uk-margin-bottom" data-category="viande" data-price="abordable" data-reheat="false" data-vegetarian="false" data-difficulty="facile" data-duration-range="&lt; 30m">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/tartare-boeuf">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
                 <span class="uk-hidden@m">
-                  <span class="uk-label">plat froid</span>
+                  <span class="uk-label">viande</span>
                   &nbsp;
                 </span>
                 <div class="uk-hidden@s uk-margin-top"></div>
@@ -1262,7 +1277,7 @@
                 <span class="uk-visible@m">Tartare de boeuf</span>
               </div>
               <div class="uk-visible@m uk-width-small@m">
-                <span class="uk-visible@m">plat froid</span>
+                <span class="uk-visible@m">viande</span>
               </div>
               <div class="uk-hidden@m uk-width-1-1">
                 <div class="uk-grid">
@@ -1294,7 +1309,7 @@
           <hr>
         </div>
       
-        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
+        <div class="uk-margin-bottom" data-category="plat chaud" data-price="économique" data-reheat="true" data-vegetarian="true" data-difficulty="facile" data-duration-range="&gt; 30m et &lt; 1h">
           <a class="uk-link-text tm-link-no-highlight" href="/recipes/veloute-potimarron-carotte-patate-douce">
             <div class="uk-grid">
               <div class="uk-width-1-1 uk-width-expand@m">
