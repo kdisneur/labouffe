@@ -1,10 +1,11 @@
 title: Purée de pommes de terre
-category: plat chaud
+category: accompagnement
 cooking: 30m
 preparation: 20m
 difficulty: facile
 reheat: true
 pricing: économique
+vegetarian: true
 servings:
   quantity: 4
   type: personnes

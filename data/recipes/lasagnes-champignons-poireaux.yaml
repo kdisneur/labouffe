@@ -17,6 +17,7 @@ ingredients:
     details: de Paris
   poireau:
     quantity: 150g
+  # légume ?
   bouillon-volaille:
     quantity: 0.5
     details: tablette

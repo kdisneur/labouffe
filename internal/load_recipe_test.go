@@ -55,7 +55,7 @@ func TestLoadingValidRecipes(t *testing.T) {
 		{
 			Code:        "recipe-2-plat-froid-moyen-abordable",
 			Title:       "Recipe 2",
-			Category:    recipe.CategoryColdDishes,
+			Category:    recipe.CategoryColdMeal,
 			Preparation: recipe.Duration(10 * time.Minute),
 			Resting:     recipe.Duration(3 * time.Minute),
 			Cooking:     recipe.Duration(20 * time.Minute),
@@ -81,7 +81,7 @@ func TestLoadingValidRecipes(t *testing.T) {
 		{
 			Code:        "recipe-3-plat-chaud-difficile-cher",
 			Title:       "Recipe 3",
-			Category:    recipe.CategoryHotDishes,
+			Category:    recipe.CategoryHotMeal,
 			Preparation: recipe.Duration(45 * time.Minute),
 			Cooking:     recipe.Duration(time.Hour + 14*time.Minute),
 			Difficulty:  recipe.DifficultyHard,
@@ -111,7 +111,7 @@ func TestLoadingValidRecipes(t *testing.T) {
 		{
 			Code:        "recipe-4-plat-chaud-facile-economique",
 			Title:       "Recipe 4",
-			Category:    recipe.CategoryHotDishes,
+			Category:    recipe.CategoryHotMeal,
 			Preparation: recipe.Duration(10 * time.Minute),
 			Cooking:     recipe.Duration(20 * time.Minute),
 			Difficulty:  recipe.DifficultyEasy,
@@ -139,7 +139,7 @@ func TestLoadingValidRecipes(t *testing.T) {
 		{
 			Code:        "recipe-5-entree-facile-economique",
 			Title:       "Recipe 5",
-			Category:    recipe.CategorySideDishes,
+			Category:    recipe.CategoryStarterDish,
 			Warning:     "Ceci est une recette a préparer à l'avance",
 			Preparation: recipe.Duration(10 * time.Minute),
 			Cooking:     recipe.Duration(35 * time.Minute),

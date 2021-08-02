@@ -5,6 +5,7 @@ preparation: 15m
 resting: 0m
 difficulty: facile
 reheat: true
+vegetarian: true
 pricing: économique
 servings:
   quantity: 2

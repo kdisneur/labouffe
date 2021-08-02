@@ -1,10 +1,11 @@
 title: Aubergine aux légumes confits
-category: plat chaud
+category: accompagnement
 difficulty: facile
 preparation: 20m
 cooking: 1h45m
 pricing: économique
 reheat: true
+vegetarian: true
 servings:
   quantity: 2
   type: personnes

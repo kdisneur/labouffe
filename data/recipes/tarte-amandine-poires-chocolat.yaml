@@ -4,6 +4,7 @@ cooking: 40m
 preparation: 30m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 6
   type: personnes
@@ -36,7 +37,7 @@ instructions:
   - Préchauffer le four à 180°C
   - Eplucher et couper les poires en quartiers
   - Battre le beurre mou et le sucre dans un saladier, jusqu'à ce que le mélange soit crémeux
-  - Ajouter les œufs, la crème fraiche, la farine et la poudre d'amande 
+  - Ajouter les œufs, la crème fraiche, la farine et la poudre d'amande
   - Mélanger jusqu'à obtention d'un mélange homogène
   - Etaler la pâte dans le moule
   - Piquer la pâte avec une fourchette dans le fond et les côtés

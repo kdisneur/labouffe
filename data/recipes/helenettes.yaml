@@ -4,6 +4,7 @@ preparation: 30m
 cooking: 8m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 12
   type: unités

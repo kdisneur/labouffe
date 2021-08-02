@@ -5,6 +5,7 @@ preparation: 15m
 resting: 30m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 3
   type: personnes

@@ -1,9 +1,10 @@
 title: Pâtes ail ciboulette
-category: plat chaud
+category: accompagnement
 cooking: 20m
 preparation: 10m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 2
   type: personnes

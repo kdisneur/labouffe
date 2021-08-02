@@ -5,8 +5,7 @@ resting: 13h
 cooking: 30m
 difficulty: facile
 pricing: économique
-warning: |
-  Pour gagner du temps le hachage de la coriandre, de la menthe, du persil, de l'oignon et de l'ail peut être effectué la veille au soir. Bien penser à stocker ça au frigo dans un plat hermétiquement fermé
+vegetarian: true
 servings:
   quantity: 30
   type: unités
@@ -42,7 +41,7 @@ instructions:
   - Mettre les pois-chiche dans le Thermomix
   - Ajouter le persil, la coriandre, la menthe, l'ail et l'oignon
   - Ajouter la coriandre et le cumin en poudre ainsi que le sel
-  - Mixer à vitesse 6 pendant 30 secondes
+  - Mixer à vitesse 6 pendant 30s
   - Décoller la pâte des bords et réitérer l'opération jusq'à obtention d'une pâte mixte. La vitesse peut-être augmenté au fur et à mesure.
   - Transvaser la pâte dans un plat
   - Laisser reposer au moins une heure au frigo

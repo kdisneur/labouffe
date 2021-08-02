@@ -1,9 +1,10 @@
 title: Oeufs pochés
-category: plat chaud
+category: oeuf
 cooking: 11m
 preparation: 5m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 1
   type: personnes

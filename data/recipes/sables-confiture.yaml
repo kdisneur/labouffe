@@ -5,6 +5,7 @@ resting: 30m
 preparation: 90m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 25
   type: unités

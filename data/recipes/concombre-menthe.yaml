@@ -4,6 +4,7 @@ preparation: 20m
 resting: 3h
 difficulty: facile
 pricing: abordable
+vegetarian: true
 servings:
   quantity: 4
   type: personnes

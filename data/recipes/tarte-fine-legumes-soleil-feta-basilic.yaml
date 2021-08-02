@@ -5,6 +5,7 @@ cooking: 30m
 difficulty: facile
 pricing: économique
 reheat: true
+vegetarian: true
 servings:
   quantity: 6
   type: personnes

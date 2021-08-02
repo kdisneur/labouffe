@@ -4,6 +4,7 @@ cooking: 40m
 preparation: 15m
 difficulty: facile
 reheat: true
+vegetarian: true
 pricing: économique
 servings:
   quantity: 4

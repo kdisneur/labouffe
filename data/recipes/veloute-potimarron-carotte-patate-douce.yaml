@@ -15,6 +15,7 @@ ingredients:
     quantity: 2
   patate-douce:
     quantity: 1
+  # légume ?
   bouillon-volaille:
     quantity: 1
     details: tablette
