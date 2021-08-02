@@ -5,6 +5,7 @@ preparation: 30m
 difficulty: facile
 reheat: true
 pricing: économique
+vegetarian: true
 servings:
   quantity: 5
   type: unités
@@ -15,10 +16,11 @@ ingredients:
     quantity: 2
   patate-douce:
     quantity: 1
-  # légume ?
   bouillon-volaille:
     quantity: 1
     details: tablette
+    alternatives:
+      - bouillon-legumes
   eau:
     quantity: 600g
   oignon:
