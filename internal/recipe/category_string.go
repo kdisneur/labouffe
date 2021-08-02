@@ -8,17 +8,22 @@ func _() {
 	// An "invalid array index" compiler error signifies that the constant values have changed.
 	// Re-run the stringer command to generate them again.
 	var x [1]struct{}
-	_ = x[CategoryBiscuit-0]
-	_ = x[CategoryDessert-1]
-	_ = x[CategoryColdDishes-2]
-	_ = x[CategoryHotDishes-3]
-	_ = x[CategorySideDishes-4]
-	_ = x[CategorySauce-5]
+	_ = x[CategoryColdMeal-0]
+	_ = x[CategoryHotMeal-1]
+	_ = x[CategoryEggDish-2]
+	_ = x[CategoryMeatDish-3]
+	_ = x[CategoryFishDish-4]
+	_ = x[CategorySideDish-5]
+	_ = x[CategoryBiscuit-6]
+	_ = x[CategoryDessert-7]
+	_ = x[CategoryStarterDish-8]
+	_ = x[CategorySauce-9]
+	_ = x[CategorySpice-10]
 }
 
-const _Category_name = "biscuitdessertplat froidplat chaudentréesauce"
+const _Category_name = "plat froidplat chaudoeufviandepoissonaccompagnementbiscuitdessertentréesauceépice"
 
-var _Category_index = [...]uint8{0, 7, 14, 24, 34, 41, 46}
+var _Category_index = [...]uint8{0, 10, 20, 24, 30, 37, 51, 58, 65, 72, 77, 83}
 
 func (i Category) String() string {
 	if i < 0 || i >= Category(len(_Category_index)-1) {

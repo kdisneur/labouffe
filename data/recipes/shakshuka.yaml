@@ -4,6 +4,7 @@ difficulty: facile
 preparation: 15m
 cooking: 20m
 pricing: économique
+vegetarian: true
 servings:
   quantity: 6
   type: personnes
@@ -44,7 +45,7 @@ instructions:
   - Morceler les tomates
   - Assaisonner avec du sel et du poivre
   - Pousser la sauce à fine ébullition
-  - Faire des trous dans la sauce pour y déposer un oeuf 
+  - Faire des trous dans la sauce pour y déposer un oeuf
   - Couvrir la sauteuse
   - Laisser cuire pendant 5m à 8m
   - Garnir de coriandre et persil juste avant de servir

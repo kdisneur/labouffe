@@ -5,6 +5,7 @@ resting: 1h
 cooking: 20m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 8
   type: personnes

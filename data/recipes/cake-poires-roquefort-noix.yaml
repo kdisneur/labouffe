@@ -4,6 +4,7 @@ preparation: 30m
 cooking: 45m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 6
   type: personnes
@@ -29,7 +30,6 @@ ingredients:
   huile-olive:
     quantity: 1cs
   sel:
-    quantity: 0
 instructions:
   - Découper les poires, le roquefort et les noix en petits morceaux
   - Préchauffer le four à 180°C

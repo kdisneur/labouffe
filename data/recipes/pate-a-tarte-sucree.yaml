@@ -4,6 +4,7 @@ preparation: 10m
 resting: 2h
 difficulty: facile
 pricing: abordable
+vegetarian: true
 servings:
   quantity: 1
   type: unités

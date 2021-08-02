@@ -24,7 +24,6 @@ ingredients:
   sel:
   poivre:
 instructions:
-  
   - Dans le Thermomix mettre 1l d’eau
   - Saler, poivrer le saumon
   - Poser les pavés de saumon sur le plateau vapeur
@@ -32,7 +31,7 @@ instructions:
   - Pendant la cuisson du saumon, préparer la béchamel au fromage
   - Préchauffer le four à 180°
   - instruction: Cuire les pâtes dans une casserole d'eau bouillante.
-    warning: Les sortir 2 minutes avant le temps indiqué sur l'emballage, elles finiront leur cuisson au four
+    warning: Les sortir 2m avant le temps indiqué sur l'emballage, elles finiront leur cuisson au four
   - Egoutter délicatement
   - Ecraser le saumon avec un peu de béchamel
   - Dans le fond du plat disposer la béchamel

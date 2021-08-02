@@ -5,6 +5,7 @@ preparation: 30m
 cooking: 15m
 pricing: économique
 reheat: false
+vegetarian: true
 servings:
   quantity: 2
   type: personnes
@@ -60,7 +61,7 @@ instructions:
   - Secouer vigoureusement le pot
   - Chauffer 1cs d'huile de colza dans une poêle à feu moyen-fort (4)
   - Ajouter les légumes pour 2m/3m jusqu'à ce qu'ils ramolissent
-  - Réserver les légumes 
+  - Réserver les légumes
   - Rajouter 1cs d'huile d'olive dans la poêle
   - Égoutter les pâtes
   - Ajouter les pâtes dans la poêle et mélanger constamment pendant 1m

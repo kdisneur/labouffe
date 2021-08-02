@@ -1,9 +1,10 @@
 title: Épice tandoori
-category: plat froid
+category: épice
 difficulty: facile
 preparation: 30m
 cooking: 30m
 pricing: économique
+vegetarian: true
 ingredients:
   cumin-graine:
     quantity: 3cs

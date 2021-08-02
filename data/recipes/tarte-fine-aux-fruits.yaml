@@ -4,6 +4,7 @@ cooking: 30m
 preparation: 30m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 6
   type: personnes
@@ -26,6 +27,6 @@ instructions:
   - Etaler la pate feuilletée sur une plaque
   - Piquer la pâte
   - Disposer les lamelles de fruits sur la pâte
-  - Disposer de petites noisettes de beurre 
+  - Disposer de petites noisettes de beurre
   - Saupoudrer de sucre vanillé et de cassonade
   - Enfourner pour 30m

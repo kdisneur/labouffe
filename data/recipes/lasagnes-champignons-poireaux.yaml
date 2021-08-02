@@ -6,6 +6,7 @@ resting: 15m
 difficulty: facile
 pricing: économique
 reheat: true
+vegetarian: true
 servings:
   quantity: 2
   type: personnes
@@ -20,8 +21,12 @@ ingredients:
   bouillon-volaille:
     quantity: 0.5
     details: tablette
+    alternatives:
+      - lait
   eau:
     quantity: 50cl
+    alternatives:
+      - lait
   vin-blanc:
     quantity: 1cs
     details: sec

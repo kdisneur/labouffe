@@ -1,10 +1,11 @@
 title: Purée de pommes de terre Thermomix
-category: plat chaud
+category: accompagnement
 cooking: 30m
 preparation: 20m
 difficulty: facile
 reheat: true
 pricing: économique
+vegetarian: true
 servings:
   quantity: 4
   type: personnes
@@ -24,7 +25,7 @@ ingredients:
 instructions:
   - Eplucher les pommes de terre
   - Les laver
-  - Couper les pommes de terre en morceaux de 0,5cm
+  - Couper les pommes de terre en morceaux de 0.5cm
   - Dans le thermomix mettre le fouet
   - Ajouter les pommes de terre, le lait et le sel
   - Faire cuire 30m, 95°C, vitesse 1, sens inverse, sans le gobelet

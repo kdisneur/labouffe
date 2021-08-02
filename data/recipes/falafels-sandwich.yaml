@@ -3,12 +3,13 @@ category: plat froid
 preparation: 15m
 difficulty: facile
 pricing: économique
-warning: |
-  La dernière fois on a testé avec du pain faluche mais ça prenait trop le dessus en terme de goût. À retester avec une galette.
+vegetarian: true
 servings:
   quantity: 4
   type: unités
 ingredients:
+  pain-pita:
+    quantity: 4
   falafel:
     quantity: 12
   sauce-menthe:
@@ -17,8 +18,8 @@ ingredients:
     quantity: 2
     details: grosses
 instructions:
-  - Ouvrir le pain en 2, ne pas couper en entier
-  - Tartiner les deux faces intérieurs de sauce à la menthe
-  - Ajouter des rondelles de tomates
-  - Ajouter 3 falafels
-  - Refermer le pain
+  - Trancher les tomates en fines rondelles
+  - Tartiner une face de pain avec la sauce à la menthe
+  - Disposer les tomates au centre de la galette
+  - Ajouter 3 falafels au centre de la galette
+  - Refermer le pain façon wrap

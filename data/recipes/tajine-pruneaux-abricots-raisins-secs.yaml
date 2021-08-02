@@ -5,6 +5,7 @@ difficulty: facile
 pricing: économique
 reheat: true
 cooking: 45m
+vegetarian: true
 servings:
   quantity: 4
   type: personnes
@@ -24,6 +25,8 @@ ingredients:
   bouillon-volaille:
     quantity: 1
     details: tablette
+    alternatives:
+      - bouillon-legumes
   ras-el-hanout:
     quantity: 1cs
   semoule:

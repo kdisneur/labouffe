@@ -5,6 +5,7 @@ preparation: 45m
 cooking: 15m
 pricing: économique
 reheat: true
+vegetarian: true
 servings:
   quantity: 3
   type: unités

@@ -5,6 +5,7 @@ preparation: 10m
 resting: 0m
 difficulty: facile
 reheat: true
+vegetarian: true
 pricing: économique
 servings:
   quantity: 2
@@ -30,11 +31,10 @@ instructions:
     recipe: sauce-tomate
   - Préparer une béchamel
   - Faire revenir les dés d’aubergine dans l’huile d’olive
-  - Ajouter la sauce tomate 
+  - Ajouter la sauce tomate
   - Laisser mijoter 30min
   - Faire cuire les conchiglioni 12m
   - Préchauffer le four à 180°
   - Disposer la béchamel dans le fond du plat
   - Garnir les conchiglioni de la farce aux aubergines
   - Enfourner 15m
-

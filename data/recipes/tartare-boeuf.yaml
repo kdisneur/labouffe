@@ -1,5 +1,5 @@
 title: Tartare de boeuf
-category: plat froid
+category: viande
 preparation: 15m
 difficulty: facile
 pricing: abordable
@@ -19,10 +19,9 @@ ingredients:
   sauce-worchestershire:
     quantity: 1cs
   sel:
-
 instructions:
   - Émincer l’oignon et les cornichons en brunoise
-  - Dans un saladier les mélanger à la viande hachée 
+  - Dans un saladier les mélanger à la viande hachée
   - Ajouter les sauces et le sel
-  - Goûter et rectifier l’assaisonnement 
-  - Réserver au frais 
+  - Goûter et rectifier l’assaisonnement
+  - Réserver au frais

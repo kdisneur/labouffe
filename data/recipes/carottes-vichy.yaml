@@ -1,10 +1,11 @@
 title: Carottes vichy
-category: plat chaud
+category: accompagnement
 cooking: 33m
 preparation: 15m
 reheat: true
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 4
   type: personnes
@@ -36,5 +37,5 @@ instructions:
   - Eplucher les gousses d’ail
   - Eplucher les carottes, les couper en rondelles
   - Mettre l’oignon et l’ail dans le Thermomix. Hacher 6 s, vit 5
-  - Ajouter les carottes, l’eau, le sucre et le cube de bouillon. Cuire 30m, 100°, cuillère, sens inverse
-  - Ajouter la moutarde, la crème fraîche, le sel, le poivre. Cuire 3m, 100°, cuillère, sens inverse sans le gobelet
+  - Ajouter les carottes, l’eau, le sucre et le cube de bouillon. Cuire 30m, 100°C, cuillère, sens inverse
+  - Ajouter la moutarde, la crème fraîche, le sel, le poivre. Cuire 3m, 100°C, cuillère, sens inverse sans le gobelet
