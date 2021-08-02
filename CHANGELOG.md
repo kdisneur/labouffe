@@ -6,6 +6,19 @@ All notable changes to this project will be documented in this file
 
 n/a
 
+## 2021-08
+
+- [FEATURE] Add new recipe categories: `oeuf`, `viande`, `poisson`, `accompagnement` and `épice` to improve filtering when searching for meals
+- [FEATURE] Add support for `vegetarian` on the recipe. It has also been added to the list of available filters.
+  ```yaml
+  # file:recipes/hummus.yaml
+  title: Falafel
+  # ...
+  vegetarian: true
+  instructions:
+    # - ...
+  ```
+
 ## 2021-07
 
 - [BUGFIX] Update recipe list page to sort recipes based on their name instead of their slugs.

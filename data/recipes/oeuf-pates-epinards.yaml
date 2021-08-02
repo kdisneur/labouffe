@@ -4,7 +4,8 @@ cooking: 40m
 preparation: 1h
 difficulty: facile
 pricing: abordable
-warning: Équeuter les épinard peut prendre beaucoup de temps. Ça peut être fait la veille sans problème.
+warning: Équeuter les épinards peut prendre beaucoup de temps. Ça peut être fait la veille sans problème.
+vegetarian: true
 servings:
   quantity: 1
   type: personnes

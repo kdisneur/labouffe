@@ -1,8 +1,9 @@
 title: Hummus
-category: plat froid
+category: accompagnement
 preparation: 15m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 4
   type: personnes
@@ -27,9 +28,8 @@ ingredients:
     quantity: 0.25cc
   eau:
     quantity: 3cs
-  
 instructions:
   - Émincer les gousses d'ail grossièrement
   - Presser le citron
   - Mettre tous les ingrédients dans le mixeur et mixer jusqu'à obtention d'une pâte lisse
-  - Peut rester au frigo pendant 3 jours
+  - Mettre au frigo (se conserve pendant 3 jours maximum)

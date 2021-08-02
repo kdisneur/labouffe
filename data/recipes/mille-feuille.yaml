@@ -5,6 +5,7 @@ resting: 12h
 cooking: 40m
 difficulty: facile
 pricing: abordable
+vegetarian: true
 servings:
   quantity: 6
   type: unités
@@ -18,7 +19,7 @@ ingredients:
     quantity: 1
   sucre-glace:
 instructions:
-  - Préchauffer le four à 180°
+  - Préchauffer le four à 180°C
   - Mettre au congélateur le récipient et les fouets pour monter la chantilly
   - Sur les plaques de four, sur du papier cuisson, déposer les rectangles de pâte feuilletée
   - Les saupoudrer de sucre glace

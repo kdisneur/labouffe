@@ -5,6 +5,7 @@ resting: 2h
 cooking: 11m
 difficulty: facile
 pricing: abordable
+vegetarian: true
 servings:
   quantity: 3
   type: unités

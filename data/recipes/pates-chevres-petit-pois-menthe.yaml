@@ -4,6 +4,7 @@ cooking: 15m
 preparation: 20m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 2
   type: personnes

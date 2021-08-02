@@ -10,18 +10,28 @@ type Category int
 
 //go:generate go run ../../vendor/golang.org/x/tools/cmd/stringer/stringer.go -type=Category -linecomment
 const (
+	// CategoryColdMeal represents a cold meal kind of recipe
+	CategoryColdMeal Category = iota // plat froid
+	// CategoryHotMeal represents a hot meal kind of recipe
+	CategoryHotMeal // plat chaud
+	// CategoryEggDish represents an egg dish kind of recipe
+	CategoryEggDish // oeuf
+	// CategoryMeatDish represents a meat dish kind of recipe
+	CategoryMeatDish // viande
+	// CategoryFishDish represents a fish dish kind of recipe
+	CategoryFishDish // poisson
+	// CategorySideDishes represents a side dish kind of recipe
+	CategorySideDish // accompagnement
 	// CategoryBiscuit represents a biscuit kind of recipe
-	CategoryBiscuit Category = iota // biscuit
+	CategoryBiscuit // biscuit
 	// CategoryDessert represents a dessert kind of recipe
 	CategoryDessert // dessert
-	// CategoryColdDishes represents a cold dishes kind of recipe
-	CategoryColdDishes // plat froid
-	// CategoryHotDishes represents a hot dishes kind of recipe
-	CategoryHotDishes // plat chaud
-	// CategorySideDishes represents a side dishes kind of recipe
-	CategorySideDishes // entrée
+	// CategoryStarterDish represents a starter dish kind of recipe
+	CategoryStarterDish // entrée
 	// CategorySauce represents a sauce kind of recipe
 	CategorySauce // sauce
+	// CategorySpice represents a spice kind of recipe
+	CategorySpice // épice
 )
 
 // AllCategories returns the full list of categories

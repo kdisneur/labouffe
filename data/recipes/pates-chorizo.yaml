@@ -4,6 +4,7 @@ preparation: 20m
 cooking: 15m
 difficulty: facile
 pricing: économique
+reheat: true
 servings:
   quantity: 2
   type: personnes

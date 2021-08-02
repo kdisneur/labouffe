@@ -1,10 +1,11 @@
 title: Riz japonais
-category: plat chaud
+category: accompagnement
 cooking: 35m
 preparation: 35m
 resting: 40m
 difficulty: facile
 pricing: abordable
+vegetarian: true
 servings:
   quantity: 2
   type: personnes

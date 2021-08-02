@@ -1,9 +1,10 @@
 title: Champignons teriyaki
-category: plat chaud
+category: accompagnement
 cooking: 12m
 preparation: 10m
 difficulty: facile
 pricing: économique
+vegetarian: true
 servings:
   quantity: 4
   type: personnes
