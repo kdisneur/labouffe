@@ -340,6 +340,7 @@ roquefort:
 safran:
   title: Safran
 sauce-ail:
+  recipe: sauce-blanche-ail
   title: Sauce à l'ail
 sauce-ciboulette:
   recipe: sauce-ciboulette
