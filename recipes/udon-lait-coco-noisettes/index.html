@@ -1,0 +1,390 @@
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Site web listant nos recettes" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+      <style>
+      .uk-offcanvas-bar {
+        background: #fff;
+      }
+      .uk-offcanvas-bar .uk-subnav {
+        margin-left: 0;
+        font-size: .875rem;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-nav-default .uk-nav-header {
+        border-bottom: 1px solid #e5e5e5;
+        color: #222;
+        text-transform: uppercase;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-subnav > li {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .uk-offcanvas-bar .uk-subnav > li > a,
+      .uk-offcanvas-bar .uk-subnav > li > a:focus,
+      .uk-offcanvas-bar .uk-subnav > li > a:hover {
+        text-transform: capitalize;
+        color: #999 !important;
+      }
+
+      .uk-offcanvas-bar .uk-subnav > li.uk-active > a {
+        background-color: #1e87f0;
+        color: #fff !important;
+      }
+
+      .tm-logo-title {
+        margin-left: 5px;
+      }
+      .tm-logo-title img {
+        display: block;
+        float: left;
+      }
+      .tm-logo-title span {
+        padding-top: 5px;
+        display: inline-block;
+      }
+
+      .tm-link-no-highlight,
+      .tm-link-no-highlight:hover,
+      .tm-link-no-highlight:focus {
+        color: #666 !important;
+        text-decoration: none;
+      }
+      </style>
+      <title>La bouffe, hein!</title>
+    </head>
+    <body>
+      <nav class="uk-navbar-container tm-navbar-container uk-active" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="/" class="uk-link tm-no-underline tm-logo-title">
+            <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="42" />
+              <span class="uk-margin-small-left uk-text-large">La bouffe</span>
+            </a>
+          </div>
+
+          <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon href="" uk-toggle="target: #small-menu"></a>
+            <div id="small-menu" uk-offcanvas="mode: push; overlay: true">
+              <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
+                <div class="uk-panel">
+                    <ul class="uk-subnav uk-subnav-pill tm-nav">
+                      <li class="uk-subnav-header">Général</a>
+                      <li class="uk-margin-top uk-active">
+                        <a href="/">recettes</a>
+                      </li>
+                      <li class="uk-margin-top ">
+                        <a href="/ingredients">ingrédients</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <ul class="uk-navbar-nav uk-visible@s">
+              <li class=" uk-active ">
+                <a href="/">recettes</a>
+              </li>
+              <li class="">
+                <a href="/ingredients">ingrédients</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="uk-container uk-margin-medium-top">
+        
+
+        
+  <div class="uk-width-3-4@l uk-align-center">
+    <h1 class="uk-heading-small uk-heading-divider uk-margin-remove-top">Nouilles udon lait de coco noisettes</h1>
+
+    <div uk-grid="true">
+      <div class="uk-width-1-2@s">
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Temps total</span></div>
+          <div class="uk-width-1-2">20m</div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">préparation</div>
+          <div class="uk-width-1-2">5m</div>
+        </div>
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">cuisson</div>
+          <div class="uk-width-1-2">15m</div>
+        </div>
+
+        <hr>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Réchauffable</span></div>
+          <div class="uk-width-1-2"> Non
+          </div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Coût</span></div>
+          <div class="uk-width-1-2"><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Difficulté</span></div>
+          <div class="uk-width-1-2"><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></div>
+        </div>
+      </div>
+      <div class="uk-width-1-2@s">
+        <h5 class="uk-text-uppercase">
+          
+            Ingrédients pour 2 personnes
+          
+        </h5>
+
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/nouille-udon">
+                Nouilles udon
+              </a>
+              
+              
+                (sous vide)
+              
+            </div>
+            
+              <div>
+                200g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/echalote">
+                Echalote
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/noisette">
+                Noisette
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                10
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/huile-colza">
+                Huile de colza
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                2cc
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/huile-sesame">
+                Huile de sésame
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1cc
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/noix-coco-lait">
+                Lait de noix de coco
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                20cl
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/sauce-soja-sucree">
+                Sauce soja sucrée
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                2cc
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/sauce-soja-salee">
+                Sauce soja salée
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1cc
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/oeuf-jaune">
+                Jaune d&#39;oeuf
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+    <div>
+      <div class="uk-hidden@s uk-margin-large-top"></div>
+      <h5 class="uk-text-uppercase">Étapes</h5>
+      
+        <p>
+          Concasser les noisettes grossièrement
+          
+        </p>
+      
+        <p>
+          Émincer l&#39;échalote
+          
+        </p>
+      
+        <p>
+          Mélanger les sauces soja et les noisettes dans un bol
+          
+        </p>
+      
+        <p>
+          Chauffer l&#39;huile de sésame et de colza dans un wok à feu moyen-fort
+          
+        </p>
+      
+        <p>
+          Faire revenir l&#39;échalote
+          
+        </p>
+      
+        <p>
+          Ajouter les nouilles udon en décollant bien les pâtes
+          
+        </p>
+      
+        <p>
+          Ajouter le lait de coco
+          
+        </p>
+      
+        <p>
+          Laisser le lait de coco réduire en remuant régulièrement (~10m)
+          
+        </p>
+      
+        <p>
+          Verser les noisettes et les sauces soja dans le wok
+          
+        </p>
+      
+        <p>
+          Mélanger
+          
+        </p>
+      
+        <p>
+          Servir bien chaud
+          
+        </p>
+      
+        <p>
+          Poser un jaune d’œuf sur les pâtes au moment de servir
+          
+        </p>
+      
+    </div>
+  </div>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    </body>
+  </html>
+
