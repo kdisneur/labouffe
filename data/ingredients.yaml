@@ -177,6 +177,8 @@ huile-noisettes:
   title: Huile de noisettes
 huile-olive:
   title: Huile d'olive
+huile-sesame:
+  title: Huile de sésame
 hummus:
   recipe: hummus
   title: Hummus
@@ -222,8 +224,12 @@ noix-cajou:
   title: Noix de Cajou
 noix-coco:
   title: Noix de coco
+noix-coco-lait:
+  title: Lait de noix de coco
 noix-muscade:
   title: Noix de muscade
+nouille-udon:
+  title: Nouilles udon
 nouilles-riz:
   title: Nouilles de riz
 nugget:
@@ -356,6 +362,8 @@ sauce-ranch:
   title: Sauce ranch
 sauce-soja-salee:
   title: Sauce soja salée
+sauce-soja-sucree:
+  title: Sauce soja sucrée
 sauce-tartare:
   title: Sauce tartare
 sauce-teriyaki:
