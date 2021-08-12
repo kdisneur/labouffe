@@ -1,0 +1,38 @@
+title: Bruschetta curry ananas
+category: plat chaud
+cooking: 10m
+preparation: 10m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 1
+  type: personnes
+ingredients:
+  pain:
+    quantity: 1
+    details: bruschetta
+  ananas:
+    quantity: 4
+    details: tranches
+  champignon:
+    quantity: 4
+    details: Paris
+  creme-fraiche:
+    quantity: 10cl
+  curry-poudre:
+    quantity: 1cs
+  emmental:
+  huile-olive:
+instructions:
+  - Préchauffer le four en mode grill à 200°C
+  - Raper l'emmental
+  - Couper les champignons en petits cubes
+  - Couper les ananas en petits dés
+  - Faire revenir les champignons dans une poêle avec de l'huile d'olive
+  - Verser la crème épaisse dans un bol
+  - Ajouter le curry
+  - Mélanger
+  - Étaler la crème sur la bruschetta
+  - Ajouter les champignons et les ananas
+  - Saupoudrer d'emmental rapé
+  - Placer au four pour 10m
