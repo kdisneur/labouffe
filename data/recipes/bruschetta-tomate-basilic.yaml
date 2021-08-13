@@ -1,0 +1,38 @@
+title: Bruschetta tomate basilic
+category: plat chaud
+cooking: 10m
+preparation: 10m
+difficulty: facile
+pricing: économique
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  pain:
+    quantity: 2
+    details: bruschetta
+  tomate:
+    quantity: 2
+    details: grosses
+  basilic:
+    quantity: 8
+    details: moyennes feuilles
+  ail:
+    quantity: 1
+  vinaigre-balsamique:
+    quantity: 0.5cc
+  huile-olive:
+    quantity: 2.5cs
+  sel:
+  poivre:
+instructions:
+  - Préchauffer le four en mode grill à 200°C
+  - Hacher l'ail finement
+  - Ciseler le basilic
+  - Couper les tomates en petit dés (le mieux étant de les peler avant)
+  - Placer l'ail, le basilic, les tomates, le vinaigre et l'huile d'olive dans un bol
+  - Saler et poivrer
+  - Mélanger l'ensemble
+  - instruction: Placer le pain au four pour 10m
+    warning: à sec, sans avoir étalé le mélange dessus
+  - Étaler le mélange sur le pain au moment de servir
