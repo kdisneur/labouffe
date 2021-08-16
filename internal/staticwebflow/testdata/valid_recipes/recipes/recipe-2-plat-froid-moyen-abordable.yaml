@@ -1,0 +1,19 @@
+title: Recipe 2
+category: plat froid
+preparation: 10m
+resting: 3m
+cooking: 20m
+difficulty: moyen
+pricing: abordable
+servings:
+  quantity: 4
+  type: personnes
+ingredients:
+  oeuf:
+    quantity: 3
+  farine:
+    quantity: 1.5kg
+instructions:
+  - La première instruction
+  - La seconde instruction
+  - La troisième instruction

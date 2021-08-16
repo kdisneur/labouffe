@@ -1,4 +1,4 @@
-package internal
+package staticwebflow
 
 import (
 	"fmt"
@@ -10,8 +10,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/kdisneur/labouffe/internal/html"
-	"github.com/kdisneur/labouffe/internal/recipe"
+	"github.com/kdisneur/labouffe/internal/foodaccess"
 )
 
 // SiteConfig  represents the site configuration
@@ -23,37 +22,37 @@ type SiteConfig struct {
 
 // RecipesView is the data necessary to display a list of recipe template
 type RecipesView struct {
-	AllDurationRanges []recipe.DurationRange
-	AllCategories     []recipe.Category
-	AllDifficulties   []recipe.Difficulty
-	AllPrices         []recipe.Price
+	AllDurationRanges []foodaccess.DurationRange
+	AllCategories     []foodaccess.Category
+	AllDifficulties   []foodaccess.Difficulty
+	AllPrices         []foodaccess.Price
 	Recipes           []*RecipeView
 }
 
 // RecipeView is the data necessary to build a recipe template
 type RecipeView struct {
-	*recipe.Recipe
+	*foodaccess.Recipe
 	Instructions    []*RecipeViewInstruction
 	WarningSafeHTML *template.HTML
-	TotalDuration   recipe.Duration
+	TotalDuration   foodaccess.Duration
 	PricingScale    int
 	DifficultyScale int
 }
 
 // RecipeViewInstruction is the instruction data necessary to buld a recipe template
 type RecipeViewInstruction struct {
-	*recipe.Instruction
+	*foodaccess.Instruction
 	WarningSafeHTML *template.HTML
 }
 
 // IngredientView is the data necessary to build an ingredient template
 type IngredientView struct {
-	*recipe.Ingredient
+	*foodaccess.Ingredient
 	Recipes []*RecipeView
 }
 
 // GenerateSite generates the whole website
-func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*recipe.Recipe) error {
+func GenerateSite(cfg SiteConfig, ingredients []*foodaccess.Ingredient, recipes []*foodaccess.Recipe) error {
 	if err := os.RemoveAll(cfg.OutputFolderPath); err != nil {
 		return fmt.Errorf("can't remove output folder '%s': %v", cfg.OutputFolderPath, err)
 	}
@@ -62,15 +61,15 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 		return fmt.Errorf("can't copy assets folder: %v", err)
 	}
 
-	renderer, err := html.NewRenderer(cfg.TemlatesFolderPath)
+	renderer, err := NewRenderer(cfg.TemlatesFolderPath)
 	if err != nil {
 		return fmt.Errorf("can't initialize html renderer: %v", err)
 	}
 
-	durationRanges := recipe.AllDurationRanges()
-	categories := recipe.AllCategories()
-	prices := recipe.AllPrices()
-	difficulties := recipe.AllDifficulties()
+	durationRanges := foodaccess.AllDurationRanges()
+	categories := foodaccess.AllCategories()
+	prices := foodaccess.AllPrices()
+	difficulties := foodaccess.AllDifficulties()
 
 	recipeviews := make([]*RecipeView, len(recipes))
 	for i := range recipes {
@@ -86,18 +85,18 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 			Recipe:          recipes[i],
 			Instructions:    instructions,
 			WarningSafeHTML: nl2br(recipes[i].Warning),
-			TotalDuration:   recipe.Duration(recipes[i].Preparation + +recipes[i].Resting + recipes[i].Cooking),
+			TotalDuration:   foodaccess.Duration(recipes[i].Preparation + +recipes[i].Resting + recipes[i].Cooking),
 			PricingScale:    int(recipes[i].Pricing) + 1,
 			DifficultyScale: int(recipes[i].Difficulty) + 1,
 		}
 
 		err := renderer.Generate(
 			path.Join(cfg.OutputFolderPath, "recipes", recipes[i].Code),
-			html.PageRecipeShow,
-			html.PageValues{
-				Site: html.PageSiteValues{
+			PageRecipeShow,
+			PageValues{
+				Site: PageSiteValues{
 					PublicURL:          cfg.PublicURL,
-					CurrentPageSection: html.PageSectionRecipes,
+					CurrentPageSection: PageSectionRecipes,
 				},
 				Data: recipeviews[i],
 			},
@@ -113,11 +112,11 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 
 	err = renderer.Generate(
 		path.Join(cfg.OutputFolderPath),
-		html.PageRecipesList,
-		html.PageValues{
-			Site: html.PageSiteValues{
+		PageRecipesList,
+		PageValues{
+			Site: PageSiteValues{
 				PublicURL:          cfg.PublicURL,
-				CurrentPageSection: html.PageSectionRecipes,
+				CurrentPageSection: PageSectionRecipes,
 			},
 			Title: "Les recettes",
 			Data: RecipesView{
@@ -147,11 +146,11 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 	for _, ingredient := range data {
 		err := renderer.Generate(
 			path.Join(cfg.OutputFolderPath, "ingredients", ingredient.Code),
-			html.PageRecipesList,
-			html.PageValues{
-				Site: html.PageSiteValues{
+			PageRecipesList,
+			PageValues{
+				Site: PageSiteValues{
 					PublicURL:          cfg.PublicURL,
-					CurrentPageSection: html.PageSectionRecipes,
+					CurrentPageSection: PageSectionRecipes,
 				},
 				Title: fmt.Sprintf("%s: Les recettes", ingredient.Title),
 				Data: RecipesView{
@@ -171,11 +170,11 @@ func GenerateSite(cfg SiteConfig, ingredients []*recipe.Ingredient, recipes []*r
 
 	err = renderer.Generate(
 		path.Join(cfg.OutputFolderPath, "ingredients"),
-		html.PageIngredientsList,
-		html.PageValues{
-			Site: html.PageSiteValues{
+		PageIngredientsList,
+		PageValues{
+			Site: PageSiteValues{
 				PublicURL:          cfg.PublicURL,
-				CurrentPageSection: html.PageSectionIngredients,
+				CurrentPageSection: PageSectionIngredients,
 			},
 			Title: "Les ingrédients",
 			Data:  data,

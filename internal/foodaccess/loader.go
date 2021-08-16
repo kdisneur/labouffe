@@ -1,23 +1,21 @@
-package internal
+package foodaccess
 
 import (
 	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
-
-	"github.com/kdisneur/labouffe/internal/recipe"
 )
 
 // LoadIngredientAndRecipes is in charge of loading / parsing / validating all ingredients and recipes data
-func LoadIngredientAndRecipes(ingredientpath string, recipesfolderpath string) ([]*recipe.Ingredient, []*recipe.Recipe, error) {
+func LoadIngredientAndRecipes(ingredientpath string, recipesfolderpath string) ([]*Ingredient, []*Recipe, error) {
 	ingredientfile, err := os.Open(ingredientpath)
 	if err != nil {
 		return nil, nil, fmt.Errorf("can't open ingredient file '%s': %v", ingredientpath, err)
 	}
 	defer ingredientfile.Close()
 
-	builder, err := recipe.NewBuilderFromYAMLIngredients(ingredientfile)
+	builder, err := NewBuilderFromYAMLIngredients(ingredientfile)
 	if err != nil {
 		return nil, nil, fmt.Errorf("can't import ingredients file '%s': %v", ingredientpath, err)
 	}

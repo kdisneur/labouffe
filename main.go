@@ -6,7 +6,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/kdisneur/labouffe/internal"
+	"github.com/kdisneur/labouffe/internal/foodaccess"
+	"github.com/kdisneur/labouffe/internal/staticwebflow"
 )
 
 // Flags represents the set of config flags available for the command line
@@ -39,7 +40,7 @@ func run() error {
 		return err
 	}
 
-	ingredients, recipes, err := internal.LoadIngredientAndRecipes(fcfg.IngredientsPath, fcfg.RecipesFolderPath)
+	ingredients, recipes, err := foodaccess.LoadIngredientAndRecipes(fcfg.IngredientsPath, fcfg.RecipesFolderPath)
 	if err != nil {
 		return fmt.Errorf("can't load data: %v", err)
 	}
@@ -48,11 +49,11 @@ func run() error {
 		return fmt.Errorf("can't create output folder '%s': %v", fcfg.OutputFolderPath, err)
 	}
 
-	sitecfg := internal.SiteConfig{
+	sitecfg := staticwebflow.SiteConfig{
 		TemlatesFolderPath: "templates",
 		OutputFolderPath:   fcfg.OutputFolderPath,
 	}
-	if err := internal.GenerateSite(sitecfg, ingredients, recipes); err != nil {
+	if err := staticwebflow.GenerateSite(sitecfg, ingredients, recipes); err != nil {
 		return fmt.Errorf("can't generate site: %v", err)
 	}
 

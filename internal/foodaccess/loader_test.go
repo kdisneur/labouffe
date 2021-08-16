@@ -1,20 +1,19 @@
-package internal_test
+package foodaccess_test
 
 import (
 	"testing"
 	"time"
 
-	"github.com/kdisneur/labouffe/internal"
-	"github.com/kdisneur/labouffe/internal/recipe"
+	"github.com/kdisneur/labouffe/internal/foodaccess"
 )
 
 func TestLoadingValidRecipes(t *testing.T) {
-	ingredients, recipes, err := internal.LoadIngredientAndRecipes("testdata/valid_recipes/ingredients.yaml", "testdata/valid_recipes/recipes")
+	ingredients, recipes, err := foodaccess.LoadIngredientAndRecipes("testdata/valid_recipes/ingredients.yaml", "testdata/valid_recipes/recipes")
 	if err != nil {
 		t.Fatalf("expected successful ingredients and recipes load: %v", err)
 	}
 
-	expectedIngredients := []*recipe.Ingredient{
+	expectedIngredients := []*foodaccess.Ingredient{
 		{Code: "farine", Title: "Farine"},
 		{Code: "oeuf", Title: "Oeuf"},
 		{Code: "sucre-glace", Title: "Sucre glace"},
@@ -22,31 +21,31 @@ func TestLoadingValidRecipes(t *testing.T) {
 		{Code: "recipe4-no-override", Title: "Recipe 4"},
 	}
 
-	expectedRecipes := []*recipe.Recipe{
+	expectedRecipes := []*foodaccess.Recipe{
 		{
 			Code:        "recipe-1-biscuit-facile-economique",
 			Title:       "Recipe 1",
-			Category:    recipe.CategoryBiscuit,
-			Preparation: recipe.Duration(10 * time.Minute),
-			Cooking:     recipe.Duration(20 * time.Minute),
-			Difficulty:  recipe.DifficultyEasy,
-			Pricing:     recipe.PriceCheap,
-			Servings:    recipe.Servings{Quantity: 20, Type: recipe.ServingsTypeUnits},
-			Ingredients: []*recipe.IncludedIngredient{
+			Category:    foodaccess.CategoryBiscuit,
+			Preparation: foodaccess.Duration(10 * time.Minute),
+			Cooking:     foodaccess.Duration(20 * time.Minute),
+			Difficulty:  foodaccess.DifficultyEasy,
+			Pricing:     foodaccess.PriceCheap,
+			Servings:    foodaccess.Servings{Quantity: 20, Type: foodaccess.ServingsTypeUnits},
+			Ingredients: []*foodaccess.IncludedIngredient{
 				{
 					Ingredient: expectedIngredients[1],
-					Quantity:   recipe.Quantity{Value: 1, Unit: recipe.QuantityUnitNoUnit},
+					Quantity:   foodaccess.Quantity{Value: 1, Unit: foodaccess.QuantityUnitNoUnit},
 					Details:    "jaune",
 				},
 				{
 					Ingredient: expectedIngredients[0],
-					Quantity:   recipe.Quantity{Value: 300, Unit: recipe.QuantityUnitGram},
+					Quantity:   foodaccess.Quantity{Value: 300, Unit: foodaccess.QuantityUnitGram},
 				},
 				{
 					Ingredient: expectedIngredients[2],
 				},
 			},
-			Instructions: []*recipe.Instruction{
+			Instructions: []*foodaccess.Instruction{
 				{Title: "La première instruction"},
 				{Title: "La seconde instruction"},
 				{Title: "La troisième instruction"},
@@ -55,24 +54,24 @@ func TestLoadingValidRecipes(t *testing.T) {
 		{
 			Code:        "recipe-2-plat-froid-moyen-abordable",
 			Title:       "Recipe 2",
-			Category:    recipe.CategoryColdMeal,
-			Preparation: recipe.Duration(10 * time.Minute),
-			Resting:     recipe.Duration(3 * time.Minute),
-			Cooking:     recipe.Duration(20 * time.Minute),
-			Difficulty:  recipe.DifficultyAverage,
-			Pricing:     recipe.PriceAffordable,
-			Servings:    recipe.Servings{Quantity: 4, Type: recipe.ServingsTypeGuests},
-			Ingredients: []*recipe.IncludedIngredient{
+			Category:    foodaccess.CategoryColdMeal,
+			Preparation: foodaccess.Duration(10 * time.Minute),
+			Resting:     foodaccess.Duration(3 * time.Minute),
+			Cooking:     foodaccess.Duration(20 * time.Minute),
+			Difficulty:  foodaccess.DifficultyAverage,
+			Pricing:     foodaccess.PriceAffordable,
+			Servings:    foodaccess.Servings{Quantity: 4, Type: foodaccess.ServingsTypeGuests},
+			Ingredients: []*foodaccess.IncludedIngredient{
 				{
 					Ingredient: expectedIngredients[1],
-					Quantity:   recipe.Quantity{Value: 3, Unit: recipe.QuantityUnitNoUnit},
+					Quantity:   foodaccess.Quantity{Value: 3, Unit: foodaccess.QuantityUnitNoUnit},
 				},
 				{
 					Ingredient: expectedIngredients[0],
-					Quantity:   recipe.Quantity{Value: 1.5, Unit: recipe.QuantityUnitKilogram},
+					Quantity:   foodaccess.Quantity{Value: 1.5, Unit: foodaccess.QuantityUnitKilogram},
 				},
 			},
-			Instructions: []*recipe.Instruction{
+			Instructions: []*foodaccess.Instruction{
 				{Title: "La première instruction"},
 				{Title: "La seconde instruction"},
 				{Title: "La troisième instruction"},
@@ -81,28 +80,28 @@ func TestLoadingValidRecipes(t *testing.T) {
 		{
 			Code:        "recipe-3-plat-chaud-difficile-cher",
 			Title:       "Recipe 3",
-			Category:    recipe.CategoryHotMeal,
-			Preparation: recipe.Duration(45 * time.Minute),
-			Cooking:     recipe.Duration(time.Hour + 14*time.Minute),
-			Difficulty:  recipe.DifficultyHard,
-			Pricing:     recipe.PriceExpensive,
-			Servings:    recipe.Servings{Quantity: 8, Type: recipe.ServingsTypeGuests},
-			Ingredients: []*recipe.IncludedIngredient{
+			Category:    foodaccess.CategoryHotMeal,
+			Preparation: foodaccess.Duration(45 * time.Minute),
+			Cooking:     foodaccess.Duration(time.Hour + 14*time.Minute),
+			Difficulty:  foodaccess.DifficultyHard,
+			Pricing:     foodaccess.PriceExpensive,
+			Servings:    foodaccess.Servings{Quantity: 8, Type: foodaccess.ServingsTypeGuests},
+			Ingredients: []*foodaccess.IncludedIngredient{
 				{
 					Ingredient: expectedIngredients[1],
-					Quantity:   recipe.Quantity{Value: 3, Unit: recipe.QuantityUnitNoUnit},
+					Quantity:   foodaccess.Quantity{Value: 3, Unit: foodaccess.QuantityUnitNoUnit},
 				},
 				{
 					Ingredient:   expectedIngredients[0],
-					Quantity:     recipe.Quantity{Value: 1.5, Unit: recipe.QuantityUnitKilogram},
-					Alternatives: []*recipe.Ingredient{expectedIngredients[2]},
+					Quantity:     foodaccess.Quantity{Value: 1.5, Unit: foodaccess.QuantityUnitKilogram},
+					Alternatives: []*foodaccess.Ingredient{expectedIngredients[2]},
 				},
 				{
 					Ingredient: expectedIngredients[3],
-					Quantity:   recipe.Quantity{Value: 100, Unit: recipe.QuantityUnitGram},
+					Quantity:   foodaccess.Quantity{Value: 100, Unit: foodaccess.QuantityUnitGram},
 				},
 			},
-			Instructions: []*recipe.Instruction{
+			Instructions: []*foodaccess.Instruction{
 				{Title: "La première instruction"},
 				{Title: "La seconde instruction"},
 				{Title: "La troisième instruction"},
@@ -111,23 +110,23 @@ func TestLoadingValidRecipes(t *testing.T) {
 		{
 			Code:        "recipe-4-plat-chaud-facile-economique",
 			Title:       "Recipe 4",
-			Category:    recipe.CategoryHotMeal,
-			Preparation: recipe.Duration(10 * time.Minute),
-			Cooking:     recipe.Duration(20 * time.Minute),
-			Difficulty:  recipe.DifficultyEasy,
-			Pricing:     recipe.PriceCheap,
-			Servings:    recipe.Servings{Quantity: 2, Type: recipe.ServingsTypeGuests},
-			Ingredients: []*recipe.IncludedIngredient{
+			Category:    foodaccess.CategoryHotMeal,
+			Preparation: foodaccess.Duration(10 * time.Minute),
+			Cooking:     foodaccess.Duration(20 * time.Minute),
+			Difficulty:  foodaccess.DifficultyEasy,
+			Pricing:     foodaccess.PriceCheap,
+			Servings:    foodaccess.Servings{Quantity: 2, Type: foodaccess.ServingsTypeGuests},
+			Ingredients: []*foodaccess.IncludedIngredient{
 				{
 					Ingredient: expectedIngredients[1],
-					Quantity:   recipe.Quantity{Value: 1, Unit: recipe.QuantityUnitNoUnit},
+					Quantity:   foodaccess.Quantity{Value: 1, Unit: foodaccess.QuantityUnitNoUnit},
 				},
 				{
 					Ingredient: expectedIngredients[0],
-					Quantity:   recipe.Quantity{Value: 10, Unit: recipe.QuantityUnitGram},
+					Quantity:   foodaccess.Quantity{Value: 10, Unit: foodaccess.QuantityUnitGram},
 				},
 			},
-			Instructions: []*recipe.Instruction{
+			Instructions: []*foodaccess.Instruction{
 				{Title: "La première instruction"},
 				{Title: "La seconde instruction"},
 				{
@@ -139,24 +138,24 @@ func TestLoadingValidRecipes(t *testing.T) {
 		{
 			Code:        "recipe-5-entree-facile-economique",
 			Title:       "Recipe 5",
-			Category:    recipe.CategoryStarterDish,
+			Category:    foodaccess.CategoryStarterDish,
 			Warning:     "Ceci est une recette a préparer à l'avance",
-			Preparation: recipe.Duration(10 * time.Minute),
-			Cooking:     recipe.Duration(35 * time.Minute),
-			Difficulty:  recipe.DifficultyEasy,
-			Pricing:     recipe.PriceCheap,
-			Servings:    recipe.Servings{Quantity: 2, Type: recipe.ServingsTypeGuests},
-			Ingredients: []*recipe.IncludedIngredient{
+			Preparation: foodaccess.Duration(10 * time.Minute),
+			Cooking:     foodaccess.Duration(35 * time.Minute),
+			Difficulty:  foodaccess.DifficultyEasy,
+			Pricing:     foodaccess.PriceCheap,
+			Servings:    foodaccess.Servings{Quantity: 2, Type: foodaccess.ServingsTypeGuests},
+			Ingredients: []*foodaccess.IncludedIngredient{
 				{
 					Ingredient: expectedIngredients[1],
-					Quantity:   recipe.Quantity{Value: 1, Unit: recipe.QuantityUnitNoUnit},
+					Quantity:   foodaccess.Quantity{Value: 1, Unit: foodaccess.QuantityUnitNoUnit},
 				},
 				{
 					Ingredient: expectedIngredients[0],
-					Quantity:   recipe.Quantity{Value: 12, Unit: recipe.QuantityUnitGram},
+					Quantity:   foodaccess.Quantity{Value: 12, Unit: foodaccess.QuantityUnitGram},
 				},
 			},
-			Instructions: []*recipe.Instruction{
+			Instructions: []*foodaccess.Instruction{
 				{Title: "La première instruction"},
 				{Title: "La seconde instruction"},
 				{Title: "La troisième instruction"},
@@ -186,7 +185,7 @@ func TestLoadingValidRecipes(t *testing.T) {
 	}
 }
 
-func assertIngredient(t *testing.T, want *recipe.Ingredient, got *recipe.Ingredient) {
+func assertIngredient(t *testing.T, want *foodaccess.Ingredient, got *foodaccess.Ingredient) {
 	t.Helper()
 
 	if want != nil && got == nil {
@@ -212,7 +211,7 @@ func assertIngredient(t *testing.T, want *recipe.Ingredient, got *recipe.Ingredi
 	assertRecipe(t, want.Recipe, got.Recipe)
 }
 
-func assertRecipe(t *testing.T, want *recipe.Recipe, got *recipe.Recipe) {
+func assertRecipe(t *testing.T, want *foodaccess.Recipe, got *foodaccess.Recipe) {
 	t.Helper()
 
 	if want != nil && got == nil {

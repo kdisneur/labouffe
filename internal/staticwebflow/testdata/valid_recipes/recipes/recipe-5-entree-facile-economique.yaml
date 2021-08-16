@@ -1,0 +1,19 @@
+title: Recipe 5
+category: entrée
+preparation: 10m
+cooking: 35m
+difficulty: facile
+pricing: économique
+warning: Ceci est une recette a préparer à l'avance
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  oeuf:
+    quantity: 1
+  sucre-glace:
+    quantity: 12g
+instructions:
+  - La première instruction
+  - La seconde instruction
+  - La troisième instruction

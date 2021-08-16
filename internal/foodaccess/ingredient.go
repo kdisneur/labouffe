@@ -1,7 +1,8 @@
-package recipe
+package foodaccess
 
 import (
 	"fmt"
+
 	"gopkg.in/yaml.v2"
 )
 

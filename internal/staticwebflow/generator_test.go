@@ -1,4 +1,4 @@
-package internal_test
+package staticwebflow_test
 
 import (
 	"flag"
@@ -7,18 +7,19 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/kdisneur/labouffe/internal"
+	"github.com/kdisneur/labouffe/internal/foodaccess"
+	"github.com/kdisneur/labouffe/internal/staticwebflow"
 )
 
 var update = flag.Bool("update", false, "update golden files")
 
 func TestGenerateValidSite(t *testing.T) {
-	ingredients, recipes, err := internal.LoadIngredientAndRecipes("testdata/valid_recipes/ingredients.yaml", "testdata/valid_recipes/recipes")
+	ingredients, recipes, err := foodaccess.LoadIngredientAndRecipes("testdata/valid_recipes/ingredients.yaml", "testdata/valid_recipes/recipes")
 	if err != nil {
 		t.Fatalf("expected successful ingredients and recipes load: %v", err)
 	}
 
-	templatesFolder := "../templates"
+	templatesFolder := "../../templates"
 
 	testSiteFolder, err := ioutil.TempDir("", "site")
 	if err != nil {
@@ -29,7 +30,7 @@ func TestGenerateValidSite(t *testing.T) {
 	publicURL := "https://labouffe.local/somefolder"
 
 	if *update {
-		err := internal.GenerateSite(internal.SiteConfig{
+		err := staticwebflow.GenerateSite(staticwebflow.SiteConfig{
 			TemlatesFolderPath: templatesFolder,
 			OutputFolderPath:   goldenSiteFolder,
 			PublicURL:          publicURL,
@@ -40,7 +41,7 @@ func TestGenerateValidSite(t *testing.T) {
 		}
 	}
 
-	err = internal.GenerateSite(internal.SiteConfig{
+	err = staticwebflow.GenerateSite(staticwebflow.SiteConfig{
 		TemlatesFolderPath: templatesFolder,
 		OutputFolderPath:   testSiteFolder,
 		PublicURL:          publicURL,
