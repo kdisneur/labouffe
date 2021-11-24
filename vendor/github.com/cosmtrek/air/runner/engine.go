@@ -1,6 +1,7 @@
 package runner
 
 import (
+	"fmt"
 	"io"
 	"os"
 	"os/exec"
@@ -22,6 +23,7 @@ type Engine struct {
 	watcherStopCh  chan bool
 	buildRunCh     chan bool
 	buildRunStopCh chan bool
+	canExit        chan bool
 	binStopCh      chan bool
 	exitCh         chan bool
 
@@ -55,6 +57,7 @@ func NewEngine(cfgPath string, debugMode bool) (*Engine, error) {
 		watcherStopCh:  make(chan bool, 10),
 		buildRunCh:     make(chan bool, 1),
 		buildRunStopCh: make(chan bool, 1),
+		canExit:        make(chan bool, 1),
 		binStopCh:      make(chan bool),
 		exitCh:         make(chan bool),
 		binRunning:     false,
@@ -112,6 +115,11 @@ func (e *Engine) watching(root string) error {
 			e.watcherLog("!exclude %s", e.config.rel(path))
 			return filepath.SkipDir
 		}
+		// exclude testdata dir
+		if e.isTestDataDir(path) {
+			e.watcherLog("!exclude %s", e.config.rel(path))
+			return filepath.SkipDir
+		}
 		// exclude hidden directories like .git, .idea, etc.
 		if isHiddenDirectory(path) {
 			return filepath.SkipDir
@@ -137,6 +145,9 @@ func (e *Engine) watching(root string) error {
 func (e *Engine) cacheFileChecksums(root string) error {
 	return filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
+			if info == nil {
+				return err
+			}
 			if info.IsDir() {
 				return filepath.SkipDir
 			}
@@ -144,7 +155,7 @@ func (e *Engine) cacheFileChecksums(root string) error {
 		}
 
 		if !info.Mode().IsRegular() {
-			if e.isTmpDir(path) || isHiddenDirectory(path) || e.isExcludeDir(path) {
+			if e.isTmpDir(path) || e.isTestDataDir(path) || isHiddenDirectory(path) || e.isExcludeDir(path) {
 				e.watcherDebug("!exclude checksum %s", e.config.rel(path))
 				return filepath.SkipDir
 			}
@@ -192,7 +203,7 @@ func (e *Engine) cacheFileChecksums(root string) error {
 
 func (e *Engine) watchDir(path string) error {
 	if err := e.watcher.Add(path); err != nil {
-		e.watcherLog("failed to watching %s, error: %s", path, err.Error())
+		e.watcherLog("failed to watch %s, error: %s", path, err.Error())
 		return err
 	}
 	e.watcherLog("watching %s", e.config.rel(path))
@@ -251,6 +262,9 @@ func (e *Engine) watchNewDir(dir string, removeDir bool) {
 	if e.isTmpDir(dir) {
 		return
 	}
+	if e.isTestDataDir(dir) {
+		return
+	}
 	if isHiddenDirectory(dir) || e.isExcludeDir(dir) {
 		e.watcherLog("!exclude %s", e.config.rel(dir))
 		return
@@ -306,17 +320,24 @@ func (e *Engine) start() {
 					continue
 				}
 			}
+			// clean on rebuild https://stackoverflow.com/questions/22891644/how-can-i-clear-the-terminal-screen-in-go
+			if e.config.Screen.ClearOnRebuild {
+				fmt.Println("\033[2J")
+			}
 			e.mainLog("%s has changed", e.config.rel(filename))
 		case <-firstRunCh:
 			// go down
 			break
 		}
 
+		// already build and run now
 		select {
 		case <-e.buildRunCh:
 			e.buildRunStopCh <- true
 		default:
 		}
+
+		// if current app is running, stop it
 		e.withLock(func() {
 			if e.binRunning {
 				e.binStopCh <- true
@@ -335,10 +356,12 @@ func (e *Engine) buildRun() {
 	select {
 	case <-e.buildRunStopCh:
 		return
+	case <-e.canExit:
 	default:
 	}
 	var err error
 	if err = e.building(); err != nil {
+		e.canExit <- true
 		e.buildLog("failed to build, error: %s", err.Error())
 		_ = e.writeBuildErrorLog(err.Error())
 		if e.config.Build.StopOnError {
@@ -405,14 +428,19 @@ func (e *Engine) runBin() error {
 	}()
 
 	go func(cmd *exec.Cmd, stdout io.ReadCloser, stderr io.ReadCloser) {
+		defer func() {
+			select {
+			case <-e.exitCh:
+				close(e.canExit)
+			default:
+			}
+		}()
 		<-e.binStopCh
-		e.mainDebug("trying to kill cmd %+v", cmd.Args)
+		e.mainDebug("trying to kill pid %d, cmd %+v", cmd.Process.Pid, cmd.Args)
 		defer func() {
 			stdout.Close()
 			stderr.Close()
 		}()
-
-		var err error
 		pid, err := e.killCmd(cmd)
 		if err != nil {
 			e.mainDebug("failed to kill PID %d, error: %s", pid, err.Error())
@@ -463,9 +491,11 @@ func (e *Engine) cleanup() {
 			e.mainLog("failed to delete tmp dir, err: %+v", err)
 		}
 	}
+
+	<-e.canExit
 }
 
 // Stop the air
 func (e *Engine) Stop() {
-	e.exitCh <- true
+	close(e.exitCh)
 }

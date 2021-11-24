@@ -95,9 +95,21 @@ air
 
 For modifying the configuration refer to the [air_example.toml](air_example.toml) file.
 
+
 ### Debug
 
 `air -d` prints all logs.
+
+
+## Q&A
+
+### "command not found: air" or "No such file or directory"
+
+```zsh
+export GOPATH=$HOME/xxxxx
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$(go env GOPATH)/bin <---- Confirm this line in you profile!!!
+```
 
 ## Development
 
@@ -120,6 +132,21 @@ make install
 ```
 
 BTW: Pull requests are welcome~
+
+### Release new version
+
+```
+# 1. checkout to master
+git checkout master
+
+# 2. add the version that needs to be released
+git tag v1.xx.x
+
+# 3. push to remote
+git push origin v1.xx.x
+
+the ci will processing and will release new version,wait about 5 min you can fetch the new version.
+```
 
 ## Sponsor
 
