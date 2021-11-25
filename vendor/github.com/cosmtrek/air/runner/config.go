@@ -21,12 +21,14 @@ const (
 )
 
 type config struct {
-	Root   string   `toml:"root"`
-	TmpDir string   `toml:"tmp_dir"`
-	Build  cfgBuild `toml:"build"`
-	Color  cfgColor `toml:"color"`
-	Log    cfgLog   `toml:"log"`
-	Misc   cfgMisc  `toml:"misc"`
+	Root        string    `toml:"root"`
+	TmpDir      string    `toml:"tmp_dir"`
+	TestDataDir string    `toml:"testdata_dir"`
+	Build       cfgBuild  `toml:"build"`
+	Color       cfgColor  `toml:"color"`
+	Log         cfgLog    `toml:"log"`
+	Misc        cfgMisc   `toml:"misc"`
+	Screen      cfgScreen `toml:"screen"`
 }
 
 type cfgBuild struct {
@@ -76,6 +78,10 @@ type cfgColor struct {
 
 type cfgMisc struct {
 	CleanOnExit bool `toml:"clean_on_exit"`
+}
+
+type cfgScreen struct {
+	ClearOnRebuild bool `toml:"clear_on_rebuild"`
 }
 
 func initConfig(path string) (cfg *config, err error) {
@@ -166,13 +172,14 @@ func readConfByName(name string) (*config, error) {
 
 func defaultConfig() config {
 	build := cfgBuild{
-		Cmd:         "go build -o ./tmp/main .",
-		Bin:         "./tmp/main",
-		Log:         "build-errors.log",
-		IncludeExt:  []string{"go", "tpl", "tmpl", "html"},
-		ExcludeDir:  []string{"assets", "tmp", "vendor"},
-		Delay:       1000,
-		StopOnError: true,
+		Cmd:          "go build -o ./tmp/main .",
+		Bin:          "./tmp/main",
+		Log:          "build-errors.log",
+		IncludeExt:   []string{"go", "tpl", "tmpl", "html"},
+		ExcludeDir:   []string{"assets", "tmp", "vendor", "testdata"},
+		ExcludeRegex: []string{"_test.go"},
+		Delay:        1000,
+		StopOnError:  true,
 	}
 	if runtime.GOOS == PlatformWindows {
 		build.Bin = `tmp\main.exe`
@@ -191,12 +198,13 @@ func defaultConfig() config {
 		CleanOnExit: false,
 	}
 	return config{
-		Root:   ".",
-		TmpDir: "tmp",
-		Build:  build,
-		Color:  color,
-		Log:    log,
-		Misc:   misc,
+		Root:        ".",
+		TmpDir:      "tmp",
+		TestDataDir: "testdata",
+		Build:       build,
+		Color:       color,
+		Log:         log,
+		Misc:        misc,
 	}
 }
 
@@ -236,6 +244,9 @@ func (c *config) preprocess() error {
 	c.Root, err = expandPath(c.Root)
 	if c.TmpDir == "" {
 		c.TmpDir = "tmp"
+	}
+	if c.TestDataDir == "" {
+		c.TestDataDir = "testdata"
 	}
 	if err != nil {
 		return err
@@ -281,6 +292,10 @@ func (c *config) binPath() string {
 
 func (c *config) tmpPath() string {
 	return filepath.Join(c.Root, c.TmpDir)
+}
+
+func (c *config) TestDataPath() string {
+	return filepath.Join(c.Root, c.TestDataDir)
 }
 
 func (c *config) rel(path string) string {
