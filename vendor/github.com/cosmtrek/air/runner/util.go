@@ -54,6 +54,10 @@ func (e *Engine) isTmpDir(path string) bool {
 	return path == e.config.tmpPath()
 }
 
+func (e *Engine) isTestDataDir(path string) bool {
+	return path == e.config.TestDataPath()
+}
+
 func isHiddenDirectory(path string) bool {
 	return len(path) > 1 && strings.HasPrefix(filepath.Base(path), ".")
 }
@@ -216,7 +220,7 @@ func adaptToVariousPlatforms(c *config) {
 				c.Build.FullBin += extName
 			}
 			if !strings.HasPrefix(c.Build.FullBin, runName) {
-				c.Build.FullBin = runName + " /b " + c.Build.FullBin
+				c.Build.FullBin = runName + " /wait /b " + c.Build.FullBin
 			}
 		}
 
@@ -265,4 +269,13 @@ func (a *checksumMap) updateFileChecksum(filename, newChecksum string) (ok bool)
 		return true
 	}
 	return false
+}
+
+// trying to force kill a process by it's pid.
+func killByPid(pid int) error {
+	proc, err := os.FindProcess(pid)
+	if err != nil {
+		return err
+	}
+	return proc.Kill()
 }
