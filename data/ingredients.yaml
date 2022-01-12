@@ -43,6 +43,8 @@ bouillon-legumes:
   title: Bouillon de légumes
 bouillon-volaille:
   title: Bouillon de volaille
+butternut:
+  title: Butternut
 cacahuete:
   title: Cacahuète
 cacao:
@@ -326,6 +328,8 @@ pruneau:
 puree:
   recipe: puree-pommes-de-terre
   title: Purée
+quinoa:
+  title: Quinoa
 raisin-sec:
   title: Raisins secs
 ras-el-hanout:
