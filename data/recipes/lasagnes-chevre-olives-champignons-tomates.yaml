@@ -22,10 +22,8 @@ ingredients:
     quantity: 150g
     details: noir
   creme-entiere-liquide:
-    # il est noté 1 dans Notes, je ne sais pas ce que tu voulais dire
     quantity: 20cl
   tomate-coulis:
-    # il est noté 1 dans Notes, je ne sais pas ce que tu voulais dire
     quantity: 20cl
   huile-olive:
     quantity: 1cs
