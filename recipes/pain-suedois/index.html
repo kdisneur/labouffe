@@ -1,0 +1,417 @@
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Site web listant nos recettes" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+      <style>
+      .uk-offcanvas-bar {
+        background: #fff;
+      }
+      .uk-offcanvas-bar .uk-subnav {
+        margin-left: 0;
+        font-size: .875rem;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-nav-default .uk-nav-header {
+        border-bottom: 1px solid #e5e5e5;
+        color: #222;
+        text-transform: uppercase;
+      }
+      .uk-offcanvas-bar .uk-subnav .uk-subnav-header,
+      .uk-offcanvas-bar .uk-subnav > li {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .uk-offcanvas-bar .uk-subnav > li > a,
+      .uk-offcanvas-bar .uk-subnav > li > a:focus,
+      .uk-offcanvas-bar .uk-subnav > li > a:hover {
+        text-transform: capitalize;
+        color: #999 !important;
+      }
+
+      .uk-offcanvas-bar .uk-subnav > li.uk-active > a {
+        background-color: #1e87f0;
+        color: #fff !important;
+      }
+
+      .tm-logo-title {
+        margin-left: 5px;
+      }
+      .tm-logo-title img {
+        display: block;
+        float: left;
+      }
+      .tm-logo-title span {
+        padding-top: 5px;
+        display: inline-block;
+      }
+
+      .tm-link-no-highlight,
+      .tm-link-no-highlight:hover,
+      .tm-link-no-highlight:focus {
+        color: #666 !important;
+        text-decoration: none;
+      }
+      </style>
+      <title>La bouffe, hein!</title>
+    </head>
+    <body>
+      <nav class="uk-navbar-container tm-navbar-container uk-active" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="/" class="uk-link tm-no-underline tm-logo-title">
+            <img src="/assets/logo.svg" uk-svg="true" alt="logo" width="42" />
+              <span class="uk-margin-small-left uk-text-large">La bouffe</span>
+            </a>
+          </div>
+
+          <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon href="" uk-toggle="target: #small-menu"></a>
+            <div id="small-menu" uk-offcanvas="mode: push; overlay: true">
+              <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
+                <div class="uk-panel">
+                    <ul class="uk-subnav uk-subnav-pill tm-nav">
+                      <li class="uk-subnav-header">Général</a>
+                      <li class="uk-margin-top uk-active">
+                        <a href="/">recettes</a>
+                      </li>
+                      <li class="uk-margin-top ">
+                        <a href="/ingredients">ingrédients</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <ul class="uk-navbar-nav uk-visible@s">
+              <li class=" uk-active ">
+                <a href="/">recettes</a>
+              </li>
+              <li class="">
+                <a href="/ingredients">ingrédients</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="uk-container uk-margin-medium-top">
+        
+
+        
+  <div class="uk-width-3-4@l uk-align-center">
+    <h1 class="uk-heading-small uk-heading-divider uk-margin-remove-top">Pain suédois</h1>
+
+    <div uk-grid="true">
+      <div class="uk-width-1-2@s">
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Temps total</span></div>
+          <div class="uk-width-1-2">6h50m</div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">préparation</div>
+          <div class="uk-width-1-2">30m</div>
+        </div>
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">repos</div>
+          <div class="uk-width-1-2">6h</div>
+        </div>
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2">cuisson</div>
+          <div class="uk-width-1-2">20m</div>
+        </div>
+
+        <hr>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Réchauffable</span></div>
+          <div class="uk-width-1-2"> Non
+          </div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Coût</span></div>
+          <div class="uk-width-1-2"><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></div>
+        </div>
+
+        <div uk-grid="true" class="uk-grid-small">
+          <div class="uk-width-1-2"><span class="uk-text-uppercase">Difficulté</span></div>
+          <div class="uk-width-1-2"><span class="uk-text-primary" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span><span class="uk-text-muted" uk-icon="nut"></span></div>
+        </div>
+      </div>
+      <div class="uk-width-1-2@s">
+        <h5 class="uk-text-uppercase">
+          
+            Ingrédients pour 6 unités
+          
+        </h5>
+
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/farine">
+                Farine
+              </a>
+              
+              
+                (T55)
+              
+            </div>
+            
+              <div>
+                250g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/eau">
+                Eau
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                12cl
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/creme-fraiche">
+                Crême fraîche épaisse
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                40g
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/levure-boulanger">
+                Levure de boulanger
+              </a>
+              
+              
+                (sachet)
+              
+            </div>
+            
+              <div>
+                1
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/sucre">
+                Sucre
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                0.5cc
+              </div>
+            
+          </div>
+        
+          <div class="uk-grid-small" uk-grid="true">
+            <div class="uk-width-expand" uk-leader="true">
+              
+              
+
+              <a class="uk-link-text" href="/ingredients/sel">
+                Sel
+              </a>
+              
+              
+            </div>
+            
+              <div>
+                0.5cc
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+    <div>
+      <div class="uk-hidden@s uk-margin-large-top"></div>
+      <h5 class="uk-text-uppercase">Étapes</h5>
+      
+        <p>
+          Mettre la farine et la levure de boulanger dans un saladier
+          
+        </p>
+      
+        <p>
+          Mélanger
+          
+        </p>
+      
+        <p>
+          Ajouter le sel et le sucre
+          
+        </p>
+      
+        <p>
+          Mélanger
+          
+        </p>
+      
+        <p>
+          Ajouter la crème fraiche
+          
+        </p>
+      
+        <p>
+          Mélanger
+          
+        </p>
+      
+        <p>
+          Tiédir l&#39;eau
+          
+        </p>
+      
+        <p>
+          Faire un puit au centre de la farine
+          
+        </p>
+      
+        <p>
+          Incorporer l&#39;eau à la farine par petites quantités
+          
+        </p>
+      
+        <p>
+          Ajuster le ratio farine-eau de la pâte: elle doit coller aux doigts sans y rester accrochée. Pour bien gonfler la pâte doit être bien hydratée
+          
+        </p>
+      
+        <p>
+          Pétrir 10m à 15m pour obtenir une pâte bien souple
+          
+        </p>
+      
+        <p>
+          Former une boule avec la pâte
+          
+        </p>
+      
+        <p>
+          Couvrir le saladier avec un film étirable
+          
+        </p>
+      
+        <p>
+          Mettre au frigo pour au moins 6h. Dégazer la pâte une fois par heure durant les 3 premières heures pour ne pas trop fragiliser la pâte
+          
+        </p>
+      
+        <p>
+          Sortir la quantité de pâte nécessaire. Compter ~50g par pain
+          
+        </p>
+      
+        <p>
+          Former des boules puis abaisser chaque pâton à la main pour former un disque épais
+          
+        </p>
+      
+        <p>
+          Couvrir d&#39;un linge propre et laisser reposer ~15m
+          
+        </p>
+      
+        <p>
+          Abaisser les pâtons à ~5mm en formant un disque. Pour former un disque parfait, utiliser un bol
+          
+        </p>
+      
+        <p>
+          Placer les pains sur une plaque sulfurisée et piquer les à l&#39;aide d&#39;une fourchette
+          
+        </p>
+      
+        <p>
+          Placer un torchon sur les pains et les laisser reposer ~30m
+          
+        </p>
+      
+        <p>
+          Chauffer une poele à fond épais à feu vif (4)
+          
+        </p>
+      
+        <p>
+          Déposer un pain à la fois dans la poele, face trouée en-dessous
+          
+        </p>
+      
+        <p>
+          Piquer la face non trouée à la fourchette
+          
+        </p>
+      
+        <p>
+          Laisser cuire ~3m jusqu&#39;à ce que le pain dore
+          
+        </p>
+      
+        <p>
+          Retourner le pain
+          
+        </p>
+      
+        <p>
+          Poursuivre la cuisson pendant ~2m supplémentaire
+          
+        </p>
+      
+        <p>
+          Recommencer l&#39;opération pour les autres pains
+          
+        </p>
+      
+    </div>
+  </div>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    </body>
+  </html>
+
