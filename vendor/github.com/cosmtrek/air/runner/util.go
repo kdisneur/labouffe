@@ -4,7 +4,6 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"errors"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -208,11 +207,7 @@ func adaptToVariousPlatforms(c *config) {
 		runName := "start"
 		extName := ".exe"
 		originBin := c.Build.Bin
-		if !strings.HasSuffix(c.Build.Bin, extName) {
-
-			c.Build.Bin += extName
-		}
-
+		
 		if 0 < len(c.Build.FullBin) {
 
 			if !strings.HasSuffix(c.Build.FullBin, extName) {
@@ -233,7 +228,7 @@ func adaptToVariousPlatforms(c *config) {
 
 // fileChecksum returns a checksum for the given file's contents.
 func fileChecksum(filename string) (checksum string, err error) {
-	contents, err := ioutil.ReadFile(filename)
+	contents, err := os.ReadFile(filename)
 	if err != nil {
 		return "", err
 	}
