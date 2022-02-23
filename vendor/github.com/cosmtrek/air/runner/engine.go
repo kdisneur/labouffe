@@ -28,7 +28,6 @@ type Engine struct {
 	exitCh         chan bool
 
 	mu            sync.RWMutex
-	binRunning    bool
 	watchers      uint
 	fileChecksums *checksumMap
 
@@ -60,7 +59,6 @@ func NewEngine(cfgPath string, debugMode bool) (*Engine, error) {
 		canExit:        make(chan bool, 1),
 		binStopCh:      make(chan bool),
 		exitCh:         make(chan bool),
-		binRunning:     false,
 		watchers:       0,
 	}
 
@@ -96,7 +94,7 @@ func (e *Engine) checkRunEnv() error {
 	p := e.config.tmpPath()
 	if _, err := os.Stat(p); os.IsNotExist(err) {
 		e.runnerLog("mkdir %s", p)
-		if err := os.Mkdir(p, 0755); err != nil {
+		if err := os.Mkdir(p, 0o755); err != nil {
 			e.runnerLog("failed to mkdir, error: %s", err.Error())
 			return err
 		}
@@ -342,9 +340,8 @@ func (e *Engine) start() {
 
 		// if current app is running, stop it
 		e.withLock(func() {
-			if e.binRunning {
-				e.binStopCh <- true
-			}
+			close(e.binStopCh)
+			e.binStopCh = make(chan bool)
 		})
 		go e.buildRun()
 	}
@@ -374,6 +371,9 @@ func (e *Engine) buildRun() {
 
 	select {
 	case <-e.buildRunStopCh:
+		return
+	case <-e.exitCh:
+		close(e.canExit)
 		return
 	default:
 	}
@@ -421,12 +421,8 @@ func (e *Engine) runBin() error {
 	if err != nil {
 		return err
 	}
-	e.withLock(func() {
-		e.binRunning = true
-	})
-	e.mainDebug("running process pid %v", cmd.Process.Pid)
 
-	go func(cmd *exec.Cmd, stdin io.WriteCloser, stdout io.ReadCloser, stderr io.ReadCloser) {
+	killFunc := func(cmd *exec.Cmd, stdin io.WriteCloser, stdout io.ReadCloser, stderr io.ReadCloser) {
 		defer func() {
 			select {
 			case <-e.exitCh:
@@ -434,6 +430,7 @@ func (e *Engine) runBin() error {
 			default:
 			}
 		}()
+		// when invoke close() it will return
 		<-e.binStopCh
 		e.mainDebug("trying to kill pid %d, cmd %+v", cmd.Process.Pid, cmd.Args)
 		defer func() {
@@ -450,9 +447,6 @@ func (e *Engine) runBin() error {
 		} else {
 			e.mainDebug("cmd killed, pid: %d", pid)
 		}
-		e.withLock(func() {
-			e.binRunning = false
-		})
 		cmdBinPath := cmdPath(e.config.rel(e.config.binPath()))
 		if _, err = os.Stat(cmdBinPath); os.IsNotExist(err) {
 			return
@@ -460,7 +454,13 @@ func (e *Engine) runBin() error {
 		if err = os.Remove(cmdBinPath); err != nil {
 			e.mainLog("failed to remove %s, error: %s", e.config.rel(e.config.binPath()), err)
 		}
-	}(cmd, stdin, stdout, stderr)
+	}
+	e.withLock(func() {
+		close(e.binStopCh)
+		e.binStopCh = make(chan bool)
+		go killFunc(cmd, stdin, stdout, stderr)
+	})
+	e.mainDebug("running process pid %v", cmd.Process.Pid)
 	return nil
 }
 
@@ -469,9 +469,8 @@ func (e *Engine) cleanup() {
 	defer e.mainLog("see you again~")
 
 	e.withLock(func() {
-		if e.binRunning {
-			e.binStopCh <- true
-		}
+		close(e.binStopCh)
+		e.binStopCh = make(chan bool)
 	})
 	e.mainDebug("wating for	close watchers..")
 
