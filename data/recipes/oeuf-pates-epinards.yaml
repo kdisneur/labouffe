@@ -7,18 +7,18 @@ pricing: abordable
 warning: Équeuter les épinards peut prendre beaucoup de temps. Ça peut être fait la veille sans problème.
 vegetarian: true
 servings:
-  quantity: 1
+  quantity: 4
   type: personnes
 ingredients:
   bechamel:
-    quantity: 25cl
+    quantity: 50cl
   epinard:
     quantity: 1kg
     details: frais
   oeuf:
-    quantity: 2
+    quantity: 4
   pates:
-    quantity: 80g
+    quantity: 200g
     details: tagliatelle
   emmental:
   sel:

@@ -5,17 +5,17 @@ preparation: 5m
 difficulty: facile
 pricing: abordable
 servings:
-  quantity: 1
+  quantity: 4
   type: personnes
 ingredients:
   pates:
-    quantity: 60g
+    quantity: 200g
   saumon-frais:
-    quantity: 125g
+    quantity: 250g
   creme-fraiche:
-    quantity: 2cs
+    quantity: 4cs
   huile-olive:
-    quantity: 1cs
+    quantity: 2cs
   sel:
   poivre:
 instructions:
