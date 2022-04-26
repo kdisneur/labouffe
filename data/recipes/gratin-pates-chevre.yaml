@@ -6,23 +6,23 @@ difficulty: facile
 pricing: économique
 vegetarian: true
 servings:
-  quantity: 1
+  quantity: 4
   type: personnes
 ingredients:
   pates:
-    quantity: 50g
+    quantity: 200g
   champignon:
-    quantity: 3
-  creme-fraiche:
-    quantity: 1cs
-  tomate:
-    quantity: 1
-  chevre:
-    quantity: 50g
-  olive:
     quantity: 6
+  creme-fraiche:
+    quantity: 4cs
+  tomate:
+    quantity: 3
+  chevre:
+    quantity: 200g
+  olive:
+    quantity: 20
   tomate-coulis:
-    quantity: 100ml
+    quantity: 200ml
   origan:
   sel:
 instructions:

@@ -5,17 +5,17 @@ preparation: 5m
 difficulty: facile
 pricing: économique
 servings:
-  quantity: 1
+  quantity: 4
   type: personnes
 ingredients:
   pates:
-    quantity: 50g
+    quantity: 200g
   lardon:
-    quantity: 15g
+    quantity: 150g
   creme-fraiche:
-    quantity: 1cs
+    quantity: 4cs
   oeuf-jaune:
-    quantity: 1
+    quantity: 2
 instructions:
   - Faire cuire les pâtes dans l'eau bouillante
   - Faire revenir les lardons et la crème à feu doux

@@ -7,17 +7,17 @@ reheat: true
 pricing: économique
 vegetarian: true
 servings:
-  quantity: 1
+  quantity: 4
   type: personnes
 ingredients:
   pates:
-    quantity: 50g
+    quantity: 200g
   camembert:
-    quantity: 30g
+    quantity: 1
   parmesan:
-    quantity: 10g
+    quantity: 40g
   epinard:
-    quantity: 150g
+    quantity: 500g
 instructions:
   - Enlever la croûte du camembert
   - Couper le camembert en dés
