@@ -353,6 +353,9 @@ roquefort:
   title: Roquefort
 safran:
   title: Safran
+sauce-aigre-douce:
+  recipe: sauce-aigre-douce
+  title: Sauce aigre douce
 sauce-ail:
   recipe: sauce-blanche-ail
   title: Sauce à l'ail
