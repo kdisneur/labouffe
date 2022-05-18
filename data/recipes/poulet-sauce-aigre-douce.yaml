@@ -1,0 +1,39 @@
+title: Poulet sauce aigre douce
+category: viande
+cooking: 45m
+preparation: 20m
+difficulty: facile
+pricing: économique
+reheat: true
+servings:
+  quantity: 2
+  type: personnes
+ingredients:
+  poulet-filet:
+    quantity: 2
+  poivron:
+    quantity: 1
+  ananas:
+    quantity: 0.5
+    details: au sirop, en morceaux
+  huile-olive:
+    quantity: 2cs
+  champignon:
+    quantity: 4
+  sauce-aigre-douce:
+    quantity: 1
+  sel:
+  poivre:
+instructions:
+  - Cuire les filets de poulet dans un peu d'huile d'olive
+  - Saler, poivrer
+  - Détailler le poivron en fines lamelles
+  - Faire confire les poivrons dans une sauteuse avec de l'huile d'olive à feu moyen (3) couvert
+  - Couper les champignons en gros morceaux
+  - Couper le poulet en bouchées
+  - Ajouter les champignons à la fin de la cuisson des poivrons
+  - Préparer la sauce aigre douce
+  - Ajouter les morceaux d'ananas, le poulet et la sauce aigre douce dans la sauteuse
+  - Faire mijoter à feu moyen fort (4) pendant 15min
+  - Baisser le feu à doux (2) après réduction de la sauce
+  - Servir accompagné de pâtes ou de riz
