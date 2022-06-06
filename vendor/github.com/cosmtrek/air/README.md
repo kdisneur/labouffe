@@ -40,6 +40,14 @@ air -v
 
 P.S. Great thanks mattn's [PR](https://github.com/cosmtrek/air/pull/1) for supporting Windows platform.
 
+### Via `go install`
+
+With go 1.16 or higher:
+
+```bash
+go install github.com/cosmtrek/air@latest
+```
+
 ### Docker
 
 Please pull this docker image [cosmtrek/air](https://hub.docker.com/r/cosmtrek/air).
@@ -95,6 +103,28 @@ air
 
 For modifying the configuration refer to the [air_example.toml](air_example.toml) file.
 
+### Runtime arguments
+
+You can pass arguments for running the built binary by adding them after the air command.
+
+```bash
+# Will run ./tmp/main bench
+air bench
+
+# Will run ./tmp/main server --port 8080
+air server --port 8080
+```
+
+You can separate the arguments passed for the air command and the built binary with `--` argument.
+
+```bash
+# Will run ./tmp/main -h
+air -- -h
+
+# Will run air with custom config and pass -h argument to the built binary
+air -c .air.toml -- -h
+```
+
 ### Docker-compose
 
 ```
@@ -116,7 +146,6 @@ services:
 ### Debug
 
 `air -d` prints all logs.
-
 
 ## Q&A
 
