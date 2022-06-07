@@ -1,10 +1,12 @@
 package runner
 
 import (
+	"flag"
 	"fmt"
 	"log"
 	"os"
 	"path/filepath"
+	"reflect"
 	"regexp"
 	"runtime"
 	"time"
@@ -19,7 +21,8 @@ const (
 	airWd   = "air_wd"
 )
 
-type config struct {
+// Config is the main configuration structure for Air.
+type Config struct {
 	Root        string    `toml:"root"`
 	TmpDir      string    `toml:"tmp_dir"`
 	TestDataDir string    `toml:"testdata_dir"`
@@ -34,6 +37,7 @@ type cfgBuild struct {
 	Cmd              string        `toml:"cmd"`
 	Bin              string        `toml:"bin"`
 	FullBin          string        `toml:"full_bin"`
+	ArgsBin          []string      `toml:"args_bin"`
 	Log              string        `toml:"log"`
 	IncludeExt       []string      `toml:"include_ext"`
 	ExcludeDir       []string      `toml:"exclude_dir"`
@@ -83,7 +87,8 @@ type cfgScreen struct {
 	ClearOnRebuild bool `toml:"clear_on_rebuild"`
 }
 
-func initConfig(path string) (cfg *config, err error) {
+// InitConfig initializes the configuration.
+func InitConfig(path string) (cfg *Config, err error) {
 	if path == "" {
 		cfg, err = defaultPathConfig()
 		if err != nil {
@@ -138,7 +143,7 @@ func writeDefaultConfig() {
 	fmt.Printf("%s file created to the current directory with the default settings\n", dftTOML)
 }
 
-func defaultPathConfig() (*config, error) {
+func defaultPathConfig() (*Config, error) {
 	// when path is blank, first find `.air.toml`, `.air.conf` in `air_wd` and current working directory, if not found, use defaults
 	for _, name := range []string{dftTOML, dftConf} {
 		cfg, err := readConfByName(name)
@@ -154,7 +159,7 @@ func defaultPathConfig() (*config, error) {
 	return &dftCfg, nil
 }
 
-func readConfByName(name string) (*config, error) {
+func readConfByName(name string) (*Config, error) {
 	var path string
 	if wd := os.Getenv(airWd); wd != "" {
 		path = filepath.Join(wd, name)
@@ -169,13 +174,16 @@ func readConfByName(name string) (*config, error) {
 	return cfg, err
 }
 
-func defaultConfig() config {
+func defaultConfig() Config {
 	build := cfgBuild{
 		Cmd:          "go build -o ./tmp/main .",
 		Bin:          "./tmp/main",
 		Log:          "build-errors.log",
 		IncludeExt:   []string{"go", "tpl", "tmpl", "html"},
+		IncludeDir:   []string{},
+		ExcludeFile:  []string{},
 		ExcludeDir:   []string{"assets", "tmp", "vendor", "testdata"},
+		ArgsBin:      []string{},
 		ExcludeRegex: []string{"_test.go"},
 		Delay:        1000,
 		StopOnError:  true,
@@ -196,7 +204,7 @@ func defaultConfig() config {
 	misc := cfgMisc{
 		CleanOnExit: false,
 	}
-	return config{
+	return Config{
 		Root:        ".",
 		TmpDir:      "tmp",
 		TestDataDir: "testdata",
@@ -207,13 +215,13 @@ func defaultConfig() config {
 	}
 }
 
-func readConfig(path string) (*config, error) {
+func readConfig(path string) (*Config, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
 
-	cfg := new(config)
+	cfg := new(Config)
 	if err = toml.Unmarshal(data, cfg); err != nil {
 		return nil, err
 	}
@@ -221,7 +229,7 @@ func readConfig(path string) (*config, error) {
 	return cfg, nil
 }
 
-func readConfigOrDefault(path string) (*config, error) {
+func readConfigOrDefault(path string) (*Config, error) {
 	dftCfg := defaultConfig()
 	cfg, err := readConfig(path)
 	if err != nil {
@@ -231,7 +239,7 @@ func readConfigOrDefault(path string) (*config, error) {
 	return cfg, nil
 }
 
-func (c *config) preprocess() error {
+func (c *Config) preprocess() error {
 	var err error
 	cwd := os.Getenv(airWd)
 	if cwd != "" {
@@ -265,10 +273,15 @@ func (c *config) preprocess() error {
 	// Fix windows CMD processor
 	// CMD will not recognize relative path like ./tmp/server
 	c.Build.Bin, err = filepath.Abs(c.Build.Bin)
+
+	// Join runtime arguments with the configuration arguments
+	runtimeArgs := flag.Args()
+	c.Build.ArgsBin = append(c.Build.ArgsBin, runtimeArgs...)
+
 	return err
 }
 
-func (c *config) colorInfo() map[string]string {
+func (c *Config) colorInfo() map[string]string {
 	return map[string]string{
 		"main":    c.Color.Main,
 		"build":   c.Color.Build,
@@ -277,30 +290,40 @@ func (c *config) colorInfo() map[string]string {
 	}
 }
 
-func (c *config) buildLogPath() string {
+func (c *Config) buildLogPath() string {
 	return filepath.Join(c.tmpPath(), c.Build.Log)
 }
 
-func (c *config) buildDelay() time.Duration {
+func (c *Config) buildDelay() time.Duration {
 	return time.Duration(c.Build.Delay) * time.Millisecond
 }
 
-func (c *config) binPath() string {
+func (c *Config) binPath() string {
 	return filepath.Join(c.Root, c.Build.Bin)
 }
 
-func (c *config) tmpPath() string {
+func (c *Config) tmpPath() string {
 	return filepath.Join(c.Root, c.TmpDir)
 }
 
-func (c *config) TestDataPath() string {
+func (c *Config) testDataPath() string {
 	return filepath.Join(c.Root, c.TestDataDir)
 }
 
-func (c *config) rel(path string) string {
+func (c *Config) rel(path string) string {
 	s, err := filepath.Rel(c.Root, path)
 	if err != nil {
 		return ""
 	}
 	return s
+}
+
+// WithArgs returns a new config with the given arguments added to the configuration.
+func (c *Config) WithArgs(args map[string]TomlInfo) {
+	for _, value := range args {
+		if value.Value != nil && *value.Value != "" {
+			v := reflect.ValueOf(c)
+			setValue2Struct(v, value.fieldPath, *value.Value)
+		}
+	}
 }
