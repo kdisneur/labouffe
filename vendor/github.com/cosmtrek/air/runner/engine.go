@@ -368,7 +368,7 @@ func (e *Engine) buildRun() {
 	}
 	var err error
 	if err = e.building(); err != nil {
-		close(e.canExit)
+		e.canExit <- true
 		e.buildLog("failed to build, error: %s", err.Error())
 		_ = e.writeBuildErrorLog(err.Error())
 		if e.config.Build.StopOnError {
@@ -434,6 +434,7 @@ func (e *Engine) runBin() error {
 	go func() {
 		_, _ = io.Copy(os.Stdout, stdout)
 		_, _ = io.Copy(os.Stderr, stderr)
+		_, _ = cmd.Process.Wait()
 	}()
 
 	killFunc := func(cmd *exec.Cmd, stdout io.ReadCloser, stderr io.ReadCloser) {
