@@ -1,0 +1,38 @@
+title: Biscuit roulé
+category: dessert
+cooking: 22m
+preparation: 10m
+difficulty: facile
+pricing: économique
+vegetarian: true
+servings:
+  quantity: 6
+  type: personnes
+ingredients:
+  oeuf:
+    quantity: 4
+  sucre:
+    quantity: 100g
+  farine:
+    quantity: 30g
+  levure-chimique:
+    quantity: 1cc
+  sucre-vanille:
+    quantity: 1cs
+  maizena:
+    quantity: 70g
+instructions:
+  - Préchauffer le four à 170°C
+  - Beurrer et fariner la plaque à pâtisserie
+  - Insérer le fouet dans le thermomix, mettre les œufs et le sucre dans le bol
+  - Fouetter 6m, 50°C, vitesse 3,5
+  - Ajouter la farine, la fécule de maïs, le sucre vanillé et la levure
+  - Mélanger 40s, vitesse 2
+  - Retirer le fouet. Mélanger légèrement à la spatule pour bien dissoudre la farine
+  - Transvaser la pâte sur la plaque
+  - Égaliser avec la spatule
+  - Cuire 16m
+  - Démouler sur un torchon humide puis rouler l'ensemble
+  - Réserver jusqu'à complet refroidissement
+  - Dérouler délicatement le gâteau. Garnir, puis rouler de nouveau
+  - Couper les extrémités
