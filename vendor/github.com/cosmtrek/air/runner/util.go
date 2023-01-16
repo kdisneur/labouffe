@@ -16,6 +16,10 @@ import (
 	"github.com/fsnotify/fsnotify"
 )
 
+const (
+	sliceCmdArgSeparator = ","
+)
+
 func (e *Engine) mainLog(format string, v ...interface{}) {
 	e.logWithLock(func() {
 		e.logger.main()(format, v...)
@@ -29,21 +33,27 @@ func (e *Engine) mainDebug(format string, v ...interface{}) {
 }
 
 func (e *Engine) buildLog(format string, v ...interface{}) {
-	e.logWithLock(func() {
-		e.logger.build()(format, v...)
-	})
+	if e.debugMode || !e.config.Log.MainOnly {
+		e.logWithLock(func() {
+			e.logger.build()(format, v...)
+		})
+	}
 }
 
 func (e *Engine) runnerLog(format string, v ...interface{}) {
-	e.logWithLock(func() {
-		e.logger.runner()(format, v...)
-	})
+	if e.debugMode || !e.config.Log.MainOnly {
+		e.logWithLock(func() {
+			e.logger.runner()(format, v...)
+		})
+	}
 }
 
 func (e *Engine) watcherLog(format string, v ...interface{}) {
-	e.logWithLock(func() {
-		e.logger.watcher()(format, v...)
-	})
+	if e.debugMode || !e.config.Log.MainOnly {
+		e.logWithLock(func() {
+			e.logger.watcher()(format, v...)
+		})
+	}
 }
 
 func (e *Engine) watcherDebug(format string, v ...interface{}) {
@@ -61,7 +71,7 @@ func (e *Engine) isTestDataDir(path string) bool {
 }
 
 func isHiddenDirectory(path string) bool {
-	return len(path) > 1 && strings.HasPrefix(filepath.Base(path), ".")
+	return len(path) > 1 && strings.HasPrefix(filepath.Base(path), ".") && filepath.Base(path) != ".."
 }
 
 func cleanPath(path string) string {
@@ -101,6 +111,23 @@ func (e *Engine) checkIncludeDir(path string) (bool, bool) {
 		}
 	}
 	return false, walkDir
+}
+
+func (e *Engine) checkIncludeFile(path string) bool {
+	cleanName := cleanPath(e.config.rel(path))
+	iFile := e.config.Build.IncludeFile
+	if len(iFile) == 0 { // ignore empty
+		return false
+	}
+	if cleanName == "." {
+		return false
+	}
+	for _, d := range iFile {
+		if d == cleanName {
+			return true
+		}
+	}
+	return false
 }
 
 func (e *Engine) isIncludeExt(path string) bool {
@@ -296,8 +323,10 @@ func setValue2Struct(v reflect.Value, fieldName string, value string) {
 		case reflect.String:
 			field.SetString(value)
 		case reflect.Slice:
-			if field.Len() == 0 {
-				field.Set(reflect.Append(field, reflect.ValueOf(value)))
+			if len(value) == 0 {
+				field.Set(reflect.ValueOf([]string{}))
+			} else {
+				field.Set(reflect.ValueOf(strings.Split(value, sliceCmdArgSeparator)))
 			}
 		case reflect.Int64:
 			i, _ := strconv.ParseInt(value, 10, 64)

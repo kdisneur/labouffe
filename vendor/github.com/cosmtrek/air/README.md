@@ -1,8 +1,10 @@
-# Air [![Go](https://github.com/cosmtrek/air/workflows/Go/badge.svg)](https://github.com/cosmtrek/air/actions?query=workflow%3AGo+branch%3Amaster) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/dcb95264cc504cad9c2a3d8b0795a7f8)](https://www.codacy.com/gh/cosmtrek/air/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cosmtrek/air&amp;utm_campaign=Badge_Grade) [![Go Report Card](https://goreportcard.com/badge/github.com/cosmtrek/air)](https://goreportcard.com/report/github.com/cosmtrek/air) [![codecov](https://codecov.io/gh/cosmtrek/air/branch/master/graph/badge.svg)](https://codecov.io/gh/cosmtrek/air)
+# Air [![Go](https://github.com/cosmtrek/air/actions/workflows/release.yml/badge.svg)](https://github.com/cosmtrek/air/actions?query=workflow%3AGo+branch%3Amaster) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/dcb95264cc504cad9c2a3d8b0795a7f8)](https://www.codacy.com/gh/cosmtrek/air/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cosmtrek/air&amp;utm_campaign=Badge_Grade) [![Go Report Card](https://goreportcard.com/badge/github.com/cosmtrek/air)](https://goreportcard.com/report/github.com/cosmtrek/air) [![codecov](https://codecov.io/gh/cosmtrek/air/branch/master/graph/badge.svg)](https://codecov.io/gh/cosmtrek/air)
 
 :cloud: Live reload for Go apps
 
 ![air](docs/air.png)
+
+English | [简体中文](README-zh_cn.md) 
 
 ## Motivation
 
@@ -19,24 +21,22 @@ NOTE: This tool has nothing to do with hot-deploy for production.
 ## Features
 
 * Colorful log output
-* Customize build or 
-
-
-
-
-ary command
+* Customize build or ary command
 * Support excluding subdirectories
 * Allow watching new directories after Air started
 * Better building process
 
 ### ✨ beta feature
+
 Support air config fields as arguments:
 
 if you just want to config build command and run command, you can use like following command without config file:
 
 `air --build.cmd "go build -o bin/api cmd/run.go" --build.bin "./bin/api"`
 
+use a comma to separate items for arguments that take a list as input:
 
+`air --build.cmd "go build -o bin/api cmd/run.go" --build.bin "./bin/api" --build.exclude_dir "templates,build"`
 
 ## Installation
 
@@ -161,6 +161,39 @@ services:
 
 `air -d` prints all logs.
 
+## Installation and Usage for Docker users who don't want to use air image
+
+`Dockerfile`
+```Dockerfile
+# Choose whatever you want, version >= 1.16
+FROM golang:1.19-alpine
+
+WORKDIR /app
+
+RUN go install github.com/cosmtrek/air@latest
+
+COPY go.mod go.sum ./
+RUN go mod download
+
+CMD ["air", "-c", ".air.toml"]
+```
+
+`docker-compose.yaml`
+```yaml
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      # Correct the path to your Dockerfile
+      dockerfile: Dockerfile
+    ports:
+      - 8080:3000
+    # Important to bind/mount your codebase dir to /app dir for live reload
+    volumes:
+      - ./:/app
+```
+
 ## Q&A
 
 ### "command not found: air" or "No such file or directory"
@@ -170,6 +203,11 @@ export GOPATH=$HOME/xxxxx
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$(go env GOPATH)/bin <---- Confirm this line in you profile!!!
 ```
+
+### Error under wsl when ' is included in the bin
+
+Should use `\` to escape the `' in the bin. related issue: [#305](https://github.com/cosmtrek/air/issues/305)
+
 
 ## Development
 
