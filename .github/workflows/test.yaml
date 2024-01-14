@@ -13,51 +13,10 @@ jobs:
       - name: Set up go version
         uses: actions/setup-go@v2
         with:
-          go-version: '^1.17'
+          go-version: '^1.21'
 
       - name: Run Test
         run: make test
 
       - name: Build site
         run: go run .
-
-      - name: Save generated site
-        uses: actions/upload-artifact@v2
-        with:
-          name: website
-          path: public
-          retention-days: 1
-
-  deploy:
-    needs: test
-    name: Deploy
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-    steps:
-      - name: Checkout live-site branch
-        uses: actions/checkout@v2
-        with:
-          ref: live-site
-
-      - name: Cleanup current files
-        run: |
-          find . -mindepth 1 -maxdepth 1 -type d -not -name .git -prune -exec rm -r {} \;
-          find . -mindepth 1 -maxdepth 1 -not -name CNAME -exec rm {} \;
-
-      - name: Download a single artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: website
-
-      - name: Commit new version
-        run: |
-          git config --global user.email github-actions@github.com;
-          git config --global user.name github-actions;
-          git remote set-url --push origin https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git;
-          if [ -z "$(git status -s)" ]; then
-              echo "no changes to commit";
-          else
-              git add -A .;
-              git commit --message="New version from SHA $GITHUB_SHA";
-              git push;
-          fi

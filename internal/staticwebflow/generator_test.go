@@ -2,7 +2,7 @@ package staticwebflow_test
 
 import (
 	"flag"
-	"io/ioutil"
+	"os"
 	"os/exec"
 	"strings"
 	"testing"
@@ -21,7 +21,7 @@ func TestGenerateValidSite(t *testing.T) {
 
 	templatesFolder := "../../templates"
 
-	testSiteFolder, err := ioutil.TempDir("", "site")
+	testSiteFolder, err := os.MkdirTemp("", "site")
 	if err != nil {
 		t.Fatalf("can't generate test folder: %v", err)
 	}

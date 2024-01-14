@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 )
 
@@ -37,7 +36,7 @@ func main() {
 	fmt.Fprintln(out)
 	fmt.Fprintln(out, "func init() {")
 	for _, filename := range filenames {
-		content, err := ioutil.ReadFile(filename)
+		content, err := os.ReadFile(filename)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, "can't read source file:", err)
 			return

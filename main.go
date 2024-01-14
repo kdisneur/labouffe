@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/kdisneur/labouffe/internal/foodaccess"
+	"github.com/kdisneur/labouffe/internal/staticmarkdown"
 	"github.com/kdisneur/labouffe/internal/staticwebflow"
 )
 
@@ -49,17 +50,27 @@ func run() error {
 		return fmt.Errorf("can't create output folder '%s': %v", fcfg.OutputFolderPath, err)
 	}
 
-	sitecfg := staticwebflow.SiteConfig{
-		TemlatesFolderPath: "templates",
-		OutputFolderPath:   fcfg.OutputFolderPath,
-	}
-	if err := staticwebflow.GenerateSite(sitecfg, ingredients, recipes); err != nil {
-		return fmt.Errorf("can't generate site: %v", err)
-	}
+	if fs.Arg(0) == "export" {
+		cfg := staticmarkdown.Config{
+			TemplatePath:     "templates/obsidian.md",
+			OutputFolderPath: fcfg.OutputFolderPath,
+		}
+		if err := staticmarkdown.GenerateMarkdown(cfg, ingredients, recipes); err != nil {
+			return fmt.Errorf("can't export markdown: %v", err)
+		}
+	} else {
+		sitecfg := staticwebflow.SiteConfig{
+			TemlatesFolderPath: "templates",
+			OutputFolderPath:   fcfg.OutputFolderPath,
+		}
+		if err := staticwebflow.GenerateSite(sitecfg, ingredients, recipes); err != nil {
+			return fmt.Errorf("can't generate site: %v", err)
+		}
 
-	if fcfg.DeveloperMode {
-		fmt.Printf("start developer server: http://127.0.0.1:%d\n", fcfg.DeveloperModePort)
-		return http.ListenAndServe(fmt.Sprintf(":%d", fcfg.DeveloperModePort), http.FileServer(http.Dir(fcfg.OutputFolderPath)))
+		if fcfg.DeveloperMode {
+			fmt.Printf("start developer server: http://127.0.0.1:%d\n", fcfg.DeveloperModePort)
+			return http.ListenAndServe(fmt.Sprintf(":%d", fcfg.DeveloperModePort), http.FileServer(http.Dir(fcfg.OutputFolderPath)))
+		}
 	}
 
 	return nil
